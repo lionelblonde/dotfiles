@@ -27,7 +27,7 @@ values."
      better-defaults
      emacs-lisp
      git
-     markdown
+     markdown ;;TEST
      ;; spell-checking
      syntax-checking
      version-control
