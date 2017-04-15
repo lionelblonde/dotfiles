@@ -110,9 +110,9 @@ hyperfns["["] = function() hs.window.focusedWindow():moveToUnit(hs.layout.left50
 hyperfns["]"] = function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end
 hyperfns["="] = toggle_window_maximized
 
--- Hotkeys to resized according to grid
+-- Hotkeys to resize according to grid
 hyperfns["a"] = function() hs.grid.resizeWindowThinner(hs.window.focusedWindow()) end
-hyperfns["d"] = function() hs.grid.resizeWindowWider(hs.window.focusedWindow()) end
+hyperfns["s"] = function() hs.grid.resizeWindowWider(hs.window.focusedWindow()) end
 hyperfns["w"] = function() hs.grid.resizeWindowShorter(hs.window.focusedWindow()) end
 hyperfns["z"] = function() hs.grid.resizeWindowTaller(hs.window.focusedWindow()) end
 
