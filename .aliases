@@ -12,6 +12,7 @@ alias ...='../..'
 alias vim='nvim'
 
 # Aliases for Tmux
+alias tmux="TERM=screen-256color-bce tmux"
 alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tls='tmux ls'
