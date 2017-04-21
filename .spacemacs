@@ -28,7 +28,7 @@ values."
      emacs-lisp
      git
      markdown
-     ;; spell-checking
+     spell-checking
      syntax-checking
      version-control
      osx
