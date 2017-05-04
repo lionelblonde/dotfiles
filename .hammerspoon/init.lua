@@ -55,7 +55,6 @@ end
 local single_monitor_layout = {
   {"Emacs", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Dash", nil, internal_display, hs.layout.right50, nil, nil},
-  {"Atom", nil, internal_display, hs.layout.left50, nil, nil},
   {"iTunes", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Spotify", nil, internal_display, hs.layout.maximized, nil, nil},
@@ -72,8 +71,7 @@ local single_monitor_layout = {
 local triple_monitor_layout = {
   {"Emacs", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Dash", nil, internal_display, hs.layout.right50, nil, nil},
-  {"Atom", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"iTunes", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"iTunes", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Google Chrome", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Spotify", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Papers 3.4.8", nil, left_screen, hs.layout.maximized, nil, nil},
@@ -117,7 +115,7 @@ hyperfns["w"] = function() hs.grid.resizeWindowShorter(hs.window.focusedWindow()
 hyperfns["z"] = function() hs.grid.resizeWindowTaller(hs.window.focusedWindow()) end
 
 -- Hotkeys to toggle focus on applications
-hyperfns["y"] = function() toggle_application("Atom") end
+hyperfns["y"] = function() toggle_application("iTunes") end
 hyperfns["u"] = function() toggle_application("Finder") end
 hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
