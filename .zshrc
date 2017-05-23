@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/lionelblonde/.oh-my-zsh
 
+export TERM=xterm-256color
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -49,7 +51,7 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-syntax-highlighting) #zsh-syntax-highlighting has to be the last item
+plugins=(fasd zsh-syntax-highlighting) #zsh-syntax-highlighting has to be the last item
 
 # User configuration
 
@@ -82,6 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(fasd --init auto)"
 
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
