@@ -73,15 +73,15 @@ local triple_monitor_layout = {
   {"Dash", nil, internal_display, hs.layout.right50, nil, nil},
   {"iTunes", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Google Chrome", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"Spotify", nil, right_screen, hs.layout.maximized, nil, nil},
+  {"Spotify", nil, right_screen, hs.geometry.unitrect(0, 1/4, 1, 3/4), nil, nil},
   {"Papers 3.4.8", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Spark", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Skype", nil, internal_display, hs.layout.right30, nil, nil},
-  {"Finder", nil, right_screen, hs.geometry.unitrect(0, 0, 1, 1/2), nil, nil},
+  {"Finder", nil, right_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
   {"iTerm2", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Messages", nil, internal_display, hs.geometry.unitrect(1/2, 1/2, 1/2, 1/2), nil, nil},
   {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
-  {"Skim", nil, left_screen, hs.layout.maximized, nil, nil},
+  {"Skim", nil, right_screen, hs.geometry.unitrect(0, 0, 1, 1/2), nil, nil},
   {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil}
 }
 
