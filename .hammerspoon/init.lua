@@ -59,7 +59,7 @@ local single_monitor_layout = {
   {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Spotify", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Papers 3.4.8", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Spark", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Mail", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Skype", nil, internal_display, hs.layout.right30, nil, nil},
   {"Finder", nil, internal_display, hs.layout.right50, nil, nil},
   {"iTerm2", nil, internal_display, hs.layout.maximized, nil, nil},
@@ -75,7 +75,7 @@ local triple_monitor_layout = {
   {"Google Chrome", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Spotify", nil, right_screen, hs.geometry.unitrect(0, 1/4, 1, 3/4), nil, nil},
   {"Papers 3.4.8", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"Spark", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Mail", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Skype", nil, internal_display, hs.layout.right30, nil, nil},
   {"Finder", nil, right_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
   {"iTerm2", nil, right_screen, hs.layout.maximized, nil, nil},
@@ -120,7 +120,7 @@ hyperfns["u"] = function() toggle_application("Finder") end
 hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Papers 3.4.8") end
-hyperfns["h"] = function() toggle_application("Spark") end
+hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Google Chrome") end
 hyperfns["l"] = function() toggle_application("Skype") end
 hyperfns["m"] = function() toggle_application("Messages") end
