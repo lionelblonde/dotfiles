@@ -25,4 +25,4 @@ alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 
 # Alias to manage dotfiles via bare git repository
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
