@@ -28,7 +28,7 @@ values."
      emacs-lisp
      git
      markdown
-     ;; spell-checking
+     spell-checking
      syntax-checking
      version-control
      osx
@@ -109,11 +109,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro for Powerline"
-                               :size 13
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.2)
+    dotspacemacs-default-font '("Source Code Pro for Powerline"
+                                 :size 13
+                                 :weight normal
+                                 :width normal
+                                 :powerline-scale 1.2)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -355,11 +355,8 @@ layers configuration. You are free to put any user code."
   ;; Skim's displayline is used for forward search (from .tex to .pdf)
   ;; option -b highlights the current line; option -g opens Skim in the background
   (setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
-  (setq TeX-view-program-list
-        '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
-
-  ;; (setq font-latex-fontify-script nil)
-  ;; (setq font-latex-fontify-sectioning 'color)
+  ;; (setq TeX-view-program-list
+  ;;       '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -g %n %o %b")))
 
   ;; Only change sectioning color
   (setq font-latex-fontify-sectioning 'color)
