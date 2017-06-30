@@ -1,1 +1,1 @@
-# Dotfiles Bare Repository
+# Dotfiles
