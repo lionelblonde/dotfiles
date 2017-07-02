@@ -11,7 +11,7 @@ local right_screen = hs.screen.allScreens()[3]
 
 -- Set up the grid
 hs.grid.setMargins("0, 0")
-hs.grid.setGrid("2x2", "Color LCD")
+hs.grid.setGrid("4x2", "Color LCD")
 hs.grid.setGrid("1x4", "1080x1920")
 hs.grid.setGrid("1x4", "1050x1680")
 
