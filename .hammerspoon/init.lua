@@ -54,34 +54,34 @@ end
 -- {"App name", "Window name", "Display Name", "unitrect", "framerect", "fullframerect"}
 local single_monitor_layout = {
   {"Emacs", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Dash", nil, internal_display, hs.layout.right50, nil, nil},
+  {"Code", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Dash", nil, internal_display, hs.layout.maximized, nil, nil},
   {"iTunes", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Spotify", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Papers 3.4.8", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Mail", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Skype", nil, internal_display, hs.layout.right30, nil, nil},
   {"Finder", nil, internal_display, hs.layout.right50, nil, nil},
   {"iTerm2", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Messages", nil, internal_display, hs.geometry.unitrect(1/2, 1/2, 1/2, 1/2), nil, nil},
   {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
-  {"Skim", nil, internal_display, hs.layout.right50, nil, nil},
+  {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil}
 }
 local triple_monitor_layout = {
   {"Emacs", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"Dash", nil, internal_display, hs.layout.right50, nil, nil},
+  {"Code", nil, right_screen, hs.layout.maximized, nil, nil},
+  {"Dash", nil, left_screen, hs.layout.maximized, nil, nil},
   {"iTunes", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Google Chrome", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Spotify", nil, right_screen, hs.geometry.unitrect(0, 1/4, 1, 3/4), nil, nil},
-  {"Papers 3.4.8", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Mail", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"Skype", nil, internal_display, hs.layout.right30, nil, nil},
+  {"Skype", nil, right_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
   {"Finder", nil, right_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
   {"iTerm2", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"Messages", nil, internal_display, hs.geometry.unitrect(1/2, 1/2, 1/2, 1/2), nil, nil},
-  {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
-  {"Skim", nil, right_screen, hs.geometry.unitrect(0, 0, 1, 1/2), nil, nil},
+  {"Messages", nil, right_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+  {"WhatsApp", nil, right_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+  {"Skim", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil}
 }
 
@@ -119,7 +119,7 @@ hyperfns["y"] = function() toggle_application("iTunes") end
 hyperfns["u"] = function() toggle_application("Finder") end
 hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
-hyperfns["p"] = function() toggle_application("Papers 3.4.8") end
+hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Google Chrome") end
 hyperfns["l"] = function() toggle_application("Skype") end
@@ -128,6 +128,7 @@ hyperfns["'"] = function() toggle_application("WhatsApp") end
 hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
 hyperfns["n"] = function() toggle_application("Calendar") end
+hyperfns["v"] = function() toggle_application("Code") end
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
