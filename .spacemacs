@@ -355,8 +355,8 @@ layers configuration. You are free to put any user code."
   ;; Skim's displayline is used for forward search (from .tex to .pdf)
   ;; option -b highlights the current line; option -g opens Skim in the background
   (setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
-  ;; (setq TeX-view-program-list
-  ;;       '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -g %n %o %b")))
+  (setq TeX-view-program-list
+        '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -g %n %o %b")))
 
   ;; Only change sectioning color
   (setq font-latex-fontify-sectioning 'color)
