@@ -6,8 +6,8 @@ local window = require "hs.window"
 
 -- Screens
 local internal_display = "Color LCD"
-local left_screen = hs.screen.allScreens()[2]
-local right_screen = hs.screen.allScreens()[3]
+local left_screen = hs.screen.allScreens()[1]
+local right_screen = hs.screen.allScreens()[2]
 
 -- Set up the grid
 hs.grid.setMargins("0, 0")
@@ -66,23 +66,26 @@ local single_monitor_layout = {
   {"Messages", nil, internal_display, hs.geometry.unitrect(1/2, 1/2, 1/2, 1/2), nil, nil},
   {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
   {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil}
+  {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Code", nil, internal_display, hs.layout.maximized, nil, nil}
 }
-local triple_monitor_layout = {
-  {"Emacs", nil, right_screen, hs.layout.maximized, nil, nil},
+
+local dual_monitor_layout = {
+  {"Emacs", nil, right_screen, hs.geometry.unitrect(0, 0, 1, 65/100), nil, nil},
   {"Code", nil, right_screen, hs.layout.maximized, nil, nil},
   {"Dash", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"iTunes", nil, right_screen, hs.layout.maximized, nil, nil},
+  {"iTunes", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Google Chrome", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"Spotify", nil, right_screen, hs.geometry.unitrect(0, 1/4, 1, 3/4), nil, nil},
-  {"Mail", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"Skype", nil, right_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+  {"Spotify", nil, left_screen, hs.geometry.unitrect(0, 1/4, 1, 3/4), nil, nil},
+  {"Mail", nil, left_screen, hs.layout.maximized, nil, nil},
+  {"Skype", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
   {"Finder", nil, right_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
-  {"iTerm2", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"Messages", nil, right_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
-  {"WhatsApp", nil, right_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
-  {"Skim", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil}
+  {"iTerm2", nil, right_screen, hs.geometry.unitrect(0, 65/100, 1, 35/100), nil, nil},
+  {"Messages", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+  {"WhatsApp", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+  {"Skim", nil, left_screen, hs.layout.maximized, nil, nil},
+  {"Calendar", nil, left_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
+  {"Code", nil, right_screen, hs.layout.maximized, nil, nil}
 }
 
 -- And now for hotkeys relating to Hyper.
@@ -97,7 +100,7 @@ hyperfns["g"] = hs.grid.show
 
 -- Hotkeys to trigger defined layouts
 hyperfns["1"] = function() hs.layout.apply(single_monitor_layout) end
-hyperfns["2"] = function() hs.layout.apply(triple_monitor_layout) end
+hyperfns["2"] = function() hs.layout.apply(dual_monitor_layout) end
 
 -- Hotkeys to move windows accross screens
 hyperfns[","] = function() hs.window.focusedWindow():moveOneScreenWest() end
