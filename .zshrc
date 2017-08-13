@@ -3,6 +3,9 @@ export ZSH=/Users/lionelblonde/.oh-my-zsh
 
 export TERM=xterm-256color
 
+# Path to anaconda: enables the use of "conda" from anywhere
+export PATH="/Users/lionelblonde/anaconda/bin:$PATH"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -88,8 +91,8 @@ source $ZSH/oh-my-zsh.sh
 # fasd
 eval "$(fasd --init auto)"
 
-# source the octicons font maps
-source ~/.fonts/*.sh
+# Load pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
@@ -207,6 +210,12 @@ SPACESHIP_HG_STATUS_ADDED="+"
 SPACESHIP_HG_STATUS_MODIFIED="!"
 SPACESHIP_HG_STATUS_DELETED="✘"
 
+# Venv
+SPACESHIP_VENV_SHOW=true
+SPACESHIP_VENV_PREFIX="venv:("
+SPACESHIP_VENV_SUFFIX=") "
+SPACESHIP_VENV_COLOR="cyan"
+
 # Version indication
 SPACESHIP_NODE_SHOW=false
 SPACESHIP_RUBY_SHOW=false
@@ -216,7 +225,6 @@ SPACESHIP_GOLANG_SHOW=false
 SPACESHIP_PHP_SHOW=false
 SPACESHIP_RUST_SHOW=false
 SPACESHIP_JULIA_SHOW=false
-SPACESHIP_VENV_SHOW=false
 SPACESHIP_PYENV_SHOW=false
 SPACESHIP_VI_MODE_SHOW=false
 
