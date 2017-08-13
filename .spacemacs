@@ -28,7 +28,7 @@ values."
      emacs-lisp
      git
      markdown
-     spell-checking
+     ;; spell-checking
      syntax-checking
      version-control
      osx
@@ -288,7 +288,7 @@ layers configuration. You are free to put any user code."
      perl-indent-level n
      prolog-indent-width n
      puppet-indent-level n
-     python-indent-offset n
+     python-indent-offset 4 ;; special case
      ruby-indent-level n
      rust-indent-offset n
      scala-indent:step n
@@ -303,10 +303,12 @@ layers configuration. You are free to put any user code."
      ))
   (set-indent 2)
 
-  (add-hook 'python-mode-hook (lambda () (set-indent 2)))
-
+  ;; Set a ruler as maximum line length indicator (used by AucTeX)
   (setq-default fill-column 100)
+  ;; Set flake8 package maximum line length to the same value as ruler
+  (setq-default flycheck-flake8-maximum-line-length 100)
 
+  ;; Display the indent guides
   (spacemacs/toggle-indent-guide-globally-on)
 
   ;; LaTeX necessary material
