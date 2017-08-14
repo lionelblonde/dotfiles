@@ -118,6 +118,7 @@ SPACESHIP_PROMPT_ORDER=(
   julia         # Julia section
   docker        # Docker section
   venv          # virtualenv section
+  conda         # conda env section
   pyenv         # Pyenv section
   exec_time     # Execution time
   line_sep      # Line break
@@ -215,6 +216,13 @@ SPACESHIP_VENV_SHOW=true
 SPACESHIP_VENV_PREFIX="venv:("
 SPACESHIP_VENV_SUFFIX=") "
 SPACESHIP_VENV_COLOR="cyan"
+
+# Conda
+SPACESHIP_CONDA_SHOW=true
+SPACESHIP_CONDA_PREFIX="conda:("
+SPACESHIP_CONDA_SUFFIX=") "
+SPACESHIP_CONDA_SYMBOL=""
+SPACESHIP_CONDA_COLOR="cyan"
 
 # Version indication
 SPACESHIP_NODE_SHOW=false
