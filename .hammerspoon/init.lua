@@ -67,7 +67,6 @@ local single_monitor_layout = {
   {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
   {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Code", nil, internal_display, hs.layout.maximized, nil, nil}
 }
 
 local dual_monitor_layout = {
@@ -85,7 +84,6 @@ local dual_monitor_layout = {
   {"WhatsApp", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
   {"Skim", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Calendar", nil, left_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
-  {"Code", nil, right_screen, hs.layout.maximized, nil, nil}
 }
 
 -- And now for hotkeys relating to Hyper.
@@ -131,7 +129,6 @@ hyperfns["'"] = function() toggle_application("WhatsApp") end
 hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
 hyperfns["n"] = function() toggle_application("Calendar") end
-hyperfns["v"] = function() toggle_application("Code") end
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
