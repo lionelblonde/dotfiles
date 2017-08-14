@@ -28,7 +28,7 @@ values."
      emacs-lisp
      git
      markdown
-     ;; spell-checking
+     spell-checking
      syntax-checking
      version-control
      osx
@@ -303,7 +303,7 @@ layers configuration. You are free to put any user code."
      ))
   (set-indent 2)
 
-  ;; Set a ruler as maximum line length indicator (used by AucTeX)
+  ;; Set a ruler as maximum line length indicator (used by AUCTeX)
   (setq-default fill-column 100)
   ;; Set flake8 package maximum line length to the same value as ruler
   (setq-default flycheck-flake8-maximum-line-length 100)
