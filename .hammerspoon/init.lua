@@ -67,6 +67,7 @@ local single_monitor_layout = {
   {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
   {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Sublime Text", nil, internal_display, hs.layout.maximized, nil, nil}
 }
 
 local dual_monitor_layout = {
@@ -84,6 +85,7 @@ local dual_monitor_layout = {
   {"WhatsApp", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
   {"Skim", nil, left_screen, hs.layout.maximized, nil, nil},
   {"Calendar", nil, left_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
+  {"Sublime Text", nil, left_screen, hs.layout.maximized, nil, nil}
 }
 
 -- And now for hotkeys relating to Hyper.
@@ -109,12 +111,6 @@ hyperfns["["] = function() hs.window.focusedWindow():moveToUnit(hs.layout.left50
 hyperfns["]"] = function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end
 hyperfns["="] = toggle_window_maximized
 
--- Hotkeys to resize according to grid
-hyperfns["a"] = function() hs.grid.resizeWindowThinner(hs.window.focusedWindow()) end
-hyperfns["s"] = function() hs.grid.resizeWindowWider(hs.window.focusedWindow()) end
-hyperfns["w"] = function() hs.grid.resizeWindowShorter(hs.window.focusedWindow()) end
-hyperfns["z"] = function() hs.grid.resizeWindowTaller(hs.window.focusedWindow()) end
-
 -- Hotkeys to toggle focus on applications
 hyperfns["y"] = function() toggle_application("iTunes") end
 hyperfns["u"] = function() toggle_application("Finder") end
@@ -123,12 +119,13 @@ hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Google Chrome") end
-hyperfns["l"] = function() toggle_application("Skype") end
-hyperfns["m"] = function() toggle_application("Messages") end
-hyperfns["'"] = function() toggle_application("WhatsApp") end
+hyperfns["l"] = function() toggle_application("Sublime Text") end
+hyperfns["m"] = function() toggle_application("Messages")end
+hyperfns["'"] = function() toggle_application("Skype") end
 hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
 hyperfns["n"] = function() toggle_application("Calendar") end
+
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
