@@ -111,8 +111,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '(" Menlo " ;; "Source Code Pro for Powerline"
-                                 :size 13
+   dotspacemacs-default-font '("Menlo" ;;"Source Code Pro for Powerline"
+                                :size 12
                                  :weight normal
                                  :width normal
                                  :powerline-scale 1.2)
@@ -244,6 +244,10 @@ It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
 
+  ;; Environment variable for anaconda envs directory
+  ;; SPC m V w then select the conda env to activate the selected env
+  (setenv "WORKON_HOME" "~/anaconda/envs")
+
   ;; Ensime setup
   (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
   (push '("ensime" . "melpa-stable") package-pinned-packages)
@@ -310,6 +314,12 @@ layers configuration. You are free to put any user code."
 
   ;; Display the indent guides
   (spacemacs/toggle-indent-guide-globally-on)
+
+  ;; Anaconda-mode
+  (setq company-idle-delay 0.5)
+  (require 'anaconda-mode)
+  (remove-hook 'anaconda-mode-response-read-fail-hook
+    'anaconda-mode-show-unreadable-response)
 
   ;; LaTeX necessary material
   ;; AucTeX
