@@ -1,4 +1,3 @@
-# Unix
 # Prefered version of ls
 alias ll='ls -FGlAhp'
 # Prefered version of ln
@@ -23,6 +22,9 @@ alias ea='vim ~/.aliases'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+
+# Convenience alias to source .zshrc
+alias sz='source ~/.zshrc'
 
 # Alias to manage dotfiles via bare git repository
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
