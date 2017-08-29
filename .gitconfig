@@ -1,7 +1,13 @@
 # This is Git's per-user configuration file.
+
+[core]
+    pager=cat
 [user]
-# Please adapt and uncomment the following lines:
 	name = Lionel Blondé
 	email = lionel.blonde@gmail.com
 [alias]
 	st = status -s
+    ll = log --decorate=short --oneline
+    ll1 = log --decorate=short --oneline -n1
+    ll5 = log --decorate=short --oneline -n5
+
