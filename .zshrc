@@ -3,6 +3,9 @@ export ZSH=/Users/lionelblonde/.oh-my-zsh
 
 export TERM=xterm-256color
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Path to anaconda: enables the use of "conda" from anywhere
 export PATH="/Users/lionelblonde/anaconda/bin:$PATH"
 
