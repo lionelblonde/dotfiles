@@ -14,6 +14,7 @@ hs.grid.setMargins("0, 0")
 hs.grid.setGrid("4x2", "Color LCD")
 hs.grid.setGrid("1x4", "1080x1920")
 hs.grid.setGrid("1x4", "1050x1680")
+hs.grid.setGrid("2x4", "1200x1920")
 
 -- Aliases
 local hyper = {"ctrl", "shift"}
@@ -98,6 +99,9 @@ hyperfns["r"] = function() hs.reload() end
 -- Hotkey to show grid
 hyperfns["g"] = hs.grid.show
 
+-- Hotkey to show window hints
+hyperfns["l"] = hs.hints.windowHints
+
 -- Hotkeys to trigger defined layouts
 hyperfns["1"] = function() hs.layout.apply(single_monitor_layout) end
 hyperfns["2"] = function() hs.layout.apply(dual_monitor_layout) end
@@ -119,7 +123,6 @@ hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Google Chrome") end
-hyperfns["l"] = function() toggle_application("Sublime Text") end
 hyperfns["m"] = function() toggle_application("Messages")end
 hyperfns["'"] = function() toggle_application("Skype") end
 hyperfns["k"] = function() toggle_application("Emacs") end
