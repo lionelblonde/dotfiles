@@ -11,11 +11,11 @@ alias ...='../..'
 alias vim='nvim'
 
 # Aliases for Tmux
-alias tmux="TERM=screen-256color-bce tmux"
-alias ta='tmux attach -t'
-alias tnew='tmux new -s'
-alias tls='tmux ls'
-alias tkill='tmux kill-session -t'
+alias tmux="tmux -2"
+alias ta='tmux -2 attach -t'
+alias tnew='tmux -2 new -s'
+alias tls='tmux -2 ls'
+alias tkill='tmux -2 kill-session -t'
 
 # Convenience aliases for editing configs
 alias ea='vim ~/.aliases'
