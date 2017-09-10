@@ -96,6 +96,9 @@ hyperfns = {}
 -- Hotkey to reload config
 hyperfns["r"] = function() hs.reload() end
 
+-- Hotkey to lock screen
+hyperfns["c"] = function() hs.caffeinate.startScreensaver() end
+
 -- Hotkey to show grid
 hyperfns["g"] = hs.grid.show
 
