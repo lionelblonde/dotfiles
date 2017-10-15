@@ -11,7 +11,7 @@ local right_screen = hs.screen.allScreens()[2]
 
 -- Set up the grid
 hs.grid.setMargins("0, 0")
-hs.grid.setGrid("4x2", "Color LCD")
+hs.grid.setGrid("2x1", "Color LCD")
 hs.grid.setGrid("1x4", "1080x1920")
 hs.grid.setGrid("1x4", "1050x1680")
 hs.grid.setGrid("2x4", "1200x1920")
@@ -103,7 +103,7 @@ hyperfns["c"] = function() hs.caffeinate.startScreensaver() end
 hyperfns["g"] = hs.grid.show
 
 -- Hotkey to show window hints
-hyperfns["l"] = hs.hints.windowHints
+-- hyperfns["l"] = hs.hints.windowHints
 
 -- Hotkeys to trigger defined layouts
 hyperfns["1"] = function() hs.layout.apply(single_monitor_layout) end
@@ -131,6 +131,8 @@ hyperfns["'"] = function() toggle_application("Skype") end
 hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
 hyperfns["n"] = function() toggle_application("Calendar") end
+-- [Temporary] for the review period
+hyperfns["l"] = function() toggle_application("Microsoft PowerPoint") end
 
 
 -- Bind all the hotkeys and functions together
