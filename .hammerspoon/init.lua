@@ -132,7 +132,7 @@ hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
 hyperfns["n"] = function() toggle_application("Calendar") end
 -- [Temporary] for the review period
-hyperfns["l"] = function() toggle_application("Microsoft PowerPoint") end
+hyperfns["l"] = function() toggle_application("Skype") end
 
 
 -- Bind all the hotkeys and functions together
