@@ -14,7 +14,8 @@ hs.grid.setMargins("0, 0")
 hs.grid.setGrid("2x1", "Color LCD")
 hs.grid.setGrid("1x4", "1080x1920")
 hs.grid.setGrid("1x4", "1050x1680")
-hs.grid.setGrid("2x4", "1200x1920")
+hs.grid.setGrid("1x4", "1200x1920")
+hs.grid.setGrid("3x1", "3440x1440")
 
 -- Aliases
 local hyper = {"ctrl", "shift"}
@@ -131,7 +132,6 @@ hyperfns["'"] = function() toggle_application("Skype") end
 hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
 hyperfns["n"] = function() toggle_application("Calendar") end
--- [Temporary] for the review period
 hyperfns["l"] = function() toggle_application("Skype") end
 
 
