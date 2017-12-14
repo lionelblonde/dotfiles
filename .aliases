@@ -28,3 +28,6 @@ alias sz='source ~/.zshrc'
 
 # Alias to manage dotfiles via bare git repository
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
+
+# Alias to shorten the verbose ssh call with identity key
+alias sshbaobab='ssh -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
