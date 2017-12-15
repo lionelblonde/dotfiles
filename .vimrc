@@ -1,5 +1,5 @@
-" Best Goddamn vimrc in the whole world.
-" Author: Lionel Blonde.
+" My vimrc
+" Author: Lionel Blonde
 " For more information type :help followed by the command.
 
 " Plugins handled by vim-plug
@@ -7,14 +7,12 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 " On-demand loading
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'dracula/vim'
 Plug 'vim-airline/vim-airline'
-" Minimap as right panel, <Leader>mm to display the minimap, <Leader>mc to close it
-"Plug 'severin-lemaignan/vim-minimap'
+Plug 'scrooloose/nerdcommenter'
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Scala syntax highlighting
-Plug 'derekwyatt/vim-scala'
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -27,10 +25,19 @@ call plug#end()
 " PlugDiff -> Examine changes from the previous update and the pending changes
 " PlugSnapshot[!] [output path] -> Generate script for restoring the current snapshot of the plugins
 
-" Put your non-Plugin stuff after this line
+" Put the non-Plugin stuff after this line
 
-" Leader mappings
+" Set the maximum length of a line
+set textwidth=100
+" Enable syntax highlighting
+" syntax on
+
+" Leader mapping
 map <Space> <leader>
+
+" NERDCOmmenter plugin config 
+let NERDSpaceDelims=1
+map <leader>;; <plug>NERDCommenterToggle
 
 " Tabulations, spaces and indents rules
 " Show existing tab with 4 spaces width
@@ -67,13 +74,12 @@ map <right> <nop>
 set relativenumber
 set number
 set numberwidth=3
-highlight LineNr ctermfg=darkgray
-set cursorline
 
-" Displays a grey column to help maintain less than 80 chars per line
-"set colorcolumn=80
-"highlight ColorColumn ctermbg=235
-"
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+" Next line is commented since a cursor guide already in use in iTerm is ported in vim as well
+" set cursorline
+
 " Nerdtree-related tweaks
 " Sets a keybind to toggle the Nerdtree view
 map <C-n> :NERDTreeToggle<CR>
