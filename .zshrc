@@ -1,14 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/lionelblonde/.oh-my-zsh
 
-export TERM=xterm-256color
-
-export VISUAL=vim
-export EDITOR="$VISUAL"
-
-# Path to anaconda: enables the use of "conda" from anywhere
-export PATH="/Users/lionelblonde/anaconda/bin:$PATH"
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -91,14 +83,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# fasd
+# Line added according to the fasd installation instructions
 eval "$(fasd --init auto)"
-
-# Load pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# Locale
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+export TERM=xterm-256color
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# Path to anaconda: enables the use of "conda" from anywhere
+export PATH="/Users/lionelblonde/anaconda/bin:$PATH"
 
 # Spaceship zsh theme variables
 # Order of entities in the prompt
@@ -129,7 +130,7 @@ SPACESHIP_PROMPT_ORDER=(
 )
 
 # Prompt
-SPACESHIP_PROMPT_SYMBOL="➜"
+SPACESHIP_PROMPT_SYMBOL="MBP ➜"
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_PREFIXES_SHOW=true
@@ -157,8 +158,8 @@ SPACESHIP_USER_COLOR_ROOT="red"
 
 # Host
 SPACESHIP_HOST_SHOW=true
-SPACESHIP_HOST_PREFIX="@:("
-SPACESHIP_HOST_SUFFIX=") "
+SPACESHIP_HOST_PREFIX="@"
+SPACESHIP_HOST_SUFFIX=" "
 SPACESHIP_HOST_COLOR="green"
 
 # Directory
