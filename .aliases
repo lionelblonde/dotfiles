@@ -1,3 +1,8 @@
+# Prefered version of uname
+# Print system information
+# -o prints the operating system
+# -r prints the kernel release
+alias distro='uname -sr'
 # Prefered version of ls
 alias ll='ls -FGlAhp'
 # Prefered version of ln
@@ -10,7 +15,7 @@ alias ...='../..'
 # Replace vim by neovim
 alias vim='nvim'
 
-# Aliases for Tmux
+# Tmux
 alias tmux="tmux -2"
 alias ta='tmux attach -t'
 alias tnew='tmux new -s'
@@ -29,5 +34,6 @@ alias sz='source ~/.zshrc'
 # Alias to manage dotfiles via bare git repository
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
-# Alias to shorten the verbose ssh call with identity key
+# Shorten the verbose baobab-related commands containing the identity key
 alias sshbaobab='ssh -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
+alias rsyncbaobab='rsync -v -e "ssh -i ~/.ssh/baobab_key_ecdsa" --progress'
