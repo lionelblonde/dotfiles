@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'dracula/vim'
-Plug 'vim-airline/vim-airline'
+Plug 'colepeters/spacemacs-theme.vim'
 Plug 'scrooloose/nerdcommenter'
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -27,10 +27,10 @@ call plug#end()
 
 " Put the non-Plugin stuff after this line
 
+set termguicolors
+
 " Set the maximum length of a line
 set textwidth=100
-" Enable syntax highlighting
-" syntax on
 
 " Leader mapping
 map <Space> <leader>
@@ -57,7 +57,9 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 
 " Define colorscheme provided as plugin
-colorscheme dracula
+" colorscheme dracula
+set background=dark
+colorscheme spacemacs-theme
 
 set laststatus=2 " to make airline appear all the time
 let g:airline_powerline_fonts=1
@@ -78,7 +80,7 @@ set numberwidth=3
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " Next line is commented since a cursor guide already in use in iTerm is ported in vim as well
-" set cursorline
+set cursorline
 
 " Nerdtree-related tweaks
 " Sets a keybind to toggle the Nerdtree view
