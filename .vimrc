@@ -8,8 +8,8 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'dracula/vim'
-Plug 'colepeters/spacemacs-theme.vim'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -49,20 +49,16 @@ set softtabstop=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-set wildmenu
-set wildmode=list:longest,full
-
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
     syntax on
 endif
 
 " Define colorscheme provided as plugin
-" colorscheme dracula
 set background=dark
-colorscheme spacemacs-theme
+colorscheme gruvbox
 
-set laststatus=2 " to make airline appear all the time
-let g:airline_powerline_fonts=1
+" Get airline to work at startup
+set laststatus=2 
 
 " To prevent myself from using the arrow keys
 map <up> <nop>
@@ -77,7 +73,8 @@ set relativenumber
 set number
 set numberwidth=3
 
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+" Number column highlight
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " Next line is commented since a cursor guide already in use in iTerm is ported in vim as well
 set cursorline
