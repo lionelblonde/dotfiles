@@ -114,10 +114,10 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Menlo";;"Source Code Pro for Powerline"
-                                :size 13
-                                 :weight normal
-                                 :width normal
-                                 :powerline-scale 1.2)
+                                :size 12
+                                :weight normal
+                                :width normal
+                                :powerline-scale 1.2)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
