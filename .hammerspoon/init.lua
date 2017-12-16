@@ -133,6 +133,7 @@ hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
 hyperfns["n"] = function() toggle_application("Calendar") end
 hyperfns["l"] = function() toggle_application("Firefox") end
+hyperfns["\\"] = function() toggle_application("Discord") end  -- backslash needs to be escaped
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
