@@ -54,41 +54,41 @@ end
 -- Define window layouts
 -- Format reminder:
 -- {"App name", "Window name", "Display Name", "unitrect", "framerect", "fullframerect"}
-local single_monitor_layout = {
-  {"Emacs", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Code", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Dash", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"iTunes", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Spotify", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Mail", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Skype", nil, internal_display, hs.layout.right30, nil, nil},
-  {"Finder", nil, internal_display, hs.layout.right50, nil, nil},
-  {"iTerm2", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Messages", nil, internal_display, hs.geometry.unitrect(1/2, 1/2, 1/2, 1/2), nil, nil},
-  {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
-  {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Sublime Text", nil, internal_display, hs.layout.maximized, nil, nil}
-}
+-- local single_monitor_layout = {
+--   {"Emacs", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Code", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Dash", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"iTunes", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Spotify", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Mail", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Skype", nil, internal_display, hs.layout.right30, nil, nil},
+--   {"Finder", nil, internal_display, hs.layout.right50, nil, nil},
+--   {"iTerm2", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Messages", nil, internal_display, hs.geometry.unitrect(1/2, 1/2, 1/2, 1/2), nil, nil},
+--   {"WhatsApp", nil, internal_display, hs.geometry.unitrect(0, 1/2, 1/2, 1/2), nil, nil},
+--   {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil},
+--   {"Sublime Text", nil, internal_display, hs.layout.maximized, nil, nil}
+-- }
 
-local dual_monitor_layout = {
-  {"Emacs", nil, right_screen, hs.geometry.unitrect(0, 0, 1, 65/100), nil, nil},
-  {"Code", nil, right_screen, hs.layout.maximized, nil, nil},
-  {"Dash", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"iTunes", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"Google Chrome", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"Spotify", nil, left_screen, hs.geometry.unitrect(0, 1/4, 1, 3/4), nil, nil},
-  {"Mail", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"Skype", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
-  {"Finder", nil, right_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
-  {"iTerm2", nil, right_screen, hs.geometry.unitrect(0, 65/100, 1, 35/100), nil, nil},
-  {"Messages", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
-  {"WhatsApp", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
-  {"Skim", nil, left_screen, hs.layout.maximized, nil, nil},
-  {"Calendar", nil, left_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
-  {"Sublime Text", nil, left_screen, hs.layout.maximized, nil, nil}
-}
+-- local dual_monitor_layout = {
+--   {"Emacs", nil, right_screen, hs.geometry.unitrect(0, 0, 1, 65/100), nil, nil},
+--   {"Code", nil, right_screen, hs.layout.maximized, nil, nil},
+--   {"Dash", nil, left_screen, hs.layout.maximized, nil, nil},
+--   {"iTunes", nil, left_screen, hs.layout.maximized, nil, nil},
+--   {"Google Chrome", nil, left_screen, hs.layout.maximized, nil, nil},
+--   {"Spotify", nil, left_screen, hs.geometry.unitrect(0, 1/4, 1, 3/4), nil, nil},
+--   {"Mail", nil, left_screen, hs.layout.maximized, nil, nil},
+--   {"Skype", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+--   {"Finder", nil, right_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
+--   {"iTerm2", nil, right_screen, hs.geometry.unitrect(0, 65/100, 1, 35/100), nil, nil},
+--   {"Messages", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+--   {"WhatsApp", nil, left_screen, hs.geometry.unitrect(0, 2/3, 1, 1/3), nil, nil},
+--   {"Skim", nil, left_screen, hs.layout.maximized, nil, nil},
+--   {"Calendar", nil, left_screen, hs.geometry.unitrect(0, 1/2, 1, 1/2), nil, nil},
+--   {"Sublime Text", nil, left_screen, hs.layout.maximized, nil, nil}
+-- }
 
 -- And now for hotkeys relating to Hyper.
 -- First, let's capture all of the functions, then we can just quickly iterate and bind them
@@ -120,14 +120,14 @@ hyperfns["]"] = function() hs.window.focusedWindow():moveToUnit(hs.layout.right5
 hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
-hyperfns["y"] = function() toggle_application("iTunes") end
+hyperfns["y"] = function() toggle_application("Activity Monitor") end
 hyperfns["u"] = function() toggle_application("Finder") end
 hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Google Chrome") end
-hyperfns["m"] = function() toggle_application("Messages")end
+hyperfns["m"] = function() toggle_application("Sublime Text")end
 hyperfns["'"] = function() toggle_application("Skype") end
 hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
