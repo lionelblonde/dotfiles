@@ -27,6 +27,7 @@ alias ea='vim ~/.aliases'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+alias eb='vim ~/.bash_profile'
 
 # Convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
