@@ -37,4 +37,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
 # Shorten the verbose baobab-related commands containing the identity key
 alias sshbaobab='ssh -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
-alias rsyncbaobab='rsync -v -e "ssh -i ~/.ssh/baobab_key_ecdsa" --progress'
+alias rsyncbaobab='rsync -avP -e "ssh -i ~/.ssh/baobab_key_ecdsa"'
