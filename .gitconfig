@@ -5,7 +5,7 @@
     editor = vim
 [user]
 	name = lionelblonde
-	email = lionel.blonde@gmail.com
+	email = lionel.blonde@protonmail.ch
 [alias]
     # usual commands enhancements
 	st = status -sb
