@@ -131,7 +131,8 @@ hyperfns["m"] = function() toggle_application("Sublime Text")end
 hyperfns["'"] = function() toggle_application("Skype") end
 hyperfns["k"] = function() toggle_application("Emacs") end
 hyperfns[";"] = function() toggle_application("Skim") end
-hyperfns["n"] = function() toggle_application("Calendar") end
+-- hyperfns["n"] = function() toggle_application("Calendar") end
+hyperfns["n"] = function() toggle_application("Fantastical") end
 hyperfns["l"] = function() toggle_application("Firefox") end
 hyperfns["\\"] = function() toggle_application("Discord") end  -- backslash needs to be escaped
 
@@ -142,3 +143,4 @@ end
 
 -- Finally, show a notification that we finished loading the config successfully
 hs.notify.new({title = 'Hammerspoon', informativeText = 'Config loaded'}):send()
+
