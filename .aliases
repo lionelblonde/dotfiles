@@ -1,6 +1,6 @@
 # Prefered version of uname
 # Print system information
-# -o prints the operating system
+# -s prints the kernel name
 # -r prints the kernel release
 alias distro='uname -sr'
 # Prefered version of ls
