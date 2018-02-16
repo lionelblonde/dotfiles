@@ -48,4 +48,4 @@ alias rsyncbaobab='rsync -avP -e "ssh -i ~/.ssh/baobab_key_ecdsa"'
 # Shorten the verbose gengar-related commands containing the identity key
 alias sshgengar='ssh -i ~/.ssh/gengar_key_ecdsa lionel@gengar'
 alias rsyncgengar='rsync -avP -e "ssh -i ~/.ssh/gengar_key_ecdsa"'
-alias tunnelgengar='ssh -L 8888:localhost:8888 lionel@gengar'
+alias tunnelgengar='ssh -i ~/.ssh/gengar_key_ecdsa -L 8888:localhost:8888 lionel@gengar'
