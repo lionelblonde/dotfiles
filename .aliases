@@ -3,6 +3,8 @@
 # -s prints the kernel name
 # -r prints the kernel release
 alias distro='uname -sr'
+# Print the num of logical cores
+alias nproc='sysctl -n hw.ncpu'
 # Prefered version of ls
 alias ll='ls -FGlAhp'
 # Prefered version of ln
@@ -11,6 +13,9 @@ alias ln='ln -v'
 alias mkdir='mkdir -p'
 # Navigate up the directories
 alias ...='../..'
+
+# Change to most recent directory
+alias cdr='cd ./*(/om[1])'
 
 # Replace vim by neovim
 alias vim='nvim'
@@ -42,10 +47,18 @@ alias sz='source ~/.zshrc'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
 # Shorten the verbose baobab-related commands containing the identity key
-alias sshbaobab='ssh -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
+alias sshbaobab='ssh -v -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
 alias rsyncbaobab='rsync -avP -e "ssh -i ~/.ssh/baobab_key_ecdsa"'
 
 # Shorten the verbose gengar-related commands containing the identity key
-alias sshgengar='ssh -i ~/.ssh/gengar_key_ecdsa lionel@gengar'
+# gengar
+alias sshgengar='ssh -v -i ~/.ssh/gengar_key_ecdsa lionel@gengar'
+alias sshxgengar='ssh -vX -i ~/.ssh/gengar_key_ecdsa lionel@gengar'
 alias rsyncgengar='rsync -avP -e "ssh -i ~/.ssh/gengar_key_ecdsa"'
-alias tunnelgengar='ssh -i ~/.ssh/gengar_key_ecdsa -L 8888:localhost:8888 lionel@gengar'
+alias tunnelgengar='ssh -v -i ~/.ssh/gengar_key_ecdsa -L 8888:localhost:8888 lionel@gengar'
+# gengar0
+alias sshgengar0='ssh -v -i ~/.ssh/gengar0_key_ecdsa lionel@gengar0'
+alias sshxgengar0='ssh -vX -i ~/.ssh/gengar0_key_ecdsa lionel@gengar0'
+alias rsyncgengar0='rsync -avP -e "ssh -i ~/.ssh/gengar0_key_ecdsa"'
+alias tunnelgengar0='ssh -v -i ~/.ssh/gengar0_key_ecdsa -L 8888:localhost:8888 lionel@gengar0'
+
