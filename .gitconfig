@@ -6,7 +6,7 @@
 	excludesfile = /Users/lionelblonde/.gitignore_global
 [user]
 	name = lionelblonde
-	email = lionel.blonde@protonmail.ch
+	email = lionel.blonde@gmail.com
 [alias]
     # usual commands enhancements
 	st = status -sb
