@@ -120,7 +120,7 @@ hyperfns["]"] = function() hs.window.focusedWindow():moveToUnit(hs.layout.right5
 hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
-hyperfns["y"] = function() toggle_application("Activity Monitor") end
+hyperfns["y"] = function() toggle_application("Texpad") end
 hyperfns["u"] = function() toggle_application("Finder") end
 hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
@@ -129,9 +129,8 @@ hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Google Chrome") end
 hyperfns["m"] = function() toggle_application("Sublime Text")end
 hyperfns["'"] = function() toggle_application("Skype") end
-hyperfns["k"] = function() toggle_application("Emacs") end
+hyperfns["k"] = function() toggle_application("Sourcetree") end
 hyperfns[";"] = function() toggle_application("Skim") end
--- hyperfns["n"] = function() toggle_application("Calendar") end
 hyperfns["n"] = function() toggle_application("Fantastical") end
 hyperfns["l"] = function() toggle_application("Firefox") end
 hyperfns["\\"] = function() toggle_application("Discord") end  -- backslash needs to be escaped
