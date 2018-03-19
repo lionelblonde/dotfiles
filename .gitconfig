@@ -28,7 +28,6 @@
     lsv = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(blue)(%C(reset)%an%C(blue))%C(reset)' --numstat
     # list out the aliases
     la = "!git config -l | grep alias | cut -c 7-"
-
 [pager]
     ls = false
 [difftool "sourcetree"]
@@ -39,3 +38,8 @@
 	trustExitCode = true
 [commit]
 	template = /Users/lionelblonde/.stCommitMsg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
