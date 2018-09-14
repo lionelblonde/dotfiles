@@ -50,6 +50,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 alias sshbaobab='ssh -v -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
 alias rsyncbaobab='rsync -avP -e "ssh -i ~/.ssh/baobab_key_ecdsa"'
 
+# Shorten the verbose ela-related commands containing the identity key
+alias sshela='ssh -v -i ~/.ssh/ela_key_ecdsa lblonde@ela.cscs.ch'
+alias rsyncela='rsync -avP -e "ssh -i ~/.ssh/ela_key_ecdsa"'
+
 # Shorten the verbose gengar-related commands containing the identity key
 # gengar
 alias sshgengar='ssh -v -i ~/.ssh/gengar_key_ecdsa lionel@gengar'
