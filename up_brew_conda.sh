@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Formatting
+# Define icons, colors and artifacts
 beer_icon=🍺
 python_icon=🐍
 green='\033[01;32m'
@@ -19,8 +19,8 @@ brew update
 # Update conda
 echo $line_sep
 echo -e "$python_icon Updating ${green}conda${reset}..."
-conda install conda
+conda update conda
 echo $line_sep
 echo -e "$python_icon Updating packages of base/root environment..."
-conda install anaconda
+conda update anaconda
 echo $line_sep
