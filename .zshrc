@@ -101,6 +101,9 @@ export EDITOR="$VISUAL"
 # Path to anaconda: enables the use of "conda" from anywhere
 export PATH="/Users/lionelblonde/anaconda/bin:$PATH"
 
+# Path to MuJoCo bins
+export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro150/bin“
+
 # Spaceship zsh theme variables
 # Order of entities in the prompt
 SPACESHIP_PROMPT_ORDER=(

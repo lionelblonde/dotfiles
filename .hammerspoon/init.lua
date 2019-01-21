@@ -73,22 +73,15 @@ quit_modal:bind('', 'escape', function() quit_modal:exit() end)
 -- Format reminder:
 -- {"App name", "Window name", "Display Name", "unitrect", "framerect", "fullframerect"}
 local laptop_layout = {
-  {"ForkLift", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Finder", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Dash", nil, internal_display, hs.layout.left75, nil, nil},
   {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Spotify", nil, internal_display, hs.layout.right70, nil, nil},
   {"Mail", nil, internal_display, hs.layout.right70, nil, nil},
-  {"ChatMate for Facebook", nil, internal_display, hs.layout.left50, nil, nil},
-  {"ChatMate for WhatsApp", nil, internal_display, hs.layout.right50, nil, nil},
-  {"Telegram", nil, internal_display, hs.layout.left50, nil, nil},
-  {"Slack", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Discord", nil, internal_display, hs.layout.left70, nil, nil},
-  {"iTerm2", nil, internal_display, hs.layout.right75, nil, nil},
   {"PDF Expert", nil, internal_display, hs.layout.left75, nil, nil},
-  {"Calendar", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Fork", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Sublime Text", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Texpad", nil, internal_display, hs.layout.maximized, nil, nil}
+  {"Sublime Merge", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Sketch", nil, internal_display, hs.layout.maximized, nil, nil}
 }
 
 -- And now for hotkeys relating to Hyper.
@@ -117,20 +110,20 @@ hyperfns["]"] = function() hs.window.focusedWindow():moveToUnit(hs.layout.right5
 hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
-hyperfns["y"] = function() toggle_application("Texpad") end
-hyperfns["u"] = function() toggle_application("ForkLift") end
+hyperfns["y"] = function() toggle_application("Sketch") end
+hyperfns["u"] = function() toggle_application("Finder") end
 hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Google Chrome") end
 hyperfns["m"] = function() toggle_application("Sublime Text")end
-hyperfns[";"] = function() toggle_application("ChatMate for WhatsApp") end
+hyperfns[";"] = function() toggle_application("Cyberduck") end
 hyperfns["'"] = function() toggle_application("Telegram") end
 hyperfns["\\"] = function() toggle_application("Slack") end  -- backslash needs to be escaped
-hyperfns["k"] = function() toggle_application("Fork") end
-hyperfns["n"] = function() toggle_application("Calendar") end
-hyperfns["l"] = function() toggle_application("PDF Expert") end
+hyperfns["k"] = function() toggle_application("Sublime Merge") end
+hyperfns["n"] = function() toggle_application("PDF Expert") end
+hyperfns["l"] = function() toggle_application("Skim") end
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
