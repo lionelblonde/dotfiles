@@ -76,6 +76,7 @@ local laptop_layout = {
   {"Finder", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Dash", nil, internal_display, hs.layout.left75, nil, nil},
   {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Safari", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Mail", nil, internal_display, hs.layout.right70, nil, nil},
   {"PDF Expert", nil, internal_display, hs.layout.left75, nil, nil},
   {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
@@ -116,13 +117,13 @@ hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
-hyperfns["j"] = function() toggle_application("Google Chrome") end
+hyperfns["j"] = function() toggle_application("Safari") end
 hyperfns["m"] = function() toggle_application("Sublime Text")end
 hyperfns[";"] = function() toggle_application("Cyberduck") end
 hyperfns["'"] = function() toggle_application("Telegram") end
 hyperfns["\\"] = function() toggle_application("Slack") end  -- backslash needs to be escaped
 hyperfns["k"] = function() toggle_application("Sublime Merge") end
-hyperfns["n"] = function() toggle_application("PDF Expert") end
+hyperfns["n"] = function() toggle_application("Google Chrome") end
 hyperfns["l"] = function() toggle_application("Skim") end
 
 -- Bind all the hotkeys and functions together

@@ -99,7 +99,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Path to anaconda: enables the use of "conda" from anywhere
-export PATH="/Users/lionelblonde/anaconda/bin:$PATH"
+# export PATH="/Users/lionelblonde/anaconda/bin:$PATH"  # commented out by conda initialize
 
 # Path to MuJoCo bins
 export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro150/bin“
@@ -254,3 +254,19 @@ SPACESHIP_DOCKER_PREFIX=""
 SPACESHIP_DOCKER_SUFFIX=" "
 SPACESHIP_DOCKER_SYMBOL="🐳 "
 SPACESHIP_DOCKER_COLOR="cyan"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/lionelblonde/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/lionelblonde/anaconda/etc/profile.d/conda.sh" ]; then
+        . "/Users/lionelblonde/anaconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/lionelblonde/anaconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
