@@ -5,7 +5,7 @@
     editor = vim
 	excludesfile = /Users/lionelblonde/.gitignore_global
 [user]
-	name = Lionel
+	name = lionelblonde
 	email = lionel.blonde@gmail.com
 [alias]
     # usual commands enhancements
