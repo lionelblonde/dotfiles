@@ -27,6 +27,8 @@ brew install unrar
 brew install trash
 brew install reattach-to-user-namespace
 brew install ruby
+brew install lua
+brew install luarocks
 
 # Install macOS applications with brew cask
 brew cask install istat-menus
