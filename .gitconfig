@@ -3,7 +3,6 @@
 [core]
     pager = less -x4
     editor = vim
-	excludesfile = /Users/lionelblonde/.gitignore_global
 [user]
 	name = lionelblonde
 	email = lionel.blonde@gmail.com
