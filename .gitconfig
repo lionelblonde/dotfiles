@@ -14,7 +14,7 @@
     cp = cherry-pick
     cl = clone
     co = checkout
-    br = branch 
+    br = branch
     diff = diff --word-diff
     dc = diff --cached
     # logs for a specific file ('fl' stands for 'file log')
@@ -30,8 +30,6 @@
     la = "!git config -l | grep alias | cut -c 7-"
 [pager]
     ls = false
-[commit]
-	template = /Users/lionelblonde/.stCommitMsg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

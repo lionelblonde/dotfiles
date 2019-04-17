@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/lionelblonde/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -24,7 +24,7 @@ ZSH_THEME="spaceship"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -53,35 +53,7 @@ plugins=(fasd zsh-syntax-highlighting) #zsh-syntax-highlighting has to be the la
 
 # User configuration
 
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Line added according to the fasd installation instructions
 eval "$(fasd --init auto)"
@@ -90,7 +62,7 @@ eval "$(fasd --init auto)"
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # Locale
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export TERM=xterm-256color
@@ -98,11 +70,8 @@ export TERM=xterm-256color
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# Path to anaconda: enables the use of "conda" from anywhere
-# export PATH="/Users/lionelblonde/anaconda/bin:$PATH"  # commented out by conda initialize
-
 # Path to MuJoCo bins
-export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro150/bin“
+export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro200_macos/bin“
 
 # Spaceship zsh theme variables
 # Order of entities in the prompt
@@ -141,7 +110,7 @@ SPACESHIP_PROMPT_DEFAULT_PREFIX=""
 SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
 
 # Char
-SPACESHIP_CHAR_SYMBOL="MBP ➜"
+SPACESHIP_CHAR_SYMBOL="MacbookPro"
 SPACESHIP_CHAR_PREFIX=""
 SPACESHIP_CHAR_SUFFIX=" "
 
@@ -165,6 +134,7 @@ SPACESHIP_USER_COLOR_ROOT="red"
 
 # Host
 SPACESHIP_HOST_SHOW=true
+SPACESHIP_HOST_SHOW_FULL=true
 SPACESHIP_HOST_PREFIX="@"
 SPACESHIP_HOST_SUFFIX=" "
 SPACESHIP_HOST_COLOR="cyan"
@@ -175,6 +145,7 @@ SPACESHIP_DIR_SHOW=true
 SPACESHIP_DIR_PREFIX=""
 SPACESHIP_DIR_SUFFIX=" "
 SPACESHIP_DIR_TRUNC=0
+SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_COLOR="blue"
 
 # Git
@@ -248,13 +219,6 @@ SPACESHIP_JULIA_SHOW=false
 SPACESHIP_PYENV_SHOW=false
 SPACESHIP_VI_MODE_SHOW=false
 
-# Docker version and container name
-SPACESHIP_DOCKER_SHOW=false
-SPACESHIP_DOCKER_PREFIX=""
-SPACESHIP_DOCKER_SUFFIX=" "
-SPACESHIP_DOCKER_SYMBOL="🐳 "
-SPACESHIP_DOCKER_COLOR="cyan"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/lionelblonde/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -269,4 +233,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-

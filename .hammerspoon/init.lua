@@ -81,7 +81,7 @@ local laptop_layout = {
   {"PDF Expert", nil, internal_display, hs.layout.left75, nil, nil},
   {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Sublime Text", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Sublime Merge", nil, internal_display, hs.layout.maximized, nil, nil},
+  {"Notes", nil, internal_display, hs.layout.maximized, nil, nil},
   {"Sketch", nil, internal_display, hs.layout.maximized, nil, nil}
 }
 
@@ -113,7 +113,7 @@ hyperfns["="] = toggle_window_maximized
 -- Hotkeys to toggle focus on applications
 hyperfns["y"] = function() toggle_application("Sketch") end
 hyperfns["u"] = function() toggle_application("Finder") end
-hyperfns["i"] = function() toggle_application("iTerm2") end
+hyperfns["i"] = function() toggle_application("Terminal") end
 hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
@@ -122,7 +122,7 @@ hyperfns["m"] = function() toggle_application("Sublime Text")end
 hyperfns[";"] = function() toggle_application("Cyberduck") end
 hyperfns["'"] = function() toggle_application("Telegram") end
 hyperfns["\\"] = function() toggle_application("Slack") end  -- backslash needs to be escaped
-hyperfns["k"] = function() toggle_application("Sublime Merge") end
+hyperfns["k"] = function() toggle_application("Notes") end
 hyperfns["n"] = function() toggle_application("Google Chrome") end
 hyperfns["l"] = function() toggle_application("Skim") end
 

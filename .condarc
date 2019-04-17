@@ -1,0 +1,4 @@
+changeps1: false
+channels:
+  - defaults
+ssl_verify: true

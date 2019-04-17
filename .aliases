@@ -43,9 +43,6 @@ alias eb='vim ~/.bash_profile'
 # Convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
 
-# Alias to manage dotfiles via bare git repository
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
-
 # Shorten the verbose baobab-related commands containing the identity key
 alias sshbaobab='ssh -v -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
 alias rsyncbaobab='rsync -avP -e "ssh -i ~/.ssh/baobab_key_ecdsa"'
@@ -54,15 +51,7 @@ alias rsyncbaobab='rsync -avP -e "ssh -i ~/.ssh/baobab_key_ecdsa"'
 alias sshela='ssh -v -i ~/.ssh/ela_key_ecdsa lblonde@ela.cscs.ch'
 alias rsyncela='rsync -avP -e "ssh -i ~/.ssh/ela_key_ecdsa"'
 
-# Shorten the verbose gengar-related commands containing the identity key
-# gengar
-alias sshgengar='ssh -v -i ~/.ssh/gengar_key_ecdsa lionel@gengar'
-alias sshxgengar='ssh -vX -i ~/.ssh/gengar_key_ecdsa lionel@gengar'
-alias rsyncgengar='rsync -avP -e "ssh -i ~/.ssh/gengar_key_ecdsa"'
-alias tunnelgengar='ssh -v -i ~/.ssh/gengar_key_ecdsa -L 8888:localhost:8888 lionel@gengar'
-# gengar0
-alias sshgengar0='ssh -v -i ~/.ssh/gengar0_key_ecdsa lionel@gengar0'
-alias sshxgengar0='ssh -vX -i ~/.ssh/gengar0_key_ecdsa lionel@gengar0'
-alias rsyncgengar0='rsync -avP -e "ssh -i ~/.ssh/gengar0_key_ecdsa"'
-alias tunnelgengar0='ssh -v -i ~/.ssh/gengar0_key_ecdsa -L 8888:localhost:8888 lionel@gengar0'
+# Shorten the verbose ubuntubox-related commands containing the identity key
+alias sshubuntubox='ssh -v -i ~/.ssh/ubuntubox_key_ecdsa lionel@ubuntubox'
+alias rsyncubuntubox='rsync -avP -e "ssh -i ~/.ssh/ubuntubox_key_ecdsa"'
 
