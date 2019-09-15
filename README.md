@@ -138,11 +138,17 @@ pip install --upgrade pyvips scikit-image
 pip install --upgrade torch torchvision visdom
 conda install -y -c conda-forge pillow opencv pyglet pyopengl mpi4py cython
 
+brew install gcc@8
+cd && mkdir -p .mujoco && cd .mujoco
+curl -O https://www.roboti.us/download/mujoco200_macos.zip
+unzip mujoco200_macos.zip
+mv mujoco200_macos mujoco200
+
+cd ~/Code
 git clone https://github.com/openai/mujoco-py.git
 pip install -e mujoco-py
 git clone https://github.com/openai/gym.git
 pip install -e 'gym[all]'
-
 ```
 
 ## Tmux plugin manager
