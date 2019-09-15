@@ -9,8 +9,8 @@ alias nproc='sysctl -n hw.ncpu'
 alias ll='ls -FGlAhp'
 # Prefered version of ln
 alias ln='ln -v'
-# Prefered version of mkdir
-alias mkdir='mkdir -p'
+# Prefered version of rsync
+alias rsync='rsync -avP'
 # Navigate up the directories
 alias ...='../..'
 
@@ -42,15 +42,3 @@ alias eb='vim ~/.bash_profile'
 
 # Convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
-
-# Shorten the verbose baobab-related commands containing the identity key
-alias sshbaobab='ssh -v -i ~/.ssh/baobab_key_ecdsa blonde0@baobab.unige.ch'
-alias rsyncbaobab='rsync -avP -e "ssh -i ~/.ssh/baobab_key_ecdsa"'
-
-# Shorten the verbose ela-related commands containing the identity key
-alias sshela='ssh -v -i ~/.ssh/ela_key_ecdsa lblonde@ela.cscs.ch'
-alias rsyncela='rsync -avP -e "ssh -i ~/.ssh/ela_key_ecdsa"'
-
-# Shorten the verbose ubuntubox-related commands containing the identity key
-alias sshubuntubox='ssh -v -i ~/.ssh/ubuntubox_key_ecdsa lionel@ubuntubox'
-alias rsyncubuntubox='rsync -avP -e "ssh -i ~/.ssh/ubuntubox_key_ecdsa"'

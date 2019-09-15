@@ -69,22 +69,6 @@ end
 quit_modal:bind('cmd', 'q', do_quit)
 quit_modal:bind('', 'escape', function() quit_modal:exit() end)
 
--- Define window layouts
--- Format reminder:
--- {"App name", "Window name", "Display Name", "unitrect", "framerect", "fullframerect"}
-local laptop_layout = {
-  {"Finder", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Dash", nil, internal_display, hs.layout.left75, nil, nil},
-  {"Google Chrome", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Safari", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Mail", nil, internal_display, hs.layout.right70, nil, nil},
-  {"PDF Expert", nil, internal_display, hs.layout.left75, nil, nil},
-  {"Skim", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Sublime Text", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Notes", nil, internal_display, hs.layout.maximized, nil, nil},
-  {"Sketch", nil, internal_display, hs.layout.maximized, nil, nil}
-}
-
 -- And now for hotkeys relating to Hyper.
 -- First, let's capture all of the functions, then we can just quickly iterate and bind them
 hyperfns = {}
@@ -97,9 +81,6 @@ hyperfns["c"] = function() hs.caffeinate.lockScreen() end
 
 -- Hotkey to show grid
 hyperfns["g"] = hs.grid.show
-
--- Hotkeys to trigger defined layouts
-hyperfns["1"] = function() hs.layout.apply(laptop_layout) end
 
 -- Hotkeys to move windows accross screens
 hyperfns[","] = function() hs.window.focusedWindow():moveOneScreenWest() end
