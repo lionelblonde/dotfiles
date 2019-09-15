@@ -20,7 +20,7 @@ hs.grid.setGrid("1x4", "1200x1920")
 hs.grid.setGrid("3x1", "3440x1440")
 
 -- Aliases
-local hyper = {"ctrl", "shift"}
+local hyper = {"control", "shift"}
 
 -- Instant window resizing, none of this animation shit
 hs.window.animationDuration = 0
@@ -119,7 +119,7 @@ hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
 hyperfns["j"] = function() toggle_application("Safari") end
 hyperfns["m"] = function() toggle_application("Sublime Text")end
-hyperfns[";"] = function() toggle_application("Cyberduck") end
+hyperfns[";"] = function() toggle_application("Sublime Merge") end
 hyperfns["'"] = function() toggle_application("Telegram") end
 hyperfns["\\"] = function() toggle_application("Slack") end  -- backslash needs to be escaped
 hyperfns["k"] = function() toggle_application("Notes") end

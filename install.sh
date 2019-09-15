@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-# Create symlinks
-./symlink.sh
-echo "symlinks successfully created"
-
 # Run brew installer
 ./brew.sh
 echo "brew utils and apps successfully installed"
+
+# Create symlinks
+./symlink.sh
+echo "symlinks successfully created"
 
 # Run sublime installer
 ./sublime.sh

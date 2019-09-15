@@ -54,4 +54,3 @@ alias rsyncela='rsync -avP -e "ssh -i ~/.ssh/ela_key_ecdsa"'
 # Shorten the verbose ubuntubox-related commands containing the identity key
 alias sshubuntubox='ssh -v -i ~/.ssh/ubuntubox_key_ecdsa lionel@ubuntubox'
 alias rsyncubuntubox='rsync -avP -e "ssh -i ~/.ssh/ubuntubox_key_ecdsa"'
-

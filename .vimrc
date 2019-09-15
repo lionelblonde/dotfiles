@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
@@ -55,7 +54,6 @@ endif
 
 " Define colorscheme provided as plugin
 set background=dark
-colorscheme gruvbox
 
 " Get airline to work at startup
 set laststatus=2 
