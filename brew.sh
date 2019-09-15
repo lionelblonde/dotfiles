@@ -26,6 +26,7 @@ brew install lua
 brew install luarocks
 
 # Install macOS applications with brew cask
+brew cask install iterm2
 brew cask install istat-menus
 brew cask install intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
 brew cask install muzzle
@@ -51,6 +52,8 @@ brew cask install qlmarkdown
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlimagesize
+brew cask install teracopy
+brew cask install openinterminal
 
 # Install fonts
 brew tap caskroom/fonts

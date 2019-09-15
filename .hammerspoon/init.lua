@@ -113,7 +113,7 @@ hyperfns["="] = toggle_window_maximized
 -- Hotkeys to toggle focus on applications
 hyperfns["y"] = function() toggle_application("Sketch") end
 hyperfns["u"] = function() toggle_application("Finder") end
-hyperfns["i"] = function() toggle_application("Terminal") end
+hyperfns["i"] = function() toggle_application("iTerm2") end
 hyperfns["o"] = function() toggle_application("Spotify") end
 hyperfns["p"] = function() toggle_application("Dash") end
 hyperfns["h"] = function() toggle_application("Mail") end
