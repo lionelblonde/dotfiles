@@ -52,6 +52,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
     6. MarkdownEditing
     7. LaTeXTools
     8. Conda
+    9. Color Highlight
 3. Populate the general settings (`CMD + ,`) with
 ```
 {
