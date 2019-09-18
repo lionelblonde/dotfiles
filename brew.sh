@@ -64,6 +64,7 @@ brew cask install iina
 brew cask install zerotier-one
 brew cask install pdf-expert
 brew cask install daisydisk
+brew cask install bettertouchtool
 
 # Install fonts
 brew tap caskroom/fonts
