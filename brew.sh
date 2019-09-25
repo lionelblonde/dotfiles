@@ -65,6 +65,7 @@ brew cask install zerotier-one
 brew cask install pdf-expert
 brew cask install daisydisk
 brew cask install bettertouchtool
+brew cask install homebrew/cask-versions/firefox-beta
 
 # Install fonts
 brew tap caskroom/fonts
