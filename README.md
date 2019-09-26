@@ -166,4 +166,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     1. <kbd>shift</kbd> keys become <kbd>(</kbd> / <kbd>)</kbd> when used alone
     2. <kbd>capslock</kbd> sends <kbd>escape</kbd> when used alone
     and <kbd>control</kbd> when used with another key
+2. Add a *simple modification* **for the HHKB keyboard only** that maps
+    <kbd>left control</kbd> to <kbd>capslock</kbd> to be able to use the second
+    *Modern Space Cadet* setting when using an HHKB layout
 
