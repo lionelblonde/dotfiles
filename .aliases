@@ -29,9 +29,10 @@ alias sss='service ssh status'
 # Tmux
 alias tmux="tmux -2"
 alias ta='tmux attach -t'
-alias tnew='tmux new -s'
+alias tnew='tmux new -d -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
+alias tkillall='tmux kill-server'
 
 # Convenience aliases for editing configs
 alias ea='vim ~/.aliases'

@@ -1,36 +1,34 @@
-local application = require "hs.application"
-local fnutils = require "hs.fnutils"
 local grid = require "hs.grid"
-local hotkey = require "hs.hotkey"
 local window = require "hs.window"
-
--- Screens
-local internal_display = "Color LCD"
-local ultrawide_home = "Acer X34A"
-local ultrawide_office = "DELL U3417W"
-local screen1 = hs.screen.allScreens()[1]
-local screen2 = hs.screen.allScreens()[2]
+local alert = require "hs.alert"
+local timer = require "hs.timer"
+local application = require "hs.application"
+local appfinder = require "hs.appfinder"
+local hotkey = require "hs.hotkey"
+local layout = require "hs.layout"
+local caffeinate = require "hs.caffeinate"
+local notify = require "hs.notify"
 
 -- Set up the grid
-hs.grid.setMargins("1, 1")
-hs.grid.setGrid("2x1", "Color LCD")
-hs.grid.setGrid("1x4", "1080x1920")
-hs.grid.setGrid("1x4", "1050x1680")
-hs.grid.setGrid("1x4", "1200x1920")
-hs.grid.setGrid("3x1", "3440x1440")
+grid.setMargins("1, 1")
+grid.setGrid("2x1", "Color LCD")
+grid.setGrid("1x4", "1080x1920")
+grid.setGrid("1x4", "1050x1680")
+grid.setGrid("1x4", "1200x1920")
+grid.setGrid("3x1", "3440x1440")
 
 -- Aliases
 local hyper = {"control", "shift"}
 
 -- Instant window resizing, none of this animation shit
-hs.window.animationDuration = 0
+window.animationDuration = 0
 
 -- Toggle an application between being the frontmost app, and being hidden
-function toggle_application(_app)
-  local app = hs.appfinder.appFromName(_app)
+local function toggle_application(_app)
+  local app = appfinder.appFromName(_app)
   local mainwin = app:mainWindow()
   if mainwin then
-    if mainwin == hs.window.focusedWindow() then
+    if mainwin == window.focusedWindow() then
       mainwin:application():hide()
     else
       mainwin:application():activate(true)
@@ -42,8 +40,8 @@ end
 
 local frameCache = {} --reset the cache
 -- Toggle a window between its normal size, and being maximized
-function toggle_window_maximized()
-  local win = hs.window.focusedWindow()
+local function toggle_window_maximized()
+  local win = window.focusedWindow()
   if frameCache[win:id()] then
     win:setFrame(frameCache[win:id()])
     frameCache[win:id()] = nil
@@ -54,41 +52,41 @@ function toggle_window_maximized()
 end
 
 -- Press Command-q twice to quit an application
-local quit_modal = hs.hotkey.modal.new('cmd','q')
+local quit_modal = hotkey.modal.new('cmd','q')
 local waiting_time = 1.5
 
-function quit_modal:entered()
-    hs.alert.show("Press Command-Q again to quit", waiting_time)
-    hs.timer.doAfter(waiting_time, function() quit_modal:exit() end)
+function quit_modal:entered() -- luacheck: ignore
+    alert.show("Press Command-Q again to quit", waiting_time)
+    timer.doAfter(waiting_time, function() quit_modal:exit() end)
 end
 
-function do_quit()
-    hs.application.frontmostApplication():kill()
+local function do_quit()
+    application.frontmostApplication():kill()
 end
 
 quit_modal:bind('cmd', 'q', do_quit)
 quit_modal:bind('', 'escape', function() quit_modal:exit() end)
 
--- And now for hotkeys relating to Hyper.
--- First, let's capture all of the functions, then we can just quickly iterate and bind them
-hyperfns = {}
+--[[ And now for hotkeys relating to Hyper.
+First, let's capture all of the functions, then we can just quickly iterate and bind them]]
+local hyperfns = {}
 
 -- Hotkey to reload config
-hyperfns["x"] = function() hs.reload() end
+hyperfns["x"] = function() hs.reload() end  -- luacheck: ignore
 
 -- Hotkey to lock the screen
-hyperfns["c"] = function() hs.caffeinate.lockScreen() end
+hyperfns["c"] = function() caffeinate.lockScreen() end
 
 -- Hotkey to show grid
-hyperfns["g"] = hs.grid.show
+hyperfns["g"] = grid.show
 
 -- Hotkeys to move windows accross screens
-hyperfns[","] = function() hs.window.focusedWindow():moveOneScreenWest() end
-hyperfns["."] = function() hs.window.focusedWindow():moveOneScreenEast() end
+hyperfns[","] = function() window.focusedWindow():moveOneScreenWest() end
+hyperfns["."] = function() window.focusedWindow():moveOneScreenEast() end
 
 -- Hotkeys to resize the windows absolutely
-hyperfns["["] = function() hs.window.focusedWindow():moveToUnit(hs.layout.left50) end
-hyperfns["]"] = function() hs.window.focusedWindow():moveToUnit(hs.layout.right50) end
+hyperfns["["] = function() window.focusedWindow():moveToUnit(layout.left50) end
+hyperfns["]"] = function() window.focusedWindow():moveToUnit(layout.right50) end
 hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
@@ -109,8 +107,8 @@ hyperfns["l"] = function() toggle_application("Skim") end
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
-  hs.hotkey.bind(hyper, _hotkey, _fn)
+  hotkey.bind(hyper, _hotkey, _fn)
 end
 
 -- Finally, show a notification that we finished loading the config successfully
-hs.notify.new({title = 'Hammerspoon', informativeText = 'Config loaded'}):send()
+notify.new({title = 'Hammerspoon', informativeText = 'Config loaded'}):send()
