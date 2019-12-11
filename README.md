@@ -36,8 +36,10 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git \
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" \
     "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
-6. Install the [*zsh-syntax-highlighting*](https://github.com/zsh-users/zsh-syntax-highlighting) ZSH plugin.
-Install instructions [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
+6. Install the [*zsh-syntax-highlighting*](https://github.com/zsh-users/zsh-syntax-highlighting)
+ZSH plugin.
+Install instructions
+[here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
     ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -86,7 +88,7 @@ pip install --upgrade pytest pytest-instafail flake8 wrapt six tqdm pyyaml psuti
 pip install --upgrade numpy pandas scipy scikit-learn h5py matplotlib
 pip install --upgrade pyvips scikit-image
 pip install --upgrade torch torchvision
-conda install -y -c conda-forge pillow opencv pyglet pyopengl mpi4py cython
+conda install -y -c conda-forge pillow opencv pyglet pyopengl mpi4py cython patchelf
 # >>>> wandb
 conda install -y -c conda-forge watchdog
 pip install moviepy imageio
