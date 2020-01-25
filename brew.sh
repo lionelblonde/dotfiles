@@ -27,7 +27,8 @@ brew install open-mpi
 
 # Install macOS applications with brew cask
 brew cask install iterm2
-brew cask install istat-menus
+brew cask install itsycal
+brew cask install istat-menus  # disable date menu
 brew cask install intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
 brew cask install 1password
 brew cask install protonmail-bridge
@@ -59,7 +60,6 @@ brew cask install qlmarkdown
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlimagesize
-brew cask install openinterminal
 brew cask install iina
 brew cask install zerotier-one
 brew cask install pdf-expert
