@@ -56,13 +56,10 @@ brew cask install spotify
 brew cask install discord
 brew cask install handbrake
 brew cask install xquartz
-brew cask install qlmarkdown
-brew cask install qlcolorcode
 brew cask install qlstephen
-brew cask install qlimagesize
 brew cask install iina
 brew cask install zerotier-one
-brew cask install pdf-expert
+brew cask install keka
 brew cask install daisydisk
 brew cask install bettertouchtool
 brew cask install homebrew/cask-versions/firefox-beta
