@@ -6,7 +6,9 @@ alias distro='uname -sr'
 # Print the num of logical cores
 alias nproc='sysctl -n hw.ncpu'
 # Prefered version of ls
-alias ll='ls -FGlAhp'
+alias lll='ls -FGlAhp'
+# Prefered version of exa
+alias ll='exa -laFhHuUm --git --time-style=long-iso --group-directories-first'
 # Prefered version of ln
 alias ln='ln -v'
 # Prefered version of rsync

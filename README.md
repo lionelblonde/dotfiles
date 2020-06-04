@@ -1,4 +1,9 @@
-# Dotfiles and system setup scripts
+# Dotfiles and macOS system setup scripts
+
+## System Preferences
+
+- Go to *Accessibility -> Display* and tick the *Reduce transparency* box.
+- Go to *Dock -> Prefer tabs when opening documents* and select *Always*.
 
 ## Hidden settings
 
@@ -18,6 +23,11 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 ```
 3. Install the Homebrew packages
 `./brew.sh`
+
+## Mac App Store
+
+* Microsoft Word
+* Endel
 
 ## Zsh
 
