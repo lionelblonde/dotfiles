@@ -28,6 +28,7 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 
 * Microsoft Word
 * Endel
+* Notability
 
 ## Zsh
 
@@ -148,12 +149,13 @@ ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loc
     * SublimeLinter-flake8
     * SublimeLinter-luacheck
     * Neon Color Scheme
-    * A File Icon
+    * FileIcons Mono
     * NeoVintageous
     * MarkdownPreview
     * LaTeXTools
     * Color Highlight
     * TabNine
+    * Dotfiles Syntax Highlighting
 3. Populate the general settings (`CMD + ,`) with
 ```bash
 {

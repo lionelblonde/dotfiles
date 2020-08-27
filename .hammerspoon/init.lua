@@ -9,6 +9,9 @@ local layout = require "hs.layout"
 local caffeinate = require "hs.caffeinate"
 local notify = require "hs.notify"
 
+-- Speaker
+speaker = hs.speech.new()
+
 -- Set up the grid
 grid.setMargins("1, 1")
 grid.setGrid("2x1", "Color LCD")
@@ -25,30 +28,30 @@ window.animationDuration = 0
 
 -- Toggle an application between being the frontmost app, and being hidden
 local function toggle_application(_app)
-  local app = appfinder.appFromName(_app)
-  local mainwin = app:mainWindow()
-  if mainwin then
-    if mainwin == window.focusedWindow() then
-      mainwin:application():hide()
-    else
-      mainwin:application():activate(true)
-      mainwin:application():unhide()
-      mainwin:focus()
-    end
-  end
+   local app = appfinder.appFromName(_app)
+   local mainwin = app:mainWindow()
+   if mainwin then
+      if mainwin == window.focusedWindow() then
+         mainwin:application():hide()
+      else
+         mainwin:application():activate(true)
+         mainwin:application():unhide()
+         mainwin:focus()
+      end
+   end
 end
 
 local frameCache = {} --reset the cache
 -- Toggle a window between its normal size, and being maximized
 local function toggle_window_maximized()
-  local win = window.focusedWindow()
-  if frameCache[win:id()] then
-    win:setFrame(frameCache[win:id()])
-    frameCache[win:id()] = nil
-  else
-    frameCache[win:id()] = win:frame()
-    win:maximize()
-  end
+   local win = window.focusedWindow()
+   if frameCache[win:id()] then
+      win:setFrame(frameCache[win:id()])
+      frameCache[win:id()] = nil
+   else
+      frameCache[win:id()] = win:frame()
+      win:maximize()
+   end
 end
 
 -- Press Command-q twice to quit an application
@@ -56,16 +59,38 @@ local quit_modal = hotkey.modal.new('cmd','q')
 local waiting_time = 1.5
 
 function quit_modal:entered() -- luacheck: ignore
-    alert.show("Press Command-Q again to quit", waiting_time)
-    timer.doAfter(waiting_time, function() quit_modal:exit() end)
+   alert.show("Press Command-Q again to quit", waiting_time)
+   timer.doAfter(waiting_time, function() quit_modal:exit() end)
 end
 
 local function do_quit()
-    application.frontmostApplication():kill()
+   application.frontmostApplication():kill()
 end
 
 quit_modal:bind('cmd', 'q', do_quit)
 quit_modal:bind('', 'escape', function() quit_modal:exit() end)
+
+local function tell_me_current_spot_track()
+   local track = hs.spotify.getCurrentTrack()
+   local artist = hs.spotify.getCurrentArtist()
+   local album = hs.spotify.getCurrentAlbum()
+   local time = hs.spotify.getPosition()
+   local duration = hs.spotify.getDuration()
+
+   -- speaker:speak("track: " .. track .. ", from " .. artist)
+   -- alert.show("Spotify\n" .. track .. "\n" .. artist .. "\n" .. album,
+   --            {strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=1}),
+   --             strokeWidth = 16,
+   --             radius = 22,
+   --             textFont = "Proxima Nova Medium",
+   --             fadeInDuration = 0,
+   --             fadeOutDuration = 0.5},
+   --            2)
+   notify.new({title = "Spotify current track",
+               subTitle = track .. " (" .. math.floor(time / duration * 100) .. "%)",
+               informativeText = artist .. " | " .. album,
+               }):send()
+end
 
 --[[ And now for hotkeys relating to Hyper.
 First, let's capture all of the functions, then we can just quickly iterate and bind them]]
@@ -74,15 +99,11 @@ local hyperfns = {}
 -- Hotkey to reload config
 hyperfns["x"] = function() hs.reload() end  -- luacheck: ignore
 
--- Hotkey to lock the screen
-hyperfns["c"] = function() caffeinate.lockScreen() end
+-- Hotkey to display the track Spotify currently plays
+hyperfns["`"] = function() tell_me_current_spot_track() end
 
 -- Hotkey to show grid
 hyperfns["g"] = grid.show
-
--- Hotkeys to move windows accross screens
-hyperfns[","] = function() window.focusedWindow():moveOneScreenWest() end
-hyperfns["."] = function() window.focusedWindow():moveOneScreenEast() end
 
 -- Hotkeys to resize the windows absolutely
 hyperfns["["] = function() window.focusedWindow():moveToUnit(layout.left50) end
@@ -102,13 +123,72 @@ hyperfns[";"] = function() toggle_application("Sublime Merge") end
 hyperfns["'"] = function() toggle_application("Telegram") end
 hyperfns["\\"] = function() toggle_application("Slack") end  -- backslash needs to be escaped
 hyperfns["k"] = function() toggle_application("Notes") end
-hyperfns["n"] = function() toggle_application("Google Chrome") end
+hyperfns["n"] = function() toggle_application("Things") end
 hyperfns["l"] = function() toggle_application("Skim") end
+hyperfns[","] = function() toggle_application("Keynote") end
+hyperfns["/"] = function() toggle_application("System Preferences") end
+
+local hyperapps = {}
+hyperapps["y"] = "Sketch"
+hyperapps["u"] = "Finder"
+hyperapps["i"] = "iTerm2"
+hyperapps["o"] = "Spotify"
+hyperapps["p"] = "Dash"
+hyperapps["h"] = "Mail"
+hyperapps["j"] = "Brave Browser"
+hyperapps["m"] = "Sublime Text"
+hyperapps[";"] = "Sublime Merge"
+hyperapps["'"] = "Telegram"
+hyperapps["\\"] = "Slack"  -- backslash needs to be escaped
+hyperapps["k"] = "Notes"
+hyperapps["n"] = "Things"
+hyperapps["l"] = "Skim"
+hyperapps[","] = "Keynote"
+hyperapps["/"] = "Reminders"
+
+for k, v in pairs(hyperapps) do
+   hyperfns[k] = function() toggle_application(v) end
+end
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
   hotkey.bind(hyper, _hotkey, _fn)
 end
 
+-- Show launch application's keystroke
+local showAppKeystrokeAlertId = ""
+
+local function showAppKeystroke()
+   if showAppKeystrokeAlertId == "" then
+      -- Show application keystroke if alert id is empty.
+      local keystroke = ""
+      local keystrokeString = ""
+      for key, app in pairs(hyperapps) do
+         print(key, app)
+         keystrokeString = string.format(" %-10s%s", key, app:gsub(".app", ""))
+
+         if keystroke == "" then
+            keystroke = keystrokeString
+         else
+            keystroke = keystroke .. "\n" .. keystrokeString
+         end
+      end
+
+      showAppKeystrokeAlertId = hs.alert.show(
+         keystroke,
+         {textFont = "Source Code Pro",
+          textSize = 16,
+          radius = 0,
+          strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0})},
+         hs.screen.mainScreen(), 25)
+   else
+      -- Otherwise hide keystroke alert.
+      hs.alert.closeSpecific(showAppKeystrokeAlertId)
+      showAppKeystrokeAlertId = ""
+   end
+end
+hotkey.bind(hyper, ".", showAppKeystroke)
+
 -- Finally, show a notification that we finished loading the config successfully
 notify.new({title = 'Hammerspoon', informativeText = 'Config loaded'}):send()
+-- speaker:speak("config reloaded successfully")

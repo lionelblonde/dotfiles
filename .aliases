@@ -5,16 +5,34 @@
 alias distro='uname -sr'
 # Print the num of logical cores
 alias nproc='sysctl -n hw.ncpu'
+
 # Prefered version of ls
 alias lll='ls -FGlAhp'
 # Prefered version of exa
-alias ll='exa -laFhHuUm --git --time-style=long-iso --group-directories-first'
+alias ll='exa -laFH --header --git --color-scale --time-style=long-iso --group-directories-first --sort=Ext'
+# same as before, but only display the dotfiles
+alias l.='exa -la | egrep "^\."'
 # Prefered version of ln
 alias ln='ln -v'
 # Prefered version of rsync
 alias rsync='rsync -avP'
+# Prefered version of grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+# Prefered version of cp
+alias cp='cp -i'
+# Prefered version of df (report file system disk space usage)
+alias df='df -h'
+# Prefered version of du (estimate file space usage)
+alias du='du -h'
+alias du.='du -h .'
+alias du.1='du -h --max-depth=1 .'
+
 # Navigate up the directories
-alias ...='../..'
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
 
 # Change to most recent directory
 alias cdr='cd ./*(/om[1])'

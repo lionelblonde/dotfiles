@@ -1,14 +1,92 @@
 # Cheat Sheet
 
+- Things 3 (subset, from this [page](https://culturedcode.com/things/support/articles/2803569/#changing-the-keyboard-shortcut-for-quick-entry))
+    - Create new items
+        - <kbd>command</kbd> + <kbd>n</kbd> : create a new to-do
+        - <kbd>space</kbd> : create a new to-do below selection
+        - <kbd>command</kbd> + <kbd>v</kbd> : paste plain text to create new to-dos
+        - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>c</kbd> : create a checklist in an open to-do
+        - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>n</kbd> : create a new heading in a project
+        - <kbd>command</kbd> + <kbd>meta</kbd> + <kbd>c</kbd> : create a new project
+        - <kbd>control</kbd> + <kbd>space</kbd> : open Quick Entry
+        - <kbd>control</kbd> + <kbd>meta</kbd> + <kbd>space</kbd> : open Quick Entry with Autofill
+    - Edit items
+        - <kbd>return</kbd> : open a to-do or project
+        - <kbd>command</kbd> + <kbd>return</kbd> : save and close
+        - <kbd>escape</kbd> : save and close (careful, closes Quick Entry)
+        - <kbd>command</kbd> + <kbd>d</kbd> : duplicate a to-do or project
+        - <kbd>command</kbd> + <kbd>c</kbd> : copy a to-do or project
+        - <kbd>command</kbd> + <kbd>v</kbd> : paste a to-do or project
+        - <kbd>command</kbd> + <kbd>k</kbd> : complete selected items
+        - <kbd>command</kbd> + <kbd>meta</kbd> + <kbd>.</kbd> : cancel selected items
+        - <kbd>command</kbd> + <kbd>backspace</kbd> or <kbd>delete</kbd> : delete selected items
+        - <kbd>command</kbd> + <kbd>l</kbd> : move completed to Logbook
+    - Select items
+        - <kbd>up</kbd> : select item above
+        - <kbd>down</kbd> : select item below
+        - <kbd>shift</kbd> + <kbd>up</kbd> : extend selection upwards
+        - <kbd>shift</kbd> + <kbd>down</kbd> : extend selection downwards
+        - <kbd>shift</kbd> + <kbd>meta</kbd> + <kbd>up</kbd> : extend selection to the top
+        - <kbd>shift</kbd> + <kbd>meta</kbd> + <kbd>down</kbd> : extend selection to the bottom
+        - <kbd>command</kbd> + <kbd>a</kbd> : select everything
+    - Move items
+        - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>m</kbd> : move selection to another list
+        - <kbd>command</kbd> + <kbd>meta</kbd> + <kbd>v</kbd> : move copied to-dos and projects
+        - <kbd>command</kbd> + <kbd>up</kbd> : move selection up
+        - <kbd>command</kbd> + <kbd>down</kbd> : move selection down
+        - <kbd>command</kbd> + <kbd>meta</kbd> + <kbd>up</kbd> : move selection to top of list
+        - <kbd>command</kbd> + <kbd>meta</kbd> + <kbd>down</kbd> : move selection to bottom of list
+    - Edit dates
+        - <kbd>command</kbd> + <kbd>s</kbd> : show When
+        - <kbd>command</kbd> + <kbd>t</kbd> : start Today
+        - <kbd>command</kbd> + <kbd>e</kbd> : start This Evening
+        - <kbd>command</kbd> + <kbd>r</kbd> : start Anytime
+        - <kbd>command</kbd> + <kbd>o</kbd> : start Someday
+        - <kbd>control</kbd> + <kbd>]</kbd> : start date +1 day
+        - <kbd>control</kbd> + <kbd>[</kbd> : start date -1 day
+        - <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>]</kbd> : start date +1 week
+        - <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>[</kbd> : start date -1 week
+        - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>d</kbd> : add a deadline
+        - <kbd>control</kbd> + <kbd>.</kbd> : deadline +1 day
+        - <kbd>control</kbd> + <kbd>,</kbd> : deadline -1 day
+        - <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>></kbd> : deadline +1 week
+        - <kbd>control</kbd> + <kbd>shift</kbd> + <kbd><</kbd> : deadline -1 week
+        - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>r</kbd> : make to-do or project repeating
+    - Control windows
+        - <kbd>command</kbd> + <kbd>control</kbd> + <kbd>n</kbd> : open new window
+        - <kbd>command</kbd> + <kbd>/</kbd> : hide or show sidebar
+        - <kbd>command</kbd> + <kbd>meta</kbd> + <kbd>t</kbd> : hide or show toolbar
+    - Navigate
+        - <kbd>command</kbd> + <kbd>1</kbd> : go to Inbox
+        - <kbd>command</kbd> + <kbd>2</kbd> : go to Today
+        - <kbd>command</kbd> + <kbd>3</kbd> : go to Upcoming
+        - <kbd>command</kbd> + <kbd>4</kbd> : go to Anytime
+        - <kbd>command</kbd> + <kbd>5</kbd> : go to Someday
+        - <kbd>command</kbd> + <kbd>6</kbd> : go to Logbook
+    - Search
+        - <kbd>any key</kbd> : start typing to begin a search
+        - <kbd>command</kbd> + <kbd>f</kbd> : find
+        - Keywords in search
+            - `Tomorrow`: Quick Find list for tomorrow's to-dos
+            - `Dealines`: Quick Find list for all deadlines
+            - `Repeating`: Quick Find list for repeating to-dos
+            - `Projects`: Quick Find list for all projects
+            - `Logged Projects`: Quick Find list for completed projects
+    - Tag
+        - <kbd>control</kbd> + <kbd>command</kbd> + <kbd>t</kbd> : open tag window
+        - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>t</kbd> : access tag picker for selected to-dos
 - Shell
     - `du -sh <file or folder>` : estimate file or folder space usage
     - `df -h` : report file system disk space usage
 - Sublime Text 3
     - <kbd>command</kbd> + <kbd>d</kbd> : add next identical item to selection
-    - <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>up</kbd> / <kbd>down</kbd> :
-    multi-cursor
+    - <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>up</kbd> / <kbd>down</kbd> : multi-cursor
     - <kbd>command</kbd> + <kbd>/</kbd> : toggle/untoggle comment
 - macOS
+    - <kbd>command</kbd> + <kbd>[</kbd> : go to the previous page
+    - <kbd>command</kbd> + <kbd>]</kbd> : go to the next page
+    - <kbd>control</kbd> + <kbd>command</kbd> + <kbd>q</kbd> : lock the screen
+    - <kbd>command</kbd> + <kbd>b</kbd> after typing something in Spotlight to web-search it
     - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>.</kbd> : show/hide hidden files
     - <kbd>shift</kbd> + *double click on title bar* : maximize/demaximize
     - Moving the cursor/Arrow keys
@@ -21,9 +99,10 @@
     - Delete/Modify
         - <kbd>control</kbd> + <kbd>d</kbd> : delete character from left to right
         - <kbd>control</kbd> + <kbd>h</kbd> : delete character from right to left
-        - <kbd>control</kbd> + <kbd>u</kbd> : delete from cursor to beginning of line
+        - <kbd>meta</kbd> + <kbd>backspace</kbd> : delete word to the left
+        - <kbd>meta</kbd> + <kbd>backspace</kbd> : delete from cursor to beginning of line
         - <kbd>control</kbd> + <kbd>k</kbd> : delete from cursor to end of line
-        - <kbd>control</kbd> + <kbd>w</kbd> : erase word to the left
+        - <kbd>control</kbd> + <kbd>o</kbd> : insert a new line after the cursor
         - <kbd>control</kbd> + <kbd>t</kbd> : transpose characters around cursor
 - Vim
     - Motions
@@ -119,13 +198,13 @@
                     (including leading or trailing whitespace)
                     - <kbd>d</kbd> <kbd>a</kbd> <kbd>b</kbd> :
                     delete around (including) braces
-                    - <kbd>d</kbd> <kbd>a</kbd> <kbd>B</kbd> : 
+                    - <kbd>d</kbd> <kbd>a</kbd> <kbd>B</kbd> :
                     delete around (including) brackets
                     - <kbd>d</kbd> <kbd>i</kbd> <kbd>b</kbd> :
                     delete in (excluding) braces
-                    - <kbd>d</kbd> <kbd>i</kbd> <kbd>B</kbd> : 
+                    - <kbd>d</kbd> <kbd>i</kbd> <kbd>B</kbd> :
                     delete in (excluding) brackets
-                    - <kbd>x</kbd> <kbd>p</kbd> : 
+                    - <kbd>x</kbd> <kbd>p</kbd> :
                     transpose letter at cursor and after cursor
             - Copying (yank) can be done using y{motion}
               y stands for yank in Vim, which in other editors is usually called copy
@@ -134,25 +213,25 @@
                 can be inconvenient since it yanks the current line,
                 including the newline character at the end of the line.
                 It can therefore be better to use
-                    - <kbd>^</kbd> <kbd>Y</kbd> : 
+                    - <kbd>^</kbd> <kbd>Y</kbd> :
                     move to the first character on the line
                     and yank until the end of the line
                 - <kbd>Y</kbd> yanks the current line,
                 including the newline character at the end of the line
                 (equivalent to <kbd>y</kbd> <kbd>$</kbd>)
                 - Examples
-                    - <kbd>y</kbd> <kbd>i</kbd> <kbd>w</kbd> : 
+                    - <kbd>y</kbd> <kbd>i</kbd> <kbd>w</kbd> :
                     yank the current word (excluding surrounding whitespace)
                     - <kbd>y</kbd> <kbd>a</kbd> <kbd>w</kbd> :
                     yank the current word
                     (including leading or trailing whitespace)
-                    - <kbd>y</kbd> <kbd>a</kbd> <kbd>b</kbd> : 
+                    - <kbd>y</kbd> <kbd>a</kbd> <kbd>b</kbd> :
                     yank around (including) braces
-                    - <kbd>y</kbd> <kbd>a</kbd> <kbd>B</kbd> : 
+                    - <kbd>y</kbd> <kbd>a</kbd> <kbd>B</kbd> :
                     yank around (including) brackets
-                    - <kbd>y</kbd> <kbd>i</kbd> <kbd>b</kbd> : 
+                    - <kbd>y</kbd> <kbd>i</kbd> <kbd>b</kbd> :
                     yank in (excluding) braces
-                    - <kbd>y</kbd> <kbd>i</kbd> <kbd>B</kbd> : 
+                    - <kbd>y</kbd> <kbd>i</kbd> <kbd>B</kbd> :
                     yank in (excluding) brackets
         - Pasting in normal mode
           To select a register from which to paste, one can use
@@ -165,14 +244,14 @@
             - <kbd>control</kbd> + <kbd>r</kbd>
             then a character that identifies the register
             - Examples
-                - <kbd>control</kbd> + <kbd>r</kbd> 
+                - <kbd>control</kbd> + <kbd>r</kbd>
                 then <kbd>"</kbd> pastes from the default register
-                - <kbd>control</kbd> + <kbd>r</kbd> 
+                - <kbd>control</kbd> + <kbd>r</kbd>
                 then <kbd>0</kbd> pastes from register zero which holds the text that was most recently yanked (copied)
         - Marking text (visual mode)
             - <kbd>v</kbd> : start visual mode. Marks the current character.
             - <kbd>V</kbd> : start line-wise visual mode. Marks the current line.
-            - <kbd>control</kbd> + <kbd>V</kbd> : 
+            - <kbd>control</kbd> + <kbd>V</kbd> :
             start visual block mode
             - Visual mode commands
                 - <kbd>o</kbd> : move to other end of marked area
@@ -180,20 +259,20 @@
                 - <kbd>i</kbd> <kbd>w</kbd> :
                 mark the current word and places the cursor
                 on the last character of the word
-                - <kbd>a</kbd> <kbd>w</kbd> : 
+                - <kbd>a</kbd> <kbd>w</kbd> :
                 mark the current word and places
                 the cursor on the whitespace after the word
                 - <kbd>a</kbd> <kbd>b</kbd> :
                 mark around (including) braces
-                - <kbd>a</kbd> <kbd>B</kbd> : 
+                - <kbd>a</kbd> <kbd>B</kbd> :
                 mark around (including) brackets
-                - <kbd>i</kbd> <kbd>b</kbd> : 
+                - <kbd>i</kbd> <kbd>b</kbd> :
                 mark in (excluding) braces
-                - <kbd>i</kbd> <kbd>B</kbd> : 
+                - <kbd>i</kbd> <kbd>B</kbd> :
                 mark in (excluding) brackets
                 - <kbd>escape</kbd> : exit visual mode
     - Registers
-        - To access a register, 
+        - To access a register,
         you type <kbd>"</kbd> <kbd>k</kbd> before a command,
         where *k* is the name of a register.
         - If you want to copy the current line into register *k*,
@@ -228,6 +307,9 @@
     cycle through panes
     - If in 2D, <kbd>command</kbd> + <kbd>alt</kbd> + <kbd>arrow key</kbd>
     to change pane
+    - <kbd>control</kbd> + <kbd>w</kbd> : delete word to the left
+    - <kbd>control</kbd> + <kbd>u</kbd> : delete from cursor to beginning of line
+    - <kbd>control</kbd> + <kbd>k</kbd> : delete from cursor to end of line
 - Tmux
     - Prefix changed from the default <kbd>control</kbd> + <kbd>b</kbd>
     to <kbd>control</kbd> + <kbd>a</kbd> in `~/.tmux.conf`.

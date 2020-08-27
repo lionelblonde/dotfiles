@@ -49,7 +49,7 @@ export DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fasd zsh-syntax-highlighting) #zsh-syntax-highlighting has to be the last item
+plugins=(fasd safe-paste zsh-syntax-highlighting) #zsh-syntax-highlighting has to be the last item
 
 # User configuration
 

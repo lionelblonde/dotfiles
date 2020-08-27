@@ -27,6 +27,7 @@ brew install neofetch
 brew install open-mpi
 brew install youtube-dl
 brew install mkvtoolnix
+brew install glfw3
 
 # Install macOS applications with brew cask
 brew cask install iterm2
@@ -49,7 +50,7 @@ brew cask install hammerspoon
 brew cask install mactex
 brew cask install malwarebytes
 brew cask install dash
-brew cask install paste
+brew cask install maccy
 brew cask install skim
 brew cask install sketch
 brew cask install sublime-text
