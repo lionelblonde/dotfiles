@@ -1,5 +1,6 @@
 local grid = require "hs.grid"
 local window = require "hs.window"
+local tabs = require "hs.tabs"
 local alert = require "hs.alert"
 local timer = require "hs.timer"
 local application = require "hs.application"
@@ -70,7 +71,7 @@ end
 quit_modal:bind('cmd', 'q', do_quit)
 quit_modal:bind('', 'escape', function() quit_modal:exit() end)
 
-local function tell_me_current_spot_track()
+local function tell_me_current_spot_track()  -- not used atm
    local track = hs.spotify.getCurrentTrack()
    local artist = hs.spotify.getCurrentArtist()
    local album = hs.spotify.getCurrentAlbum()
@@ -99,9 +100,6 @@ local hyperfns = {}
 -- Hotkey to reload config
 hyperfns["x"] = function() hs.reload() end  -- luacheck: ignore
 
--- Hotkey to display the track Spotify currently plays
-hyperfns["`"] = function() tell_me_current_spot_track() end
-
 -- Hotkey to show grid
 hyperfns["g"] = grid.show
 
@@ -111,39 +109,24 @@ hyperfns["]"] = function() window.focusedWindow():moveToUnit(layout.right50) end
 hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
-hyperfns["y"] = function() toggle_application("Sketch") end
-hyperfns["u"] = function() toggle_application("Finder") end
-hyperfns["i"] = function() toggle_application("iTerm2") end
-hyperfns["o"] = function() toggle_application("Spotify") end
-hyperfns["p"] = function() toggle_application("Dash") end
-hyperfns["h"] = function() toggle_application("Mail") end
-hyperfns["j"] = function() toggle_application("Brave Browser") end
-hyperfns["m"] = function() toggle_application("Sublime Text")end
-hyperfns[";"] = function() toggle_application("Sublime Merge") end
-hyperfns["'"] = function() toggle_application("Telegram") end
-hyperfns["\\"] = function() toggle_application("Slack") end  -- backslash needs to be escaped
-hyperfns["k"] = function() toggle_application("Notes") end
-hyperfns["n"] = function() toggle_application("Things") end
-hyperfns["l"] = function() toggle_application("Skim") end
-hyperfns[","] = function() toggle_application("Keynote") end
-hyperfns["/"] = function() toggle_application("System Preferences") end
-
 local hyperapps = {}
 hyperapps["y"] = "Sketch"
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "iTerm2"
-hyperapps["o"] = "Spotify"
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Brave Browser"
 hyperapps["m"] = "Sublime Text"
 hyperapps[";"] = "Sublime Merge"
-hyperapps["'"] = "Telegram"
-hyperapps["\\"] = "Slack"  -- backslash needs to be escaped
+hyperapps["'"] = "Logitech G HUB"
+hyperapps["o"] = "Slack"
 hyperapps["k"] = "Notes"
 hyperapps["n"] = "Things"
 hyperapps["l"] = "Skim"
-hyperapps[","] = "Keynote"
+hyperapps[","] = "Calendar"
+hyperapps["."] = "ChatMate for WhatsApp"
+hyperapps["\\"] = "Telegram"
+hyperapps["b"] = "Keynote"
 hyperapps["/"] = "Reminders"
 
 for k, v in pairs(hyperapps) do
@@ -152,7 +135,7 @@ end
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
-  hotkey.bind(hyper, _hotkey, _fn)
+   hotkey.bind(hyper, _hotkey, _fn)
 end
 
 -- Show launch application's keystroke
@@ -187,7 +170,7 @@ local function showAppKeystroke()
       showAppKeystrokeAlertId = ""
    end
 end
-hotkey.bind(hyper, ".", showAppKeystroke)
+hotkey.bind(hyper, "space", showAppKeystroke)
 
 -- Finally, show a notification that we finished loading the config successfully
 notify.new({title = 'Hammerspoon', informativeText = 'Config loaded'}):send()

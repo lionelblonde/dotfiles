@@ -26,8 +26,7 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 
 ## Mac App Store
 
-* Microsoft Word
-* Endel
+* Microsoft Word (installing via the Mac App Store to avoid the incredibly annoying Microsoft Update overly-frequent pop-ups)
 * Notability
 
 ## Zsh
@@ -136,6 +135,18 @@ luarocks install luacheck
 2. Add a *simple modification* **for the HHKB keyboard only** that maps
     <kbd>left control</kbd> to <kbd>capslock</kbd> to be able to use the second
     *Modern Space Cadet* setting when using an HHKB layout
+
+## Brave/Chrome extensions
+
+* QuicKey
+* uBlock Origin
+* Save to Pocket
+* Session Buddy
+* Video Speed Controller
+* Paperpile
+* arxiv-utils
+* 1Password
+* Decentraleyes
 
 ## Sublime Text
 

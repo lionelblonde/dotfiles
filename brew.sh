@@ -36,6 +36,7 @@ brew cask install itsycal
 brew cask install istat-menus  # disable date menu
 brew cask install intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
 brew cask install 1password
+brew cask install protonmail-bridge
 brew cask install protonvpn
 brew cask install brave-browser
 brew cask install telegram
@@ -44,7 +45,7 @@ brew cask install osxfuse
 brew cask install appcleaner
 brew cask install slack
 brew cask install keepingyouawake
-brew cask install dozer
+brew cask install bartender
 brew cask install karabiner-elements
 brew cask install hammerspoon
 brew cask install mactex
@@ -71,6 +72,7 @@ brew cask install daisydisk
 brew cask install bettertouchtool
 brew cask install cyberduck
 brew cask install chatmate-for-whatsapp
+brew cask install logitech-g-hub
 
 # Install fonts
 brew tap caskroom/fonts
