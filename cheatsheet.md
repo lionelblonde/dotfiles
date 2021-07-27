@@ -78,11 +78,15 @@
 - Shell
     - `du -sh <file or folder>` : estimate file or folder space usage
     - `df -h` : report file system disk space usage
+- Safari
+    - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>r</kbd> : open Reader
 - Sublime Text 3
     - <kbd>command</kbd> + <kbd>d</kbd> : add next identical item to selection
     - <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>up</kbd> / <kbd>down</kbd> : multi-cursor
     - <kbd>command</kbd> + <kbd>/</kbd> : toggle/untoggle comment
 - macOS
+    - <kbd>meta</kbd> + *click on Notification Center icon in menu bar* : toggle/untoggle *do not disturb*
+    - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>meta</kbd> + <kbd>v</kbd> : paste without formatting
     - <kbd>command</kbd> + <kbd>[</kbd> : go to the previous page
     - <kbd>command</kbd> + <kbd>]</kbd> : go to the next page
     - <kbd>control</kbd> + <kbd>command</kbd> + <kbd>q</kbd> : lock the screen
@@ -298,6 +302,10 @@
         - The same way <kbd>"</kbd> <kbd>0</kbd> holds the last yank,
         <kbd>"</kbd> <kbd>1</kbd> holds the last delete or change.
 - iTerm2
+    <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>.</kbd> :
+    open Composer
+    <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>b</kbd> :
+    show Toolbelt
     - <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>d</kbd> :
     split horizontally
     - <kbd>command</kbd> + <kbd>d</kbd> :

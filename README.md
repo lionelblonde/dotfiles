@@ -4,11 +4,18 @@
 
 - Go to *Accessibility -> Display* and tick the *Reduce transparency* box.
 - Go to *Dock -> Prefer tabs when opening documents* and select *Always*.
+* Go to *Keyboard ->  Touch Bar shows* and select *Expanded Control Strip*.
+* Go to *Extensions -> Finder Extensions* and disable Dropbox and Google Drive Finder extensions.
 
-## Hidden settings
+## Hidden settings (redundant if using TinkerTool)
 
 - Enable key repeat:
 `defaults write -g ApplePressAndHoldEnabled -bool false`
+- Change the time in seconds it takes for the Dock to reappear fully:
+`defaults write com.apple.dock autohide-time-modifier -float 0.15`
+Followed by `killall Dock` for this change to properly take effect.
+To restore the Dock appearance to its original setting, use
+`defaults delete com.apple.dock autohide-time-modifier;killall Dock`.
 
 ## Homebrew
 
@@ -24,10 +31,25 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 3. Install the Homebrew packages
 `./brew.sh`
 
+## TinkerTool
+
+* Download and install TinkerTool from `https://www.bresink.com/osx/TinkerTool.html`.
+* Download and install Music Widget from `https://marioaguzman.github.io/musicwidget/`
+
 ## Mac App Store
 
 * Microsoft Word (installing via the Mac App Store to avoid the incredibly annoying Microsoft Update overly-frequent pop-ups)
+* Things 3
+* Hush (Safari extension)
+* Wipr (Safari extension)
 * Notability
+* Simple Comic
+* OwlOCR
+* Audiobook Binder
+
+## Finder preferences
+
+Do not show anything on the desktop.
 
 ## Zsh
 
@@ -94,7 +116,7 @@ conda create -n pytorch-rl python=3.7
 conda activate pytorch-rl
 # >>>> PyTorch
 pip install --upgrade pip
-pip install --upgrade pytest pytest-instafail flake8 wrapt six tqdm pyyaml psutil cloudpickle
+pip install --upgrade pytest pytest-instafail flake8 wrapt six tqdm pyyaml psutil cloudpickle tmuxp lockfile
 pip install --upgrade numpy pandas scipy scikit-learn h5py matplotlib
 pip install --upgrade pyvips scikit-image
 pip install --upgrade torch torchvision
@@ -126,17 +148,9 @@ Install the prefered Lua linter
 luarocks install luacheck
 ```
 
-## Karabiner
+## Brave/Chromium
 
-1. Download the *Modern Space Cadet* settings from the rule webpage and enable:
-    1. <kbd>shift</kbd> keys become <kbd>(</kbd> / <kbd>)</kbd> when used alone
-    2. <kbd>capslock</kbd> sends <kbd>escape</kbd> when used alone
-    and <kbd>control</kbd> when used with another key
-2. Add a *simple modification* **for the HHKB keyboard only** that maps
-    <kbd>left control</kbd> to <kbd>capslock</kbd> to be able to use the second
-    *Modern Space Cadet* setting when using an HHKB layout
-
-## Brave/Chrome extensions
+### Extensions
 
 * QuicKey
 * uBlock Origin
@@ -147,6 +161,14 @@ luarocks install luacheck
 * arxiv-utils
 * 1Password
 * Decentraleyes
+* LeechBlock
+* Pinboard Pro
+
+### Settings
+
+In the preferred search engines menu,
+add a search engine to search in the bookmarks by mapping the keyword `b` to the url
+`brave://bookmarks/?q=%s`.
 
 ## Sublime Text
 

@@ -115,17 +115,17 @@ hyperapps["u"] = "Finder"
 hyperapps["i"] = "iTerm2"
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
-hyperapps["j"] = "Brave Browser"
+hyperapps["j"] = "Safari"
 hyperapps["m"] = "Sublime Text"
 hyperapps[";"] = "Sublime Merge"
-hyperapps["'"] = "Logitech G HUB"
-hyperapps["o"] = "Slack"
+hyperapps["'"] = "Slack"
+hyperapps["o"] = "Music"
 hyperapps["k"] = "Notes"
 hyperapps["n"] = "Things"
 hyperapps["l"] = "Skim"
 hyperapps[","] = "Calendar"
-hyperapps["."] = "ChatMate for WhatsApp"
-hyperapps["\\"] = "Telegram"
+hyperapps["."] = "Brave Browser"
+hyperapps["\\"] = "Numbers"
 hyperapps["b"] = "Keynote"
 hyperapps["/"] = "Reminders"
 
@@ -171,6 +171,9 @@ local function showAppKeystroke()
    end
 end
 hotkey.bind(hyper, "space", showAppKeystroke)
+
+-- Start the screensaver
+hotkey.bind(hyper, "c", function() hs.caffeinate.startScreensaver() end)
 
 -- Finally, show a notification that we finished loading the config successfully
 notify.new({title = 'Hammerspoon', informativeText = 'Config loaded'}):send()

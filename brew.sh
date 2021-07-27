@@ -7,7 +7,6 @@ brew install exa
 brew install git
 brew install git-lfs
 brew install wget
-brew install sshfs
 brew install curl
 brew install neovim
 brew install imagemagick
@@ -26,54 +25,44 @@ brew install luarocks
 brew install neofetch
 brew install open-mpi
 brew install youtube-dl
-brew install mkvtoolnix
+brew install atomicparsley  # for reading, parsing and setting metadata into MPEG-4 files
 brew install glfw3
+brew install id3v2
 
 # Install macOS applications with brew cask
-brew cask install iterm2
-brew cask install soundsource
-brew cask install itsycal
-brew cask install istat-menus  # disable date menu
-brew cask install intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
-brew cask install 1password
-brew cask install protonmail-bridge
-brew cask install protonvpn
-brew cask install brave-browser
-brew cask install telegram
-brew cask install muzzle
-brew cask install osxfuse
-brew cask install appcleaner
-brew cask install slack
-brew cask install keepingyouawake
-brew cask install bartender
-brew cask install karabiner-elements
-brew cask install hammerspoon
-brew cask install mactex
-brew cask install malwarebytes
-brew cask install dash
-brew cask install maccy
-brew cask install skim
-brew cask install sketch
-brew cask install sublime-text
-brew cask install sublime-merge
-brew cask install google-chrome
-brew cask install google-backup-and-sync
-brew cask install dropbox
-brew cask install spotify
-brew cask install discord
-brew cask install zoomus
-brew cask install handbrake
-brew cask install xquartz
-brew cask install qlstephen
-brew cask install iina
-brew cask install zerotier-one
-brew cask install keka
-brew cask install daisydisk
-brew cask install bettertouchtool
-brew cask install cyberduck
-brew cask install chatmate-for-whatsapp
-brew cask install logitech-g-hub
+brew install --cask iterm2
+brew install --cask istat-menus  # disable date menu
+brew install --cask intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
+brew install --cask 1password
+brew install --cask protonvpn
+brew install --cask brave-browser
+brew install --cask browserosaurus
+brew install --cask appcleaner
+brew install --cask slack
+brew install --cask keepingyouawake
+brew install --cask hammerspoon
+brew install --cask karabiner-elements
+brew install --cask mactex
+brew install --cask malwarebytes
+brew install --cask dash
+brew install --cask maccy
+brew install --cask skim
+brew install --cask sketch
+brew install --cask sublime-text
+brew install --cask sublime-merge
+brew install --cask google-backup-and-sync
+brew install --cask dropbox
+brew install --cask discord
+brew install --cask zoomus
+brew install --cask xquartz
+brew install --cask qlstephen
+brew install --cask iina
+brew install --cask zerotier-one
+brew install --cask cyberduck
+brew install --cask superduper
+brew install --cask keka
+brew install --cask muzzle
 
 # Install fonts
 brew tap caskroom/fonts
-brew cask install font-source-code-pro
+brew install --cask font-source-code-pro

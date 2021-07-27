@@ -40,7 +40,7 @@ export DISABLE_AUTO_TITLE="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -61,6 +61,22 @@ eval "$(fasd --init auto)"
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# History configuration
+# How many lines of history to keep in memory
+HISTSIZE=5000
+# Where to save history to disk
+HISTFILE=~/.zsh_history
+# Number of history entries to save to disk
+SAVEHIST=5000
+# Append history to the history file (no overwriting)
+setopt appendhistory
+# Share history across terminals
+setopt sharehistory
+# Immediately append to the history file, not just when a term is killed
+setopt incappendhistory
+# Prepending a command with a space prevent it from being added to the zsh history
+setopt HIST_IGNORE_SPACE
+
 # Locale
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -70,154 +86,19 @@ export TERM=xterm-256color
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+export DEMO_DIR=$HOME/Datasets/expert_demonstrations_openai_mujoco_h5
+export D4RL_DIR=$HOME/Datasets/d4rl_datasets_h5
+
 # Path to MuJoCo bins
 export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro200/bin“
 
-# Spaceship zsh theme variables
-# Order of entities in the prompt
-SPACESHIP_PROMPT_ORDER=(
-  char          # Prompt character
-  time          # Time stampts section
-  user          # Username section
-  host          # Hostname section
-  dir           # Current directory section
-  git           # Git section (git_branch + git_status)
-  hg            # Mercurial section (hg_branch  + hg_status)
-  node          # Node.js section
-  ruby          # Ruby section
-  xcode         # Xcode section
-  swift         # Swift section
-  golang        # Go section
-  php           # PHP section
-  rust          # Rust section
-  haskell       # Haskell Stack section
-  julia         # Julia section
-  docker        # Docker section
-  venv          # virtualenv section
-  conda         # conda env section
-  pyenv         # Pyenv section
-  exec_time     # Execution time
-  line_sep      # Line break
-  vi_mode       # Vi-mode indicator
-)
+# Google Cloud SDK
+export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-# Prompt
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_PROMPT_PREFIXES_SHOW=true
-SPACESHIP_PROMPT_SUFFIXES_SHOW=true
-SPACESHIP_PROMPT_DEFAULT_PREFIX=""
-SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
-
-# Char
-SPACESHIP_CHAR_SYMBOL="MacbookPro"
-SPACESHIP_CHAR_PREFIX=""
-SPACESHIP_CHAR_SUFFIX=" "
-
-# Time
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_TIME_PREFIX="("
-SPACESHIP_TIME_SUFFIX=") "
-SPACESHIP_TIME_FORMAT="%*"
-SPACESHIP_TIME_12HR=false
-SPACESHIP_TIME_COLOR="cyan"
-
-# Execution time
-SPACESHIP_EXEC_TIME_SHOW=false
-
-# User
-SPACESHIP_USER_SHOW=true
-SPACESHIP_USER_PREFIX=""
-SPACESHIP_USER_SUFFIX=""
-SPACESHIP_USER_COLOR="cyan"
-SPACESHIP_USER_COLOR_ROOT="red"
-
-# Host
-SPACESHIP_HOST_SHOW=true
-SPACESHIP_HOST_SHOW_FULL=true
-SPACESHIP_HOST_PREFIX="@"
-SPACESHIP_HOST_SUFFIX=" "
-SPACESHIP_HOST_COLOR="cyan"
-SPACESHIP_HOST_COLOR_SSH="magenta"
-
-# Directory
-SPACESHIP_DIR_SHOW=true
-SPACESHIP_DIR_PREFIX=""
-SPACESHIP_DIR_SUFFIX=" "
-SPACESHIP_DIR_TRUNC=0
-SPACESHIP_DIR_TRUNC_REPO=false
-SPACESHIP_DIR_COLOR="blue"
-
-# Git
-SPACESHIP_GIT_SHOW=true
-SPACESHIP_GIT_PREFIX="git:("
-SPACESHIP_GIT_SUFFIX=") "
-SPACESHIP_GIT_SYMBOL="" # 
-# Git branch
-SPACESHIP_GIT_BRANCH_SHOW=true
-SPACESHIP_GIT_BRANCH_PREFIX=""
-SPACESHIP_GIT_BRANCH_SUFFIX=""
-SPACESHIP_GIT_BRANCH_COLOR="green"
-# Git status
-SPACESHIP_GIT_STATUS_SHOW=true
-SPACESHIP_GIT_STATUS_PREFIX=""
-SPACESHIP_GIT_STATUS_SUFFIX=""
-SPACESHIP_GIT_STATUS_COLOR="red"
-SPACESHIP_GIT_STATUS_UNTRACKED="?"
-SPACESHIP_GIT_STATUS_ADDED="+"
-SPACESHIP_GIT_STATUS_MODIFIED="!"
-SPACESHIP_GIT_STATUS_RENAMED="»"
-SPACESHIP_GIT_STATUS_DELETED="✘"
-SPACESHIP_GIT_STATUS_STASHED="$"
-SPACESHIP_GIT_STATUS_UNMERGED="="
-SPACESHIP_GIT_STATUS_AHEAD="⇡"
-SPACESHIP_GIT_STATUS_BEHIND="⇣"
-SPACESHIP_GIT_STATUS_DIVERGED="⇕"
-
-# Hg
-SPACESHIP_HG_SHOW=true
-SPACESHIP_HG_PREFIX="hg:("
-SPACESHIP_HG_SUFFIX=") "
-SPACESHIP_HG_SYMBOL="" # ☿
-# Hg branch
-SPACESHIP_HG_BRANCH_SHOW=true
-SPACESHIP_HG_BRANCH_PREFIX=""
-SPACESHIP_HG_BRANCH_SUFFIX=""
-SPACESHIP_HG_BRANCH_COLOR="green"
-# Hg status
-SPACESHIP_HG_STATUS_SHOW=true
-SPACESHIP_HG_STATUS_PREFIX=""
-SPACESHIP_HG_STATUS_SUFFIX=""
-SPACESHIP_HG_STATUS_COLOR="red"
-SPACESHIP_HG_STATUS_UNTRACKED="?"
-SPACESHIP_HG_STATUS_ADDED="+"
-SPACESHIP_HG_STATUS_MODIFIED="!"
-SPACESHIP_HG_STATUS_DELETED="✘"
-
-# Venv
-SPACESHIP_VENV_SHOW=true
-SPACESHIP_VENV_PREFIX="venv:("
-SPACESHIP_VENV_SUFFIX=") "
-SPACESHIP_VENV_COLOR="cyan"
-
-# Conda
-SPACESHIP_CONDA_SHOW=true
-SPACESHIP_CONDA_PREFIX="conda:("
-SPACESHIP_CONDA_SUFFIX=") "
-SPACESHIP_CONDA_SYMBOL=""
-SPACESHIP_CONDA_COLOR="cyan"
-
-# Version indication
-SPACESHIP_NODE_SHOW=false
-SPACESHIP_RUBY_SHOW=false
-SPACESHIP_XCODE_SHOW_LOCAL=false
-SPACESHIP_SWIFT_SHOW_LOCAL=false
-SPACESHIP_GOLANG_SHOW=false
-SPACESHIP_PHP_SHOW=false
-SPACESHIP_RUST_SHOW=false
-SPACESHIP_JULIA_SHOW=false
-SPACESHIP_PYENV_SHOW=false
-SPACESHIP_VI_MODE_SHOW=false
+# Source the prompt config
+[[ -f ~/.prompt.conf ]] && source ~/.prompt.conf
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
