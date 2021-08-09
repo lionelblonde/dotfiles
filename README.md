@@ -34,7 +34,6 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 ## TinkerTool
 
 * Download and install TinkerTool from `https://www.bresink.com/osx/TinkerTool.html`.
-* Download and install Music Widget from `https://marioaguzman.github.io/musicwidget/`
 
 ## Mac App Store
 
@@ -43,8 +42,8 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 * Hush (Safari extension)
 * Wipr (Safari extension)
 * Notability
-* Simple Comic
 * OwlOCR
+* Pinstachio
 * Audiobook Binder
 
 ## Finder preferences
