@@ -31,9 +31,10 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 3. Install the Homebrew packages
 `./brew.sh`
 
-## TinkerTool
+## Manual Install
 
 * Download and install TinkerTool from `https://www.bresink.com/osx/TinkerTool.html`.
+* Download and install IVPN from `https://www.ivpn.net/apps-macos/`.
 
 ## Mac App Store
 
@@ -43,8 +44,9 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 * Wipr (Safari extension)
 * Notability
 * OwlOCR
+* Endel
 * Pinstachio
-* Audiobook Binder
+* Shut Up: Comment Blocker (Safari extension)
 
 ## Finder preferences
 
@@ -147,21 +149,20 @@ Install the prefered Lua linter
 luarocks install luacheck
 ```
 
-## Brave/Chromium
+## Chromium-based browser
 
 ### Extensions
 
-* QuicKey
 * uBlock Origin
-* Save to Pocket
-* Session Buddy
+* enhanced h264ify
 * Video Speed Controller
 * Paperpile
 * arxiv-utils
-* 1Password
-* Decentraleyes
-* LeechBlock
 * Pinboard Pro
+* Delta for YouTube
+* Shut Up: Comment Blocker
+* LeechBlock NG
+* Session Buddy
 
 ### Settings
 

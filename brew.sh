@@ -34,9 +34,7 @@ brew install --cask iterm2
 brew install --cask istat-menus  # disable date menu
 brew install --cask intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
 brew install --cask 1password
-brew install --cask protonvpn
 brew install --cask brave-browser
-brew install --cask browserosaurus
 brew install --cask appcleaner
 brew install --cask slack
 brew install --cask keepingyouawake
@@ -62,6 +60,8 @@ brew install --cask cyberduck
 brew install --cask superduper
 brew install --cask keka
 brew install --cask muzzle
+brew install --cask spotify
+brew install --cask cryptomator
 
 # Install fonts
 brew tap caskroom/fonts
