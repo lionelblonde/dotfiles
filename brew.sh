@@ -27,10 +27,10 @@ brew install open-mpi
 brew install youtube-dl
 brew install atomicparsley  # for reading, parsing and setting metadata into MPEG-4 files
 brew install glfw3
-brew install id3v2
+brew install ncdu
 
 # Install macOS applications with brew cask
-brew install --cask iterm2
+brew install --cask google-cloud-sdk
 brew install --cask istat-menus  # disable date menu
 brew install --cask intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
 brew install --cask 1password
@@ -48,8 +48,6 @@ brew install --cask skim
 brew install --cask sketch
 brew install --cask sublime-text
 brew install --cask sublime-merge
-brew install --cask google-backup-and-sync
-brew install --cask dropbox
 brew install --cask discord
 brew install --cask zoomus
 brew install --cask xquartz
@@ -57,10 +55,12 @@ brew install --cask qlstephen
 brew install --cask iina
 brew install --cask zerotier-one
 brew install --cask cyberduck
+brew install --cask mountain-duck
 brew install --cask superduper
 brew install --cask keka
 brew install --cask muzzle
 brew install --cask spotify
+brew install --cask signal
 brew install --cask cryptomator
 
 # Install fonts

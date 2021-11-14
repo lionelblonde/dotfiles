@@ -14,3 +14,4 @@ ln -svf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -svf $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -svf $HOME/dotfiles/.prompt.conf $HOME/.prompt.conf
 ln -svf $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -svf $HOME/dotfiles/snippets.dash $HOME/snippets.dash

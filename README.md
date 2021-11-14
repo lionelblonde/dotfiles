@@ -35,17 +35,21 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 
 * Download and install TinkerTool from `https://www.bresink.com/osx/TinkerTool.html`.
 * Download and install IVPN from `https://www.ivpn.net/apps-macos/`.
+* Download and install PDF Expert from `https://pdfexpert.com/`.
 
 ## Mac App Store
 
-* Microsoft Word (installing via the Mac App Store to avoid the incredibly annoying Microsoft Update overly-frequent pop-ups)
+* Microsoft Word and Excel (installing via the Mac App Store to avoid
+the incredibly annoying Microsoft Update overly-frequent pop-ups)
 * Things 3
+* OwlOCR
+* DaisyDisk
+
+Only if not using Safari as primary browser:
+* Pinstachio
 * Hush (Safari extension)
 * Wipr (Safari extension)
-* Notability
-* OwlOCR
-* Endel
-* Pinstachio
+* 1Blocker (Safari extension)
 * Shut Up: Comment Blocker (Safari extension)
 
 ## Finder preferences
@@ -163,6 +167,11 @@ luarocks install luacheck
 * Shut Up: Comment Blocker
 * LeechBlock NG
 * Session Buddy
+* Old Brave Dark Theme
+* Overcast: Mark as Played
+* Unhook - Remove YouTube Recommended Videos
+* Reader View
+* Schi-Hub X Now!
 
 ### Settings
 
