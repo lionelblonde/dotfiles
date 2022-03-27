@@ -112,7 +112,7 @@ hyperfns["="] = toggle_window_maximized
 local hyperapps = {}
 hyperapps["y"] = "Sketch"
 hyperapps["u"] = "Finder"
-hyperapps["i"] = "Terminal"
+hyperapps["i"] = "iTerm2"
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Brave Browser"
@@ -124,10 +124,10 @@ hyperapps["k"] = "Notes"
 hyperapps["n"] = "Things"
 hyperapps["l"] = "Skim"
 hyperapps[","] = "Calendar"
-hyperapps["."] = "PDF Expert"
-hyperapps["\\"] = "Messages"
-hyperapps["b"] = "Keynote"
-hyperapps["/"] = "Reminders"
+hyperapps["."] = "Signal"
+hyperapps["\\"] = "Cyberduck"
+hyperapps["b"] = "Music"
+hyperapps["/"] = "Messages"
 
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end
@@ -159,7 +159,7 @@ local function showAppKeystroke()
 
       showAppKeystrokeAlertId = hs.alert.show(
          keystroke,
-         {textFont = "Source Code Pro",
+         {textFont = "Input Mono",
           textSize = 16,
           radius = 0,
           strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0})},

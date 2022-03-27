@@ -8,10 +8,18 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Theme seoul 256
+Plug 'junegunn/seoul256.vim'
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+" Distraction-free writing in Vim
+Plug 'junegunn/goyo.vim'
+" Hyperfocus-writing in Vim
+Plug 'junegunn/limelight.vim'
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -54,6 +62,7 @@ endif
 
 " Define colorscheme provided as plugin
 set background=dark
+colorscheme seoul256
 
 " Get airline to work at startup
 set laststatus=2 
@@ -71,11 +80,16 @@ set relativenumber
 set number
 set numberwidth=3
 
-" Number column highlight
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-
-" Next line is commented since a cursor guide already in use in iTerm is ported in vim as well
+" Highlight the current line in every window and update the highlight as the cursor moves
 set cursorline
+
+" Disable folding in Markdown (setting of the installed extra package)
+let g:vim_markdown_folding_disabled = 1
+
+" Add command to open the file with Sublime Text
+command Sublime :silent !open -a Sublime\ Text.app '%:p'
+" Add command to open the file with Typora
+command Typora :silent !open -a Typora.app '%:p'
 
 " Nerdtree-related tweaks
 " Sets a keybind to toggle the Nerdtree view

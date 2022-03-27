@@ -2,10 +2,10 @@
 
 ## System Preferences
 
-- Go to *Accessibility -> Display* and tick the *Reduce transparency* box.
-- Go to *Dock -> Prefer tabs when opening documents* and select *Always*.
-* Go to *Keyboard ->  Touch Bar shows* and select *Expanded Control Strip*.
-* Go to *Extensions -> Finder Extensions* and disable Dropbox and Google Drive Finder extensions.
++ Go to _Accessibility -> Display_ and tick the _Reduce transparency_ box.
++ Go to _Dock -> Prefer tabs when opening documents_ and select _Always_.
++ Go to _Keyboard ->  Touch Bar shows_ and select _Expanded Control Strip_.
++ Go to _Extensions -> Finder Extensions_ and disable Dropbox and Google Drive Finder extensions.
 
 ## Hidden settings (redundant if using TinkerTool)
 
@@ -33,24 +33,20 @@ git -C "$(brew --repo homebrew/core)" fetch --unshallow
 
 ## Manual Install
 
-* Download and install TinkerTool from `https://www.bresink.com/osx/TinkerTool.html`.
-* Download and install IVPN from `https://www.ivpn.net/apps-macos/`.
-* Download and install PDF Expert from `https://pdfexpert.com/`.
++ Download and install TinkerTool from `https://www.bresink.com/osx/TinkerTool.html`.
 
 ## Mac App Store
 
-* Microsoft Word and Excel (installing via the Mac App Store to avoid
++ Microsoft Word and Excel (installing via the Mac App Store to avoid
 the incredibly annoying Microsoft Update overly-frequent pop-ups)
-* Things 3
-* OwlOCR
-* DaisyDisk
++ Things 3
++ OwlOCR
++ Infuse
++ Mp3tag
++ Notability
 
 Only if not using Safari as primary browser:
-* Pinstachio
-* Hush (Safari extension)
-* Wipr (Safari extension)
-* 1Blocker (Safari extension)
-* Shut Up: Comment Blocker (Safari extension)
++ Wipr (Safari extension)
 
 ## Finder preferences
 
@@ -61,19 +57,19 @@ Do not show anything on the desktop.
 1. Ensure `zsh` has been properly installed by running `brew install zsh`
 2. Add the line `/usr/local/bin/zsh` to `/etc/shells` (need `sudo` to write)
 3. Swap default shell: `chsh -s /usr/local/bin/zsh`
-4. Install [*oh-my-zsh*](https://ohmyz.sh)
+4. Install [_oh-my-zsh_](https://ohmyz.sh)
 ```bash
 sh -c "$(curl -fsSL \
     https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-5. Install the [*spaceship-prompt*](https://github.com/denysdovhan/spaceship-prompt) ZSH theme
+5. Install the [_spaceship-prompt_](https://github.com/denysdovhan/spaceship-prompt) ZSH theme
 ```bash
 git clone https://github.com/denysdovhan/spaceship-prompt.git \
     "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" \
     "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
-6. Install the [*zsh-syntax-highlighting*](https://github.com/zsh-users/zsh-syntax-highlighting)
+6. Install the [_zsh-syntax-highlighting_](https://github.com/zsh-users/zsh-syntax-highlighting)
 ZSH plugin.
 Install instructions
 [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
@@ -91,7 +87,7 @@ Create symbolic links to reference the dotfiles outside the repository by runnin
 
 1. Ensure `neovim` has been properly installed by running `brew install neovim`
 2. Ensure the file `$HOME/.config/nvim/init.vim` exists
-2. Install the [*vim-plug*](https://github.com/junegunn/vim-plug) Vim plugin manager
+2. Install the [_vim-plug_](https://github.com/junegunn/vim-plug) Vim plugin manager
 ```bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -101,8 +97,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 ## Python
 
-1. Download and install the latest version of *Miniconda*.
-The available versions are visible [*here*](https://repo.anaconda.com/miniconda/).
+1. Download and install the latest version of _Miniconda_.
+The available versions are visible [_here_](https://repo.anaconda.com/miniconda/).
 ```bash
 cd && curl -L -O  https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 bash Miniconda3-latest-MacOSX-x86_64.sh
@@ -153,51 +149,46 @@ Install the prefered Lua linter
 luarocks install luacheck
 ```
 
-## Chromium-based browser
+## Chromium-based browser extensions
 
-### Extensions
-
-* uBlock Origin
-* enhanced h264ify
-* Video Speed Controller
-* Paperpile
-* arxiv-utils
-* Pinboard Pro
-* Delta for YouTube
-* Shut Up: Comment Blocker
-* LeechBlock NG
-* Session Buddy
-* Old Brave Dark Theme
-* Overcast: Mark as Played
-* Unhook - Remove YouTube Recommended Videos
-* Reader View
-* Schi-Hub X Now!
-
-### Settings
-
-In the preferred search engines menu,
-add a search engine to search in the bookmarks by mapping the keyword `b` to the url
-`brave://bookmarks/?q=%s`.
++ uBlock Origin
++ Reader View
++ enhanced h264ify
++ Video Speed Controller
++ Paperpile
++ arxiv-utils
++ Delta for YouTube
++ LeechBlock NG
++ Session Buddy
++ Old Brave Dark Theme
++ Unhook - Remove YouTube Recommended Videos
++ Return YouTube Dislike
++ Sci-Hub X Now!
++ SponsorBlock for YouTube - Skip Sponsorships
++ QuicKey – The quick tab switcher
++ BetterTTV
++ ABSOLUTELY Blank New Tab Page
++ Soundcloud Download
++ Live Reload, from Blaise Kal
 
 ## Sublime Text
 
 1. Create a command to launch Sublime Text from the terminal
 ```bash
-ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+ln -sv "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge
 ```
 2. Install the packages
-    * SublimeLinter
-    * SublimeLinter-annotations
-    * SublimeLinter-flake8
-    * SublimeLinter-luacheck
-    * Neon Color Scheme
-    * FileIcons Mono
-    * NeoVintageous
-    * MarkdownPreview
-    * LaTeXTools
-    * Color Highlight
-    * TabNine
-    * Dotfiles Syntax Highlighting
+    + SublimeLinter
+    + SublimeLinter-annotations
+    + SublimeLinter-flake8
+    + SublimeLinter-luacheck
+    + Neon Color Scheme
+    + FileIcons Mono
+    + NeoVintageous
+    + LaTeXTools
+    + Typora Markdown App (OSX)
+    + LiveReload
 3. Populate the general settings (`CMD + ,`) with
 ```bash
 {
@@ -212,21 +203,29 @@ ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loc
     "ensure_newline_at_eof_on_save": true,
     "fade_fold_buttons": false,
     "figlet_font": "slant",
-    "font_size": 11,
-    "highlight_line": false,
+    // "font_face": "Source Code Pro",
+    "font_face": "Input Mono",
+    // "font_face": "Comic Code",
+    // "font_face": "Menlo",
+    "font_size": 13,
+    "highlight_line": true,
     "highlight_modified_tabs": true,
     "ignored_packages":
     [
         "Makefile",
         "Six",
         "Vintage",
-        "Vintageous"
+        "Vintageous",
     ],
     "indent_to_bracket": true,
     "margin": -2,
     "neovintageous_build_version": 11100,
     "overlay_scroll_bars": "system",
-    "rulers": [100],
+    "relative_line_numbers": true,
+    "rulers":
+    [
+        120
+    ],
     "shift_tab_unindent": true,
     "show_errors_inline": false,
     "show_full_path": true,
@@ -239,17 +238,23 @@ ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loc
     "vintageous_use_ctrl_keys": null,
     "vintageous_use_super_keys": null,
     "word_wrap": false,
+    "added_words":
+    [
+        "dataset",
+        "optimality",
+        "covariate",
+        "discretizing",
+        "discretized",
+    ],
+    "update_check": true,
+    "dark_theme": "Default Dark.sublime-theme",
+    "light_theme": "Default.sublime-theme",
+    "dark_color_scheme": "Packages/Neon Color Scheme/Neon.tmTheme",
+    "light_color_scheme": "Celeste.sublime-color-scheme",
 }
+
 ```
-4. Populate the *A File Icon* package settings with
-```bash
-{
-   "color": "#fff",
-   "row_padding": [4, 1],
-   "size": 6
-}
-```
-5. Configure *SublimeLinter* with
+4. Configure _SublimeLinter_ with
 ```bash
 // SublimeLinter Settings - User
 {
@@ -266,6 +271,6 @@ ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loc
     }
 }
 ```
-6. Click on the *Switch Panel* icon (bottom left of the window) and select
-*Output: SublimeLinter* to see the linter's output at all times
+5. Click on the `Switch Panel` icon (bottom left of the window) and select
+`Output: SublimeLinter` to see the linter's output at all times
 (errors, warnings and annotations).

@@ -49,7 +49,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fasd safe-paste zsh-syntax-highlighting) #zsh-syntax-highlighting has to be the last item
+plugins=(safe-paste zsh-syntax-highlighting) #zsh-syntax-highlighting has to be the last item
 
 # User configuration
 
@@ -85,17 +85,6 @@ export TERM=xterm-256color
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-
-export DEMO_DIR=$HOME/Datasets/expert_demonstrations_openai_mujoco_h5
-export D4RL_DIR=$HOME/Datasets/d4rl_datasets_h5
-
-# Path to MuJoCo bins
-export LD_LIBRARY_PATH=“$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro200/bin“
-
-# Google Cloud SDK
-export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # Source the prompt config
 [[ -f ~/.prompt.conf ]] && source ~/.prompt.conf

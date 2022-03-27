@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 # Install brew packages
+brew install cask
 brew install coreutils
+brew install ncdu
 brew install zsh
 brew install exa
 brew install git
-brew install git-lfs
 brew install wget
 brew install curl
 brew install neovim
@@ -23,16 +24,15 @@ brew install ruby
 brew install lua
 brew install luarocks
 brew install neofetch
-brew install open-mpi
-brew install youtube-dl
-brew install atomicparsley  # for reading, parsing and setting metadata into MPEG-4 files
-brew install glfw3
-brew install ncdu
+brew install yt-dlp
+brew install rclone
+brew install ocaml
 
 # Install macOS applications with brew cask
-brew install --cask google-cloud-sdk
-brew install --cask istat-menus  # disable date menu
-brew install --cask intel-power-gadget  # https://bjango.com/help/istatmenus6/frequency/
+brew install --cask bartender
+brew install --cask istat-menus
+brew install --cask replacicon
+brew install --cask iterm2
 brew install --cask 1password
 brew install --cask brave-browser
 brew install --cask appcleaner
@@ -41,11 +41,11 @@ brew install --cask keepingyouawake
 brew install --cask hammerspoon
 brew install --cask karabiner-elements
 brew install --cask mactex
-brew install --cask malwarebytes
 brew install --cask dash
 brew install --cask maccy
 brew install --cask skim
 brew install --cask sketch
+brew install --cask typora
 brew install --cask sublime-text
 brew install --cask sublime-merge
 brew install --cask discord
@@ -55,14 +55,12 @@ brew install --cask qlstephen
 brew install --cask iina
 brew install --cask zerotier-one
 brew install --cask cyberduck
-brew install --cask mountain-duck
 brew install --cask superduper
-brew install --cask keka
 brew install --cask muzzle
-brew install --cask spotify
+brew install --cask monitorcontrol
+brew install --cask ivpn
 brew install --cask signal
-brew install --cask cryptomator
-
-# Install fonts
-brew tap caskroom/fonts
-brew install --cask font-source-code-pro
+brew install --cask plex-media-server
+# to unlock the Karabiner apps (protected from deletion by default),
+# follow the instructions at the link:
+# https://karabiner-elements.pqrs.org/docs/help/advanced-topics/lock-icon/#:~:text=A%20lock%20indicator%20is%20shown,cannot%20be%20deleted%20from%20Finder.

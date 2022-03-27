@@ -9,9 +9,7 @@ alias nproc='sysctl -n hw.ncpu'
 # Prefered version of ls
 alias lll='ls -FGlAhp'
 # Prefered version of exa
-alias ll='exa -laFH --header --git --color-scale --time-style=long-iso --group-directories-first --sort=Ext'
-# same as before, but only display the dotfiles
-alias l.='exa -la | egrep "^\."'
+alias ll='exa -1la --header --git --color-scale --time=created --time-style=long-iso --octal-permissions --no-user'
 # Prefered version of ln
 alias ln='ln -v'
 # Prefered version of rsync
@@ -28,6 +26,8 @@ alias df='df -h'
 alias du='du -h'
 alias du.='du -h .'
 alias du.1='du -h --max-depth=1 .'
+# Prefered version of nettop
+alias nettop='nettop -P -k state,interface -d'
 
 # Navigate up the directories
 alias ..='cd ..'
