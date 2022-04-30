@@ -3,6 +3,7 @@
 # Install brew packages
 brew install cask
 brew install coreutils
+brew install gnu-sed
 brew install ncdu
 brew install zsh
 brew install exa
@@ -27,6 +28,9 @@ brew install neofetch
 brew install yt-dlp
 brew install rclone
 brew install ocaml
+brew install miniforge
+brew install node
+brew install pandoc
 
 # Install macOS applications with brew cask
 brew install --cask bartender
@@ -48,7 +52,6 @@ brew install --cask sketch
 brew install --cask typora
 brew install --cask sublime-text
 brew install --cask sublime-merge
-brew install --cask discord
 brew install --cask zoomus
 brew install --cask xquartz
 brew install --cask qlstephen
@@ -59,8 +62,5 @@ brew install --cask superduper
 brew install --cask muzzle
 brew install --cask monitorcontrol
 brew install --cask ivpn
-brew install --cask signal
+brew install --cask textsniper
 brew install --cask plex-media-server
-# to unlock the Karabiner apps (protected from deletion by default),
-# follow the instructions at the link:
-# https://karabiner-elements.pqrs.org/docs/help/advanced-topics/lock-icon/#:~:text=A%20lock%20indicator%20is%20shown,cannot%20be%20deleted%20from%20Finder.

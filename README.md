@@ -1,156 +1,101 @@
 # Dotfiles and macOS system setup scripts
 
 ## System Preferences
-
-+ Go to _Accessibility -> Display_ and tick the _Reduce transparency_ box.
-+ Go to _Dock -> Prefer tabs when opening documents_ and select _Always_.
++ Go to _Accessibility -> Pointer Control -> Mouse & Trackpad -> Trackpad Options..._ and select _Enable dragging_ with
+  the _without drag lock_ option.
++ Go to _General-> Prefer tabs_ and select _never_.
 + Go to _Keyboard ->  Touch Bar shows_ and select _Expanded Control Strip_.
-+ Go to _Extensions -> Finder Extensions_ and disable Dropbox and Google Drive Finder extensions.
 
-## Hidden settings (redundant if using TinkerTool)
-
-- Enable key repeat:
-`defaults write -g ApplePressAndHoldEnabled -bool false`
-- Change the time in seconds it takes for the Dock to reappear fully:
-`defaults write com.apple.dock autohide-time-modifier -float 0.15`
-Followed by `killall Dock` for this change to properly take effect.
-To restore the Dock appearance to its original setting, use
-`defaults delete com.apple.dock autohide-time-modifier;killall Dock`.
+## More hidden settings
++ Install __TinkerTool__ by following the instructions at [this link](https://www.bresink.com/osx/TinkerTool.html).
++ The following setting are redundant if we are already using TinkerTool; here for legacy purposes
+    + Enable key repeat: `defaults write -g ApplePressAndHoldEnabled -bool false`
+    + Change the time it takes for the Dock to reappear fully; this time is in seconds
+        1. `defaults write com.apple.dock autohide-time-modifier -float 0.15` to make the change
+        2. `killall Dock` for this change to properly take effect
+        0. To restore the Dock's appearance to its original setting, use the following command
+            + `defaults delete com.apple.dock autohide-time-modifier;killall Dock`
++ Unlock the Karabiner apps, which are protected from deletion by default (a lock indicator is shown on the app icons)
+    + N.B.: this only makes sense (and not even remotely necessary even then) if one wants to replace the app icons
+    + _Why are these files [apps] protected?_ The Karabiner system of apps is a system-wide software, and files are
+      installed at appropriate locations besides the Application folder. If you just put the application icon in Trash
+      like a normal app uninstall, some files will be left behind. The file protection forces to use the built-in 
+      uninstaller, which removes the installed files tied to the Karabiner system properly when one uninstalls.
+    + This file locking is achieved with `schg` and `uchg` flags.
+    + One can unlock the locked application files with the following commands:
+        + `sudo chflags nouchg,noschg /Applications/Karabiner-Elements.app`
+        + `sudo chflags nouchg,noschg /Applications/Karabiner-EventViewer.app`
+    + Enter the administrator password upon executing these commands in a terminal; the apps should now be unlocked
+    + N.B.: __remember to use the built-in uninstaller when one wishes to remove the apps__
++ Install __SCR Thumbnail Provider__ from [this link](https://smartcomicreader.com/thumbnailprovider/).
+    + _What_ it does and _why_ it is a great little utility are both questions answered at the above link.
 
 ## Homebrew
-
-1. Install Homebrew
-```bash
-/usr/bin/ruby -e \
-    "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-2. Get the complete history
-```bash
-git -C "$(brew --repo homebrew/core)" fetch --unshallow
-```
-3. Install the Homebrew packages
-`./brew.sh`
-
-## Manual Install
-
-+ Download and install TinkerTool from `https://www.bresink.com/osx/TinkerTool.html`.
+1. Install __Homebrew__ by following the instructions at [this link](https://brew.sh/) _including_ the __Cask__ utility
+2. Run the install script `brew.sh`
 
 ## Mac App Store
-
-+ Microsoft Word and Excel (installing via the Mac App Store to avoid
-the incredibly annoying Microsoft Update overly-frequent pop-ups)
+Install these apps from the Mac App Store:
++ Microsoft Word and Excel (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 + Things 3
-+ OwlOCR
-+ Infuse
 + Mp3tag
-+ Notability
 
-Only if not using Safari as primary browser:
+Install __only__ if not using Safari as primary browser:
 + Wipr (Safari extension)
 
 ## Finder preferences
-
 Do not show anything on the desktop.
 
 ## Zsh
-
 1. Ensure `zsh` has been properly installed by running `brew install zsh`
 2. Add the line `/usr/local/bin/zsh` to `/etc/shells` (need `sudo` to write)
 3. Swap default shell: `chsh -s /usr/local/bin/zsh`
-4. Install [_oh-my-zsh_](https://ohmyz.sh)
+4. Install [`oh-my-zsh`](https://ohmyz.sh)
 ```bash
 sh -c "$(curl -fsSL \
     https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-5. Install the [_spaceship-prompt_](https://github.com/denysdovhan/spaceship-prompt) ZSH theme
+5. Install the [`spaceship-prompt`](https://github.com/denysdovhan/spaceship-prompt) ZSH theme
 ```bash
 git clone https://github.com/denysdovhan/spaceship-prompt.git \
     "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" \
     "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
-6. Install the [_zsh-syntax-highlighting_](https://github.com/zsh-users/zsh-syntax-highlighting)
-ZSH plugin.
-Install instructions
-[here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
+6. Install the [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) ZSH plugin.
+   Install instructions [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
     ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ## Symlinks
+Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
 
-Create symbolic links to reference the dotfiles outside the repository by running
-`./symlink.sh`
-
-## Vim plugin manager
-
-1. Ensure `neovim` has been properly installed by running `brew install neovim`
+## Vim
+1. (Ensure `neovim` has been properly installed by running `brew install neovim`)
 2. Ensure the file `$HOME/.config/nvim/init.vim` exists
-2. Install the [_vim-plug_](https://github.com/junegunn/vim-plug) Vim plugin manager
+3. Install the [`vim-plug`](https://github.com/junegunn/vim-plug) Vim plugin manager
 ```bash
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-3. Open any file with the `nvim` command (or `vim` if already aliased) and type
-`:PlugInstall` to install the vim plugins indicated in the `.vimrc` config.
+4. Open any file with the `nvim` command (or `vim` if already aliased) and type `:PlugInstall` to install the vim
+   plugins already typed out in the recovered version-controlled `.vimrc` configuration.
+5. Verify that the completion package(s) specified in the `.vimrc` configuration is (are) installed; otherwise, do it
+   manually with `:CocInstall coc-tabnine`. It is necessary to operate via the either a global variable or directly via
+   the above command to benefit from automatic update support.
 
 ## Python
-
-1. Download and install the latest version of _Miniconda_.
-The available versions are visible [_here_](https://repo.anaconda.com/miniconda/).
-```bash
-cd && curl -L -O  https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-bash Miniconda3-latest-MacOSX-x86_64.sh
-chmod 777 -R /anaconda3
-```
-2. In the base environment, install `flake8`
-```bash
-pip install flake8
-# Verify that the following command ouputs `~/miniconda3/bin/flake8`,
-# with `~` substituted with the full path.
-which flake8
-```
-3. Create a complete python environment align with my current needs
-```bash
-conda create -n pytorch-rl python=3.7
-conda activate pytorch-rl
-# >>>> PyTorch
-pip install --upgrade pip
-pip install --upgrade pytest pytest-instafail flake8 wrapt six tqdm pyyaml psutil cloudpickle tmuxp lockfile
-pip install --upgrade numpy pandas scipy scikit-learn h5py matplotlib
-pip install --upgrade pyvips scikit-image
-pip install --upgrade torch torchvision
-conda install -y -c conda-forge pillow opencv pyglet pyopengl mpi4py cython patchelf
-# >>>> wandb
-conda install -y -c conda-forge watchdog
-pip install moviepy imageio
-pip install wandb
-# >>>> MuJoCo
-brew install gcc@8
-cd && mkdir -p .mujoco && cd .mujoco
-curl -O https://www.roboti.us/download/mujoco200_macos.zip
-unzip mujoco200_macos.zip
-mv mujoco200_macos mujoco200
-# >>>> Editable-mode packages
-cd ~/Code
-git clone https://github.com/openai/mujoco-py.git
-pip install -e mujoco-py
-git clone https://github.com/openai/gym.git
-pip install -e 'gym[all]'
-git clone https://github.com/deepmind/pycolab
-pip install -e pycolab
-```
+1. (Ensure `miniforge` has been properly installed by running `brew install miniforge`)
+2. In the base Anaconda/conda/miniforge environment, install the PEP-8 rule-checking package `flake8` with the command
+   `pip install flake8`, and finally verify that the installed executable is first in the PATH with `which flake8`
 
 ## Lua
+Install `luacheck`, the preferred Lua code-linting executable, with `luarocks install luacheck`
 
-Install the prefered Lua linter
-```bash
-luarocks install luacheck
-```
-
-## Chromium-based browser extensions
-
+## Chromium
+Install the following Chrome extensions:
 + uBlock Origin
 + Reader View
 + enhanced h264ify
@@ -166,111 +111,31 @@ luarocks install luacheck
 + Sci-Hub X Now!
 + SponsorBlock for YouTube - Skip Sponsorships
 + QuicKey – The quick tab switcher
-+ BetterTTV
-+ ABSOLUTELY Blank New Tab Page
 + Soundcloud Download
-+ Live Reload, from Blaise Kal
++ BetterTTV
++ High Resolution Downloader for Instagram
 
-## Sublime Text
+## iTerm
++ In the preferences, go to _Profiles -> Keys -> General_ and change the setting _Left Option Key_ to _Esc+_.
+  This will have the effect of enabling the use of the _meta_ modifier (option/alt) in the terminal emulator.
++ In the preferences, go to _General -> Window_ and make sure that "Adjust window when changing font size" is off
 
+## Sublime Text and Merge
 1. Create a command to launch Sublime Text from the terminal
 ```bash
 ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 ln -sv "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge
 ```
-2. Install the packages
-    + SublimeLinter
-    + SublimeLinter-annotations
-    + SublimeLinter-flake8
-    + SublimeLinter-luacheck
-    + Neon Color Scheme
-    + FileIcons Mono
-    + NeoVintageous
-    + LaTeXTools
-    + Typora Markdown App (OSX)
-    + LiveReload
-3. Populate the general settings (`CMD + ,`) with
-```bash
-{
-    "always_show_minimap_viewport": true,
-    "auto_complete": false,
-    "bold_folder_labels": true,
-    "caret_style": "phase",
-    "close_windows_when_empty": true,
-    "color_scheme": "Packages/Neon Color Scheme/Neon.tmTheme",
-    "detect_indentation": false,
-    "draw_minimap_border": true,
-    "ensure_newline_at_eof_on_save": true,
-    "fade_fold_buttons": false,
-    "figlet_font": "slant",
-    // "font_face": "Source Code Pro",
-    "font_face": "Input Mono",
-    // "font_face": "Comic Code",
-    // "font_face": "Menlo",
-    "font_size": 13,
-    "highlight_line": true,
-    "highlight_modified_tabs": true,
-    "ignored_packages":
-    [
-        "Makefile",
-        "Six",
-        "Vintage",
-        "Vintageous",
-    ],
-    "indent_to_bracket": true,
-    "margin": -2,
-    "neovintageous_build_version": 11100,
-    "overlay_scroll_bars": "system",
-    "relative_line_numbers": true,
-    "rulers":
-    [
-        120
-    ],
-    "shift_tab_unindent": true,
-    "show_errors_inline": false,
-    "show_full_path": true,
-    "spell_check": false,
-    "theme": "Adaptive.sublime-theme",
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true,
-    "use_tab_stops": true,
-    "vintage_start_in_command_mode": true,
-    "vintageous_use_ctrl_keys": null,
-    "vintageous_use_super_keys": null,
-    "word_wrap": false,
-    "added_words":
-    [
-        "dataset",
-        "optimality",
-        "covariate",
-        "discretizing",
-        "discretized",
-    ],
-    "update_check": true,
-    "dark_theme": "Default Dark.sublime-theme",
-    "light_theme": "Default.sublime-theme",
-    "dark_color_scheme": "Packages/Neon Color Scheme/Neon.tmTheme",
-    "light_color_scheme": "Celeste.sublime-color-scheme",
-}
+2. In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
++ SublimeLinter
++ SublimeLinter-annotations
++ SublimeLinter-flake8
++ SublimeLinter-luacheck
++ Neon Color Scheme
++ FileIcons Mono
++ NeoVintageous
++ ToggleNeoVintageous
++ LaTeXTools
++ Typora Markdown App (OSX)
++ Tabnine
 
-```
-4. Configure _SublimeLinter_ with
-```bash
-// SublimeLinter Settings - User
-{
-    "debug": true,
-    "lint_mode": "load_save",
-    "linters": {
-        "luacheck": {
-            "executable": "/usr/local/bin/luacheck"
-        },
-        "flake8": {
-            "args": "--max-line-length=100",
-            "executable": "~/miniconda3/bin/flake8"
-        }
-    }
-}
-```
-5. Click on the `Switch Panel` icon (bottom left of the window) and select
-`Output: SublimeLinter` to see the linter's output at all times
-(errors, warnings and annotations).
