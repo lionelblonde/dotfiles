@@ -58,6 +58,10 @@ source $ZSH/oh-my-zsh.sh
 # Line added according to the fasd installation instructions
 eval "$(fasd --init auto)"
 
+# ZSH uses the KEYTIMEOUT parameter to determine how long to wait (in hundredths of a second)
+# for additional characters in sequence. Default is 0.4 seconds.
+KEYTIMEOUT=1
+
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
@@ -81,13 +85,24 @@ setopt HIST_IGNORE_SPACE
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Terminal (and number of colors)
 export TERM=xterm-256color
 
+# Set editor to use by default
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Enable the use of vi in terminal commands
+set -o vi
+# Problem: vi mode in bash has a delay when switching from insert mode to command mode
+set keyseq-timeout 0.01
+
 # Source the prompt config
 [[ -f ~/.prompt.conf ]] && source ~/.prompt.conf
+
+# Have the vi mode indicator in the prompt refresh when changing mode; info at the following link
+# https://github.com/spaceship-prompt/spaceship-prompt/blob/master/docs/options.md#vi-mode-vi_mode
+eval spaceship_vi_mode_enable
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -106,3 +121,6 @@ unset __conda_setup
 
 # Necessary for conda envs to work in tmux
 [[ -z $TMUX ]] || conda deactivate; conda activate base
+
+# opam configuration
+[[ ! -r /Users/lionelblonde/.opam/opam-init/init.zsh ]] || source /Users/lionelblonde/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

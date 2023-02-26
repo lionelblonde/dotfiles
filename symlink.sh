@@ -16,9 +16,27 @@ ln -svf $HOME/Documents/dotfiles/.vimrc $HOME/.vimrc
 ln -svf $HOME/Documents/dotfiles/.prompt.conf $HOME/.prompt.conf
 ln -svf $HOME/Documents/dotfiles/.zshrc $HOME/.zshrc
 ln -svf $HOME/Documents/dotfiles/.ytdlp.conf $HOME/.ytdlp.conf
-ln -svf $HOME/Documents/dotfiles/sublime/Preferences.sublime-settings \
+# Sublime Text and Merge
+# Text
+ln -svf $HOME/Documents/dotfiles/sublime/text/Preferences.sublime-settings \
     "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"
-ln -svf $HOME/Documents/dotfiles/sublime/SublimeLinter.sublime-settings \
+ln -svf $HOME/Documents/dotfiles/sublime/text/SublimeLinter.sublime-settings \
     "$HOME/Library/Application Support/Sublime Text/Packages/User/SublimeLinter.sublime-settings"
-ln -svf $HOME/Documents/dotfiles/sublime/.neovintageousrc \
+ln -svf $HOME/Documents/dotfiles/sublime/text/.neovintageousrc \
     "$HOME/Library/Application Support/Sublime Text/Packages/User/.neovintageousrc"
+ln -svf $HOME/Documents/dotfiles/sublime/text/LSP.sublime-settings \
+    "$HOME/Library/Application Support/Sublime Text/Packages/User/LSP.sublime-settings"
+ln -svf $HOME/Documents/dotfiles/sublime/text/LSP-pylsp.sublime-settings \
+    "$HOME/Library/Application Support/Sublime Text/Packages/User/LSP-pylsp.sublime-settings"
+# Merge
+ln -svf $HOME/Documents/dotfiles/sublime/merge/Preferences.sublime-settings \
+    "$HOME/Library/Application Support/Sublime Merge/Packages/User/Preferences.sublime-settings"
+ln -svf $HOME/Documents/dotfiles/sublime/merge/Commit\ Message\ -\ Merge.sublime-settings \
+    "$HOME/Library/Application Support/Sublime Merge/Packages/User/Commit Message - Merge.sublime-settings"
+ln -svf $HOME/Documents/dotfiles/sublime/merge/Diff\ -\ Merge.sublime-settings \
+    "$HOME/Library/Application Support/Sublime Merge/Packages/User/Diff - Merge.sublime-settings"
+ln -svf $HOME/Documents/dotfiles/sublime/merge/File\ Mode\ -\ Merge.sublime-settings \
+    "$HOME/Library/Application Support/Sublime Merge/Packages/User/File Mode - Merge.sublime-settings"
+# kitty
+ln -svf $HOME/Documents/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+

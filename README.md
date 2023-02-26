@@ -17,7 +17,7 @@
             + `defaults delete com.apple.dock autohide-time-modifier;killall Dock`
 + Unlock the Karabiner apps, which are protected from deletion by default (a lock indicator is shown on the app icons)
     + N.B.: this only makes sense (and not even remotely necessary even then) if one wants to replace the app icons
-    + _Why are these files [apps] protected?_ The Karabiner system of apps is a system-wide software, and files are
+    + _Why are these files (apps) protected?_ The Karabiner system of apps is a system-wide software, and files are
       installed at appropriate locations besides the Application folder. If you just put the application icon in Trash
       like a normal app uninstall, some files will be left behind. The file protection forces to use the built-in 
       uninstaller, which removes the installed files tied to the Karabiner system properly when one uninstalls.
@@ -27,8 +27,8 @@
         + `sudo chflags nouchg,noschg /Applications/Karabiner-EventViewer.app`
     + Enter the administrator password upon executing these commands in a terminal; the apps should now be unlocked
     + N.B.: __remember to use the built-in uninstaller when one wishes to remove the apps__
-+ Install __SCR Thumbnail Provider__ from [this link](https://smartcomicreader.com/thumbnailprovider/).
-    + _What_ it does and _why_ it is a great little utility are both questions answered at the above link.
++ Install the _Fonts for Apple Platforms_ that are available at [this link](https://developer.apple.com/fonts/)
+    + In paticular, make sure to acquire the __New York__ one.
 
 ## Homebrew
 1. Install __Homebrew__ by following the instructions at [this link](https://brew.sh/) _including_ the __Cask__ utility
@@ -36,12 +36,12 @@
 
 ## Mac App Store
 Install these apps from the Mac App Store:
-+ Microsoft Word and Excel (installation via the Mac App Store alleviates Microsoft Update pop-ups)
-+ Things 3
-+ Mp3tag
-
-Install __only__ if not using Safari as primary browser:
-+ Wipr (Safari extension)
++ Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
++ Pure Paste
++ Things 3 (and hide the sidebar)
++ Infuse
++ DaisyDisk
++ RunCat
 
 ## Finder preferences
 Do not show anything on the desktop.
@@ -91,34 +91,63 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 2. In the base Anaconda/conda/miniforge environment, install the PEP-8 rule-checking package `flake8` with the command
    `pip install flake8`, and finally verify that the installed executable is first in the PATH with `which flake8`
 
+## OCaml
+Run the following (exhaustive: there might be overlaps):
+```console
+brew install opam
+opam init
+opam install ocaml-lsp-server
+opam install dune
+opam install utop
+```
+The last line installs the OCaml language server protocol library.
+
+Debug log with Sublime Text:
+=> do not even try to use Sublime Text for OCaml. VSCodium is far better because of this:
+[ocamllabs/vscode-ocaml-platform](https://github.com/ocamllabs/vscode-ocaml-platform).
+It allows for the choice of OCaml switch through the GUI, and is designed with building tools like `dune` in mind.
+The absolute killer feature is that it (VSCodium with the OCaml platform plugin) adds a header to each function
+to indicate the signature of the function (e.g. `int -> int -> int list`).
+
+To install Coq (theorem-proving langauge written in OCaml), use: `opam install coq`.
+
 ## Lua
-Install `luacheck`, the preferred Lua code-linting executable, with `luarocks install luacheck`
+Install `luacheck`, the preferred Lua code-linting executable, with `luarocks install luacheck`.
+
+## Rust
+1. Use `rustup` (installed) to install the Rust compiler (rustc) and the Rust package manager (cargo): `rustup-init`.
+2. Verify that all is well with: `rustc --version`.
 
 ## Chromium
-Install the following Chrome extensions:
+Install the following Chrome extensions from the store:
 + uBlock Origin
 + Reader View
-+ enhanced h264ify
-+ Video Speed Controller
++ 1Password – Password Manager
++ enhanced-h264ify
 + Paperpile
 + arxiv-utils
-+ Delta for YouTube
-+ LeechBlock NG
-+ Session Buddy
-+ Old Brave Dark Theme
-+ Unhook - Remove YouTube Recommended Videos
-+ Return YouTube Dislike
 + Sci-Hub X Now!
++ Session Buddy
++ LeechBlock NG
++ uBlacklist
++ Medium Unlocker
++ Video Speed Controller
++ Old Reddit Redirect
++ Nitter Redirect
++ QuicKey
 + SponsorBlock for YouTube - Skip Sponsorships
-+ QuicKey – The quick tab switcher
-+ Soundcloud Download
-+ BetterTTV
-+ High Resolution Downloader for Instagram
++ Return YouTube Dislike
++ Youtube-shorts block
++ Delta for YouTube
++ RYS — Remove YouTube Suggestions
 
-## iTerm
-+ In the preferences, go to _Profiles -> Keys -> General_ and change the setting _Left Option Key_ to _Esc+_.
-  This will have the effect of enabling the use of the _meta_ modifier (option/alt) in the terminal emulator.
-+ In the preferences, go to _General -> Window_ and make sure that "Adjust window when changing font size" is off
+[This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
+
+## VSCodium
+Install the following extensions:
++ Vim from vscodevim
++ OCaml Platform by ocamllabs
++ Whatever is best for Jupyter notebooks (package of extensions)
 
 ## Sublime Text and Merge
 1. Create a command to launch Sublime Text from the terminal
@@ -127,15 +156,55 @@ ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loc
 ln -sv "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/smerge
 ```
 2. In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
-+ SublimeLinter
-+ SublimeLinter-annotations
-+ SublimeLinter-flake8
-+ SublimeLinter-luacheck
 + Neon Color Scheme
++ DashDoc
 + FileIcons Mono
 + NeoVintageous
 + ToggleNeoVintageous
 + LaTeXTools
-+ Typora Markdown App (OSX)
 + Tabnine
++ SublimeLinter
++ SublimeLinter-annotations
++ Breadcrumbs
++ rainbow_csv
++ Switch Window
++ Outline
++ LSP
++ LSP-file-watcher-chokidar
++ LSP-pyright
++ LSP-pylsp
++ LSP-lua
++ LSP-rust-analyzer
++ Julia
++ LSP-julia
++ LSP-json
++ LSP-yaml
++ LSP-metals
+
+## Karabiner
++ In _Simple modifications_, hit _Add item_, and map "eject" to "delete_forward"
++ In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
++ In there, also add "Change control key".
++ Once the item has been imported in the Karabiner app, enable the following rules from the imported bundle of rules:
+    + "Caps Lock to Escape on single press, Caps Lock on press and hold."
+    + "Post escape if left_control is pressed alone." (necessary when using the HHKB)
++ In _Devices -> Advanced -> Disable the build-in keyboard while one of the following selected device is connected_,
+  tick the box that says "HHKB Professional \[...\]" (or other desired device)
+
+## QMK
+After installing, set it up with `qmk setup`.
+
+## Jupyter
+Those are the steps to follow to create a new kernelspec aligned with a conda environment, although this is effectively
+obsolete to carry out by hand since vscode/vscodium is capable of changing the kernel directly from conda environments.
++ activate the desired conda environment
++ `pip install jupyter`
++ `pip install ipykernel`
++ `python -m ipykernel install --user --name=<exact conda env name> --display-name="<nicer name for kernelspec>"`
+Note, the `--name` flag gives ties the kernelspec to an existing conda environment (it is not the activation that does).
+
+Use `jupyter kernelspec list` to print the list of kernelspecs install on the system.
+Use `jupyter kernelspec uninstall my_kernelspec_name` to remove a kernelspec.
+
+
 

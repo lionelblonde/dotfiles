@@ -47,7 +47,7 @@ alias myip='ip route get 8.8.8.8 | awk "{print $NF; exit}"'
 alias sss='service ssh status'
 
 # Tmux
-alias tmux="tmux -2"
+alias tmux='tmux -2'
 alias ta='tmux attach -t'
 alias tnew='tmux new -d -s'
 alias tls='tmux ls'
@@ -61,13 +61,20 @@ alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 alias eb='vim ~/.bash_profile'
 alias eh='vim ~/.hammerspoon/init.lua'
+alias ek='vim ~/.config/kitty/kitty.conf'
+alias er='vim ~/Documents/dotfiles/README.md'
+alias es='vim ~/Documents/dotfiles/brew.sh'
 
 # Convenience shortcut to quickly reach the Sublime Text configuration folder
 alias gtsubl='cd "/Users/lionelblonde/Library/Application Support/Sublime Text/Packages/User"'
+
 alias gtidoc='cd "/Users/lionelblonde/Library/Mobile Documents/com~apple~CloudDocs/Documents"'
 
 # Convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
 
-# Create alias to open Markdown files in Typora
+# Create alias to open files from various apps that do not have CLI
 alias typora="open -a typora"
+
+# Replace `sed` by `gsed`
+alias sed=gsed
