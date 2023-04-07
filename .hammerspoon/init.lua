@@ -124,7 +124,7 @@ hyperapps["k"] = "Notes"
 hyperapps["n"] = "Things"
 hyperapps["l"] = "Skim"
 hyperapps[","] = "Calendar"
-hyperapps["."] = "Keynote"
+hyperapps["."] = "IINA"
 
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end

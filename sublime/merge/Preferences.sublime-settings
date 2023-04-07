@@ -1,6 +1,6 @@
 {
 	"font_size": 12,
-	"theme": "Merge.sublime-theme",
+	"theme": "auto",
 	"translate_tabs_to_spaces": true,
 	"side_bar_layout": "tabs",
 	"render_commit_dialog_message_at_top": true,

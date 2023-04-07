@@ -124,3 +124,7 @@ unset __conda_setup
 
 # opam configuration
 [[ ! -r /Users/lionelblonde/.opam/opam-init/init.zsh ]] || source /Users/lionelblonde/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# Secretive Config
+export SSH_AUTH_SOCK=/Users/lionelblonde/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+

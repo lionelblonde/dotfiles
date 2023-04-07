@@ -5,7 +5,6 @@ brew install cask
 brew install coreutils
 brew install gnu-sed
 brew install ncdu
-brew install shortcat
 brew install croc
 brew install zsh
 brew install exa
@@ -28,7 +27,7 @@ brew install lua
 brew install luarocks
 brew install neofetch
 brew install yt-dlp
-brew install miniforge
+brew install mambaforge
 brew install node
 brew install pandoc
 brew install julia
@@ -43,6 +42,10 @@ brew install agg
 brew install megatools
 
 # Install macOS applications with brew cask
+brew install --cask kitty
+brew install --cask calibre
+brew install --cask soulver
+brew install --cask bartender
 brew install --cask mouse-fix
 brew install --cask keka
 brew install --cask 1password
@@ -59,7 +62,6 @@ brew install --cask sketch
 brew install --cask typora
 brew install --cask sublime-text
 brew install --cask sublime-merge
-brew install --cask soulver
 brew install --cask xquartz
 brew install --cask qlstephen
 brew install --cask iina
@@ -77,4 +79,5 @@ brew install --cask signal
 brew install --cask zerotier-one
 brew install --cask maestral
 brew install --cask microsoft-teams
-brew install --cask vscodium
+brew install --cask utm
+

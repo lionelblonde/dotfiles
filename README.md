@@ -4,7 +4,7 @@
 + Go to _Accessibility -> Pointer Control -> Mouse & Trackpad -> Trackpad Options..._ and select _Enable dragging_ with
   the _without drag lock_ option.
 + Go to _General-> Prefer tabs_ and select _never_.
-+ Go to _Keyboard ->  Touch Bar shows_ and select _Expanded Control Strip_.
++ Go to _Keyboard -> Keyboard Shortcuts... -> Mission Control_ and assign F10 to _Application windows_.
 
 ## More hidden settings
 + Install __TinkerTool__ by following the instructions at [this link](https://www.bresink.com/osx/TinkerTool.html).
@@ -29,6 +29,12 @@
     + N.B.: __remember to use the built-in uninstaller when one wishes to remove the apps__
 + Install the _Fonts for Apple Platforms_ that are available at [this link](https://developer.apple.com/fonts/)
     + In paticular, make sure to acquire the __New York__ one.
++ Setup the following shortcuts for the menubar apps:
+    + `control + shift + B`: Bartender's Spotlight-like menu pop-up to access menubar items with the keyboard
+    + `control + shift + S`: Soulver's Spotlight-like menu pop-up to carry out quick calculations
+    + `control + P`: open 1Password
+    + `control + :`: trigger TextSniper
+    + `control + '`: trigger Maccy
 
 ## Homebrew
 1. Install __Homebrew__ by following the instructions at [this link](https://brew.sh/) _including_ the __Cask__ utility
@@ -37,11 +43,8 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
-+ Pure Paste
 + Things 3 (and hide the sidebar)
-+ Infuse
 + DaisyDisk
-+ RunCat
 
 ## Finder preferences
 Do not show anything on the desktop.
@@ -87,8 +90,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
    the above command to benefit from automatic update support.
 
 ## Python
-1. (Ensure `miniforge` has been properly installed by running `brew install miniforge`)
-2. In the base Anaconda/conda/miniforge environment, install the PEP-8 rule-checking package `flake8` with the command
+1. (Ensure `mambaforge` has been properly installed by running `brew install mambaforge`)
+2. In the base conda/miniforge/mambaforge environment, install the PEP-8 rule-checking package `flake8` with the command
    `pip install flake8`, and finally verify that the installed executable is first in the PATH with `which flake8`
 
 ## OCaml
@@ -121,7 +124,6 @@ Install `luacheck`, the preferred Lua code-linting executable, with `luarocks in
 ## Chromium
 Install the following Chrome extensions from the store:
 + uBlock Origin
-+ Reader View
 + 1Password – Password Manager
 + enhanced-h264ify
 + Paperpile
@@ -140,6 +142,9 @@ Install the following Chrome extensions from the store:
 + Youtube-shorts block
 + Delta for YouTube
 + RYS — Remove YouTube Suggestions
++ HeadingsMap
++ Pinboard Plus
++ Emoji Blocker
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
@@ -182,7 +187,6 @@ ln -sv "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/
 + LSP-metals
 
 ## Karabiner
-+ In _Simple modifications_, hit _Add item_, and map "eject" to "delete_forward"
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
 + In there, also add "Change control key".
 + Once the item has been imported in the Karabiner app, enable the following rules from the imported bundle of rules:
@@ -190,6 +194,20 @@ ln -sv "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/
     + "Post escape if left_control is pressed alone." (necessary when using the HHKB)
 + In _Devices -> Advanced -> Disable the build-in keyboard while one of the following selected device is connected_,
   tick the box that says "HHKB Professional \[...\]" (or other desired device)
++ In _Function Keys_, _For all devices_, set ("use all F1, F2, etc. keys as standard function keys" is set to False):
+    + _f1_ to "display_brightness_decrement"
+    + _f2_ to "display_brightness_increment"
+    + _f3_ to "mission_control"
+    + _f4_ to "f10"
+    + _f5_ to "f5"
+    + _f6_ to "f6"
+    + _f7_ to "rewind"
+    + _f8_ to "play_or_pause"
+    + _f9_ to "fast_forward"
+    + _f10_ to "mute"
+    + _f11_ to "volume_decrement"
+    + _f12_ to "volume_increment"
+N.B.: these depend on the QMK layout.
 
 ## QMK
 After installing, set it up with `qmk setup`.
@@ -205,6 +223,4 @@ Note, the `--name` flag gives ties the kernelspec to an existing conda environme
 
 Use `jupyter kernelspec list` to print the list of kernelspecs install on the system.
 Use `jupyter kernelspec uninstall my_kernelspec_name` to remove a kernelspec.
-
-
 

@@ -54,6 +54,9 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias tkillall='tmux kill-server'
 
+# yt-dl
+alias ydl='yt-dlp --config-location ~/.ytdlp.conf'
+
 # Convenience aliases for editing configs
 alias ea='vim ~/.aliases'
 alias ev='vim ~/.vimrc'
@@ -74,7 +77,8 @@ alias gtidoc='cd "/Users/lionelblonde/Library/Mobile Documents/com~apple~CloudDo
 alias sz='source ~/.zshrc'
 
 # Create alias to open files from various apps that do not have CLI
-alias typora="open -a typora"
+alias typora='open -a typora'
 
 # Replace `sed` by `gsed`
 alias sed=gsed
+
