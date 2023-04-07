@@ -7,6 +7,8 @@ brew install gnu-sed
 brew install ncdu
 brew install croc
 brew install zsh
+brew install zsh-syntax-highlighting
+brew install spaceship
 brew install exa
 brew install git
 brew install wget
@@ -16,7 +18,6 @@ brew install imagemagick
 brew install ffmpeg
 brew install htop
 brew install tmux
-brew install fasd
 brew install tree
 brew install ssh-copy-id
 brew install unrar
@@ -39,7 +40,6 @@ brew install qmk/qmk/qmk
 brew tap bloznelis/tap
 brew install asciinema
 brew install agg
-brew install megatools
 
 # Install macOS applications with brew cask
 brew install --cask kitty

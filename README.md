@@ -50,6 +50,12 @@ Install these apps from the Mac App Store:
 Do not show anything on the desktop.
 
 ## Zsh
+1. Make sure to only continue here after having run the `brew.sh` script.
+    + The `brew.sh` script installs (among many others) `zsh`, `spaceship`, and `zsh-syntax-highlighting`
+2. Add prompt initialization to your `.zshrc`: `echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >>! ~/.zshrc`
+    + Not necessary to execute if the line is already in `.zshrc`
+
+These are the __legacy instructions__, which will be left here for a bit while facing eventual deletion:
 1. Ensure `zsh` has been properly installed by running `brew install zsh`
 2. Add the line `/usr/local/bin/zsh` to `/etc/shells` (need `sudo` to write)
 3. Swap default shell: `chsh -s /usr/local/bin/zsh`

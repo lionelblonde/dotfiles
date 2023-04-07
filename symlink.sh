@@ -4,7 +4,7 @@
 ln -svf $HOME/Documents/dotfiles/.aliases $HOME/.aliases
 ln -svf $HOME/Documents/dotfiles/.bash_profile $HOME/.bash_profile
 ln -svf $HOME/Documents/dotfiles/.bashrc $HOME/.bashrc
-ln -svf $HOME/Documents/dotfiles/.condarc $HOME/.condarc
+ln -svf $HOME/Documents/dotfiles/.mambarc $HOME/.mambarc
 cd $HOME/.config && mkdir -p nvim
 ln -svf $HOME/Documents/dotfiles/.config/nvim/init.vim $HOME/.config/nvim/init.vim
 ln -svf $HOME/Documents/dotfiles/.gitconfig $HOME/.gitconfig

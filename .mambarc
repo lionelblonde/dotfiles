@@ -2,3 +2,4 @@ changeps1: false
 channels:
   - defaults
 ssl_verify: true
+always_yes: true
