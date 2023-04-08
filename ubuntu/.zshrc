@@ -46,31 +46,28 @@ set keyseq-timeout 0.01
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/mambaforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/lionel/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/local/Caskroom/mambaforge/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/mambaforge/base/etc/profile.d/conda.sh"
+    if [ -f "/home/lionel/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/home/lionel/mambaforge/etc/profile.d/conda.sh"
     else
-        export PATH="/usr/local/Caskroom/mambaforge/base/bin:$PATH"
+        export PATH="/home/lionel/mambaforge/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/usr/local/Caskroom/mambaforge/base/etc/profile.d/mamba.sh" ]; then
-    . "/usr/local/Caskroom/mambaforge/base/etc/profile.d/mamba.sh"
+if [ -f "/home/lionel/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/home/lionel/mambaforge/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 
 # Necessary for conda envs to work in tmux
 [[ -z $TMUX ]] || mamba deactivate; mamba activate base
 
-# Configure opam
-[[ ! -r /Users/lionelblonde/.opam/opam-init/init.zsh ]] || source /Users/lionelblonde/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
 # Configure the spaceship prompt
-source /usr/local/opt/spaceship/spaceship.zsh
+source "$HOME/.zsh/spaceship/spaceship.zsh"
 
-# Configure the zsh-syntax-highlighting plugin (N.B. path to the executable found by digging)
-source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Configure the zsh-syntax-highlighting plugin
+source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

@@ -52,8 +52,20 @@ Do not show anything on the desktop.
 ## Zsh
 1. Make sure to only continue here after having run the `brew.sh` script.
     + The `brew.sh` script installs (among many others) `zsh`, `spaceship`, and `zsh-syntax-highlighting`
+1. [maybe not needed depending on the system (?)]
+    + Add the line `/usr/local/bin/zsh` to `/etc/shells` (need `sudo` to write)
+    + Swap default shell: `chsh -s /usr/local/bin/zsh`
 2. Add prompt initialization to your `.zshrc`: `echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >>! ~/.zshrc`
     + Not necessary to execute if the line is already in `.zshrc`
+3. Exactly the same goes for the `zsh-syntax-highlighting` plugin
+4. Source `.zshrc`
+
+Special note: on Ubuntu
+1. Create a `.zsh` folder at home: `mkdir -p .zsh`
+2. Clone `git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git "$HOME/.zsh/spaceship"`
+3. Clone `git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh/zsh-syntax-highlighting"`
+4. Transfer the file or just the lines from the saved `.zshrc` in `ubuntu` to the `.zshrc` to have them sourced
+5. Source `.zshrc`
 
 These are the __legacy instructions__, which will be left here for a bit while facing eventual deletion:
 1. Ensure `zsh` has been properly installed by running `brew install zsh`
@@ -91,9 +103,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 ```
 4. Open any file with the `nvim` command (or `vim` if already aliased) and type `:PlugInstall` to install the vim
    plugins already typed out in the recovered version-controlled `.vimrc` configuration.
-5. Verify that the completion package(s) specified in the `.vimrc` configuration is (are) installed; otherwise, do it
-   manually with `:CocInstall coc-tabnine`. It is necessary to operate via the either a global variable or directly via
-   the above command to benefit from automatic update support.
 
 ## Python
 1. (Ensure `mambaforge` has been properly installed by running `brew install mambaforge`)
@@ -173,7 +182,6 @@ ln -sv "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/
 + NeoVintageous
 + ToggleNeoVintageous
 + LaTeXTools
-+ Tabnine
 + SublimeLinter
 + SublimeLinter-annotations
 + Breadcrumbs

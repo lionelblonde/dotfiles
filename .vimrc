@@ -26,17 +26,12 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 " Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim'
-" Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Modern Vim and Neovim filetype and syntax plugin for LaTeX files
 Plug 'lervag/vimtex'
 " Add sticky scroll functionality
 Plug 'wellle/context.vim'
 " Plugin for viewing vim and nvim startup event timing information
 Plug 'dstein64/vim-startuptime'
-" Versatile (files and buffers) fuzzy finder (originated by TJ DeVries)
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -202,64 +197,6 @@ autocmd! User GoyoLeave call <SID>goyo_leave()
 
 " Make the yanked region apparent
 au TextYankPost * silent! lua vim.highlight.on_yank()
-
-" Make coc automatically install the desired extensions
-let g:coc_global_extensions = ['coc-tabnine']
-
-" -----------------------------------------------------------------------
-" Suggested configuration from https://github.com/neoclide/coc.nvim
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-set signcolumn=yes
-
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" NOTE: There's always complete item selected by default, you may want to enable
-" no select by `"suggest.noselect": true` in your configuration file.
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-" -----------------------------------------------------------------------
-
-" Create a function that toggles Coc's linting
-function! CocToggle()
-    if g:coc_enabled
-        CocDisable
-    else
-        CocEnable
-    endif
-endfunction
-command! CocToggle :call CocToggle()
-" Set a keybind to toggle Coc
-nnoremap <leader>coc :CocToggle<CR>
 
 " Enable markdown folding
 let g:markdown_folding = 1

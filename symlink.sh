@@ -39,4 +39,4 @@ ln -svf $HOME/Documents/dotfiles/sublime/merge/File\ Mode\ -\ Merge.sublime-sett
     "$HOME/Library/Application Support/Sublime Merge/Packages/User/File Mode - Merge.sublime-settings"
 # kitty
 ln -svf $HOME/Documents/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
-
+ln -svf $HOME/Documents/dotfiles/.config/kitty/ssh.conf $HOME/.config/kitty/ssh.conf
