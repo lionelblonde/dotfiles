@@ -14,7 +14,7 @@ alias xx='exa -1la --header --git --color-scale --time=created --time-style=long
 # Prefered version of ln
 alias ln='ln -v'
 # Prefered version of rsync
-alias rsync='rsync -avP'
+alias rsync='rsync -ahP'
 # Prefered version of grep
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -65,6 +65,8 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 
 # Convenience aliases for editing configs
 # I use these on macOS and Anton only -- can use neovim
+alias ec='v ~/Documents/notes/cheatsheet.md'
+alias eb='v ~/Documents/notes/bookmarks.txt'
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
 alias ez='v ~/.zshrc'
@@ -74,14 +76,12 @@ alias ek='v ~/.config/kitty/kitty.conf'
 alias er='v ~/Documents/dotfiles/README.md'
 alias es='v ~/Documents/dotfiles/brew.sh'
 
-# Convenience shortcut to quickly reach the Sublime Text configuration folder
+# Convenience shortcut to quickly reach the Sublime Text/Merge configuration folder
 alias gotosubl='cd "/Users/lionelblonde/Library/Application Support/Sublime Text/Packages/User"'
+alias gotomerge='cd "/Users/lionelblonde/Library/Application Support/Sublime Merge/Packages/User/"'
 
 # Convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
-
-# Create alias to open files from various apps that do not have CLI
-alias typora='open -a typora'
 
 # Replace `sed` by `gsed`
 alias sed=gsed

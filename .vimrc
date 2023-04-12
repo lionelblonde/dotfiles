@@ -82,8 +82,8 @@ endif
 let NERDSpaceDelims=1
 
 " Define colorscheme provided as plugin
-colo seoul256-light
-set background=light
+" colo seoul256-light
+" set background=light
 " Force the bg to default to the terminal's bg
 hi Normal ctermbg=None
 hi LineNr ctermbg=None

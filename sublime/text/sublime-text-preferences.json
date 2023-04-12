@@ -15,17 +15,15 @@
     // "font_face": "Input Mono Narrow",
     // "font_face": "Comic Code",
     // "font_face": "Menlo",
-    "font_face": "Mensch",
-    // "font_face": "Cousine",
-    // "font_face": "JuliaMono",
-    "font_size": 12,
+    // "font_face": "Mensch",
+    "font_face": "Cousine",
+    "font_size": 13,
     "highlight_line": false,
     "highlight_modified_tabs": true,
     "ignored_packages":
     [
         "Makefile",
         "Six",
-        "SublimeLinter",
         "Vintage",
         "Vintageous",
     ],
@@ -66,4 +64,5 @@
     "show_tab_close_buttons": false,
     "fold_buttons": true,
     "font_options": ["no_calt"],
+    "animation_enabled": true,
 }

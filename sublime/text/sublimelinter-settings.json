@@ -1,0 +1,18 @@
+{
+    "debug": true,
+    "lint_mode": "load_save",
+    "linters": {
+        "luacheck": {
+            "executable": "/opt/homebrew/bin/luacheck"
+        },
+        "flake8": {
+            "args": "--max-line-length=120",
+            "executable": "/Users/lionelblonde/mambaforge/bin/flake8"
+        },
+        "annotations": {
+            "infos": ["NOTA BENE", "FYI", "NOTE", "HACK", "HAXX"],
+            "warnings": ["FOO", "BAR", "XXX", "TODO"],
+            "errors": ["WHAT?", "OMG!", "FIXME"]
+        }
+    }
+}
