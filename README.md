@@ -39,8 +39,6 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
-+ Things 3 (and hide the sidebar)
-
 
 ## Zsh
 1. Make sure to only continue here after having run the `brew.sh` script.
@@ -83,13 +81,16 @@ Install the following Chrome extensions from the store:
 + Octotree (and pin it to the side)
 + Return YouTube Dislike
 + arxiv-utils
++ Redirectify
 + uBlock Origin
+    + in settings, go to filters, annoyances, and tick every box; this should remove all the cookie pop-ups
 + Paperpile
 + Session Buddy
 + Old Reddit Redirect
 + HeadingsMap
 + Pinboard Plus
-+ Emoji Blocker
++ Reader View
++ Remove YouTube Suggestions
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
@@ -98,7 +99,7 @@ Install the following Chrome extensions from the store:
 Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget` from
 [this official link](https://github.com/conda-forge/miniforge#mambaforge).
 
-## Sublime
+## Sublime (Legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
 + Neon Color Scheme
 + BracketHighlighter
@@ -111,6 +112,9 @@ In Sublime Text, install the following packages using the in-app package manager
 + SublimeLinter-flake8
 + SublimeLinter-luacheck
 + Switch Window
++ MarkdownPreview
++ LaTeXTools
+Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
 
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.

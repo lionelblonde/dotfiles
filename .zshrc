@@ -36,7 +36,7 @@ export LANG=en_US.UTF-8
 # and has the annoying consequence of preventing zsh-syntax-highlighting from being usable from a tmux session!
 
 # Set editor to use by default
-export VISUAL=
+export VISUAL=/opt/homebrew/bin/nvim
 export EDITOR="$VISUAL"
 
 # Enable the use of vi in terminal commands

@@ -65,8 +65,10 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 
 # Convenience aliases for editing configs
 # I use these on macOS and Anton only -- can use neovim
-alias ec='v ~/Documents/notes/cheatsheet.md'
-alias eb='v ~/Documents/notes/bookmarks.txt'
+alias ec='v ~/Documents/notes/daily-quick-access/cheatsheet.md'
+alias eb='v ~/Documents/notes/daily-quick-access/bookmarks.txt'
+alias ei='v ~/Documents/notes/daily-quick-access/inspiration.md'
+alias ew='v ~/Documents/notes/knowledge-base/words.md'
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
 alias ez='v ~/.zshrc'
@@ -75,6 +77,8 @@ alias eh='v ~/.hammerspoon/init.lua'
 alias ek='v ~/.config/kitty/kitty.conf'
 alias er='v ~/Documents/dotfiles/README.md'
 alias es='v ~/Documents/dotfiles/brew.sh'
+# alias ee='v "/Users/lionelblonde/Library/Application Support/espanso/match/base.yml"'  # double quotes for the space
+alias ee="espanso edit"
 
 # Convenience shortcut to quickly reach the Sublime Text/Merge configuration folder
 alias gotosubl='cd "/Users/lionelblonde/Library/Application Support/Sublime Text/Packages/User"'

@@ -31,7 +31,7 @@
     "margin": 0,
     "neovintageous_build_version": 12700,
     "overlay_scroll_bars": "system",
-    "relative_line_numbers": true,
+    "relative_line_numbers": false,
     "rulers":
     [
         120

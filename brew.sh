@@ -7,6 +7,7 @@ brew install rsync
 brew install ncdu
 brew install croc
 brew install trex
+brew install meetingbar
 brew install zsh
 brew install zsh-syntax-highlighting
 brew install spaceship
@@ -31,7 +32,10 @@ brew install rust-analyzer
 # Install macOS applications with brew cask
 brew install --cask kitty
 brew install --cask calibre
+brew install --cask docker
 brew install --cask sublime-text
+brew install --cask sublime-merge
+brew install --cask signal
 brew install --cask ivpn
 brew install --cask qbittorrent
 brew install --cask cyberduck
@@ -44,7 +48,7 @@ brew install --cask keepingyouawake
 brew install --cask hammerspoon
 brew install --cask karabiner-elements
 brew install --cask mactex
-brew install --cask dash
+brew install --cask espanso
 brew install --cask maccy
 brew install --cask skim
 brew install --cask iina
