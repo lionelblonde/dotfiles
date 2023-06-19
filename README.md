@@ -39,6 +39,8 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
++ Things 3
++ DaisyDisk
 
 ## Zsh
 1. Make sure to only continue here after having run the `brew.sh` script.
@@ -78,7 +80,6 @@ Just follow the instructions from the [official install page](https://www.rust-l
 ## Chromium
 Install the following Chrome extensions from the store:
 + Vimium (and setup the search engine to use in settings)
-+ Octotree (and pin it to the side)
 + Return YouTube Dislike
 + arxiv-utils
 + Redirectify
@@ -91,6 +92,7 @@ Install the following Chrome extensions from the store:
 + Pinboard Plus
 + Reader View
 + Remove YouTube Suggestions
++ QuicKey
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
@@ -99,7 +101,7 @@ Install the following Chrome extensions from the store:
 Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget` from
 [this official link](https://github.com/conda-forge/miniforge#mambaforge).
 
-## Sublime (Legacy)
+## Sublime Text (legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
 + Neon Color Scheme
 + BracketHighlighter
@@ -114,6 +116,9 @@ In Sublime Text, install the following packages using the in-app package manager
 + Switch Window
 + MarkdownPreview
 + LaTeXTools
++ LSP
++ LSP-file-watcher-chokidar
++ LSP-pyright
 Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
 
 ## Karabiner

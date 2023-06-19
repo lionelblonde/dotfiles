@@ -10,6 +10,7 @@ brew install trex
 brew install meetingbar
 brew install zsh
 brew install zsh-syntax-highlighting
+brew install reattach-to-user-namespace
 brew install spaceship
 brew install exa
 brew install git
@@ -28,11 +29,15 @@ brew install neofetch
 brew install yt-dlp
 brew install pandoc
 brew install rust-analyzer
+brew install lua-language-server
+brew install pyright
+brew install ripgrep
 
 # Install macOS applications with brew cask
 brew install --cask kitty
 brew install --cask calibre
 brew install --cask docker
+brew install --cask dash
 brew install --cask sublime-text
 brew install --cask sublime-merge
 brew install --cask signal
@@ -54,6 +59,8 @@ brew install --cask skim
 brew install --cask iina
 brew install --cask monitorcontrol
 brew install --cask qmk-toolbox
+
+brew install visual-studio-code
 
 brew install --cask zoom
 brew install --cask slack
