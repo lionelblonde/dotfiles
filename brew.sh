@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Install brew packages
-brew install coreutils
-brew install gnu-sed
+brew install uutils-coreutils
+brew install sd
 brew install rsync
 brew install ncdu
 brew install croc
@@ -30,16 +30,15 @@ brew install yt-dlp
 brew install pandoc
 brew install rust-analyzer
 brew install lua-language-server
-brew install pyright
 brew install ripgrep
+brew install diskonaut
+brew install dust
 
 # Install macOS applications with brew cask
 brew install --cask kitty
 brew install --cask calibre
 brew install --cask docker
 brew install --cask dash
-brew install --cask sublime-text
-brew install --cask sublime-merge
 brew install --cask signal
 brew install --cask ivpn
 brew install --cask qbittorrent

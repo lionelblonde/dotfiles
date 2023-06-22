@@ -38,6 +38,9 @@ alias .3='cd ../../..'
 # Change to most recent directory
 alias cdr='cd ./*(/om[1])'
 
+# Navigate down code directory
+alias cdc='cd ~/Documents/git/code/WIP'
+
 # neovim (this does not replace vim by neovim)
 alias v='nvim'
 
@@ -81,12 +84,9 @@ alias es='v ~/Documents/dotfiles/brew.sh'
 # alias ee='v "/Users/lionelblonde/Library/Application Support/espanso/match/base.yml"'  # double quotes for the space
 alias ee="espanso edit"
 
-# Convenience shortcut to quickly reach the Sublime Text/Merge configuration folder
-alias gotosubl='cd "/Users/lionelblonde/Library/Application Support/Sublime Text/Packages/User"'
-alias gotomerge='cd "/Users/lionelblonde/Library/Application Support/Sublime Merge/Packages/User/"'
-
 # Convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
 
 # Replace `sed` by `gsed`
 alias sed=gsed
+

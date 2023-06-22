@@ -18,6 +18,14 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 local plugins = {
+  "github/copilot.vim", -- `:Copilot setup` to set it up
+  {
+    "mvllow/modes.nvim",
+    tag = 'v0.2.0',
+    config = function()
+      require('modes').setup()
+    end
+  },
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.1",
@@ -40,14 +48,7 @@ local plugins = {
   },
   "RRethy/vim-illuminate",
   "lervag/vimtex",
-  {
-    "NLKNguyen/papercolor-theme",
-    name = "papercolor",
-  },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine"
-  },
+  "ishan9299/modus-theme-vim",
   "wellle/context.vim",
   {
     "TimUntersberger/neogit", -- magit for neovim
@@ -61,15 +62,6 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
-  },
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
   },
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -102,9 +94,11 @@ vim.opt.termguicolors = true -- leave it before the colorscheme
 
 -- Set background
 vim.o.background = "light"
+-- vim.o.background = "dark"
 
 -- Colorscheme
-vim.cmd("colorscheme papercolor")
+vim.cmd("colorscheme modus-operandi")
+-- vim.cmd("colorscheme modus-vivendi")
 
 -- Controls whether the current mode
 vim.opt.showmode = true
@@ -130,7 +124,7 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 
 -- Set a ruler to indicate the X column
-vim.opt.colorcolumn = '120'
+-- vim.opt.colorcolumn = '120'
 
 -- Set the format options
 -- `q` enales automatic formatting of comments using `gq` command
@@ -187,13 +181,17 @@ vim.cmd('setlocal spell!')
 -- <CR> is a carrige return
 
 -- Turn spelling off or on
-vim.keymap.set('n', '<leader>sp', ':setlocal spell!<CR>', { silent = true })
+vim.keymap.set('n', '<leader>sp', '<cmd>setlocal spell!<CR>', { silent = true })
 
 -- Clear the search highlighting
-vim.keymap.set('n', '<leader>nh', ':noh<CR>')
+vim.keymap.set('n', '<leader>nh', '<cmd>noh<CR>')
 
--- Show the list of open buffers
-vim.keymap.set('n', '<leader>o', ':ls<CR>')
+-- Show the list of open buffers (without Telescope)
+vim.keymap.set('n', '<leader>o', '<cmd>ls<CR>')
+
+-- Re-select the selected are after indenting and outdenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
 -- Explore files
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex) -- from theprimeagean, this one an below
@@ -237,6 +235,11 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Not used yet, but prime keymap to use
 -- vim.keymap.set("n", "<C-f>", "")
 
+-- Toggle the Trouble panel to see the LSP's diagnostics
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<CR>",
+  {silent = true, noremap = true}
+)
+
 -- Formats a buffer using the attached (and optionally filtered) language server clients
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
@@ -254,7 +257,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Edit the config without leaving neovim
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/Documents/.dotfiles/nvim/.config/nvim/init.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/Documents/dotfiles/.config/nvim/init.lua<CR>");
 
 -- Pressing the leader key twice sources the current file (mnemotechnics: "shout out")
 vim.keymap.set("n", "<leader><leader>", function()
@@ -266,6 +269,7 @@ end)
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<C-b>', builtin.buffers, {})
 vim.keymap.set('n', '<leader>ps', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
@@ -330,7 +334,7 @@ vim.keymap.set('n', '<leader>gs', neogit.open)
 -- LSP Zero
 local lsp = require("lsp-zero").preset({})
 
-lsp.setup_servers({ "lua_ls", "pyright", "rust_analyzer" })
+lsp.setup_servers({ "lua_ls", "ruff_lsp", "rust_analyzer" })
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()

@@ -39,8 +39,6 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
-+ Things 3
-+ DaisyDisk
 
 ## Zsh
 1. Make sure to only continue here after having run the `brew.sh` script.
@@ -62,17 +60,6 @@ Special note: on Ubuntu
 
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
-
-## Vim
-1. Install the [`vim-plug`](https://github.com/junegunn/vim-plug) Vim plugin manager
-   ```bash
-   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-   ```
-2. Open any file with neovim and type `:PlugInstall` to install the vim plugins.
-
-## Lua
-Install `luacheck`, the preferred Lua code-linting executable, with `luarocks install luacheck`.
 
 ## Rust
 Just follow the instructions from the [official install page](https://www.rust-lang.org/tools/install).
