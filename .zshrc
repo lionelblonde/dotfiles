@@ -71,3 +71,5 @@ source /opt/homebrew/opt/spaceship/spaceship.zsh
 
 # Configure the zsh-syntax-highlighting plugin (N.B. path to the executable found by digging)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /Users/lionelblonde/.config/broot/launcher/bash/br

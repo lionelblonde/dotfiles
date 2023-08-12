@@ -39,6 +39,7 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
++ Mactracker
 
 ## Zsh
 1. Make sure to only continue here after having run the `brew.sh` script.
@@ -58,6 +59,11 @@ Special note: on Ubuntu
 4. Transfer the file or just the lines from the saved `.zshrc` in `ubuntu` to the `.zshrc` to have them sourced
 5. Source `.zshrc`
 
+## Tmux
+Install Tmux Plugin Manager: `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`.
+The plugins are to then be installed with `prefix` + `I` (capital `i`).
+Instructions at: [this link](https://github.com/tmux-plugins/tpm).
+
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
 
@@ -74,19 +80,23 @@ Install the following Chrome extensions from the store:
     + in settings, go to filters, annoyances, and tick every box; this should remove all the cookie pop-ups
 + Paperpile
 + Session Buddy
-+ Old Reddit Redirect
 + HeadingsMap
 + Pinboard Plus
-+ Reader View
++ Web Archives
 + Remove YouTube Suggestions
 + QuicKey
++ LeechBlock NG
+    + in settings, make it so that it displays what needs to be reminded
++ BlockTube
++ Goodreads ratings for Amazon
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
 ## Python
-
 Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget` from
 [this official link](https://github.com/conda-forge/miniforge#mambaforge).
+
+In the base environment, install the Ruff Python LSP (written in Rust), like so: `pip install ruff-lsp`.
 
 ## Sublime Text (legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
@@ -105,8 +115,12 @@ In Sublime Text, install the following packages using the in-app package manager
 + LaTeXTools
 + LSP
 + LSP-file-watcher-chokidar
-+ LSP-pyright
++ LSP-ruff
 Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
+
+## VSCode
+(DRAFT)
+Ruff (LSP for Python written in Rust)
 
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
@@ -141,4 +155,7 @@ Note, the `--name` flag gives ties the kernelspec to an existing mamba environme
 
 Use `jupyter kernelspec list` to print the list of kernelspecs install on the system.
 Use `jupyter kernelspec uninstall my_kernelspec_name` to remove a kernelspec.
+
+## LaTeX
+Setup `vimtex` by following the instructions at [this link](https://dr563105.github.io/blog/skim-vimtex-setup/).
 

@@ -19,3 +19,5 @@ if [ -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh" ]; then
     . "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
+
+source /Users/lionelblonde/.config/broot/launcher/bash/br

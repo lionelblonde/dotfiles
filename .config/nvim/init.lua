@@ -1,5 +1,6 @@
 -- For help, type :help followed by the command.
 
+
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -14,29 +15,33 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 -- Leader mapping
 vim.g.mapleader = " "
 
 local plugins = {
-  "github/copilot.vim", -- `:Copilot setup` to set it up
-  {
-    "mvllow/modes.nvim",
-    tag = 'v0.2.0',
-    config = function()
-      require('modes').setup()
-    end
-  },
+  "github/copilot.vim", -- `:Copilot setup` to set it up 
+  "lewis6991/gitsigns.nvim",
   {
     "nvim-telescope/telescope.nvim",
+
     tag = "0.1.1",
     dependencies = { {"nvim-lua/plenary.nvim"} },
   },
-  "theprimeagen/harpoon",
   "numToStr/Comment.nvim",
   "mbbill/undotree",
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ':TSUpdate',
+    build = ":TSUpdate",
+    opts = {
+      indent = { enable = true },
+    },
+  },
+  "Vimjas/vim-python-pep8-indent",
+  {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      opts = {} -- this is equalent to setup({}) function
   },
   {
     "kylechui/nvim-surround",
@@ -49,6 +54,7 @@ local plugins = {
   "RRethy/vim-illuminate",
   "lervag/vimtex",
   "ishan9299/modus-theme-vim",
+  "NLKNguyen/papercolor-theme",
   "wellle/context.vim",
   {
     "TimUntersberger/neogit", -- magit for neovim
@@ -61,26 +67,27 @@ local plugins = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
+      mode = "workspace_diagnostics",
     },
   },
   {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v2.x",
     dependencies = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
+      {"neovim/nvim-lspconfig"},             -- Required
       {                                      -- Optional
-        'williamboman/mason.nvim',
+        "williamboman/mason.nvim",
         build = function()
-          pcall(vim.cmd, 'MasonUpdate')
+          pcall(vim.cmd, "MasonUpdate")
         end,
       },
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+      {"williamboman/mason-lspconfig.nvim"}, -- Optional
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
+      {"hrsh7th/nvim-cmp"},     -- Required
+      {"hrsh7th/cmp-nvim-lsp"}, -- Required
+      {"L3MON4D3/LuaSnip"},     -- Required
     }
   },
 }
@@ -88,17 +95,23 @@ local opts = {}
 require("lazy").setup(plugins, opts)
 -- Lazy setup done
 
+-- Mitigate netrw defaults
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
 
 -- Set termguicolors to enable highlight groups
 vim.opt.termguicolors = true -- leave it before the colorscheme
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 -- Set background
-vim.o.background = "light"
--- vim.o.background = "dark"
+-- vim.opt.background = "light"
+vim.opt.background = "dark"
 
 -- Colorscheme
-vim.cmd("colorscheme modus-operandi")
--- vim.cmd("colorscheme modus-vivendi")
+-- vim.cmd("colorscheme modus-operandi") -- light
+vim.cmd("colorscheme modus-vivendi") -- dark
+-- vim.cmd("colorscheme papercolor") -- light and dark
 
 -- Controls whether the current mode
 vim.opt.showmode = true
@@ -110,7 +123,7 @@ vim.opt.modeline = false
 -- Tabulations, spaces and indents rules
 -- Show existing tab with 4 spaces width
 vim.opt.tabstop = 4
--- When indenting with '>', use 4 spaces width
+-- When indenting with ">", use 4 spaces width
 vim.opt.shiftwidth = 4
 -- Sets the number of columns for a tab
 vim.opt.softtabstop = 4
@@ -124,14 +137,14 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 
 -- Set a ruler to indicate the X column
--- vim.opt.colorcolumn = '120'
+-- vim.opt.colorcolumn = "120"
 
 -- Set the format options
 -- `q` enales automatic formatting of comments using `gq` command
 -- `r` allows continuation of comments when pressing Enter
 -- `n` automatically inserts a comment leader when using the `o` or `O` commands in Normal mode
 -- `1` allows formatting of numbered lists
-vim.opt.formatoptions = 'qrn1'
+vim.opt.formatoptions = "qrn1"
 
 -- Enable incremental search
 vim.opt.incsearch = true
@@ -167,47 +180,38 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@") -- make `@` a valid char for file names
 
 -- Set spell and spelllang options
-vim.cmd('setlocal spell spelllang=en_us')
+vim.cmd("setlocal spell spelllang=en_us")
 -- Toggle spell check
-vim.cmd('setlocal spell!')
-
--- Force the bg to default to the terminal's bg
---vim.api.nvim_set_hl(0, "Normal", { ctermbg = "NONE" })
---vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = "NONE" })
---vim.api.nvim_set_hl(0, "LineNr", { ctermbg = "NONE" })
+vim.cmd("setlocal spell!")
 
 
 -- Keybindings
 -- <CR> is a carrige return
 
 -- Turn spelling off or on
-vim.keymap.set('n', '<leader>sp', '<cmd>setlocal spell!<CR>', { silent = true })
+vim.keymap.set("n", "<leader>sp", "<cmd>setlocal spell!<CR>", { silent = true })
 
 -- Clear the search highlighting
-vim.keymap.set('n', '<leader>nh', '<cmd>noh<CR>')
+vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
 
 -- Show the list of open buffers (without Telescope)
-vim.keymap.set('n', '<leader>o', '<cmd>ls<CR>')
+vim.keymap.set("n", "<leader>o", "<cmd>ls<CR>")
 
 -- Re-select the selected are after indenting and outdenting
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
 -- Explore files
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex) -- from theprimeagean, this one an below
-
--- Add black lines
-vim.keymap.set('n', '<CR>', 'o<ESC>')
-vim.keymap.set('n', '<S-CR>', 'O<ESC>')
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- from theprimeagean, this one an below
 
 -- Move a bunch a selected lines around
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Apply `J` (append next line to current one with a space inbetween)
 -- but the cursor does not go at the end of the appended text;
 -- it remains where it was
-vim.keymap.set('n', 'J', "mzJ`z")
+vim.keymap.set("n", "J", "mzJ`z")
 
 -- Make `C-d` and `C-u` keep the cursor at the center of the viewport
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -231,9 +235,6 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- Ban capital `Q`
 vim.keymap.set("n", "Q", "<nop>")
-
--- Not used yet, but prime keymap to use
--- vim.keymap.set("n", "<C-f>", "")
 
 -- Toggle the Trouble panel to see the LSP's diagnostics
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<CR>",
@@ -261,35 +262,22 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/Documents/dotfiles/.config/nvim/ini
 
 -- Pressing the leader key twice sources the current file (mnemotechnics: "shout out")
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+  vim.cmd("so")
 end)
 
 
 -- Telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<C-b>', builtin.buffers, {})
-vim.keymap.set('n', '<leader>ps', function()
+vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
+vim.keymap.set("n", "<C-f>", builtin.git_files, {})
+vim.keymap.set("n", "<C-b>", builtin.buffers, {})
+vim.keymap.set("n", "<leader>ps", function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
 
--- Harpoon
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-
-vim.keymap.set('n', '<leader>a', mark.add_file)
-vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
-
-vim.keymap.set('n', '<C-h>', function() ui.nav_file(1) end)
-vim.keymap.set('n', '<C-t>', function() ui.nav_file(2) end)
-vim.keymap.set('n', '<C-n>', function() ui.nav_file(3) end)
-vim.keymap.set('n', '<C-s>', function() ui.nav_file(4) end)
-
-
 -- Undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 
 -- Treesitter
@@ -312,7 +300,7 @@ require("nvim-treesitter.configs").setup({
     enable = true,
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Set this to `true` if you depend on "syntax" being enabled (like for indentation).
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
@@ -321,14 +309,14 @@ require("nvim-treesitter.configs").setup({
 
 
 -- Open or close the tree. Takes an optional path argument.
-vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>', { silent = true })
+vim.keymap.set("n", "<leader>tt", ":NvimTreeToggle<CR>", { silent = true })
 -- Move the cursor in the tree for the current buffer, opening folders if needed.
-vim.keymap.set('n', '<leader>tf', ':NvimTreeFindFile<CR>', { silent = true })
+vim.keymap.set("n", "<leader>tf", ":NvimTreeFindFile<CR>", { silent = true })
 
 
 -- Neogit
 local neogit = require("neogit")
-vim.keymap.set('n', '<leader>gs', neogit.open)
+vim.keymap.set("n", "<leader>gs", neogit.open)
 
 
 -- LSP Zero
@@ -336,7 +324,7 @@ local lsp = require("lsp-zero").preset({})
 
 lsp.setup_servers({ "lua_ls", "ruff_lsp", "rust_analyzer" })
 
--- Fix Undefined global 'vim'
+-- Fix Undefined global "vim"
 lsp.nvim_workspace()
 
 lsp.setup()
@@ -346,20 +334,20 @@ local cmp_action = require("lsp-zero").cmp_action()
 
 cmp.setup({
   mapping = {
-    ['<C-p>'] = cmp_action.luasnip_jump_forward(),
-    ['<C-n>'] = cmp_action.luasnip_jump_backward(),
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-Space'] = cmp.mapping.complete(),
+    ["<C-p>"] = cmp_action.luasnip_jump_forward(),
+    ["<C-n>"] = cmp_action.luasnip_jump_backward(),
+    ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+    ["<C-Space"] = cmp.mapping.complete(),
   }
 })
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
-        error = 'E',
-        warn = 'W',
-        hint = 'H',
-        info = 'I'
+        error = "E",
+        warn = "W",
+        hint = "H",
+        info = "I"
     }
 })
 
@@ -370,16 +358,16 @@ lsp.setup_nvim_cmp({
 lsp.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false}
 
-  vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set('n', '<leader>vd', function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set('n', ']d', function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set('n', '<leader>vca', function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set('n', '<leader>vrr', function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set('n', '<leader>vrn', function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
 vim.diagnostic.config({
@@ -394,7 +382,11 @@ require("Comment").setup()
 vim.g.tex_flavor = "latex"
 vim.g.vimtex_view_method = "skim"
 vim.g.vimtex_view_skim_sync = 1 -- value 1 allows forward search after every successful compilation
-vim.g.vimtex_view_skim_activate = 1 -- value 1 allows change focus to skim after command `:VimtexView` is given
+vim.g.vimtex_view_skim_activate = 1 -- value 1 allows change focus to Skim after command `:VimtexView` is given
 vim.g.vimtex_quickfix_mode = 0
 vim.g.tex_conceal = "abdmg"
+
+
+-- Gitsigns
+require("gitsigns").setup()
 
