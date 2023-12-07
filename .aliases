@@ -45,8 +45,6 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 
 # convenience aliases for editing configs
 # I use these on macOS and Anton only -- can use neovim
-alias ec='v ~/Documents/notes/daily-quick-access/cheatsheet.md'
-alias eb='v ~/Documents/notes/daily-quick-access/bookmarks.txt'
 alias ex='v ~/Documents/notes'
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
