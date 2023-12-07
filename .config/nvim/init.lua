@@ -20,12 +20,11 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 local plugins = {
-  "github/copilot.vim", -- `:Copilot setup` to set it up 
   "lewis6991/gitsigns.nvim",
   {
     "nvim-telescope/telescope.nvim",
 
-    tag = "0.1.1",
+    tag = "0.1.4",
     dependencies = { {"nvim-lua/plenary.nvim"} },
   },
   "numToStr/Comment.nvim",
@@ -57,8 +56,13 @@ local plugins = {
   "NLKNguyen/papercolor-theme",
   "wellle/context.vim",
   {
-    "TimUntersberger/neogit", -- magit for neovim
-    dependencies = "nvim-lua/plenary.nvim",
+      "NeogitOrg/neogit",
+      dependencies = {
+        "nvim-lua/plenary.nvim",         -- required
+        "nvim-telescope/telescope.nvim", -- optional
+        "sindrets/diffview.nvim",        -- optional
+      },
+      config = true
   },
   {
     "folke/trouble.nvim",
@@ -283,7 +287,7 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 -- Treesitter
 require("nvim-treesitter.configs").setup({
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "python", "rust", "latex", "bibtex" },
+  ensure_installed = { "c", "lua", "python", "rust", "latex", "bibtex", "markdown" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
