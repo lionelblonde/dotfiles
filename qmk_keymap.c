@@ -7,14 +7,6 @@
 #define KC_NA KC_NO // present but not available for use
 #define KC_NU KC_NO // available but not used
 
-// non-KC_ keycodes
-#define KC_RST RESET
-#define KC_TOG RGB_TOG
-#define KC_MOD RGB_MOD
-#define KC_HUI RGB_HUI
-#define KC_SAI RGB_SAI
-#define KC_VAI RGB_VAI
-
 // the layers are:
 // + BASE (alpha keys and standard punctuation)
 // + MOUSE: mouse keys (clicks, motions, scrolls)
@@ -57,13 +49,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //
     // MOUSE layer
     //
-    //      RESET    NOOP      NOOP      NOOP       NOOP             NOOP       NOOP       NOOP     NOOP        NOOP
+    //      NOOP     NOOP      NOOP      NOOP       NOOP             NOOP       NOOP       NOOP     NOOP        NOOP
     //      LEFT_CMD LEFT_ALT  LEFT_CTRL LEFT_SHIFT NOOP             MOUSE_LEFT MOUSE_DOWN MOUSE_UP MOUSE_RIGHT NOOP
     //      NOOP     RIGHT_ALT NOOP      NOOP       NOOP             WHEEL_LEFT WHEEL_DOWN WHEEL_UP WHEEL_RIGHT NOOP
     //                                       NOOP NOOP NOOP       RIGHT_BUTTON LEFT_BUTTON MIDDLE_BUTTON
     //
     [MOUSE] = LAYOUT_split_3x5_3(
-        KC_RST,  KC_NA,   KC_NA,   KC_NA,   KC_NA,         KC_NU,   KC_NU,   KC_NU,   KC_NU,   KC_NU,
+        KC_NA,   KC_NA,   KC_NA,   KC_NA,   KC_NA,         KC_NU,   KC_NU,   KC_NU,   KC_NU,   KC_NU,
         KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NA,         KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_NU,
         KC_NA,   KC_ALGR, KC_NA,   KC_NA,   KC_NA,         KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_NU,
                           KC_NA,   KC_NA,   KC_NA,         KC_BTN1, KC_BTN3, KC_BTN2
@@ -72,13 +64,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //
     // NAV layer (navigation)
     //
-    //      RESET    NOOP      NOOP      NOOP       NOOP             NOOP NOOP      NOOP    NOOP  NOOP
+    //      NOOP     NOOP      NOOP      NOOP       NOOP             NOOP NOOP      NOOP    NOOP  NOOP
     //      LEFT_CMD LEFT_ALT  LEFT_CTRL LEFT_SHIFT NOOP             LEFT DOWN      UP      RIGHT NOOP
     //      NOOP     RIGHT_ALT NOOP      NOOP       NOOP             HOME PAGE_DOWN PAGE_UP END   INSERT
     //                                       NOOP NOOP NOOP      NOOP NOOP NOOP
     //
     [NAV] = LAYOUT_split_3x5_3(
-        KC_RST,  KC_NA,   KC_NA,   KC_NA,   KC_NA,            KC_NU,   KC_NU,   KC_NU,   KC_NU,   KC_NU,
+        KC_NA,   KC_NA,   KC_NA,   KC_NA,   KC_NA,            KC_NU,   KC_NU,   KC_NU,   KC_NU,   KC_NU,
         KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NA,            KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_NU,
         KC_NA,   KC_ALGR, KC_NA,   KC_NA,   KC_NA,            KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_INS,
                           KC_NA,   KC_NA,   KC_NA,            KC_NU,   KC_NU,   KC_NU
@@ -87,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //
     // FUNC layer (for function keys | on macOS: media keys)
     //
-    //      RESET    NOOP      NOOP      NOOP       NOOP             F1 F2 NOOP NOOP PRT_SCN
+    //      NOOP     NOOP      NOOP      NOOP       NOOP             F1 F2 NOOP NOOP PRT_SCN
     //      LEFT_CMD LEFT_ALT  LEFT_CTRL LEFT_SHIFT NOOP             F4 F3 F7   F8   F9
     //      NOOP     RIGHT_ALT NOOP      NOOP       NOOP             F5 F6 NOOP NOOP NOOP
     //                                       NOOP NOOP NOOP       F10 F11 F12
@@ -108,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // F12: volume up
     //
     [FUNC] = LAYOUT_split_3x5_3(
-        KC_RST,  KC_NA,   KC_NA,   KC_NA,   KC_NA,            KC_F1,  KC_F2,  KC_NU,  KC_NU, KC_PSCR,
+        KC_NA,   KC_NA,   KC_NA,   KC_NA,   KC_NA,            KC_F1,  KC_F2,  KC_NU,  KC_NU, KC_PSCR,
         KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NA,            KC_F4,  KC_F3,  KC_F7,  KC_F8, KC_F9,
         KC_NA,   KC_ALGR, KC_NA,   KC_NA,   KC_NA,            KC_F5,  KC_F6,  KC_NU,  KC_NU, KC_NU,
                           KC_NA,   KC_NA,   KC_NA,            KC_F10, KC_F11, KC_F12

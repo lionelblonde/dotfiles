@@ -1,0 +1,9 @@
+brew install qmk/qmk/qmk
+qmk setup, and accept the default directory
+qmk new-keymap -kb crkbd/rev1
+name the keymap (here, custom)
+modify the created keymap (path written in stdout): copy past from the file in dotfiles
+qmk compile -kb crkbd/rev1 -km custom: creates a hex file crkbd_rev1_custom.hex in qmk_firmwware/
+open the QMK Toolbox app and load the hex file with open
+select the controller
+flash
