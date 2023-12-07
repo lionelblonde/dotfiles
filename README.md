@@ -128,21 +128,19 @@ In Sublime Text, install the following packages using the in-app package manager
 Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
 
 ## VSCode
-Ruff (LSP for Python written in Rust)
-Vim (vscodevim)
-Error Lens
-OCaml Platform
-Python
-Pylance
-Todo Tree
-GitHub Copilot
-GitHub Copilot Chat
-LaTeX Workshop
-edamagit
-
-Color schemes:
-Alabaster
-sema
++ Ruff (LSP for Python written in Rust)
++ Vim (vscodevim)
++ Error Lens
++ OCaml Platform
++ Python
++ Pylance
++ Todo Tree
++ GitHub Copilot
++ GitHub Copilot Chat
++ LaTeX Workshop
++ edamagit
++ Alabaster
++ sema
 
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
