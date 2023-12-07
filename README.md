@@ -3,8 +3,10 @@
 ## System Preferences
 + Go to _Accessibility -> Pointer Control -> Mouse & Trackpad -> Trackpad Options..._
     + there, select _Enable dragging_ with the _without drag lock_ option.
++ Go to _Accessibility -> Display_ and in the main settings switch on _Reduce motion_.
 + Go to _Trackpad_ and set up App Expose with three-finger swipe down as gesture.
-+ Go to _Keyboard_ and configure appropriately.
++ Go to _Keyboard_ and turn key repeat off (ZMK does not want repeat on homerow mods, and
+  it is probably for the best to turn key repeat off entirely to force myself to use more Vim movements).
 + Go to _Keyboard -> Keyboard Shortcuts... -> Mission Control_ and assign F10 to _Application windows_.
 
 ## More hidden settings
@@ -31,6 +33,7 @@
     + `control + P`: show 1Password's "Quick Access" Spotlight-like menu
     + `control + :`: trigger TRex
     + `control + '`: trigger Maccy
+    + `control + T`: trigger tomatobar
 
 ## Homebrew
 1. Install __Homebrew__ by following the instructions at [this link](https://brew.sh/) _including_ the __Cask__ utility
@@ -39,7 +42,10 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
-+ Mactracker
++ Things
++ TextSniper
++ Hand Mirror
++ Infuse
 
 ## Zsh
 1. Make sure to only continue here after having run the `brew.sh` script.
@@ -71,6 +77,8 @@ Create symbolic links to reference the dotfiles outside the repository by runnin
 Just follow the instructions from the [official install page](https://www.rust-lang.org/tools/install).
 
 ## Chromium
+Turn on SafeSearch (when using Google as search engine: right-most menu).
+
 Install the following Chrome extensions from the store:
 + Vimium (and setup the search engine to use in settings)
 + Return YouTube Dislike
@@ -80,15 +88,15 @@ Install the following Chrome extensions from the store:
     + in settings, go to filters, annoyances, and tick every box; this should remove all the cookie pop-ups
 + Paperpile
 + Session Buddy
-+ HeadingsMap
 + Pinboard Plus
 + Web Archives
-+ Remove YouTube Suggestions
 + QuicKey
 + LeechBlock NG
     + in settings, make it so that it displays what needs to be reminded
 + BlockTube
-+ Goodreads ratings for Amazon
++ SponsorBlock
++ Youtube-shorts block
++ I still don't care about cookies
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
@@ -97,6 +105,7 @@ Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget`
 [this official link](https://github.com/conda-forge/miniforge#mambaforge).
 
 In the base environment, install the Ruff Python LSP (written in Rust), like so: `pip install ruff-lsp`.
+We do not install Ruff via Homebrew!
 
 ## Sublime Text (legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
@@ -119,8 +128,21 @@ In Sublime Text, install the following packages using the in-app package manager
 Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
 
 ## VSCode
-(DRAFT)
 Ruff (LSP for Python written in Rust)
+Vim (vscodevim)
+Error Lens
+OCaml Platform
+Python
+Pylance
+Todo Tree
+GitHub Copilot
+GitHub Copilot Chat
+LaTeX Workshop
+edamagit
+
+Color schemes:
+Alabaster
+sema
 
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
@@ -158,4 +180,8 @@ Use `jupyter kernelspec uninstall my_kernelspec_name` to remove a kernelspec.
 
 ## LaTeX
 Setup `vimtex` by following the instructions at [this link](https://dr563105.github.io/blog/skim-vimtex-setup/).
+
+## Apps neither in MAS or Homebrew
+From the assets I saved, install:
++ SCR Thumbnail Provider
 
