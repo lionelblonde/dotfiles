@@ -21,6 +21,7 @@ vim.g.mapleader = " "
 
 local plugins = {
   "lewis6991/gitsigns.nvim",
+  "nvim-treesitter/nvim-treesitter-context",
   {
     "nvim-telescope/telescope.nvim",
 
