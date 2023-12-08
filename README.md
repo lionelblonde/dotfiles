@@ -5,8 +5,6 @@
     + there, select _Enable dragging_ with the _without drag lock_ option.
 + Go to _Accessibility -> Display_ and in the main settings switch on _Reduce motion_.
 + Go to _Trackpad_ and set up App Expose with three-finger swipe down as gesture.
-+ Go to _Keyboard_ and turn key repeat off (ZMK does not want repeat on homerow mods, and
-  it is probably for the best to turn key repeat off entirely to force myself to use more Vim movements).
 + Go to _Keyboard -> Keyboard Shortcuts... -> Mission Control_ and assign F10 to _Application windows_.
 
 ## More hidden settings
