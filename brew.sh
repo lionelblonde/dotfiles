@@ -4,6 +4,7 @@
 brew install topgrade
 brew install uutils-coreutils
 brew install sd
+brew install tq
 brew install fzf
 brew install rsync
 brew install ncdu
