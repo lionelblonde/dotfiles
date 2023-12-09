@@ -45,6 +45,7 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
+brew install --cask activitywatch
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask calibre
