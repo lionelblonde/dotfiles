@@ -64,5 +64,6 @@ alias ee="espanso edit"
 # convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
 
+alias cdx='cd ~/Documents/notes'
 alias cdc='cd ~/Documents/git/code/WIP'
 alias cdr='cd ~/Documents/git/code/ego/github/private/resume-latex'
