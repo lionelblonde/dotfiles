@@ -95,6 +95,9 @@ Install the following Chrome extensions from the store:
 + SponsorBlock
 + Youtube-shorts block
 + I still don't care about cookies
++ Turn Off YouTube Autoplay Next & Annotations (from unhook.app)
++ Block YouTube Feed - Homepage, Sidebar Videos (from unhook.app)
++ Turn Off YouTube Comments & Live Chat (from unhook.app)
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
@@ -107,7 +110,6 @@ We do not install Ruff via Homebrew!
 
 ## Sublime Text (legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
-+ Neon Color Scheme
 + BracketHighlighter
 + GitGutter
 + GitSavvy
@@ -123,6 +125,12 @@ In Sublime Text, install the following packages using the in-app package manager
 + LSP
 + LSP-file-watcher-chokidar
 + LSP-ruff
++ Neon Color Scheme
++ Limegrass
++ Alabaster Color Scheme
++ Cool & Clear
++ Lumi
+
 Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
 
 ## VSCode
@@ -180,4 +188,3 @@ Setup `vimtex` by following the instructions at [this link](https://dr563105.git
 ## Apps neither in MAS or Homebrew
 From the assets I saved, install:
 + SCR Thumbnail Provider
-

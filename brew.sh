@@ -68,7 +68,13 @@ brew install --cask mactex
 brew install --cask espanso
 brew install --cask maccy
 brew install --cask skim
+brew install --cask pdf-expert
 brew install --cask iina
+brew install --cask monitorcontrol  # for non-apple monitors
+brew install --cask typora
+brew install --cask sublime-text  # ideal for reading codebases / code on side
+brew install --cask sublime-merge  # ideal for tedious git operations
+
 brew install --cask visual-studio-code # Electron app but fast
 brew install --cask google-drive
 brew install --cask zoom
@@ -76,6 +82,3 @@ brew install --cask slack
 brew install --cask discord
 brew install --cask microsoft-teams
 
-brew install --cask monitorcontrol  # for non-apple monitors
-
-brew install --cask qgis # to open TIFF/GeoTIFF files; Intel app
