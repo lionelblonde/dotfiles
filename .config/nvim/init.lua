@@ -185,10 +185,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@") -- make `@` a valid char for file names
 
 -- Set spell and spelllang options
-vim.cmd("setlocal spell spelllang=en_us")
--- Toggle spell check
-vim.cmd("setlocal spell!")
-
+vim.opt.spell = false
+vim.opt.spelllang = 'en_us'
 
 -- Keybindings
 -- <CR> is a carrige return
