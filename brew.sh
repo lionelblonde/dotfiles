@@ -72,9 +72,7 @@ brew install --cask pdf-expert
 brew install --cask iina
 brew install --cask monitorcontrol  # for non-apple monitors
 brew install --cask typora
-brew install --cask sublime-text  # ideal for reading codebases / code on side
 brew install --cask sublime-merge  # ideal for tedious git operations
-
 brew install --cask visual-studio-code # Electron app but fast
 brew install --cask google-drive
 brew install --cask zoom

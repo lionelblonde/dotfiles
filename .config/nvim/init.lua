@@ -1,6 +1,5 @@
 -- For help, type :help followed by the command.
 
-
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -185,7 +184,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@") -- make `@` a valid char for file names
 
 -- Set spell and spelllang options
-vim.opt.spell = false
+vim.opt.spell = true
 vim.opt.spelllang = 'en_us'
 
 -- Keybindings
