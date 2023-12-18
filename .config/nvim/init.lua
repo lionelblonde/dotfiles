@@ -19,6 +19,10 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 local plugins = {
+  {
+    'plasticboy/vim-markdown',
+     require = {'godlygeek/tabular'},
+  },
   "lewis6991/gitsigns.nvim",
   "nvim-treesitter/nvim-treesitter-context",
   {
@@ -38,9 +42,9 @@ local plugins = {
   },
   "Vimjas/vim-python-pep8-indent",
   {
-      "windwp/nvim-autopairs",
-      event = "InsertEnter",
-      opts = {} -- this is equalent to setup({}) function
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
   },
   {
     "kylechui/nvim-surround",
@@ -53,7 +57,6 @@ local plugins = {
   "RRethy/vim-illuminate",
   "lervag/vimtex",
   "ishan9299/modus-theme-vim",
-  "NLKNguyen/papercolor-theme",
   "wellle/context.vim",
   {
       "NeogitOrg/neogit",
@@ -115,7 +118,6 @@ vim.opt.background = "dark"
 -- Colorscheme
 -- vim.cmd("colorscheme modus-operandi") -- light
 vim.cmd("colorscheme modus-vivendi") -- dark
--- vim.cmd("colorscheme papercolor") -- light and dark
 
 -- Controls whether the current mode
 vim.opt.showmode = true
@@ -184,7 +186,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@") -- make `@` a valid char for file names
 
 -- Set spell and spelllang options
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.spelllang = 'en_us'
 
 -- Keybindings
@@ -324,7 +326,7 @@ vim.keymap.set("n", "<leader>gs", neogit.open)
 -- LSP Zero
 local lsp = require("lsp-zero").preset({})
 
-lsp.setup_servers({ "lua_ls", "ruff_lsp", "rust_analyzer" })
+lsp.setup_servers({ "lua_ls", "pyright", "ruff_lsp", "rust_analyzer" })
 
 -- Fix Undefined global "vim"
 lsp.nvim_workspace()

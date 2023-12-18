@@ -106,6 +106,7 @@ Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget`
 
 In the base environment, install the Ruff Python LSP (written in Rust), like so: `pip install ruff-lsp`.
 We do not install Ruff via Homebrew!
+Same goes for pyright (developed by Microsoft): `pip install pyright` in the base environment.
 
 ## Sublime Text (legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
@@ -146,6 +147,7 @@ Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
 + edamagit
 + Alabaster
 + sema
++ lean
 
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
