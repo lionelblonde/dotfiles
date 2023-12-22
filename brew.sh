@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Install brew packages
+brew install asitop
 brew install topgrade
 brew install uutils-coreutils
 brew install sd
