@@ -77,26 +77,13 @@ local plugins = {
       mode = "workspace_diagnostics",
     },
   },
-  {
-    "VonHeikemen/lsp-zero.nvim",
-    branch = "v2.x",
-    dependencies = {
-      -- LSP Support
-      {"neovim/nvim-lspconfig"},             -- Required
-      {                                      -- Optional
-        "williamboman/mason.nvim",
-        build = function()
-          pcall(vim.cmd, "MasonUpdate")
-        end,
-      },
-      {"williamboman/mason-lspconfig.nvim"}, -- Optional
-
-      -- Autocompletion
-      {"hrsh7th/nvim-cmp"},     -- Required
-      {"hrsh7th/cmp-nvim-lsp"}, -- Required
-      {"L3MON4D3/LuaSnip"},     -- Required
-    }
-  },
+  {'williamboman/mason.nvim'},
+  {'williamboman/mason-lspconfig.nvim'},
+  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+  {'neovim/nvim-lspconfig'},
+  {'hrsh7th/cmp-nvim-lsp'},
+  {'hrsh7th/nvim-cmp'},
+  {'L3MON4D3/LuaSnip'},
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
@@ -143,7 +130,7 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 
 -- Set a ruler to indicate the X column
--- vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "100"
 
 -- Set the format options
 -- `q` enales automatic formatting of comments using `gq` command
@@ -296,9 +283,6 @@ require("nvim-treesitter.configs").setup({
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
   auto_install = true,
 
-  ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
@@ -324,12 +308,13 @@ vim.keymap.set("n", "<leader>gs", neogit.open)
 
 
 -- LSP Zero
-local lsp = require("lsp-zero").preset({})
+local lsp = require("lsp-zero")
 
 lsp.setup_servers({ "lua_ls", "pyright", "ruff_lsp", "rust_analyzer" })
 
 -- Fix Undefined global "vim"
-lsp.nvim_workspace()
+local lua_opts = lsp.nvim_lua_ls()
+require('lspconfig').lua_ls.setup(lua_opts)
 
 lsp.setup()
 
@@ -355,23 +340,19 @@ lsp.set_preferences({
     }
 })
 
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
-})
+lsp.on_attach(function(client, bufnr) -- warning: keep client here
+  local oopts = { buffer = bufnr, remap = false}
 
-lsp.on_attach(function(client, bufnr)
-  local opts = { buffer = bufnr, remap = false}
-
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, oopts)
+  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, oopts)
+  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, oopts)
+  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, oopts)
+  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, oopts)
+  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, oopts)
+  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, oopts)
+  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, oopts)
+  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, oopts)
+  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, oopts)
 end)
 
 vim.diagnostic.config({
@@ -385,8 +366,10 @@ require("Comment").setup()
 -- VimTeX
 vim.g.tex_flavor = "latex"
 vim.g.vimtex_view_method = "skim"
-vim.g.vimtex_view_skim_sync = 1 -- value 1 allows forward search after every successful compilation
-vim.g.vimtex_view_skim_activate = 1 -- value 1 allows change focus to Skim after command `:VimtexView` is given
+vim.g.vimtex_view_skim_sync = 1
+-- value 1 allows forward search after every successful compilation
+vim.g.vimtex_view_skim_activate = 1
+-- value 1 allows change focus to Skim after command `:VimtexView` is given
 vim.g.vimtex_quickfix_mode = 0
 vim.g.tex_conceal = "abdmg"
 
