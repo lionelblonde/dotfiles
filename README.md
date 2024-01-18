@@ -78,7 +78,6 @@ Turn on SafeSearch (when using Google as search engine: right-most menu).
 
 Install the following Chrome extensions from the store:
 + Vimium (and setup the search engine to use in settings)
-+ Return YouTube Dislike
 + arxiv-utils
 + Redirectify
 + uBlock Origin
@@ -89,14 +88,17 @@ Install the following Chrome extensions from the store:
 + Web Archives
 + QuicKey
 + LeechBlock NG
-    + in settings, make it so that it displays what needs to be reminded
+    + in settings, make it so that it displays what need be reminded
++ I still don't care about cookies
++ Blink: Automatic Focus & Concentration
+    + only useful to be reminded to mind time blindness
+
+YouTube-related:
++ Return YouTube Dislike
 + BlockTube
 + SponsorBlock
 + Youtube-shorts block
-+ I still don't care about cookies
-+ Turn Off YouTube Autoplay Next & Annotations (from unhook.app)
-+ Block YouTube Feed - Homepage, Sidebar Videos (from unhook.app)
-+ Turn Off YouTube Comments & Live Chat (from unhook.app)
++ RYS - Remove YouTube Suggestions
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
