@@ -4,6 +4,7 @@
 brew install asitop
 brew install topgrade
 brew install uutils-coreutils
+brew install parallel
 brew install sd
 brew install tq
 brew install fzf
@@ -41,7 +42,7 @@ brew install gitui
 brew install broot
 brew install ouch
 brew install unar
-brew install meetingbar
+brew install gallery-dl
 brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
@@ -69,9 +70,11 @@ brew install --cask mactex
 brew install --cask espanso
 brew install --cask maccy
 brew install --cask skim
+brew install --cask bike
 brew install --cask pdf-expert  # not paying; only using to read weird annotations
 brew install --cask iina
 brew install --cask monitorcontrol  # for non-apple monitors
+brew install --cask plex-media-server
 brew install --cask sublime-merge  # ideal for tedious git operations
 brew install --cask sublime-text  # only software capable of properly wrapping text
 brew install --cask visual-studio-code # Electron app but fast
