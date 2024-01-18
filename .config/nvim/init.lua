@@ -1,5 +1,13 @@
 -- For help, type :help followed by the command.
 
+-- Leader mapping
+vim.g.mapleader = " "
+
+-- Set termguicolors to enable highlight groups
+vim.opt.termguicolors = true -- leave it before the colorscheme
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+vim.opt.background = "dark"
+
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -14,31 +22,29 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Leader mapping
-vim.g.mapleader = " "
-
 require("lazy").setup({
+    -- {
+    --     "n1ghtmare/noirblaze-vim",
+    --     config = function()
+    --         vim.cmd.colorscheme("noirblaze")
+    --         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    --         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    --     end
+    -- },
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
+        "jesseleite/nvim-noirbuddy",
+        dependencies = {
+            { "tjdevries/colorbuddy.nvim", branch = "dev" },
+        },
+        lazy = false,
+        priority = 1000,
         config = function()
-            require("rose-pine").setup({
-                disable_background = true,
+            require("noirbuddy").setup({
+                preset = "minimal",
+                -- choices: minimal, miami-night, kiwi, slate, crt-green, crt-amber
             })
-            vim.cmd.colorscheme("rose-pine")
-        end
-    },
-    {
-        "ishan9299/modus-theme-vim",
-        config = function()
-            vim.g.modus_faint_syntax = 0
-            vim.g.modus_yellow_comments = 0
-            vim.g.modus_green_strings = 0
-            vim.g.modus_dim_inactive_window = 0
-            vim.g.modus_cursorline_intense = 0
-            vim.g.modus_termtrans_enable = 0
-            -- vim.cmd.colorscheme("modus-vivendi")
-            -- vim.cmd.colorscheme("modus-vivendi")
+            vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
         end
     },
     {
@@ -54,8 +60,7 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim"
         },
         config = function()
-            require('telescope').setup({})
-
+            require("telescope").setup({})
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
             vim.keymap.set("n", "<C-f>", builtin.git_files, {})
@@ -86,10 +91,10 @@ require("lazy").setup({
             vim.keymap.set("n", "<leader>tt", function()
                 require("trouble").toggle()
             end)  -- toggles the Trouble panel to see the LSP's diagnostics
-            vim.keymap.set("n", "<leader>tn", function()
+            vim.keymap.set("n", "]d", function()  -- d for diagnostics
                 require("trouble").next({ skip_groups = true, jump = true })
             end)  -- goes to the next trouble
-            vim.keymap.set("n", "<leader>tp", function()
+            vim.keymap.set("n", "[d", function()  -- d for diagnostics
                 require("trouble").previous({ skip_groups = true, jump = true })
             end)  -- goes to the next trouble
         end,
@@ -99,19 +104,24 @@ require("lazy").setup({
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter.configs").setup({
-                ensure_installed = {  -- list of parser names
-                    "vimdoc", "c", "lua", "python", "rust", "latex", "bibtex", "markdown"
+                ensure_installed = {
+                    "vimdoc",
+                    "c",
+                    "lua",
+                    "python",
+                    "rust",
+                    "latex",
+                    "bibtex",
+                    "markdown",
                 },
                 sync_install = false,  -- install parsers asynchronously
                 auto_install = true,  -- auto install missing parsers when entering buffer
-
                 indent = {
                     enable = true
                 },
-
                 highlight = {
                     enable = true,  -- false disables the whole extension
-                    additional_vim_regex_highlighting = { "markdown" },
+                    additional_vim_regex_highlighting = false,
                     -- runs `:h syntax` and TS at the same time
                     -- the values to give here can be: false, true, or parser names
                 },
@@ -120,6 +130,11 @@ require("lazy").setup({
     },
     {
         "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
+            "nvim-telescope/telescope.nvim",
+        },
         config = function()
             local neogit = require("neogit")
             neogit.setup({})
@@ -157,12 +172,16 @@ require("lazy").setup({
             vim.g.tex_conceal = "abdmg"
         end
     },
-
-
-
-
-
-
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup({})
+        end
+    },
+    {
+        "Vimjas/vim-python-pep8-indent",
+    },
     -- whatever is needed for LSP-Zero
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
@@ -177,17 +196,6 @@ require("lazy").setup({
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
-
--- Set termguicolors to enable highlight groups
-vim.opt.termguicolors = true -- leave it before the colorscheme
-vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
-
--- Set background
-vim.opt.background = "dark"
-
--- Make background transparent
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 -- Controls whether the current mode
 vim.opt.showmode = true
@@ -329,22 +337,32 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 -- Show the virtual text from the lsp inline
 vim.diagnostic.config({ virtual_text = true })
 
-
-
-
-
-
-
 -- LSP Zero
-local lsp = require("lsp-zero")
+local lsp_zero = require("lsp-zero")
 
-lsp.setup_servers({ "lua_ls", "pyright", "ruff_lsp", "rust_analyzer" })
+lsp_zero.on_attach(function(client, bufnr)
+    local opts = { buffer = bufnr, remap = false}
 
--- Fix Undefined global "vim"
-local lua_opts = lsp.nvim_lua_ls()
-require('lspconfig').lua_ls.setup(lua_opts)
+    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+    vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+    vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+    vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+    vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+    vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+    -- the two following keymaps are handled via trouble
+    -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+    -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+end)
 
-lsp.setup()
+lsp_zero.setup_servers({
+    "pyright",
+    "ruff_lsp",
+    "rust_analyzer",
+})
+
+lsp_zero.setup()
 
 local cmp = require("cmp")
 local cmp_action = require("lsp-zero").cmp_action()
@@ -358,28 +376,13 @@ cmp.setup({
     }
 })
 
-lsp.set_preferences({
+lsp_zero.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
         error = "E",
         warn = "W",
         hint = "H",
-        info = "I"
+        info = "I",
     }
 })
-
-lsp.on_attach(function(client, bufnr) -- warning: keep client here
-    local oopts = { buffer = bufnr, remap = false}
-
-    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, oopts)
-    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, oopts)
-    vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, oopts)
-    vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, oopts)
-    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, oopts)
-    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, oopts)
-    vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, oopts)
-    vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, oopts)
-    vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, oopts)
-    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, oopts)
-end)
 
