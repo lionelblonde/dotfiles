@@ -42,20 +42,6 @@ local function toggle_application(_app)
    end
 end
 
--- Show an application (not a toggle)
-local function show_application(_app)
-   local app = appfinder.appFromName(_app)
-   local mainwin = app:mainWindow()
-   if mainwin then
-      if mainwin == window.focusedWindow() then
-      else
-         mainwin:application():activate(true)
-         mainwin:application():unhide()
-         mainwin:focus()
-      end
-   end
-end
-
 local frameCache = {} --reset the cache
 -- Toggle a window between its normal size, and being maximized
 local function toggle_window_maximized()
@@ -126,7 +112,7 @@ hyperfns["="] = toggle_window_maximized
 local hyperapps = {}
 hyperapps["y"] = "Notes"
 hyperapps["u"] = "Finder"
--- hyperapps["i"] = "kitty"  -- see below; never allowed to be hidden
+hyperapps["i"] = "kitty"  -- see below; never allowed to be hidden
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Brave Browser"
@@ -143,7 +129,6 @@ hyperapps["."] = "Slack"
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end
 end
-hyperfns["i"] = function() show_application("kitty") end
 
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
