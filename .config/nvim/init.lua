@@ -4,33 +4,25 @@
 vim.g.mapleader = " "
 
 -- Set termguicolors to enable highlight groups
-vim.opt.termguicolors = true -- leave it before the colorscheme
+-- vim.opt.termguicolors = true -- leave it before the colorscheme
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 vim.opt.background = "dark"
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- {
-    --     "n1ghtmare/noirblaze-vim",
-    --     config = function()
-    --         vim.cmd.colorscheme("noirblaze")
-    --         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    --         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    --     end
-    -- },
     {
         "jesseleite/nvim-noirbuddy",
         dependencies = {
@@ -39,17 +31,69 @@ require("lazy").setup({
         lazy = false,
         priority = 1000,
         config = function()
+            vim.opt.background = "dark"
             require("noirbuddy").setup({
-                preset = "minimal",
-                -- choices: minimal, miami-night, kiwi, slate, crt-green, crt-amber
+                -- preset = "minimal",
+                -- preset = "miami-nights",
+                preset = "kiwi",
+                -- preset = "slate",
+                -- preset = "crt-green",
+                -- preset = "crt-amber",
+                -- preset = "northern-lights",
+                -- preset = "christmas",
+                -- choices: https://github.com/jesseleite/nvim-noirbuddy/tree/master/lua/noirbuddy/presets
+                colors = {  -- or just give the desired colors
+                    -- primary = "#46838A",
+                    -- secondary = "#006D8E",
+                    background = "#000000",
+                },
             })
-            vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-            vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
         end
     },
-    {
-        "github/copilot.vim",
-    },
+    -- {
+    --     "miikanissi/modus-themes.nvim",
+    --     priority = 1000,
+    --     config = function()
+    --         require("modus-themes").setup({
+    --             style = "auto",
+    --             variant = "default",
+    --             transparent = false,
+    --         })
+    --         vim.cmd.colorscheme("modus")
+    --         vim.opt.background = "dark"
+    --     end
+    -- },
+    -- {
+    --     "EdenEast/nightfox.nvim",
+    --     config = function()
+    --         require("nightfox").setup({})
+    --         vim.cmd.colorscheme("carbonfox")
+    --     end
+    -- },
+    -- {
+    --     "mcchrish/zenbones.nvim",
+    --     dependencies = { "rktjmp/lush.nvim" },
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.cmd.colorscheme("rosebones")
+    --         -- vim.cmd.colorscheme("zenwritten")
+    --         -- vim.cmd.colorscheme("tokyobones")
+    --         vim.opt.background = "dark"
+    --     end
+    -- },
+    -- {
+    --     "rose-pine/neovim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         require('rose-pine').setup({
+    --             variant = "main",
+    --         })
+    --         vim.cmd.colorscheme("rose-pine")
+    --         -- vim.opt.background = "dark"
+    --     end
+    -- },
     {
         "nvim-lua/plenary.nvim",
     },
@@ -136,7 +180,7 @@ require("lazy").setup({
             "nvim-telescope/telescope.nvim",
         },
         config = function()
-            local neogit = require("neogit")
+            neogit = require("neogit")
             neogit.setup({})
             vim.keymap.set("n", "<leader>gs", neogit.open)
         end

@@ -43,24 +43,26 @@ Install these apps from the Mac App Store:
 + Things
 + TextSniper
 + Hand Mirror
++ Endel
 
 ## Zsh
-1. Make sure to only continue here after having run the `brew.sh` script.
-    + The `brew.sh` script installs (among many others) `zsh`, `spaceship`, and `zsh-syntax-highlighting`
-1. [maybe not needed depending on the system (?)]
-    + Add the line `/usr/local/bin/zsh` to `/etc/shells` (need `sudo` to write)
-    + Swap default shell: `chsh -s /usr/local/bin/zsh`
-2. Add prompt initialization to your `.zshrc`: `echo "source $(brew --prefix)/opt/spaceship/spaceship.zsh" >>! ~/.zshrc`
-    + Not necessary to execute if the line is already in `.zshrc`
-3. Exactly the same goes for the `zsh-syntax-highlighting` plugin
-4. Source `.zshrc`
++ Make sure to only continue here after having run the `brew.sh` script
+    + (The `brew.sh` script installs `zsh`, `liquidprompt`, and `zsh-syntax-highlighting`)
++ Add the line `/usr/local/bin/zsh` to `/etc/shells` (need `sudo` to write)
++ Swap default shell: `chsh -s /usr/local/bin/zsh`
++ Make sure `liquidprompt` initialization is done in `.zshrc`
++ Same goes for the `zsh-syntax-highlighting` plugin
++ Source `.zshrc`
 
 Special note: on Ubuntu
-1. Create a `.zsh` folder at home: `mkdir -p .zsh`
-2. Clone `git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git "$HOME/.zsh/spaceship"`
-3. Clone `git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh/zsh-syntax-highlighting"`
-4. Transfer the file or just the lines from the saved `.zshrc` in `ubuntu` to the `.zshrc` to have them sourced
-5. Source `.zshrc`
++ Start from the `ubuntu/.zshrc` base stored in the dotfiles
++ Run `sudo apt-get install liquidprompt`, followed by 
++ Create a `.zsh` folder at home: `mkdir -p .zsh`
++ Clone `git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh/zsh-syntax-highlighting"`
++ Add this to `.zshrc`: `source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"`
++ Run `liquidprompt_activate` (this will add the config lines to `.zshrc`)
++ Edit `~/.config/liquidpromptrc`, and switch off the temperature setting
++ Source `.zshrc`
 
 ## Tmux
 Install Tmux Plugin Manager: `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`.
@@ -99,6 +101,8 @@ YouTube-related:
 + SponsorBlock
 + Youtube-shorts block
 + RYS - Remove YouTube Suggestions
++ Video Speed Controller
++ DeArrow - Better Titles and Thumbnails
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 

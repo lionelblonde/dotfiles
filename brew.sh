@@ -14,7 +14,7 @@ brew install croc
 brew install zsh
 brew install zsh-syntax-highlighting
 brew install reattach-to-user-namespace
-brew install spaceship
+brew install liquidprompt
 brew install exa
 brew install git
 brew install wget
@@ -50,6 +50,7 @@ brew install qmk-toolbox
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask calibre
+brew install --cask meetingbar
 brew install --cask mochi-diffusion
 brew install --cask tomatobar
 brew install --cask docker
@@ -78,9 +79,9 @@ brew install --cask plex-media-server
 brew install --cask sublime-merge  # ideal for tedious git operations
 brew install --cask sublime-text  # only software capable of properly wrapping text
 brew install --cask visual-studio-code # Electron app but fast
+brew install --cask qgis
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
-brew install --cask discord
 brew install --cask microsoft-teams
 

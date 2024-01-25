@@ -7,9 +7,6 @@ KEYTIMEOUT=1
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# Source the prompt config
-[[ -f ~/.prompt.conf ]] && source ~/.prompt.conf
-
 # History configuration
 # How many lines of history to keep in memory
 HISTSIZE=5000
@@ -66,8 +63,3 @@ fi
 # Necessary for conda envs to work in tmux
 [[ -z $TMUX ]] || mamba deactivate; mamba activate base
 
-# Configure the spaceship prompt
-source "$HOME/.zsh/spaceship/spaceship.zsh"
-
-# Configure the zsh-syntax-highlighting plugin
-source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

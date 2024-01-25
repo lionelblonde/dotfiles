@@ -10,6 +10,7 @@ local layout = require "hs.layout"
 local caffeinate = require "hs.caffeinate"
 local notify = require "hs.notify"
 
+
 -- Speaker
 speaker = hs.speech.new()
 
@@ -119,8 +120,8 @@ hyperapps["j"] = "Brave Browser"
 hyperapps["m"] = "PDF Expert"
 hyperapps[";"] = "Reminders"
 hyperapps["'"] = "Messages"
-hyperapps["o"] = "Music"
-hyperapps["k"] = "Code"
+hyperapps["o"] = "Spotify"
+hyperapps["k"] = "Bike"
 hyperapps["n"] = "Things"
 hyperapps["l"] = "Skim"
 hyperapps[","] = "Calendar"

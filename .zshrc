@@ -7,9 +7,6 @@ KEYTIMEOUT=1
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# Source the prompt config
-[[ -f ~/.prompt.conf ]] && source ~/.prompt.conf
-
 # History configuration
 # How many lines of history to keep in memory
 HISTSIZE=5000
@@ -66,8 +63,10 @@ fi
 # Necessary for conda envs to work in tmux
 [[ -z $TMUX ]] || mamba deactivate; mamba activate base
 
-# Configure the spaceship prompt
-source /opt/homebrew/opt/spaceship/spaceship.zsh
+# Configure the liquidprompt prompt
+if [ -f /opt/homebrew/share/liquidprompt ]; then
+    . /opt/homebrew/share/liquidprompt
+fi
 
 # Configure the zsh-syntax-highlighting plugin (N.B. path to the executable found by digging)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
