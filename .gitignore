@@ -35,4 +35,5 @@ Temporary Items
 
 # Custom
 .config/kitty/kitty.conf.bak
+*.un~
 
