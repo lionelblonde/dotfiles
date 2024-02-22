@@ -42,7 +42,6 @@ brew install gitui
 brew install broot
 brew install ouch
 brew install unar
-brew install gallery-dl
 brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
@@ -50,7 +49,6 @@ brew install qmk-toolbox
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask calibre
-brew install --cask meetingbar
 brew install --cask mochi-diffusion
 brew install --cask tomatobar
 brew install --cask docker
@@ -72,7 +70,6 @@ brew install --cask espanso
 brew install --cask maccy
 brew install --cask skim
 brew install --cask bike
-brew install --cask pdf-expert  # not paying; only using to read weird annotations
 brew install --cask iina
 brew install --cask monitorcontrol  # for non-apple monitors
 brew install --cask plex-media-server

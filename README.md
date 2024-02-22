@@ -3,9 +3,11 @@
 ## System Preferences
 + Go to _Accessibility -> Pointer Control -> Mouse & Trackpad -> Trackpad Options..._
     + there, select _Enable dragging_ with the _without drag lock_ option.
-+ Go to _Accessibility -> Display_ and in the main settings switch on _Reduce motion_.
++ Go to _Accessibility -> Display_ and in the main settings
+    + switch on _Reduce motion_, __Differentiate without color__, and __Reduce transparency__.
 + Go to _Trackpad_ and set up App Expose with three-finger swipe down as gesture.
 + Go to _Keyboard -> Keyboard Shortcuts... -> Mission Control_ and assign F10 to _Application windows_.
++ Schedule downtime in Screen Time (both on macOS and iOS) to be between 23:45 and 05:00.
 
 ## More hidden settings
 + Change hidden settings from the command line
@@ -40,10 +42,9 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
-+ Things
++ Infuse
 + TextSniper
 + Hand Mirror
-+ Endel
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -94,6 +95,8 @@ Install the following Chrome extensions from the store:
 + I still don't care about cookies
 + Blink: Automatic Focus & Concentration
     + only useful to be reminded to mind time blindness
++ Dark Reader
++ Minimal New Page
 
 YouTube-related:
 + Return YouTube Dislike
@@ -101,7 +104,6 @@ YouTube-related:
 + SponsorBlock
 + Youtube-shorts block
 + RYS - Remove YouTube Suggestions
-+ Video Speed Controller
 + DeArrow - Better Titles and Thumbnails
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
