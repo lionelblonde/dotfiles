@@ -24,6 +24,8 @@ alias ..='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
 
+alias qv='qlmanage -p'
+
 # neovim
 alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
 
@@ -45,8 +47,10 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 
 # convenience aliases for editing configs
 # I use these on macOS and Anton only -- can use neovim
-alias ex='v ~/Documents/notes/plan.txt'
 alias ei='v ~/Documents/notes/inspiration.md'
+alias eo='v ~/Documents/notes/research/research.md'
+alias ep='v ~/Documents/notes/plan.txt'
+# previous 3 aliases: 3 i o p are in a row
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
 alias en='v ~/.config/nvim/init.lua'
@@ -65,6 +69,7 @@ alias ee="espanso edit"
 # convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
 
+alias cdy='cd ~/Documents/plex/youtube'
 alias cdx='cd ~/Documents/notes'
 alias cdc='cd ~/Documents/git/code/WIP'
 alias cdr='cd ~/Documents/git/code/ego/github/private/resume-latex'

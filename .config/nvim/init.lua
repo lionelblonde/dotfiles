@@ -22,31 +22,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- {
-    --     "nyoom-engineering/oxocarbon.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         vim.opt.background = "dark" -- set this to dark or light
-    --         vim.cmd.colorscheme("oxocarbon")
-    --     end
-    -- },
     {
-        "ramojus/mellifluous.nvim",
+        "ishan9299/modus-theme-vim", -- lua theme for nvim despite name
         lazy = false,
         priority = 1000,
         config = function()
-            require("mellifluous").setup({
-                -- color_set = "mellifluous", -- more rose-y
-                -- color_set = "alduin", -- more yellow-y
-                color_set = "mountain", -- less brown/warm-y
-                mellifluous = {
-                    neutral = true,
-                    bg_contrast = "hard" -- options: soft, medium, hard
-                }
-            })
+            -- vim.opt.background = "light"
+            -- vim.cmd.colorscheme("modus-operandi")
             vim.opt.background = "dark"
-            vim.cmd.colorscheme("mellifluous")
+            vim.cmd.colorscheme("modus-vivendi")
         end
     },
     {

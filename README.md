@@ -45,6 +45,7 @@ Install these apps from the Mac App Store:
 + Infuse
 + TextSniper
 + Hand Mirror
++ Overcast
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -93,10 +94,9 @@ Install the following Chrome extensions from the store:
 + LeechBlock NG
     + in settings, make it so that it displays what need be reminded
 + I still don't care about cookies
-+ Blink: Automatic Focus & Concentration
-    + only useful to be reminded to mind time blindness
 + Dark Reader
 + Minimal New Page
++ News Feed Eradicator
 
 YouTube-related:
 + Return YouTube Dislike

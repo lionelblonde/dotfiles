@@ -69,13 +69,14 @@ brew install --cask mactex
 brew install --cask espanso
 brew install --cask maccy
 brew install --cask skim
-brew install --cask bike
 brew install --cask iina
-brew install --cask monitorcontrol  # for non-apple monitors
+brew install --cask meta
+brew install --cask monitorcontrol # for non-apple monitors
 brew install --cask plex-media-server
-brew install --cask sublime-merge  # ideal for tedious git operations
-brew install --cask sublime-text  # only software capable of properly wrapping text
+brew install --cask sublime-merge # ideal for tedious git operations
+brew install --cask sublime-text # only software capable of properly wrapping text
 brew install --cask visual-studio-code # Electron app but fast
+brew install --cask pdf-expert # to read PDF annotations
 brew install --cask qgis
 brew install --cask google-drive
 brew install --cask zoom
