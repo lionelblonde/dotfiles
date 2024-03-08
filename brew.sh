@@ -46,7 +46,7 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
-brew install --cask rescuetime
+brew install --cask activitywatch
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask calibre
@@ -65,7 +65,6 @@ brew install --cask brave-browser
 brew install --cask appcleaner
 brew install --cask keepingyouawake
 brew install --cask hammerspoon
-brew install --cask spotify
 brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask espanso

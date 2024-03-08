@@ -46,6 +46,7 @@ Install these apps from the Mac App Store:
 + TextSniper
 + Hand Mirror
 + Overcast
++ Timery
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -97,6 +98,7 @@ Install the following Chrome extensions from the store:
 + Dark Reader
 + Minimal New Page
 + News Feed Eradicator
++ ActivityWatch Web Watcher
 
 YouTube-related:
 + Return YouTube Dislike
