@@ -50,6 +50,7 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 alias ei='v ~/Documents/notes/inspiration.md'
 alias eo='v ~/Documents/notes/research/research.md'
 alias ep='v ~/Documents/notes/plan.txt'
+alias ej='v ~/Documents/notes/proj.txt'
 # previous 3 aliases: 3 i o p are in a row
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
@@ -68,8 +69,9 @@ alias ee="espanso edit"
 
 # convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
+alias ss='source ~/.aliases'
 
-alias cdy='cd ~/Documents/plex/youtube'
-alias cdx='cd ~/Documents/notes'
-alias cdc='cd ~/Documents/git/code/WIP'
-alias cdr='cd ~/Documents/git/code/ego/github/private/resume-latex'
+alias nts='cd ~/Documents/notes'
+alias wip='cd ~/Documents/git/code/WIP'
+alias rsm='cd ~/Documents/git/code/ego/github/private/resume-latex'
+
