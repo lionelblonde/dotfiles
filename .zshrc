@@ -41,6 +41,16 @@ set -o vi
 # Problem: vi mode in bash has a delay when switching from insert mode to command mode
 set keyseq-timeout 0.01
 
+# Enable Ctrl-x-e to edit command line
+autoload -U edit-command-line
+# Emacs style
+# zle -N edit-command-line
+# bindkey '^xe' edit-command-line
+# bindkey '^x^e' edit-command-line
+# Vi style:
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/lionelblonde/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
