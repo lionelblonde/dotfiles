@@ -34,9 +34,6 @@ require("lazy").setup({
         end
     },
     {
-        "activitywatch/aw-watcher-vim",
-    },
-    {
         "nvim-lua/plenary.nvim",
     },
     {

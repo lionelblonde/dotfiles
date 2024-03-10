@@ -98,7 +98,6 @@ Install the following Chrome extensions from the store:
 + Dark Reader
 + Minimal New Page
 + News Feed Eradicator
-+ ActivityWatch Web Watcher
 
 YouTube-related:
 + Return YouTube Dislike

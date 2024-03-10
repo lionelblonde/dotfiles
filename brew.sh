@@ -46,7 +46,7 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
-brew install --cask activitywatch
+brew install --cask qbserve
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask calibre
@@ -73,7 +73,6 @@ brew install --cask skim
 brew install --cask iina
 brew install --cask meta
 brew install --cask monitorcontrol # for non-apple monitors
-brew install --cask plex-media-server
 brew install --cask sublime-merge # ideal for tedious git operations
 brew install --cask sublime-text # only software capable of properly wrapping text
 brew install --cask visual-studio-code # Electron app but fast
