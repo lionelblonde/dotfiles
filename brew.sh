@@ -50,6 +50,7 @@ brew install --cask qbserve
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask calibre
+brew install --cask meetingbar
 brew install --cask mochi-diffusion
 brew install --cask tomatobar
 brew install --cask docker
