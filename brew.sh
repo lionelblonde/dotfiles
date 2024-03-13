@@ -2,6 +2,7 @@
 
 # Install brew packages
 brew install asitop
+brew install mas
 brew install topgrade
 brew install uutils-coreutils
 brew install parallel

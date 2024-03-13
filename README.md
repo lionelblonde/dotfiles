@@ -47,6 +47,7 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + Overcast
 + Timery
++ Focal & Naim
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
