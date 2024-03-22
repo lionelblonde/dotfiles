@@ -48,6 +48,7 @@ Install these apps from the Mac App Store:
 + Overcast
 + Timery
 + Focal & Naim
++ Endel
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -99,6 +100,7 @@ Install the following Chrome extensions from the store:
 + Dark Reader
 + Minimal New Page
 + News Feed Eradicator
++ Old Reddit Redirect
 
 YouTube-related:
 + Return YouTube Dislike
