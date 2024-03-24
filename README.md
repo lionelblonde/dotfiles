@@ -109,6 +109,7 @@ YouTube-related:
 + Youtube-shorts block
 + RYS - Remove YouTube Suggestions
 + DeArrow - Better Titles and Thumbnails
++ Video Speed Controller
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
