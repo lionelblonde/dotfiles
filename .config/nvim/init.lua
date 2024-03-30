@@ -340,9 +340,9 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 lsp_zero.setup_servers({
-    "pyright",
-    "ruff_lsp",
-    "rust_analyzer",
+    "pyright", -- type-checker
+    "ruff_lsp", -- linter
+    "pylsp", -- assist linting for rules not yet working in ruff
 })
 
 lsp_zero.setup()
@@ -366,6 +366,31 @@ lsp_zero.set_preferences({
         warn = "W",
         hint = "H",
         info = "I",
+    }
+})
+
+require("lspconfig").pylsp.setup({
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    enabled = true,
+                    select = {
+                        "W391", "E301", "E302", "E303", "E304", "E305", "E306",
+                        -- "E111",
+                    },
+                },
+                mccabe = {
+                    enabled = false,
+                },
+                pyflakes = {
+                    enabled = false,
+                },
+                flake8 = {
+                    enabled = false,
+                },
+            },
+        }
     }
 })
 

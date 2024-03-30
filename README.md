@@ -117,9 +117,11 @@ YouTube-related:
 Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget` from
 [this official link](https://github.com/conda-forge/miniforge#mambaforge).
 
-In the base environment, install the Ruff Python LSP (written in Rust), like so: `pip install ruff-lsp`.
-We do not install Ruff via Homebrew!
-Same goes for pyright (developed by Microsoft): `pip install pyright` in the base environment.
+In the base environment (and all future python envs), install `pylsp` and `flake8`:
+`pip install python-lsp-server`
+and `pip install flake8` (linter)
+but also `pip install pyright` (type checker)
+and the following flake8 plugins: (pending)
 
 ## Sublime Text (legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
@@ -137,17 +139,13 @@ In Sublime Text, install the following packages using the in-app package manager
 + LaTeXTools
 + LSP
 + LSP-file-watcher-chokidar
-+ LSP-ruff
 + Neon Color Scheme
 + Limegrass
 + Alabaster Color Scheme
 + Cool & Clear
 + Lumi
 
-Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
-
-## VSCode
-+ Ruff (LSP for Python written in Rust)
+## VSCode (legacy)
 + Vim (vscodevim)
 + Error Lens
 + OCaml Platform
@@ -160,7 +158,6 @@ Also, set the wrap width to 120 if the Distraction-Free-Mode settings.
 + edamagit
 + Alabaster
 + sema
-+ lean
 
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
