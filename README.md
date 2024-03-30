@@ -118,8 +118,9 @@ Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget`
 [this official link](https://github.com/conda-forge/miniforge#mambaforge).
 
 In the base environment (and all future python envs), install `pylsp` and `flake8`:
-`pip install python-lsp-server`
-and `pip install flake8` (linter)
+`pip install python-lsp-server` (pylsp, for extending rules not covered yet by ruff)
+and `pip install ruff-lsp` (linter)
+and `pip install pycodestyle` (linter extension)
 but also `pip install pyright` (type checker)
 and the following flake8 plugins: (pending)
 
