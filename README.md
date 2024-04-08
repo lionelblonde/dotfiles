@@ -43,12 +43,13 @@
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 + Infuse
++ Things 3
 + TextSniper
 + Hand Mirror
 + Overcast
 + Timery
 + Focal & Naim
-+ Endel
++ DaisyDisk
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -101,6 +102,7 @@ Install the following Chrome extensions from the store:
 + Minimal New Page
 + News Feed Eradicator
 + Old Reddit Redirect
++ Refined GitHub
 
 YouTube-related:
 + Return YouTube Dislike

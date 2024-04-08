@@ -23,16 +23,28 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "ishan9299/modus-theme-vim", -- lua theme for nvim despite name
+        "yorik1984/newpaper.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            -- vim.opt.background = "light"
-            -- vim.cmd.colorscheme("modus-operandi")
-            vim.opt.background = "dark"
-            vim.cmd.colorscheme("modus-vivendi")
+            require("newpaper").setup({
+                style = "dark",
+                disable_background = true,
+            })
+            vim.cmd.colorscheme("newpaper")
         end
     },
+    -- {
+    --     "ishan9299/modus-theme-vim", -- lua theme for nvim despite name
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         -- vim.opt.background = "light"
+    --         -- vim.cmd.colorscheme("modus-operandi")
+    --         vim.opt.background = "dark"
+    --         vim.cmd.colorscheme("modus-vivendi")
+    --     end
+    -- },
     {
         "nvim-lua/plenary.nvim",
     },
