@@ -123,7 +123,7 @@ In the base environment (and all future python envs), install `pylsp` and `flake
 and `pip install ruff-lsp` (linter)
 and `pip install pycodestyle` (linter extension)
 but also `pip install pyright` (type checker)
-and the following flake8 plugins: (pending)
+and `pip install beartype` (runtime type checker; ensures type hint are correct)
 
 ## Sublime Text (legacy)
 In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
