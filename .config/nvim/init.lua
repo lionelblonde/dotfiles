@@ -35,14 +35,14 @@ require("lazy").setup({
         end
     },
     -- {
-    --     "ishan9299/modus-theme-vim", -- lua theme for nvim despite name
+    --     "rose-pine/neovim",
     --     lazy = false,
     --     priority = 1000,
     --     config = function()
-    --         -- vim.opt.background = "light"
-    --         -- vim.cmd.colorscheme("modus-operandi")
-    --         vim.opt.background = "dark"
-    --         vim.cmd.colorscheme("modus-vivendi")
+    --         require("rose-pine").setup({
+    --             variant = "main",
+    --         })
+    --         vim.cmd.colorscheme("rose-pine")
     --     end
     -- },
     {
