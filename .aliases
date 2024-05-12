@@ -74,4 +74,5 @@ alias ss='source ~/.aliases'
 alias nts='cd ~/Documents/notes'
 alias wip='cd ~/Documents/git/code/WIP'
 alias rsm='cd ~/Documents/git/code/ego/github/private/resume-latex'
+alias mng='cd ~/Documents/git/code/else/lionel'
 
