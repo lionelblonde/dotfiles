@@ -50,7 +50,6 @@ brew install qmk-toolbox
 brew install --cask qbserve
 brew install --cask silicon
 brew install --cask kitty
-brew install --cask calibre
 brew install --cask meetingbar
 brew install --cask mochi-diffusion
 brew install --cask tomatobar
@@ -79,7 +78,6 @@ brew install --cask sublime-merge # ideal for tedious git operations
 brew install --cask sublime-text # only software capable of properly wrapping text
 brew install --cask visual-studio-code # Electron app but fast
 brew install --cask pdf-expert # to read PDF annotations
-brew install --cask qgis
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
