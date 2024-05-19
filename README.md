@@ -111,6 +111,7 @@ YouTube-related:
 + RYS - Remove YouTube Suggestions
 + DeArrow - Better Titles and Thumbnails
 + Video Speed Controller
++ YouTube Mix Blocker
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
