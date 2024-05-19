@@ -48,6 +48,7 @@ brew install qmk-toolbox
 
 # Install macOS applications with brew cask
 brew install --cask qbserve
+brew install --cask keka
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask calibre
