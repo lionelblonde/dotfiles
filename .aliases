@@ -72,7 +72,7 @@ alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
 
 alias nts='cd ~/Documents/notes'
-alias wip='cd ~/Documents/git/code/WIP'
+alias wip='cd ~/Documents/git/code/wip'
 alias rsm='cd ~/Documents/git/code/ego/github/private/resume-latex'
 alias mng='cd ~/Documents/git/code/else/lionel'
 
