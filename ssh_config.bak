@@ -5,10 +5,8 @@ Host nabla
     HostName 172.28.45.108
     User lionel
 Host bao
-    HostName login2.baobab.hpc.unige.ch
+    HostName login1.baobab.hpc.unige.ch
     User blondeli
-    IdentityFile ~/.ssh/bao
 Host ygg
     HostName login1.yggdrasil.hpc.unige.ch
     User blondeli
-    IdentityFile ~/.ssh/ygg
