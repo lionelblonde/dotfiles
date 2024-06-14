@@ -96,7 +96,6 @@ Install the following Chrome extensions from the store:
 + LeechBlock NG
     + in settings, make it so that it displays what need be reminded
 + I still don't care about cookies
-+ Dark Reader
 + Minimal New Page
 + News Feed Eradicator
 + Old Reddit Redirect
@@ -124,42 +123,6 @@ and `pip install ruff-lsp` (linter)
 and `pip install pycodestyle` (linter extension)
 but also `pip install pyright` (type checker)
 and `pip install beartype` (runtime type checker; ensures type hint are correct)
-
-## Sublime Text (legacy)
-In Sublime Text, install the following packages using the in-app package manager (that need be installed first):
-+ BracketHighlighter
-+ GitGutter
-+ GitSavvy
-+ FileIcons Mono
-+ NeoVintageous
-+ SublimeLinter
-+ SublimeLinter-annotations
-+ SublimeLinter-flake8
-+ SublimeLinter-luacheck
-+ Switch Window
-+ MarkdownPreview
-+ LaTeXTools
-+ LSP
-+ LSP-file-watcher-chokidar
-+ Neon Color Scheme
-+ Limegrass
-+ Alabaster Color Scheme
-+ Cool & Clear
-+ Lumi
-
-## VSCode (legacy)
-+ Vim (vscodevim)
-+ Error Lens
-+ OCaml Platform
-+ Python
-+ Pylance
-+ Todo Tree
-+ GitHub Copilot
-+ GitHub Copilot Chat
-+ LaTeX Workshop
-+ edamagit
-+ Alabaster
-+ sema
 
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
