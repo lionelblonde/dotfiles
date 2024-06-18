@@ -100,6 +100,7 @@ Install the following Chrome extensions from the store:
 + News Feed Eradicator
 + Old Reddit Redirect
 + Refined GitHub
++ Open in Sci-Hub
 
 YouTube-related:
 + Return YouTube Dislike
