@@ -22,27 +22,44 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        "yorik1984/newpaper.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("newpaper").setup({
-                style = "dark",
-                disable_background = true,
-            })
-            vim.cmd.colorscheme("newpaper")
-        end
-    },
     -- {
-    --     "rose-pine/neovim",
+    --     "yorik1984/newpaper.nvim",
     --     lazy = false,
     --     priority = 1000,
     --     config = function()
-    --         require("rose-pine").setup({
-    --             variant = "main",
+    --         require("newpaper").setup({
+    --             style = "dark",
+    --             disable_background = true,
     --         })
-    --         vim.cmd.colorscheme("rose-pine")
+    --         vim.cmd.colorscheme("newpaper")
+    --     end
+    -- },
+    -- {
+    --     "slugbyte/lackluster.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     init = function()
+    --         -- vim.cmd.colorscheme("lackluster")
+    --         vim.cmd.colorscheme("lackluster-hack") -- return is green, exception is blue
+    --         -- vim.cmd.colorscheme("lackluster-mint")  -- types are green
+    --     end
+    -- },
+    {
+        "miikanissi/modus-themes.nvim",
+        lazy = false,
+        priority = 1000,
+        init = function()
+            -- vim.cmd.colorscheme("modus_operandi")
+            vim.cmd.colorscheme("modus_vivendi")
+	    end
+    },
+    -- {
+    --     "ishan9299/modus-theme-vim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     init = function()
+    --         -- vim.cmd.colorscheme("modus-operandi")
+    --         vim.cmd.colorscheme("modus-vivendi")
     --     end
     -- },
     {
