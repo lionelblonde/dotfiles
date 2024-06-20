@@ -34,25 +34,23 @@ require("lazy").setup({
     --         vim.cmd.colorscheme("newpaper")
     --     end
     -- },
-    -- {
-    --     "slugbyte/lackluster.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     init = function()
-    --         -- vim.cmd.colorscheme("lackluster")
-    --         vim.cmd.colorscheme("lackluster-hack") -- return is green, exception is blue
-    --         -- vim.cmd.colorscheme("lackluster-mint")  -- types are green
-    --     end
-    -- },
     {
-        "miikanissi/modus-themes.nvim",
+        "nyngwang/nvimgelion",
         lazy = false,
         priority = 1000,
         init = function()
-            -- vim.cmd.colorscheme("modus_operandi")
-            vim.cmd.colorscheme("modus_vivendi")
-	    end
+            vim.cmd.colorscheme("nvimgelion")
+        end
     },
+    -- {
+    --     "miikanissi/modus-themes.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     init = function()
+    --         -- vim.cmd.colorscheme("modus_operandi")
+    --         vim.cmd.colorscheme("modus_vivendi")
+    --     end
+    -- },
     -- {
     --     "ishan9299/modus-theme-vim",
     --     lazy = false,
