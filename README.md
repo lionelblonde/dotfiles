@@ -96,7 +96,6 @@ Install the following Chrome extensions from the store:
 + LeechBlock NG
     + in settings, make it so that it displays what need be reminded
 + I still don't care about cookies
-+ Minimal New Page
 + News Feed Eradicator
 + Old Reddit Redirect
 + Refined GitHub
