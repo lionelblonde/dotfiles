@@ -34,23 +34,23 @@ require("lazy").setup({
     --         vim.cmd.colorscheme("newpaper")
     --     end
     -- },
-    {
-        "nyngwang/nvimgelion",
-        lazy = false,
-        priority = 1000,
-        init = function()
-            vim.cmd.colorscheme("nvimgelion")
-        end
-    },
     -- {
-    --     "miikanissi/modus-themes.nvim",
+    --     "nyngwang/nvimgelion",
     --     lazy = false,
     --     priority = 1000,
     --     init = function()
-    --         -- vim.cmd.colorscheme("modus_operandi")
-    --         vim.cmd.colorscheme("modus_vivendi")
+    --         vim.cmd.colorscheme("nvimgelion")
     --     end
     -- },
+    {
+        "miikanissi/modus-themes.nvim",
+        lazy = false,
+        priority = 1000,
+        init = function()
+            -- vim.cmd.colorscheme("modus_operandi")
+            vim.cmd.colorscheme("modus_vivendi")
+        end
+    },
     -- {
     --     "ishan9299/modus-theme-vim",
     --     lazy = false,
@@ -90,24 +90,20 @@ require("lazy").setup({
     },
     {
         "folke/trouble.nvim",
-        config = function()
-            require("trouble").setup({
-                icons = false,
-                position = "top",
-                mode = "workspace_diagnostics",
-                fold_open = "o",  -- icon used for open folds
-                fold_closed = "c",  -- icon used for closed folds
-            })
-            vim.keymap.set("n", "<leader>tt", function()
-                require("trouble").toggle()
-            end)  -- toggles the Trouble panel to see the LSP's diagnostics
-            vim.keymap.set("n", "]d", function()  -- d for diagnostics
-                require("trouble").next({ skip_groups = true, jump = true })
-            end)  -- goes to the next trouble
-            vim.keymap.set("n", "[d", function()  -- d for diagnostics
-                require("trouble").previous({ skip_groups = true, jump = true })
-            end)  -- goes to the next trouble
-        end,
+        opts = {},
+        cmd = "Trouble",
+        keys = {
+            {
+                "<leader>tt",
+                "<cmd>Trouble diagnostics toggle focus=true<cr>",
+                desc = "Diagnostics (Trouble)",
+            },
+            {
+                "<leader>tT",
+                "<cmd>Trouble diagnostics toggle focus=true filter.buf=0<cr>",
+                desc = "Buffer Diagnostics (Trouble)",
+            },
+        },
     },
     {
         "nvim-treesitter/nvim-treesitter",
