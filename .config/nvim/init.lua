@@ -34,30 +34,25 @@ require("lazy").setup({
     --         vim.cmd.colorscheme("newpaper")
     --     end
     -- },
-    -- {
-    --     "nyngwang/nvimgelion",
-    --     lazy = false,
-    --     priority = 1000,
-    --     init = function()
-    --         vim.cmd.colorscheme("nvimgelion")
-    --     end
-    -- },
     {
-        "miikanissi/modus-themes.nvim",
+        "nyngwang/nvimgelion",
         lazy = false,
         priority = 1000,
-        init = function()
-            -- vim.cmd.colorscheme("modus_operandi")
-            vim.cmd.colorscheme("modus_vivendi")
+        config = function()
+            vim.cmd.colorscheme("nvimgelion")
         end
     },
     -- {
-    --     "ishan9299/modus-theme-vim",
+    --     "miikanissi/modus-themes.nvim",
     --     lazy = false,
     --     priority = 1000,
-    --     init = function()
-    --         -- vim.cmd.colorscheme("modus-operandi")
-    --         vim.cmd.colorscheme("modus-vivendi")
+    --     config = function()
+    --         require("modus-themes").setup({
+    --             transparent = false,
+    --             variant = "default",
+    --         })
+    --         -- vim.cmd.colorscheme("modus_operandi")
+    --         vim.cmd.colorscheme("modus_vivendi")
     --     end
     -- },
     {
