@@ -97,7 +97,6 @@ Install the following Chrome extensions from the store:
     + in settings, make it so that it displays what need be reminded
 + I still don't care about cookies
 + News Feed Eradicator
-+ Old Reddit Redirect
 + Refined GitHub
 + Open in Sci-Hub
 
