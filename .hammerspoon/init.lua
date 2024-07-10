@@ -111,7 +111,7 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "Keynote"
+hyperapps["y"] = "Monodraw"
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "kitty"
 hyperapps["p"] = "Dash"
