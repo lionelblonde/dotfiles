@@ -99,14 +99,13 @@ Install the following Chrome extensions from the store:
 + News Feed Eradicator
 + Refined GitHub
 + Open in Sci-Hub
-+ Dark Reader
++ Firenvim
 
 YouTube-related:
 + Return YouTube Dislike
 + BlockTube
 + SponsorBlock
 + Youtube-shorts block
-+ RYS - Remove YouTube Suggestions
 + DeArrow - Better Titles and Thumbnails
 + Video Speed Controller
 + YouTube Mix Blocker
