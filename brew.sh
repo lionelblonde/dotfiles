@@ -50,6 +50,7 @@ brew install qmk-toolbox
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
 brew install --cask qbserve
+brew install --cask monodraw
 brew install --cask keka
 brew install --cask silicon
 brew install --cask kitty
