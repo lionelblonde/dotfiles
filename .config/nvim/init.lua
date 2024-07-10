@@ -172,6 +172,13 @@ require("lazy").setup({
             -- value 1 allows change focus to Skim after command `:VimtexView` is given
             vim.g.vimtex_quickfix_mode = 0
             vim.g.tex_conceal = "abdmg"
+            vim.g.vimtex_imaps_leader = ";" -- default is backtick, which is an annoyance
+        end
+    },
+    {
+        "kylechui/nvim-surround", -- surround objects
+        config = function()
+            require("nvim-surround").setup({})
         end
     },
     {
@@ -179,18 +186,36 @@ require("lazy").setup({
         event = "InsertEnter",
         config = function()
             require("nvim-autopairs").setup({})
+            local rule = require("nvim-autopairs.rule")
+            local cond = require("nvim-autopairs.conds")
+            local autopairs = require("nvim-autopairs")
+            autopairs.add_rules({
+                rule("$", "$", {"tex", "latex"}):with_cr(cond.none())
+            })
+            autopairs.get_rules("`")[1].not_filetypes = {"tex", "latex"}
+            autopairs.get_rules("'")[1].not_filetypes = {"tex", "latex", "rust"}
+            autopairs.add_rules({
+                rule("`", "'", {"tex", "latex"}):with_cr(cond.none())
+            })
         end
     },
     {
-        "Vimjas/vim-python-pep8-indent",
+        "glacambre/firenvim",
+        lazy = not vim.g.started_by_firenvim,
+        build = function()
+            vim.fn["firenvim#install"](0)
+        end
     },
+    -- {
+    --     "Vimjas/vim-python-pep8-indent",
+    -- },
     -- whatever is needed for LSP-Zero
-    {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
+    {'williamboman/mason.nvim'},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/nvim-cmp'},
+    -- {'hrsh7th/cmp-nvim-lsp'},
+    -- {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
 })
 
@@ -232,6 +257,11 @@ vim.opt.colorcolumn = "100"
 -- `1` allows formatting of numbered lists
 vim.opt.formatoptions = "qrn1"
 
+-- Set search case options
+vim.opt.ignorecase = true -- search case insensitive
+vim.opt.smartcase = true -- search case matters if capital letter
+-- Get a review of what the substitution looks like in a split
+vim.opt.inccommand = "split"
 -- Enable incremental search
 vim.opt.incsearch = true
 -- Enable highlighting of search matches as you type
@@ -366,17 +396,17 @@ lsp_zero.setup_servers({
 
 lsp_zero.setup()
 
-local cmp = require("cmp")
-local cmp_action = require("lsp-zero").cmp_action()
-
-cmp.setup({
-    mapping = {
-        ["<C-p>"] = cmp_action.luasnip_jump_forward(),
-        ["<C-n>"] = cmp_action.luasnip_jump_backward(),
-        ["<C-y>"] = cmp.mapping.confirm({ select = true }),
-        ["<C-Space"] = cmp.mapping.complete(),
-    }
-})
+-- local cmp = require("cmp")
+-- local cmp_action = require("lsp-zero").cmp_action()
+--
+-- cmp.setup({
+--     mapping = {
+--         ["<C-p>"] = cmp_action.luasnip_jump_forward(),
+--         ["<C-n>"] = cmp_action.luasnip_jump_backward(),
+--         ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+--         ["<C-Space"] = cmp.mapping.complete(),
+--     }
+-- })
 
 lsp_zero.set_preferences({
     suggest_lsp_servers = false,
