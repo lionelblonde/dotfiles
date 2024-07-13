@@ -103,7 +103,6 @@ Install the following Chrome extensions from the store:
 
 YouTube-related:
 + Return YouTube Dislike
-+ BlockTube
 + SponsorBlock
 + Youtube-shorts block
 + DeArrow - Better Titles and Thumbnails
