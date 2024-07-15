@@ -34,6 +34,22 @@ require("lazy").setup({
     --         vim.cmd.colorscheme("newpaper")
     --     end
     -- },
+    -- {
+    --     'Verf/deepwhite.nvim',
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.cmd.colorscheme("deepwhite")
+    --     end,
+    -- },
+    -- {
+    --     "ishan9299/modus-theme-vim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.cmd.colorscheme("modus-vivendi")
+    --     end
+    -- },
     {
         "nyngwang/nvimgelion",
         lazy = false,
