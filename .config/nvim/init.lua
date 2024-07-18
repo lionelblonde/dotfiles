@@ -23,18 +23,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- {
-    --     "yorik1984/newpaper.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         require("newpaper").setup({
-    --             style = "dark",
-    --             disable_background = true,
-    --         })
-    --         vim.cmd.colorscheme("newpaper")
-    --     end
-    -- },
-    -- {
     --     'Verf/deepwhite.nvim',
     --     lazy = false,
     --     priority = 1000,
@@ -51,26 +39,18 @@ require("lazy").setup({
     --     end
     -- },
     {
-        "nyngwang/nvimgelion",
+        "miikanissi/modus-themes.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme("nvimgelion")
+            require("modus-themes").setup({
+                transparent = false,
+                variant = "default",
+            })
+            -- vim.cmd.colorscheme("modus_operandi")
+            vim.cmd.colorscheme("modus_vivendi")
         end
     },
-    -- {
-    --     "miikanissi/modus-themes.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         require("modus-themes").setup({
-    --             transparent = false,
-    --             variant = "default",
-    --         })
-    --         -- vim.cmd.colorscheme("modus_operandi")
-    --         vim.cmd.colorscheme("modus_vivendi")
-    --     end
-    -- },
     {
         "nvim-lua/plenary.nvim",
     },
@@ -230,8 +210,8 @@ require("lazy").setup({
     {'williamboman/mason.nvim'},
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
     {'neovim/nvim-lspconfig'},
-    -- {'hrsh7th/cmp-nvim-lsp'},
-    -- {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
 })
 
