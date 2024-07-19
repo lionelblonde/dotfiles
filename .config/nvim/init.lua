@@ -22,33 +22,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- {
-    --     'Verf/deepwhite.nvim',
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         vim.cmd.colorscheme("deepwhite")
-    --     end,
-    -- },
-    -- {
-    --     "ishan9299/modus-theme-vim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         vim.cmd.colorscheme("modus-vivendi")
-    --     end
-    -- },
     {
-        "miikanissi/modus-themes.nvim",
+        "cdmill/neomodern.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            require("modus-themes").setup({
-                transparent = false,
-                variant = "default",
+            require("neomodern").setup({
+                -- style = "iceclimber",
+                style = "coffeecat",
+                -- style = "darkforest",
+                -- style = "campfire",
+                -- style = "roseprime",
+                -- style = "daylight",
+                transparent = true,
+                term_colors = true,
             })
-            -- vim.cmd.colorscheme("modus_operandi")
-            vim.cmd.colorscheme("modus_vivendi")
+            require("neomodern").load()
         end
     },
     {
