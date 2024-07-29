@@ -25,21 +25,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "cdmill/neomodern.nvim",
+        "miikanissi/modus-themes.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            require("neomodern").setup({
-                -- style = "iceclimber",
-                style = "coffeecat",
-                -- style = "darkforest",
-                -- style = "campfire",
-                -- style = "roseprime",
-                -- style = "daylight",
-                transparent = true,
-                term_colors = true,
+            require("modus-themes").setup({
+                style = "auto",
+                variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
+                transparent = false, -- Transparent background (as supported by the terminal)
             })
-            require("neomodern").load()
+            vim.cmd([[colorscheme modus]]) -- modus_operandi, modus_vivendi
         end
     },
     {
@@ -187,15 +182,8 @@ require("lazy").setup({
         end
     },
     {
-        "glacambre/firenvim",
-        lazy = not vim.g.started_by_firenvim,
-        build = function()
-            vim.fn["firenvim#install"](0)
-        end
+        "Vimjas/vim-python-pep8-indent",
     },
-    -- {
-    --     "Vimjas/vim-python-pep8-indent",
-    -- },
     -- whatever is needed for LSP-Zero
     {'williamboman/mason-lspconfig.nvim'},
     {'williamboman/mason.nvim'},
