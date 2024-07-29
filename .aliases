@@ -1,4 +1,6 @@
 # ALIASES
+#
+# NOTE: USE OUTER SINGLE QUOTES AND INNER DOUBLE QUOTES
 
 alias distro='uname -sr' # `s` for kernel name, `r` for kernel release
 alias nproc='sysctl -n hw.ncpu'
@@ -49,8 +51,8 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 # I use these on macOS and Anton only -- can use neovim
 alias ec='v ~/Documents/notes/cbt.md'
 alias eo='v ~/Documents/notes/research/research.md'
-alias ep='v ~/Documents/notes/plan.txt'
-alias ej='v ~/Documents/notes/proj.txt'
+alias ep='v +"match MyHighlightGroup /^[^+=*-]/" ~/Documents/notes/plan.txt'
+alias ej='v +"match MyHighlightGroup /^[^+=*-]/" ~/Documents/notes/proj.txt'
 # previous 3 aliases: 3 i o p are in a row
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
@@ -71,8 +73,6 @@ alias ee="espanso edit"
 alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
 
-alias nts='cd ~/Documents/notes'
 alias wip='cd ~/Documents/git/code/wip'
-alias rsm='cd ~/Documents/git/code/ego/github/private/resume-latex'
-alias mng='cd ~/Documents/git/code/else/lionel'
-
+alias notes='cd ~/Documents/notes'
+alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
