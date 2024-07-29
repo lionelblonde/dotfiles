@@ -72,28 +72,6 @@ end
 quit_modal:bind('cmd', 'q', do_quit)
 quit_modal:bind('', 'escape', function() quit_modal:exit() end)
 
-local function tell_me_current_spot_track()  -- not used atm
-   local track = hs.spotify.getCurrentTrack()
-   local artist = hs.spotify.getCurrentArtist()
-   local album = hs.spotify.getCurrentAlbum()
-   local time = hs.spotify.getPosition()
-   local duration = hs.spotify.getDuration()
-
-   -- speaker:speak("track: " .. track .. ", from " .. artist)
-   -- alert.show("Spotify\n" .. track .. "\n" .. artist .. "\n" .. album,
-   --            {strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=1}),
-   --             strokeWidth = 16,
-   --             radius = 22,
-   --             textFont = "Proxima Nova Medium",
-   --             fadeInDuration = 0,
-   --             fadeOutDuration = 0.5},
-   --            2)
-   notify.new({title = "Spotify current track",
-               subTitle = track .. " (" .. math.floor(time / duration * 100) .. "%)",
-               informativeText = artist .. " | " .. album,
-               }):send()
-end
-
 --[[ And now for hotkeys relating to Hyper.
 First, let's capture all of the functions, then we can just quickly iterate and bind them]]
 local hyperfns = {}
@@ -111,7 +89,7 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "Spotify"
+hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "kitty"
 hyperapps["p"] = "Dash"
