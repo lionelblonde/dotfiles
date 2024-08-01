@@ -17,7 +17,7 @@ brew install zsh
 brew install zsh-syntax-highlighting
 brew install reattach-to-user-namespace
 brew install liquidprompt
-brew install exa
+brew install eza
 brew install git
 brew install wget
 brew install curl
@@ -50,6 +50,7 @@ brew install qmk-toolbox
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
 brew install --cask qbserve
+brew install --cask sioyek
 brew install --cask keka
 brew install --cask silicon
 brew install --cask kitty
@@ -73,14 +74,13 @@ brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask espanso
 brew install --cask maccy
-brew install --cask skim
+brew install --cask skim # for LaTeX
 brew install --cask iina
-brew install --cask meta
 brew install --cask monitorcontrol # for non-apple monitors
 brew install --cask sublime-merge # ideal for tedious git operations
 brew install --cask sublime-text # only software capable of properly wrapping text
 brew install --cask visual-studio-code # Electron app but fast
-brew install --cask pdf-expert # to read PDF annotations
+brew install --cask pdf-expert # to read PDF annotations from Adobe Acrobat Reader
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
