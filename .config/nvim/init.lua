@@ -98,6 +98,7 @@ require("lazy").setup({
                     "latex",
                     "bibtex",
                     "markdown",
+                    "markdown_inline",
                 },
                 sync_install = false,  -- install parsers asynchronously
                 auto_install = true,  -- auto install missing parsers when entering buffer
@@ -148,7 +149,7 @@ require("lazy").setup({
         "lervag/vimtex",
         config = function()
             vim.g.tex_flavor = "latex"
-            vim.g.vimtex_view_method = "skim"
+            vim.g.vimtex_view_method = "general"
             vim.g.vimtex_view_skim_sync = 1
             -- value 1 allows forward search after every successful compilation
             vim.g.vimtex_view_skim_activate = 1
