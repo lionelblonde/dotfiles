@@ -6,7 +6,7 @@ alias distro='uname -sr' # `s` for kernel name, `r` for kernel release
 alias nproc='sysctl -n hw.ncpu'
 
 alias ll='ls -FGlAhp'
-alias xx='exa -1la --header --git --color-scale --time=created --time-style=long-iso --octal-permissions --no-user' # rust
+alias xx='eza -1la --header --git --color-scale --time=created --time-style=long-iso --octal-permissions --no-user' # rust
 
 alias ln='ln -v'
 
@@ -75,4 +75,8 @@ alias ss='source ~/.aliases'
 
 alias wip='cd ~/Documents/git/code/wip'
 alias notes='cd ~/Documents/notes'
+alias dots='cd ~/Documents/dotfiles'
 alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
+
+# selecte file in current directory with fzf, then ENTER to open it with default app for the type
+alias f='open "$(fzf)"'
