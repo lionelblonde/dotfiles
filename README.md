@@ -42,7 +42,6 @@
 ## Mac App Store
 Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
-+ Infuse
 + TextSniper
 + Hand Mirror
 + Overcast
