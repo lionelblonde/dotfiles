@@ -50,9 +50,10 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 # convenience aliases for editing configs
 # I use these on macOS and Anton only -- can use neovim
 alias ec='v ~/Documents/notes/cbt.md'
-alias eo='v ~/Documents/notes/research/research.md'
+alias eo='v ~/Documents/notes/research.md'
 alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt'
 alias ej='v +"g/^[^+=*-]/#" ~/Documents/notes/proj.txt'
+alias es='v ~/Documents/notes/scratchpad.txt'
 # previous 3 aliases: 3 i o p are in a row
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
@@ -62,7 +63,7 @@ alias et='v ~/.tmux.conf'
 alias eh='v ~/.hammerspoon/init.lua'
 alias ek='v ~/.config/kitty/kitty.conf'
 alias er='v ~/Documents/dotfiles/README.md'
-alias es='v ~/Documents/dotfiles/brew.sh'
+alias eb='v ~/Documents/dotfiles/brew.sh'
 
 alias ee="espanso edit"
 # file to edit is located at:
@@ -80,3 +81,4 @@ alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
 
 # selecte file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='open "$(fzf)"'
+alias ff='sioyek "$(fzf)"'
