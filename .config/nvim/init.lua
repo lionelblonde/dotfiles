@@ -225,7 +225,7 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 
 -- Set a ruler to indicate the X column
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = "100,120"
 
 -- Set the format options
 -- `q` enales automatic formatting of comments using `gq` command
