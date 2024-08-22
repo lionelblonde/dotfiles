@@ -99,6 +99,8 @@ Install the following Chrome extensions from the store:
 + Refined GitHub
 + Open in Sci-Hub
 + Letterboxd Extras
++ Honey
++ Minimal New Page
 
 YouTube-related:
 + Return YouTube Dislike
