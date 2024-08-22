@@ -6,6 +6,7 @@ brew install mas
 brew install topgrade
 brew install uutils-coreutils
 brew install jordanbaird-ice
+brew install trex
 brew install parallel
 brew install sd
 brew install tq
@@ -54,7 +55,6 @@ brew install --cask sioyek
 brew install --cask keka
 brew install --cask silicon
 brew install --cask kitty
-brew install --cask calibre
 brew install --cask meetingbar
 brew install --cask tomatobar
 brew install --cask docker
@@ -79,10 +79,8 @@ brew install --cask iina
 brew install --cask monitorcontrol # for non-apple monitors
 brew install --cask sublime-merge # ideal for tedious git operations
 brew install --cask sublime-text # only software capable of properly wrapping text
-brew install --cask visual-studio-code # Electron app but fast
 brew install --cask pdf-expert # to read PDF annotations from Adobe Acrobat Reader
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
 brew install --cask microsoft-teams
-
