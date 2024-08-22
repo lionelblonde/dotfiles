@@ -131,18 +131,18 @@ and `pip install beartype` (runtime type checker; ensures type hint are correct)
 + In _Devices -> Advanced -> Disable the build-in keyboard while one of the following selected device is connected_,
   tick the box that says "HHKB Professional \[...\]" (or other desired device)
 + In _Function Keys_, _For all devices_, set ("use all F1, F2, etc. keys as standard function keys" is set to False):
-    + _f1_ to "display_brightness_decrement"
-    + _f2_ to "display_brightness_increment"
-    + _f3_ to "mission_control"
+    + _f1_ to "display brightness decrement"
+    + _f2_ to "display brightness increment"
+    + _f3_ to "mission control"
     + _f4_ to "f10"
     + _f5_ to "f5"
     + _f6_ to "f6"
     + _f7_ to "rewind"
-    + _f8_ to "play_or_pause"
-    + _f9_ to "fast_forward"
+    + _f8_ to "play or pause"
+    + _f9_ to "fast forward"
     + _f10_ to "mute"
-    + _f11_ to "volume_decrement"
-    + _f12_ to "volume_increment"
+    + _f11_ to "volume decrement"
+    + _f12_ to "volume increment"
 N.B.: these depend on the QMK layout.
 
 ## Jupyter
