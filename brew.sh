@@ -54,6 +54,7 @@ brew install --cask qbserve
 brew install --cask sioyek
 brew install --cask keka
 brew install --cask silicon
+brew install --cask calibre
 brew install --cask kitty
 brew install --cask meetingbar
 brew install --cask tomatobar
