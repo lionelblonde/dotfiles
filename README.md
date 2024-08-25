@@ -109,6 +109,7 @@ YouTube-related:
 + DeArrow - Better Titles and Thumbnails
 + Video Speed Controller
 + YouTube Mix Blocker
++ BlockTube
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
