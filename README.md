@@ -110,6 +110,7 @@ YouTube-related:
 + Video Speed Controller
 + YouTube Mix Blocker
 + BlockTube
++ RYS - Remove YouTube Suggestions
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
