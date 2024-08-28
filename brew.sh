@@ -85,4 +85,3 @@ brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
 brew install --cask microsoft-teams
-brew install --cask spotify
