@@ -51,8 +51,6 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 # I use these on macOS and Anton only -- can use neovim
 alias ec='v ~/Documents/notes/cbt.md'
 alias eo='v ~/Documents/notes/research/log.md'
-alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt'
-alias ej='v +"g/^[^+=*-]/#" ~/Documents/notes/proj.txt'
 alias es='v ~/Documents/notes/scratchpad.txt'
 # previous 3 aliases: 3 i o p are in a row
 alias ea='v ~/.aliases'
