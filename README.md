@@ -47,6 +47,7 @@ Install these apps from the Mac App Store:
 + Overcast
 + Focal & Naim
 + DaisyDisk
++ Photo Widget -- The Best One
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
