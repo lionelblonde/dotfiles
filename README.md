@@ -101,6 +101,7 @@ Install the following Chrome extensions from the store:
 + Open in Sci-Hub
 + Honey
 + Minimal New Page
++ Dark Reader
 
 YouTube-related:
 + Return YouTube Dislike
