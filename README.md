@@ -109,6 +109,7 @@ YouTube-related:
 + YouTube Mix Blocker
 + BlockTube
 + RYS - Remove YouTube Suggestions
++ ASMR filter for Youtube (to filter out all ASMR videos)
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
