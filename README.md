@@ -99,9 +99,7 @@ Install the following Chrome extensions from the store:
 + News Feed Eradicator
 + Refined GitHub
 + Open in Sci-Hub
-+ Honey
 + Minimal New Page
-+ Dark Reader
 
 YouTube-related:
 + Return YouTube Dislike
