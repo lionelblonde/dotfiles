@@ -108,7 +108,6 @@ YouTube-related:
 + SponsorBlock
 + Youtube-shorts block
 + DeArrow - Better Titles and Thumbnails
-+ Video Speed Controller
 + YouTube Mix Blocker
 + BlockTube
 + RYS - Remove YouTube Suggestions
