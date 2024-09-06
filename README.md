@@ -107,7 +107,6 @@ YouTube-related:
 + Youtube-shorts block
 + DeArrow - Better Titles and Thumbnails
 + YouTube Mix Blocker
-+ BlockTube
 + RYS - Remove YouTube Suggestions
 + ASMR filter for Youtube (to filter out all ASMR videos)
 
