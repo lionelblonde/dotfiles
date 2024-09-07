@@ -52,7 +52,6 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 alias ec='v ~/Documents/notes/cbt.md'
 alias eo='v ~/Documents/notes/research/log.md'
 alias es='v ~/Documents/notes/scratchpad.txt'
-# previous 3 aliases: 3 i o p are in a row
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
 alias en='v ~/.config/nvim/init.lua'
@@ -74,9 +73,15 @@ alias ss='source ~/.aliases'
 
 alias wip='cd ~/Documents/git/code/wip'
 alias notes='cd ~/Documents/notes'
+alias stack='cd ~/Documents/stack'
+alias arxiv='cd ~/Documents/arxiv'
+alias books='cd ~/Documents/books'
 alias dots='cd ~/Documents/dotfiles'
 alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
 
 # selecte file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='open "$(fzf)"'
-alias ff='sioyek "$(fzf)"'
+
+alias fs='stack && f'
+alias fa='arxiv && f'
+alias fb='books && f'
