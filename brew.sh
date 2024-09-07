@@ -52,7 +52,6 @@ brew install qmk-toolbox
 brew install --cask git-credential-manager
 brew install --cask qbserve
 brew install --cask omnifocus
-brew install --cask sioyek
 brew install --cask keka
 brew install --cask silicon
 brew install --cask calibre
