@@ -80,7 +80,6 @@ brew install --cask iina
 brew install --cask monitorcontrol # for non-apple monitors
 brew install --cask sublime-merge # ideal for tedious git operations
 brew install --cask sublime-text # only software capable of properly wrapping text
-brew install --cask pdf-expert # to read PDF annotations from Adobe Acrobat Reader
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
