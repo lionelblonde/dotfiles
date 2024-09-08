@@ -48,6 +48,7 @@ Install these apps from the Mac App Store:
 + Focal & Naim
 + DaisyDisk
 + Photo Widget -- The Best One
++ Pure Paste
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
