@@ -73,15 +73,8 @@ alias ss='source ~/.aliases'
 
 alias wip='cd ~/Documents/git/code/wip'
 alias notes='cd ~/Documents/notes'
-alias stack='cd ~/Documents/stack'
-alias arxiv='cd ~/Documents/arxiv'
-alias books='cd ~/Documents/books'
 alias dots='cd ~/Documents/dotfiles'
 alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
 
 # selecte file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='open "$(fzf)"'
-
-alias fs='stack && f'
-alias fa='arxiv && f'
-alias fb='books && f'
