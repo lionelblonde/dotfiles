@@ -49,6 +49,7 @@ Install these apps from the Mac App Store:
 + DaisyDisk
 + Photo Widget -- The Best One
 + Pure Paste
++ Folder Peek
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
