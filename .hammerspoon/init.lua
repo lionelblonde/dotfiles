@@ -89,14 +89,14 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "Preview"
+hyperapps["y"] = "Books"
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "kitty"
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Brave Browser"
 hyperapps["m"] = "IINA"
-hyperapps["'"] = "Signal"
+hyperapps["'"] = "Preview"
 hyperapps[";"] = "Qbserve"
 hyperapps["o"] = "Music"
 hyperapps["k"] = "sioyek"
