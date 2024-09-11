@@ -76,7 +76,6 @@ brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask espanso
 brew install --cask maccy
-brew install --cask skim # for LaTeX
 brew install --cask iina
 brew install --cask monitorcontrol # for non-apple monitors
 brew install --cask sublime-merge # ideal for tedious git operations
