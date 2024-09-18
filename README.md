@@ -47,7 +47,7 @@ Install these apps from the Mac App Store:
 + Overcast
 + Focal & Naim
 + DaisyDisk
-+ Photo Widget -- The Best One
++ Photo Widget
 + Pure Paste
 + Folder Peek
 
