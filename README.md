@@ -47,9 +47,6 @@ Install these apps from the Mac App Store:
 + Overcast
 + Focal & Naim
 + DaisyDisk
-+ Photo Widget
-+ Pure Paste
-+ Folder Peek
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
