@@ -57,6 +57,7 @@ brew install --cask omnifocus
 brew install --cask keka
 brew install --cask silicon
 brew install --cask kitty
+brew install --cask calibre
 brew install --cask meetingbar
 brew install --cask tomatobar
 brew install --cask docker
