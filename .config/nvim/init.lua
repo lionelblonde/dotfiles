@@ -50,7 +50,7 @@ require("lazy").setup({
     --             -- style = "campfire",
     --             style = "roseprime",
     --             -- style = "daylight",
-    --             transparent = false,
+    --             transparent = true,
     --             term_colors = true,
     --         })
     --         require("neomodern").load()
