@@ -75,6 +75,7 @@ alias wip='cd ~/Documents/git/code/wip'
 alias notes='cd ~/Documents/notes'
 alias dots='cd ~/Documents/dotfiles'
 alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
+alias txtb='cd ~/Documents/textbooks'
 
 # selecte file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='find . -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
