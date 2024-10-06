@@ -51,9 +51,6 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
-# Necessary for conda envs to work in tmux
-[[ -z $TMUX ]] || mamba deactivate; mamba activate base
-
 # Configure the liquidprompt prompt
 if [ -f /opt/homebrew/share/liquidprompt ]; then
     . /opt/homebrew/share/liquidprompt
@@ -62,4 +59,20 @@ fi
 # Configure the zsh-syntax-highlighting plugin (N.B. path to the executable found by digging)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /Users/lionelblonde/.config/broot/launcher/bash/br
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/lionelblonde/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/lionelblonde/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/lionelblonde/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/lionelblonde/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Necessary for conda envs to work in tmux
+[[ -z $TMUX ]] || conda deactivate; conda activate base

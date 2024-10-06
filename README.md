@@ -115,7 +115,7 @@ YouTube-related:
 ## Python
 Install Miniforge, not with Homebrew, but directly by downloading it with `wget` from
 the appropriate link at [the official GitHub page](https://github.com/conda-forge/miniforge#install).
-
+Mambaforge is deprecated as of July 2024.
 
 In the base environment (and all future python envs), install `pylsp` and `flake8`:
 `pip install python-lsp-server` (pylsp, for extending rules not covered yet by ruff)
