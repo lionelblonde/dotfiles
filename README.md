@@ -48,6 +48,7 @@ Install these apps from the Mac App Store:
 + Overcast
 + Focal & Naim
 + DaisyDisk
++ Smart Comic
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -108,13 +109,13 @@ YouTube-related:
 + DeArrow - Better Titles and Thumbnails
 + YouTube Mix Blocker
 + RYS - Remove YouTube Suggestions
-+ ASMR filter for Youtube (to filter out all ASMR videos)
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
 ## Python
-Install Mambaforge, not with Homebrew, but directly by downloading itwith `wget` from
-[this official link](https://github.com/conda-forge/miniforge#mambaforge).
+Install Miniforge, not with Homebrew, but directly by downloading it with `wget` from
+the appropriate link at [the official GitHub page](https://github.com/conda-forge/miniforge#install).
+
 
 In the base environment (and all future python envs), install `pylsp` and `flake8`:
 `pip install python-lsp-server` (pylsp, for extending rules not covered yet by ruff)
