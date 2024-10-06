@@ -147,20 +147,16 @@ and `pip install beartype` (runtime type checker; ensures type hint are correct)
 N.B.: these depend on the QMK layout.
 
 ## Jupyter
-Those are the steps to follow to create a new kernelspec aligned with a mamba environment, although this is effectively
-obsolete to carry out by hand since vscode/vscodium is capable of changing the kernel directly from mamba environments.
-+ activate the desired mamba environment
+Those are the steps to follow to create a new kernelspec aligned with a conda environment, although this is effectively
+obsolete to carry out by hand since vscode/vscodium is capable of changing the kernel directly from conda environments.
++ activate the desired conda environment
 + `pip install jupyter`
 + `pip install ipykernel`
-+ `python -m ipykernel install --user --name=<exact mamba env name> --display-name="<nicer name for kernelspec>"`
-Note, the `--name` flag gives ties the kernelspec to an existing mamba environment (it is not the activation that does).
++ `python -m ipykernel install --user --name=<exact conda env name> --display-name="<nicer name for kernelspec>"`
+Note, the `--name` flag gives ties the kernelspec to an existing conda environment (it is not the activation that does).
 
 Use `jupyter kernelspec list` to print the list of kernelspecs install on the system.
 Use `jupyter kernelspec uninstall my_kernelspec_name` to remove a kernelspec.
 
 ## LaTeX
 Setup `vimtex` by following the instructions at [this link](https://dr563105.github.io/blog/skim-vimtex-setup/).
-
-## Apps neither in MAS or Homebrew
-From the assets I saved, install:
-+ SCR Thumbnail Provider
