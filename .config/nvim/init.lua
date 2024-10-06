@@ -435,7 +435,6 @@ require("lspconfig").pylsp.setup({
                     enabled = true,
                     select = {
                         "W391", "E301", "E302", "E303", "E304", "E305", "E306",
-                        -- "E111",
                     },
                 },
                 mccabe = {
