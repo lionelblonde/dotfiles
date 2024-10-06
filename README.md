@@ -117,13 +117,6 @@ Install Miniforge, not with Homebrew, but directly by downloading it with `wget`
 the appropriate link at [the official GitHub page](https://github.com/conda-forge/miniforge#install).
 Mambaforge is deprecated as of July 2024.
 
-In the base environment (and all future python envs), install `pylsp` and `flake8`:
-`pip install python-lsp-server` (pylsp, for extending rules not covered yet by ruff)
-and `pip install ruff-lsp` (linter)
-and `pip install pycodestyle` (linter extension)
-but also `pip install pyright` (type checker)
-and `pip install beartype` (runtime type checker; ensures type hint are correct)
-
 ## Karabiner
 + In _Complex modifications_, hit _Add rule_, and import the item "Modern Space Cadet (rev 3)" form the web interface.
 + In there, also add "Change control key".

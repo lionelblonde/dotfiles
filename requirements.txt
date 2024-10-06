@@ -1,11 +1,12 @@
 torch
 torchvision
 torchaudio
-ruff-lsp
-python-lsp-server
-pycodestyle
+ruff-lsp  # linter
+python-lsp-server  # pylsp, for extending rules not covered yet by ruff
+pycodestyle  # linter extension
+pyright  # type checker
+beartype  # runtime type checker; ensures (not 100%) type hint are correct
 einops
-beartype
 fire
 omegaconf
 pandas
