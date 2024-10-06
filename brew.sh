@@ -42,7 +42,6 @@ brew install rga
 brew install diskonaut
 brew install dust
 brew install gitui
-brew install broot
 brew install ouch
 brew install unar
 brew install qmk/qmk/qmk
