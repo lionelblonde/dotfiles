@@ -1,0 +1,20 @@
+torch
+torchvision
+torchaudio
+ruff-lsp
+python-lsp-server
+pycodestyle
+einops
+beartype
+fire
+omegaconf
+pandas
+matplotlib
+seaborn
+numpy
+tmuxp
+wandb
+tensordict
+torchrl
+# tensordict-nightly
+# torchrl-nightly
