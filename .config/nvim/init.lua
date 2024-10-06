@@ -398,7 +398,7 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 lsp_zero.setup_servers({
-    "pyright", -- type-checker
+    -- "pyright", -- type-checker
     "ruff_lsp", -- linter
     "pylsp", -- assist linting for rules not yet working in ruff
 })
