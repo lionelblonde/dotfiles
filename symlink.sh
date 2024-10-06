@@ -17,9 +17,9 @@ mkdir -p .hammerspoon
 ln -svf $HOME/Documents/dotfiles/.hammerspoon/init.lua $HOME/.hammerspoon/init.lua
 ln -svf $HOME/Documents/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -svf $HOME/Documents/dotfiles/.vimrc $HOME/.vimrc
-ln -svf $HOME/Documents/dotfiles/.prompt.conf $HOME/.prompt.conf
 ln -svf $HOME/Documents/dotfiles/.zshrc $HOME/.zshrc
 ln -svf $HOME/Documents/dotfiles/.ytdlp.conf $HOME/.ytdlp.conf
+ln -svf $HOME/Documents/dotfiles/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
 
 # kitty
 ln -svf $HOME/Documents/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
