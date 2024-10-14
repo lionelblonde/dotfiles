@@ -41,14 +41,11 @@
 
 ## Mac App Store
 Install these apps from the Mac App Store:
-+ Things 3
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 + TextSniper
 + Hand Mirror
-+ Overcast
 + Focal & Naim
 + DaisyDisk
-+ Smart Comic
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -63,7 +60,8 @@ Special note: on Ubuntu
 + Start from the `ubuntu/.zshrc` base stored in the dotfiles
 + Run `sudo apt-get install liquidprompt`, followed by 
 + Create a `.zsh` folder at home: `mkdir -p .zsh`
-+ Clone `git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh/zsh-syntax-highlighting"`
++ Clone 
+  `git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh/zsh-syntax-highlighting"`
 + Add this to `.zshrc`: `source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"`
 + Run `liquidprompt_activate` (this will add the config lines to `.zshrc`)
 + Edit `~/.config/liquidpromptrc`, and switch off the temperature setting
@@ -93,21 +91,15 @@ Install the following Chrome extensions from the store:
 + Session Buddy
 + Pinboard Plus
 + Web Archives
-+ QuicKey
 + LeechBlock NG
-    + in settings, make it so that it displays what need be reminded
 + I still don't care about cookies
 + News Feed Eradicator
 + Refined GitHub
 + Open in Sci-Hub
-+ Minimal New Page
 
 YouTube-related:
 + Return YouTube Dislike
 + SponsorBlock
-+ Youtube-shorts block
-+ DeArrow - Better Titles and Thumbnails
-+ YouTube Mix Blocker
 + RYS - Remove YouTube Suggestions
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
