@@ -137,7 +137,7 @@ local function showAppKeystroke()
       showAppKeystrokeAlertId = hs.alert.show(
          keystroke,
          {textFont = "Go Mono",
-          textSize = 16,
+          textSize = 24,
           radius = 0,
           strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0})},
          hs.screen.mainScreen(), 25)
