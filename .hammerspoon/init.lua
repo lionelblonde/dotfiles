@@ -33,15 +33,16 @@ local function toggle_application(_app)
    local app = appfinder.appFromName(_app)
    local mainwin = app:mainWindow()
    if mainwin then
-      if mainwin == window.focusedWindow() then
-         mainwin:application():hide()
-      else
+      if mainwin ~= window.focusedWindow() then
          mainwin:application():activate(true)
          mainwin:application():unhide()
          mainwin:focus()
       end
    end
 end
+-- local function toggle_application(_app)
+--    hs.application.launchOrFocus(_app)
+-- end
 
 local frameCache = {} --reset the cache
 -- Toggle a window between its normal size, and being maximized
@@ -135,7 +136,7 @@ local function showAppKeystroke()
 
       showAppKeystrokeAlertId = hs.alert.show(
          keystroke,
-         {textFont = "Cousine",
+         {textFont = "Go Mono",
           textSize = 16,
           radius = 0,
           strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0})},
