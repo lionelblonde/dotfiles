@@ -49,6 +49,7 @@ brew install qmk-toolbox
 
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
+brew install --cask arc
 brew install --cask sioyek
 brew install --cask qbserve
 brew install --cask coteditor
@@ -65,8 +66,6 @@ brew install --cask qbittorrent
 brew install --cask cyberduck
 brew install --cask zerotier-one
 brew install --cask mouse-fix
-brew install --cask 1password # Electron app but fast
-brew install --cask brave-browser
 brew install --cask appcleaner
 brew install --cask keepingyouawake
 brew install --cask hammerspoon
@@ -75,8 +74,7 @@ brew install --cask mactex
 brew install --cask espanso
 brew install --cask maccy
 brew install --cask iina
-brew install --cask monitorcontrol # for non-apple monitors
-
+brew install --cask 1password # Electron app but fast
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
