@@ -94,7 +94,6 @@ Install the following Chrome extensions from the store:
 + LeechBlock NG
 + I still don't care about cookies
 + News Feed Eradicator
-+ Refined GitHub
 + Open in Sci-Hub
 + Return YouTube Dislike
 + SponsorBlock
