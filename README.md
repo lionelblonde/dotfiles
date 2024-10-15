@@ -87,6 +87,7 @@ Install the following Chrome extensions from the store:
 + Redirectify
 + uBlock Origin
     + in settings, go to filters, annoyances, and tick every box; this should remove all the cookie pop-ups
++ QuicKey
 + Paperpile
 + Session Buddy
 + Pinboard Plus
@@ -97,7 +98,9 @@ Install the following Chrome extensions from the store:
 + Open in Sci-Hub
 + Return YouTube Dislike
 + SponsorBlock
++ DeArrow (same dev as SponsorBlock)
 + RYS - Remove YouTube Suggestions
++ YouTube Mix Blocker
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
