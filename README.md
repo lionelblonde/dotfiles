@@ -88,6 +88,7 @@ Install the following Chrome extensions from the store:
 + uBlock Origin
     + in settings, go to filters, annoyances, and tick every box; this should remove all the cookie pop-ups
 + QuicKey
+    + in settings, set C-f as keybinding for window fuzzy finder (same as Telescope in NeoVim)
 + Paperpile
 + Session Buddy
 + Pinboard Plus
