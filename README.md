@@ -96,8 +96,6 @@ Install the following Chrome extensions from the store:
 + News Feed Eradicator
 + Refined GitHub
 + Open in Sci-Hub
-
-YouTube-related:
 + Return YouTube Dislike
 + SponsorBlock
 + RYS - Remove YouTube Suggestions
