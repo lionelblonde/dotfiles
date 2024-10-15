@@ -33,16 +33,15 @@ local function toggle_application(_app)
    local app = appfinder.appFromName(_app)
    local mainwin = app:mainWindow()
    if mainwin then
-      if mainwin ~= window.focusedWindow() then
+      if mainwin == window.focusedWindow() then
+         mainwin:application():hide()
+      else
          mainwin:application():activate(true)
          mainwin:application():unhide()
          mainwin:focus()
       end
    end
 end
--- local function toggle_application(_app)
---    hs.application.launchOrFocus(_app)
--- end
 
 local frameCache = {} --reset the cache
 -- Toggle a window between its normal size, and being maximized
@@ -95,13 +94,13 @@ hyperapps["u"] = "Finder"
 hyperapps["i"] = "kitty"
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
-hyperapps["j"] = "Arc"
+hyperapps["j"] = "Brave Browser"
 hyperapps["m"] = "IINA"
 hyperapps["'"] = "Preview"
 hyperapps[";"] = "Qbserve"
 hyperapps["o"] = "Music"
 hyperapps["k"] = "sioyek"
-hyperapps["n"] = "Reminders"
+hyperapps["n"] = "Things"
 hyperapps["l"] = "Messages"
 hyperapps[","] = "Calendar"
 hyperapps["."] = "Slack"
@@ -136,8 +135,8 @@ local function showAppKeystroke()
 
       showAppKeystrokeAlertId = hs.alert.show(
          keystroke,
-         {textFont = "Pixel Code",
-          textSize = 24,
+         {textFont = "Cousine",
+          textSize = 16,
           radius = 0,
           strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0})},
          hs.screen.mainScreen(), 25)
