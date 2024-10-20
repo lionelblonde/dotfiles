@@ -51,7 +51,6 @@ brew install qmk-toolbox
 brew install --cask git-credential-manager
 brew install --cask brave-browser
 brew install --cask sioyek
-brew install --cask qbserve
 brew install --cask coteditor
 brew install --cask keka
 brew install --cask silicon
@@ -79,3 +78,4 @@ brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
 brew install --cask microsoft-teams
+brew install --cask spotify
