@@ -10,6 +10,10 @@ vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700
 -- Set the background to be black
 vim.opt.background = "dark"
 
+-- Set the colorscheme to use by default
+-- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
+vim.cmd.colorscheme("default")
+
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -25,6 +29,25 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- {
+    --     "samharju/serene.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.cmd.colorscheme("serene")
+    --     end
+    -- },
+    -- {
+    --     "metalelf0/jellybeans-nvim",
+    --     dependencies = {
+    --         "rktjmp/lush.nvim"
+    --     },
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.cmd.colorscheme("jellybeans-nvim")
+    --     end
+    -- },
     {
         "miikanissi/modus-themes.nvim",
         lazy = false,
@@ -35,27 +58,9 @@ require("lazy").setup({
                 variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
                 transparent = false, -- Transparent background (as supported by the terminal)
             })
-            vim.cmd([[colorscheme modus]]) -- modus_operandi, modus_vivendi
+            vim.cmd.colorscheme("modus") -- modus_operandi, modus_vivendi
         end
     },
-    -- {
-    --     "cdmill/neomodern.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         require("neomodern").setup({
-    --             -- style = "iceclimber",
-    --             -- style = "coffeecat",
-    --             -- style = "darkforest",
-    --             -- style = "campfire",
-    --             style = "roseprime",
-    --             -- style = "daylight",
-    --             transparent = true,
-    --             term_colors = true,
-    --         })
-    --         require("neomodern").load()
-    --     end
-    -- },
     {
         "hedyhli/outline.nvim",
         config = function()
@@ -257,7 +262,7 @@ vim.opt.smartcase = true
 vim.opt.wrap = false
 
 -- Set a ruler to indicate the X column
-vim.opt.colorcolumn = "100,120"
+-- vim.opt.colorcolumn = "100,120"
 
 -- Set the format options
 -- `q` enales automatic formatting of comments using `gq` command
