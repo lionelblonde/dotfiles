@@ -62,6 +62,7 @@ brew install --cask dash
 brew install --cask signal
 brew install --cask ivpn
 brew install --cask qbittorrent
+brew install --cask sublime-merge
 brew install --cask cyberduck
 brew install --cask zerotier-one
 brew install --cask mouse-fix
@@ -78,4 +79,3 @@ brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
 brew install --cask microsoft-teams
-brew install --cask spotify
