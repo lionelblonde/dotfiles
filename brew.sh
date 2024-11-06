@@ -49,6 +49,7 @@ brew install qmk-toolbox
 
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
+brew install --cask tomatobar
 brew install --cask brave-browser
 brew install --cask sioyek
 brew install --cask coteditor
