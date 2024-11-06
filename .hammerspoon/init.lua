@@ -89,7 +89,7 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "ChatGPT"
+-- hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "kitty"
 -- hyperapps["p"] = "Dash" -- hotkey already set in Dash preferences
@@ -97,7 +97,7 @@ hyperapps["h"] = "Mail"
 hyperapps["j"] = "Brave Browser"
 hyperapps["m"] = "IINA"
 hyperapps["'"] = "Preview"
-hyperapps[";"] = "Qbserve"
+-- hyperapps[";"] = "Qbserve"
 hyperapps["o"] = "Music"
 hyperapps["k"] = "sioyek"
 hyperapps["n"] = "Reminders"
