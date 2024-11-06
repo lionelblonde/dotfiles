@@ -30,37 +30,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- {
-    --     "samharju/serene.nvim",
+    --     "miikanissi/modus-themes.nvim",
     --     lazy = false,
     --     priority = 1000,
     --     config = function()
-    --         vim.cmd.colorscheme("serene")
+    --         require("modus-themes").setup({
+    --             style = "auto",
+    --             variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
+    --             transparent = false, -- Transparent background (as supported by the terminal)
+    --         })
+    --         vim.cmd.colorscheme("modus") -- modus_operandi, modus_vivendi
     --     end
     -- },
-    -- {
-    --     "metalelf0/jellybeans-nvim",
-    --     dependencies = {
-    --         "rktjmp/lush.nvim"
-    --     },
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         vim.cmd.colorscheme("jellybeans-nvim")
-    --     end
-    -- },
-    {
-        "miikanissi/modus-themes.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("modus-themes").setup({
-                style = "auto",
-                variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
-                transparent = false, -- Transparent background (as supported by the terminal)
-            })
-            vim.cmd.colorscheme("modus") -- modus_operandi, modus_vivendi
-        end
-    },
     {
         "hedyhli/outline.nvim",
         config = function()
