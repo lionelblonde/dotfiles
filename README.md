@@ -47,6 +47,7 @@ Install these apps from the Mac App Store:
 + Focal & Naim
 + DaisyDisk
 + Smart Comic Reader
++ Folder Peek
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -103,6 +104,9 @@ Install the following Chrome extensions from the store:
 + DeArrow (same dev as SponsorBlock)
 + RYS - Remove YouTube Suggestions
 + YouTube Mix Blocker
++ BlockTube
++ ChatGPT search
++ Save ChatGPT as PDF
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
