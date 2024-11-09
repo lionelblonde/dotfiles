@@ -385,7 +385,7 @@ end)
 
 lsp_zero.setup_servers({
     -- "pyright", -- type-checker
-    "ruff_lsp", -- linter
+    "ruff", -- linter
     "pylsp", -- assist linting for rules not yet working in ruff
 })
 
