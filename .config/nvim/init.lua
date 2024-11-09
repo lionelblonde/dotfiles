@@ -3,6 +3,10 @@
 -- Leader mapping
 vim.g.mapleader = " "
 
+-- Set listchars
+vim.opt.list = true
+vim.opt.listchars = { tab = "»·", trail = "·", extends = ">", precedes = "<", nbsp = "␣", eol = "↲" }
+
 -- Set termguicolors to enable highlight groups
 vim.opt.termguicolors = true -- leave it before the colorscheme
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
