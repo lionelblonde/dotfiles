@@ -44,9 +44,7 @@ Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 + TextSniper
 + Hand Mirror
-+ Focal & Naim
 + DaisyDisk
-+ Smart Comic Reader
 + Folder Peek
 
 ## Zsh
@@ -104,7 +102,6 @@ Install the following Chrome extensions from the store:
 + DeArrow (same dev as SponsorBlock)
 + RYS - Remove YouTube Suggestions
 + YouTube Mix Blocker
-+ BlockTube
 + ChatGPT search
 + Save ChatGPT as PDF
 
