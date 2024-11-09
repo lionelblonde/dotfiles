@@ -104,6 +104,7 @@ Install the following Chrome extensions from the store:
 + YouTube Mix Blocker
 + ChatGPT search
 + Save ChatGPT as PDF
++ Old Reddit Redirect
 
 [This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
