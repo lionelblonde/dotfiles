@@ -5,6 +5,7 @@ brew install asitop
 brew install mas
 brew install topgrade
 brew install uutils-coreutils
+brew install jless
 brew install jordanbaird-ice
 brew install trex
 brew install parallel
