@@ -74,11 +74,12 @@ alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
 
 alias wip='cd ~/Documents/git/code/wip'
-alias notes='cd ~/Documents/notes'
+alias nots='cd ~/Documents/notes'
 alias dots='cd ~/Documents/dotfiles'
 alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
-alias txtb='cd ~/Documents/textbooks'
+
+alias tb='cd ~/Documents/textbooks'
+alias ap='cd ~/Documents/annotated-papers-megadump'
 
 # selecte file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='find . -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
-alias fa='find ~/Documents/annotated-papers-megadump -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
