@@ -7,6 +7,11 @@ vim.g.mapleader = " "
 vim.opt.list = true
 vim.opt.listchars = { tab = "»·", trail = "·", extends = ">", precedes = "<", nbsp = "␣", eol = "↲" }
 
+-- Enable soft wrapping
+vim.opt.wrap = true
+vim.opt.linebreak = true
+-- vim.opt.wrap = false -- to disable line wrapping
+
 -- Set termguicolors to enable highlight groups
 vim.opt.termguicolors = true -- leave it before the colorscheme
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
@@ -247,9 +252,6 @@ vim.opt.expandtab = true
 -- Smarter case pattern matching in search
 vim.opt.smartcase = true
 
--- Disable line wrapping
-vim.opt.wrap = false
-
 -- Set a ruler to indicate the X column
 -- vim.opt.colorcolumn = "100,120"
 
@@ -300,7 +302,7 @@ vim.opt.isfname:append("@-@") -- make `@` a valid char for file names
 
 -- Set spell and spelllang options
 vim.opt.spell = false
-vim.opt.spelllang = 'en_us'
+vim.opt.spelllang = "en_us"
 
 -- Keybindings
 -- <CR> is a carrige return
