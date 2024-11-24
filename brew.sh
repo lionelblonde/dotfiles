@@ -44,6 +44,7 @@ brew install diskonaut
 brew install dust
 brew install gitui
 brew install ouch
+brew install pearcleaner
 brew install unar
 brew install qmk/qmk/qmk
 brew install qmk-toolbox
@@ -53,7 +54,6 @@ brew install --cask git-credential-manager
 brew install --cask brave-browser
 brew install --cask sioyek
 brew install --cask coteditor
-brew install --cask keka
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask meetingbar
@@ -66,7 +66,6 @@ brew install --cask sublime-merge
 brew install --cask cyberduck
 brew install --cask zerotier-one
 brew install --cask mouse-fix
-brew install --cask appcleaner
 brew install --cask keepingyouawake
 brew install --cask hammerspoon
 brew install --cask karabiner-elements
