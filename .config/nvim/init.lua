@@ -38,6 +38,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    {
+        "https://gitlab.com/bartekjaszczak/finale-nvim",
+
+        priority = 1000,
+        config = function()
+            -- Activate the theme
+            vim.cmd.colorscheme("finale")
+        end
+    },
     -- {
     --     "miikanissi/modus-themes.nvim",
     --     lazy = false,
