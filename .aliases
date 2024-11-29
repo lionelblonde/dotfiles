@@ -63,10 +63,9 @@ alias ek='v ~/.config/kitty/kitty.conf'
 alias er='v ~/Documents/dotfiles/README.md'
 alias eb='v ~/Documents/dotfiles/brew.sh'
 
-alias ee="espanso edit"
-# file to edit is located at:
-# /Users/lionelblonde/Library/Application Support/espanso/match/base.yml"'
-# and the double quotes are to escape the spaces present in the path
+alias ee='espanso edit'
+
+alias vr='less ~/Documents/notes/routines.md'
 
 # convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
@@ -77,8 +76,7 @@ alias nots='cd ~/Documents/notes'
 alias dots='cd ~/Documents/dotfiles'
 alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
 
-alias tb='cd ~/Documents/textbooks'
-alias ap='cd ~/Documents/annotated-papers-megadump'
-
 # selecte file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='find . -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
+
+alias pp='find ~/Documents/papers -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
