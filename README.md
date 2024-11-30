@@ -49,6 +49,7 @@ Install these apps from the Mac App Store:
 + Wipr 2
 + UnTrap for YouTube
 + SocialFocus: Hide Distractions
++ Stretch It: Easy Gesture Timer
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -80,34 +81,6 @@ Create symbolic links to reference the dotfiles outside the repository by runnin
 
 ## Rust
 Just follow the instructions from the [official install page](https://www.rust-lang.org/tools/install).
-
-## Chromium
-Turn on SafeSearch (when using Google as search engine: right-most menu).
-
-Install the following Chrome extensions from the store:
-+ Vimium (and setup the search engine to use in settings)
-+ arxiv-utils
-+ Redirectify
-+ uBlock Origin
-    + in settings, go to filters, annoyances, and tick every box; this should remove all the cookie pop-ups
-+ Paperpile
-+ Session Buddy
-+ Pinboard Plus
-+ Web Archives
-+ LeechBlock NG
-+ I still don't care about cookies
-+ News Feed Eradicator
-+ Open in Sci-Hub
-+ Return YouTube Dislike
-+ SponsorBlock
-+ DeArrow (same dev as SponsorBlock)
-+ RYS - Remove YouTube Suggestions
-+ YouTube Mix Blocker
-+ ChatGPT search
-+ Save ChatGPT as PDF
-+ Old Reddit Redirect
-
-[This one](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean#installation) need be downloaded and imported.
 
 ## Python
 Install Miniforge, not with Homebrew, but directly by downloading it with `wget` from
