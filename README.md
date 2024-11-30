@@ -45,6 +45,10 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + Endel
++ TestFlight -> Paperpile extension
++ Wipr 2
++ UnTrap for YouTube
++ SocialFocus: Hide Distractions
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
