@@ -50,6 +50,8 @@ Install these apps from the Mac App Store:
 + UnTrap for YouTube
 + SocialFocus: Hide Distractions
 + Stretch It: Easy Gesture Timer
++ One Thing
++ Folder Peek
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
