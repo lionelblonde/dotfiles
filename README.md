@@ -45,13 +45,24 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + Endel
-+ TestFlight -> Paperpile extension
-+ Wipr 2
-+ UnTrap for YouTube
-+ SocialFocus: Hide Distractions
 + Stretch It: Easy Gesture Timer
 + One Thing
 + Folder Peek
+
+## Chromium
+Install these from the Web Store:
++ Chromium Web Store
++ uBlock Origin
++ Vimium
++ I still don't care about cookies
++ News Feed Eradicator
++ SponsorBlock
++ DeArrow
++ Old Reddit Redirect
++ Paperpile Extension
++ Unhook
++ Return YouTube Dislike
+
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
