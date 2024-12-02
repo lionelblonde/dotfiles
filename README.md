@@ -62,7 +62,8 @@ Install these from the Web Store:
 + Paperpile Extension
 + Unhook
 + Return YouTube Dislike
-
++ Video Speed Controller
++ Bonjourr
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
