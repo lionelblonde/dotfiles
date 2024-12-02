@@ -50,6 +50,7 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
+brew install --cask qbserve  # if bugged via brew, install manually
 brew install --cask git-credential-manager
 brew install --cask eloston-chromium
 brew install --cask sioyek
