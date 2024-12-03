@@ -27,8 +27,6 @@
         + `defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO`
         + To restore the original behavior, i.e. turn the "scale up" animations back on again
             + `defaults delete NSGlobalDomain NSAutomaticWindowAnimationsEnabled`
-+ Install the _Fonts for Apple Platforms_ that are available at [this link](https://developer.apple.com/fonts/)
-    + In paticular, make sure to acquire the __New York__ one.
 + Setup the following shortcuts for various Spotlight-like apps:
     + `control + P`: show 1Password's "Quick Access" Spotlight-like menu
     + `control + :`: trigger TRex
