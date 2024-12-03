@@ -48,6 +48,8 @@ Install these apps from the Mac App Store:
 + Stretch It: Easy Gesture Timer
 + One Thing
 + Folder Peek
++ Day Progress
++ Pure Paste
 
 ## Chromium
 Install these from the Web Store:
