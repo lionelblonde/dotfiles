@@ -64,6 +64,7 @@ Install these from the Web Store:
 + Return YouTube Dislike
 + Video Speed Controller
 + Bonjourr
++ PayPal Honey
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
