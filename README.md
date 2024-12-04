@@ -65,6 +65,7 @@ Install these from the Web Store:
 + Video Speed Controller
 + Bonjourr
 + PayPal Honey
++ arxiv-utils
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
