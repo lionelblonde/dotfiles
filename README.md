@@ -65,6 +65,7 @@ Install these from the Web Store:
 + Bonjourr
 + PayPal Honey
 + arxiv-utils
++ Session Buddy
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
