@@ -44,8 +44,6 @@ Install these apps from the Mac App Store:
 + DaisyDisk
 + Stretch It: Easy Gesture Timer
 + One Thing
-+ Folder Peek
-+ Day Progress
 + Pure Paste
 
 ## Chromium
