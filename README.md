@@ -43,7 +43,6 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + Stretch It: Easy Gesture Timer
-+ One Thing
 + Pure Paste
 
 ## Chromium
