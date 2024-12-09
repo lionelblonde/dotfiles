@@ -63,6 +63,7 @@ Install these from the Web Store:
 + PayPal Honey
 + arxiv-utils
 + Session Buddy
++ Dark Reader
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
