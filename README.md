@@ -44,6 +44,7 @@ Install these apps from the Mac App Store:
 + DaisyDisk
 + Stretch It: Easy Gesture Timer
 + Pure Paste
++ HEIC Converter
 
 ## Chromium
 Install these from the Web Store:
