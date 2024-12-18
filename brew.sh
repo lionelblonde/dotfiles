@@ -52,10 +52,12 @@ brew install qmk-toolbox
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
 brew install --cask eloston-chromium
+brew install --cask tomatobar
 brew install --cask sioyek
 brew install --cask coteditor
 brew install --cask silicon
 brew install --cask kitty
+brew install --cask bike
 brew install --cask calibre
 brew install --cask meetingbar
 brew install --cask docker
