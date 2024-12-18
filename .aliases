@@ -78,5 +78,3 @@ alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
 
 # selecte file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='find . -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
-
-alias pp='find ~/Documents/papers -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
