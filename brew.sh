@@ -50,7 +50,6 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
-brew install --cask activitywatch
 brew install --cask git-credential-manager
 brew install --cask eloston-chromium
 brew install --cask tomatobar
