@@ -1,5 +1,7 @@
 # zsh config
 
+PATH="$PATH":"$HOME"
+
 # ZSH uses the KEYTIMEOUT parameter to determine how long to wait (in hundredths of a second)
 # for additional characters in sequence. Default is 0.4 seconds.
 KEYTIMEOUT=1
@@ -50,6 +52,9 @@ autoload -U edit-command-line
 # Vi style:
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+# Configure tmux-sessionizer
+bindkey -s ^f "tmux_sessionizer.sh\n"
 
 # Configure the liquidprompt prompt
 if [ -f /opt/homebrew/share/liquidprompt ]; then
