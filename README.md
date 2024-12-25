@@ -61,7 +61,6 @@ Install these from the Web Store:
 + Return YouTube Dislike
 + Video Speed Controller
 + Bonjourr
-+ PayPal Honey
 + arxiv-utils
 + Session Buddy
 + Dark Reader
