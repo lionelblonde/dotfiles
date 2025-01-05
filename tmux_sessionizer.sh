@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Documents/git/code/WIP ~/Documents/git/code/ego/github/private ~/Documents/git/code/ego/github/public -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Documents ~/Documents/git/code/WIP ~/Documents/git/code/ego/github/private ~/Documents/git/code/ego/github/public -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

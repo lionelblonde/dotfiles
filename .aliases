@@ -76,3 +76,6 @@ alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
 
 # select file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='find . -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
+
+# create tmux session from the command line, outside of a tmux session
+alias t='~/tmux_sessionizer.sh'
