@@ -65,8 +65,6 @@ alias eb='v ~/Documents/dotfiles/brew.sh'
 
 alias ee='espanso edit'
 
-alias vr='less ~/Documents/notes/routines.md'
-
 # convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
