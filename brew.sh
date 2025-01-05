@@ -75,7 +75,6 @@ brew install --cask espanso
 brew install --cask maccy
 brew install --cask iina
 brew install --cask 1password # Electron app but fast
-brew install --cask spotify
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
