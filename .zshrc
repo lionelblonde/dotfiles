@@ -29,8 +29,11 @@ setopt HIST_IGNORE_SPACE
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# # Terminal (and number of colors)
-# export TERM=xterm-256color
+# Terminal (and number of colors)
+# Set TERM to xterm-256color only if not inside a tmux session
+if [[ -z $TMUX ]]; then
+    export TERM=xterm-256color
+fi
 # left here not to make the mistake again: do not set TERM, otherwise it overrides the one set by tmux
 # and has the annoying consequence of preventing zsh-syntax-highlighting from being usable from a tmux session!
 
