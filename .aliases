@@ -32,7 +32,7 @@ alias qv='qlmanage -p'
 alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
 
 # tmux
-alias tmux='tmux -2'
+# alias tmux='tmux -2'
 alias ta='tmux attach -t'
 alias tnew='tmux new -d -s'
 alias tls='tmux ls'
