@@ -51,6 +51,7 @@ brew install qmk-toolbox
 
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
+brew install --cask affinity-designer
 brew install --cask eloston-chromium
 brew install --cask notunes
 brew install --cask sioyek
