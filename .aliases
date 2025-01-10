@@ -68,6 +68,7 @@ alias ee='espanso edit'
 alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
 
+alias tb='cd ~/Documents/textbooks'
 alias wip='cd ~/Documents/git/code/wip'
 alias nots='cd ~/Documents/notes'
 alias dots='cd ~/Documents/dotfiles'
