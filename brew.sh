@@ -58,11 +58,11 @@ brew install --cask coteditor
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask bike
+brew install --cask sioyek
 brew install --cask meetingbar
 brew install --cask docker
 brew install --cask dash
 brew install --cask ivpn
-brew install --cask skim
 brew install --cask qbittorrent
 brew install --cask sublime-merge
 brew install --cask cyberduck
