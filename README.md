@@ -57,7 +57,6 @@ Install these from the Web Store:
 + Paperpile Extension
 + Unhook
 + Return YouTube Dislike
-+ Video Speed Controller
 + Bonjourr
 + arxiv-utils
 + Session Buddy
