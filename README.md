@@ -53,7 +53,6 @@ Install these from the Web Store:
 + I still don't care about cookies
 + News Feed Eradicator
 + SponsorBlock
-+ DeArrow
 + Old Reddit Redirect
 + Paperpile Extension
 + Unhook
