@@ -91,17 +91,17 @@ hyperfns["="] = toggle_window_maximized
 local hyperapps = {}
 hyperapps["y"] = "Sketch"
 hyperapps["u"] = "Finder"
-hyperapps["i"] = "kitty"
+hyperapps["i"] = "Ghostty"
 hyperapps["k"] = "sioyek"
 -- hyperapps["p"] = "Dash" -- hotkey already set in Dash preferences
 hyperapps["h"] = "Mail"
-hyperapps["j"] = "Brave Browser"
+hyperapps["j"] = "Chromium"
 hyperapps["m"] = ""
 hyperapps["'"] = ""
 hyperapps[";"] = ""
 hyperapps["o"] = "Music"
 hyperapps["n"] = "Bike"
-hyperapps["l"] = "Ghostty"
+hyperapps["l"] = "Legcord"
 hyperapps[","] = ""
 hyperapps["."] = "Slack"
 
