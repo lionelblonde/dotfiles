@@ -96,13 +96,13 @@ hyperapps["k"] = "sioyek"
 -- hyperapps["p"] = "Dash" -- hotkey already set in Dash preferences
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Chromium"
-hyperapps["m"] = ""
-hyperapps["'"] = ""
-hyperapps[";"] = ""
+-- hyperapps["m"] = ""
+-- hyperapps["'"] = ""
+-- hyperapps[";"] = ""
 hyperapps["o"] = "Music"
 hyperapps["n"] = "Bike"
 hyperapps["l"] = "Legcord"
-hyperapps[","] = ""
+-- hyperapps[","] = ""
 hyperapps["."] = "Slack"
 
 for k, v in pairs(hyperapps) do
