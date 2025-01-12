@@ -55,7 +55,7 @@ Install these from the Web Store:
 + SponsorBlock
 + Old Reddit Redirect
 + Paperpile Extension
-+ Unhook
++ RYS
 + Return YouTube Dislike
 + Bonjourr
 + arxiv-utils
