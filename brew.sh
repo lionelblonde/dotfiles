@@ -44,13 +44,13 @@ brew install diskonaut
 brew install dust
 brew install gitui
 brew install ouch
-brew install pearcleaner
 brew install unar
 brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
+brew install --cask appcleaner
 brew install --cask sketch
 brew install --cask eloston-chromium
 brew install --cask notunes
