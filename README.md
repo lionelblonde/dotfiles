@@ -43,6 +43,7 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + Stretch It: Easy Gesture Timer
++ Mini Stopwatch - Minimal Timer
 + HEIC Converter
 
 ## Chromium
