@@ -62,6 +62,7 @@ Install these from the Web Store:
 + arxiv-utils
 + Session Buddy
 + Dark Reader
++ QuicKey
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
