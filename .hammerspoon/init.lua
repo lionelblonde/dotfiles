@@ -102,7 +102,7 @@ hyperapps["m"] = "IINA"
 hyperapps["o"] = "Music"
 hyperapps["n"] = "Bike"
 hyperapps["l"] = "Legcord"
-hyperapps[","] = "Calendar"
+-- hyperapps[","] = ""
 hyperapps["."] = "Slack"
 
 for k, v in pairs(hyperapps) do
