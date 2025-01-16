@@ -51,7 +51,6 @@ alias s="kitty +kitten ssh --kitten share_connections=yes"
 alias ec='v ~/Documents/notes/cbt.md'
 alias eo='v +"normal G" ~/Documents/notes/research/log.md'
 # alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt' # keep for posterity: pretty cool functionality
-alias es='v ~/Documents/notes/scratchpad.txt'
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
 alias en='v ~/.config/nvim/init.lua'
@@ -64,14 +63,10 @@ alias eb='v ~/Documents/dotfiles/brew.sh'
 
 alias ee='espanso edit'
 
-# convenience alias to edit the Ghostty term config
-alias gg='v $HOME/Library/Application\ Support/com.mitchellh.ghostty/config'
-
 # convenience alias to source .zshrc
 alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
 
-alias tb='cd ~/Documents/textbooks'
 alias wip='cd ~/Documents/git/code/wip'
 alias nots='cd ~/Documents/notes'
 alias dots='cd ~/Documents/dotfiles'
