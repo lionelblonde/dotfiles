@@ -52,7 +52,9 @@ brew install qmk-toolbox
 brew install --cask git-credential-manager
 brew install --cask appcleaner
 brew install --cask sketch
-brew install --cask eloston-chromium
+brew install --cask brave-browser
+brew install --cask pdf-expert
+brew install --cask cursor
 brew install --cask legcord
 brew install --cask notunes
 brew install --cask coteditor
@@ -80,4 +82,3 @@ brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
 brew install --cask microsoft-teams
-brew install --cask brave-browser
