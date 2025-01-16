@@ -47,20 +47,16 @@ Install these apps from the Mac App Store:
 
 ## Chromium
 Install these from the Web Store:
-+ Chromium Web Store
 + uBlock Origin
 + Vimium
 + I still don't care about cookies
 + News Feed Eradicator
 + SponsorBlock
-+ Old Reddit Redirect
 + Paperpile Extension
-+ RYS
 + Return YouTube Dislike
 + Bonjourr
 + arxiv-utils
 + Session Buddy
-+ Dark Reader
 + QuicKey
 
 ## Zsh
