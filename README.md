@@ -28,10 +28,14 @@
         + To restore the original behavior, i.e. turn the "scale up" animations back on again
             + `defaults delete NSGlobalDomain NSAutomaticWindowAnimationsEnabled`
 + Setup the following shortcuts for various Spotlight-like apps:
+    + `control + T`: start (Mini Stopwatch - Minimal Timer)
+    + `control + H`: reset (Mini Stopwatch - Minimal Timer)
+    + `control + U`: trigger MeetingBar
+    + `control + I`: trigger Folder Peek
+    + `control + O`: trigger Dash with seach field selected
     + `control + P`: show 1Password's "Quick Access" Spotlight-like menu
     + `control + :`: trigger TRex
     + `control + '`: trigger Maccy
-    + `control + T`: trigger tomatobar
 
 ## Homebrew
 1. Install __Homebrew__ by following the instructions at [this link](https://brew.sh/) _including_ the __Cask__ utility
@@ -44,6 +48,7 @@ Install these apps from the Mac App Store:
 + DaisyDisk
 + Mini Stopwatch - Minimal Timer
 + HEIC Converter
++ Folder Peek
 
 ## Chromium
 Install these from the Web Store:
