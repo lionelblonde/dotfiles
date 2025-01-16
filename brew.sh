@@ -61,7 +61,6 @@ brew install --cask kitty
 brew install --cask bike
 brew install --cask sioyek
 brew install --cask meetingbar
-brew install --cask docker
 brew install --cask dash
 brew install --cask ivpn
 brew install --cask qbittorrent
