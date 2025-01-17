@@ -26,6 +26,8 @@ brew install curl
 brew install neovim
 brew install imagemagick
 brew install ffmpeg
+brew install yewtube
+brew install mpv
 brew install htop
 brew install bottom # command is btm
 brew install tmux
