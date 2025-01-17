@@ -61,7 +61,7 @@ brew install --cask coteditor
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask bike
-brew install --cask sioyek
+brew install --cask skim
 brew install --cask meetingbar
 brew install --cask dash
 brew install --cask ivpn
