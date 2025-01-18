@@ -26,7 +26,6 @@ brew install curl
 brew install neovim
 brew install imagemagick
 brew install ffmpeg
-brew install yewtube
 brew install mpv
 brew install htop
 brew install bottom # command is btm
@@ -57,6 +56,7 @@ brew install --cask sketch
 brew install --cask brave-browser
 brew install --cask pdf-expert
 brew install --cask cursor
+brew install --cask chatgpt
 brew install --cask legcord
 brew install --cask notunes
 brew install --cask coteditor
