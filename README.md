@@ -63,6 +63,7 @@ Install these from the Web Store:
 + arxiv-utils
 + Session Buddy
 + QuicKey
++ Openreview Quicklook
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
