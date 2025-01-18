@@ -47,19 +47,6 @@ require("lazy").setup({
             vim.cmd.colorscheme("finale")
         end
     },
-    -- {
-    --     "miikanissi/modus-themes.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         require("modus-themes").setup({
-    --             style = "auto",
-    --             variant = "default", -- Theme comes in four variants `default`, `tinted`, `deuteranopia`, and `tritanopia`
-    --             transparent = false, -- Transparent background (as supported by the terminal)
-    --         })
-    --         vim.cmd.colorscheme("modus") -- modus_operandi, modus_vivendi
-    --     end
-    -- },
     {
         "hedyhli/outline.nvim",
         config = function()
