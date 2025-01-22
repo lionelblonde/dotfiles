@@ -49,6 +49,7 @@ Install these apps from the Mac App Store:
 + Mini Stopwatch - Minimal Timer
 + HEIC Converter
 + Folder Peek
++ Notability
 
 ## Chromium
 Install these from the Web Store:
