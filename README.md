@@ -65,6 +65,7 @@ Install these from the Web Store:
 + Session Buddy
 + QuicKey
 + Openreview Quicklook
++ Unhook
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
