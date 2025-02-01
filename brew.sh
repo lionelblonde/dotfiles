@@ -51,12 +51,13 @@ brew install qmk-toolbox
 
 # Install macOS applications with brew cask
 brew install --cask git-credential-manager
+brew install --cask itsycal # only for the hourly beep-beep
+brew install --cask insta360-studio
 brew install --cask appcleaner
 brew install --cask sketch
 brew install --cask brave-browser
 brew install --cask pdf-expert
 brew install --cask cursor
-brew install --cask chatgpt
 brew install --cask legcord
 brew install --cask notunes
 brew install --cask coteditor
