@@ -54,7 +54,6 @@ brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask insta360-studio
 brew install --cask appcleaner
-brew install --cask sketch
 brew install --cask brave-browser
 brew install --cask pdf-expert
 brew install --cask cursor
