@@ -56,7 +56,6 @@ brew install --cask insta360-studio
 brew install --cask appcleaner
 brew install --cask brave-browser
 brew install --cask pdf-expert
-brew install --cask cursor
 brew install --cask legcord
 brew install --cask notunes
 brew install --cask coteditor
