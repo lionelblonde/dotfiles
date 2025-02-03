@@ -61,6 +61,7 @@ Install these from the Web Store:
 + QuicKey
 + Openreview Quicklook
 + Unhook
++ Web Archives
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
