@@ -54,6 +54,7 @@ Install these from the Web Store:
 + I still don't care about cookies
 + News Feed Eradicator
 + SponsorBlock
++ DeArrow
 + Paperpile Extension
 + Return YouTube Dislike
 + Bonjourr
