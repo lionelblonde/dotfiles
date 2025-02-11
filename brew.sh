@@ -39,8 +39,8 @@ brew install pandoc
 brew install rust-analyzer
 brew install lua-language-server
 brew install texlab
-brew install ripgrep
-brew install rga
+brew install rga # wraps ripgrep and and enables it to search in pdf, docx, sqlite, jpg, zip, tar.*, movie subtitles (mkv, mp4), etc.
+brew install ripgrep # for telescope
 brew install diskonaut
 brew install dust
 brew install gitui
