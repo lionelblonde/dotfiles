@@ -60,7 +60,6 @@ Install these from the Web Store:
 + Bonjourr
 + arxiv-utils
 + Session Buddy
-+ QuicKey
 + Openreview Quicklook
 + Unhook
 + Web Archives
