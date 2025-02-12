@@ -45,7 +45,6 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + HEIC Converter
-+ Stando
 
 ## Chromium
 Install these from the Web Store:
