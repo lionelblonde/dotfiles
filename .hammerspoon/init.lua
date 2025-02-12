@@ -97,11 +97,11 @@ hyperapps["k"] = "Bike"
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Brave Browser"
 hyperapps["m"] = "IINA"
-hyperapps[";"] = ""
-hyperapps["'"] = ""
+-- hyperapps[";"] = ""
+-- hyperapps["'"] = ""
 hyperapps["o"] = "Music"
 hyperapps["n"] = "Reminders"
-hyperapps["l"] = "sioyek"
+hyperapps["l"] = "Skim"
 hyperapps[","] = "Calendar"
 hyperapps["."] = "Slack"
 
@@ -164,8 +164,11 @@ end
 
 -- Function to schedule reminders at the start of each hour (10 AM - 7 PM)
 function scheduleReminders()
-    for hour = 7, 21 do  -- 7 AM to 9 PM
-        hs.timer.doAt(string.format("%02d:00", hour), "1h", drinkWaterReminder)
+    for hour = 7, 22 do
+        hs.timer.doAt(string.format("%02d:00", hour), function()
+            drinkWaterReminder()
+            hs.timer.doAfter(3600, function() drinkWaterReminder() end):start()
+        end)
     end
 end
 
