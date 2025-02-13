@@ -151,6 +151,12 @@ hotkey.bind(hyper, "space", showAppKeystroke)
 -- Start the screensaver
 hotkey.bind(hyper, "c", function() hs.caffeinate.startScreensaver() end)
 
+-- Function to play a macOS system sound
+function playSound()
+    local sound = hs.sound.getByName("Submarine")
+    if sound then sound:play() end
+end
+
 -- Function to show a persistent macOS system notification
 function drinkWaterReminder()
     local currentTime = os.date("%H:%M") -- Format as HH:MM
@@ -165,17 +171,11 @@ end
 -- Function to schedule reminders at the start of each hour (10 AM - 7 PM)
 function scheduleReminders()
     for hour = 7, 22 do
-        hs.timer.doAt(string.format("%02d:00", hour), function()
+        hs.timer.doAt(string.format("%02d:30", hour), function()
             drinkWaterReminder()
             hs.timer.doAfter(3600, function() drinkWaterReminder() end):start()
         end)
     end
-end
-
--- Function to play a macOS system sound
-function playSound()
-    local sound = hs.sound.getByName("Submarine")
-    if sound then sound:play() end
 end
 
 -- Hotkey to trigger the notification manually
