@@ -66,6 +66,7 @@ brew install --cask bike
 brew install --cask meetingbar
 brew install --cask dash
 brew install --cask ivpn
+brew install --cask signal
 brew install --cask qbittorrent
 brew install --cask sublime-merge
 brew install --cask cyberduck
