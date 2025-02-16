@@ -101,7 +101,7 @@ hyperapps["m"] = "IINA"
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Music"
 hyperapps["n"] = "Reminders"
-hyperapps["l"] = "Skim"
+hyperapps["l"] = "sioyek"
 hyperapps[","] = "Calendar"
 hyperapps["."] = "Slack"
 
