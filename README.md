@@ -28,8 +28,6 @@
         + To restore the original behavior, i.e. turn the "scale up" animations back on again
             + `defaults delete NSGlobalDomain NSAutomaticWindowAnimationsEnabled`
 + Setup the following shortcuts for various Spotlight-like apps:
-    + `control + U`: trigger MeetingBar
-    + `control + I`: trigger itsycal
     + `control + O`: trigger Dash with seach field selected
     + `control + P`: show 1Password's "Quick Access" Spotlight-like menu
     + `control + :`: trigger TRex
