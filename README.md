@@ -47,6 +47,7 @@ Install these apps from the Mac App Store:
 ## Chromium
 Install these from the Web Store:
 + uBlock Origin
++ LeechBlock NG
 + Vimium
 + I still don't care about cookies
 + News Feed Eradicator
