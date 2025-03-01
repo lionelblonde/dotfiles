@@ -35,6 +35,7 @@ alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is 
 alias ta='tmux attach -t'
 alias tnew='tmux new -d -s'
 alias tls='tmux ls'
+alias tcopy='tmux list-sessions -F "#{session_name}" | fzf | tr -d "\n" | pbcopy'
 alias tkill='tmux kill-session -t'
 alias tkillall='tmux kill-server'
 
