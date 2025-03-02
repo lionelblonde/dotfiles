@@ -44,7 +44,6 @@ Install these apps from the Mac App Store:
 + DaisyDisk
 + HEIC Converter
 + Things
-+ Infuse
 
 ## Chromium
 Install these from the Web Store:
