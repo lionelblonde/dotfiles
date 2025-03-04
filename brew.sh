@@ -55,6 +55,7 @@ brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask appcleaner
 brew install --cask brave-browser
 brew install --cask skim
+brew install --cask sioyek
 brew install --cask pdf-expert # just to read Acrobat Reader garbo
 brew install --cask notunes
 brew install --cask coteditor
