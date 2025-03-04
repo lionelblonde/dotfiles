@@ -62,7 +62,6 @@ Install these from the Web Store:
 + Openreview Quicklook
 + Unhook
 + Web Archives
-+ DarkPDF
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
