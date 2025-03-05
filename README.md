@@ -62,6 +62,7 @@ Install these from the Web Store:
 + Openreview Quicklook
 + Unhook
 + Web Archives
++ Video Speed Controller
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
