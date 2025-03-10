@@ -43,6 +43,7 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + HEIC Converter
++ Things (always keep the side-bar hidden, use keyboard only: access "Deadlines", "All Projects", etc.)
 
 ## Chromium
 Install these from the Web Store:
