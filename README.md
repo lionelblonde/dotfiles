@@ -115,9 +115,9 @@ Mambaforge is deprecated as of July 2024.
     + _f5_ to "f5"
     + _f6_ to "f6"
     + _f7_ to "rewind"
-    + _f8_ to F8 for sioyek (or "play or pause" if not using sioyek anymore)
+    + _f8_ to "play or pause"
     + _f9_ to "fast forward"
-    + _f10_ to F10 for sioyek (or "mute" if not using sioyek anymore)
+    + _f10_ to "mute"
     + _f11_ to "volume decrement"
     + _f12_ to "volume increment"
 N.B.: these depend on the QMK layout.
