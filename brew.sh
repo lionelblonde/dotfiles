@@ -60,7 +60,6 @@ brew install --cask notunes
 brew install --cask silicon
 brew install --cask kitty
 brew install --cask bike
-brew install --cask spotify
 brew install --cask dash
 brew install --cask ivpn
 brew install --cask signal
