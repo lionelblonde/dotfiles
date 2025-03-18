@@ -64,7 +64,8 @@ brew install --cask dash
 brew install --cask ivpn
 brew install --cask signal
 brew install --cask qbittorrent
-brew install --cask sublime-merge
+brew install --cask sublime-text # for occasional codebase grokking
+brew install --cask sublime-merge # for occasional GUI needs
 brew install --cask cyberduck
 brew install --cask zerotier-one
 brew install --cask mouse-fix
