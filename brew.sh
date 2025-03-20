@@ -62,6 +62,7 @@ brew install --cask kitty
 brew install --cask bike
 brew install --cask dash
 brew install --cask ivpn
+brew install --cask sioyek
 brew install --cask signal
 brew install --cask qbittorrent
 brew install --cask sublime-text # for occasional codebase grokking
