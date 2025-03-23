@@ -50,8 +50,13 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
+brew install --cask monarch
+brew install --cask selfcontrol
 brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
+brew install --cask meetingbar
+brew install --cask chatgpt
+brew install --cask claude
 brew install --cask appcleaner
 brew install --cask brave-browser
 brew install --cask skim
