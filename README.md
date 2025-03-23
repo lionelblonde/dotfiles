@@ -48,7 +48,6 @@ Install these apps from the Mac App Store:
 ## Chromium
 Install these from the Web Store:
 + uBlock Origin
-+ LeechBlock NG
 + Vimium
 + I still don't care about cookies
 + News Feed Eradicator
@@ -62,7 +61,6 @@ Install these from the Web Store:
 + Openreview Quicklook
 + Unhook
 + Web Archives
-+ Video Speed Controller
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
