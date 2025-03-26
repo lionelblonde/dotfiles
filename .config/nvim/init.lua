@@ -4,7 +4,7 @@
 vim.g.mapleader = " "
 
 -- Set listchars
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = { tab = "»·", trail = "·", extends = ">", precedes = "<", nbsp = "␣", eol = "↲" }
 
 -- Enable soft wrapping
@@ -21,7 +21,7 @@ vim.opt.background = "dark"
 
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
-vim.cmd.colorscheme("default")
+-- vim.cmd.colorscheme("default")
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -38,15 +38,32 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- {
+    --     "https://gitlab.com/bartekjaszczak/finale-nvim",
+    --
+    --     priority = 1000,
+    --     config = function()
+    --         -- Activate the theme
+    --         vim.cmd.colorscheme("finale")
+    --     end
+    -- },
     {
-        "https://gitlab.com/bartekjaszczak/finale-nvim",
-
+        "L-Colombo/oldschool.nvim",
         priority = 1000,
-        config = function()
-            -- Activate the theme
-            vim.cmd.colorscheme("finale")
-        end
+        config = true,
     },
+    -- {
+    --     "vague2k/vague.nvim",
+    --     priority = 1000,
+    --     config = function()
+    --         require("vague").setup({
+    --             colors = {
+    --                 string = "#DAB2CB",
+    --             }
+    --         })
+    --         vim.cmd.colorscheme("vague")
+    --     end
+    -- },
     {
         "hedyhli/outline.nvim",
         config = function()
@@ -219,6 +236,8 @@ require("lazy").setup({
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
 })
+
+vim.cmd.colorscheme("oldschool")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
