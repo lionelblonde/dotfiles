@@ -4,7 +4,7 @@
 vim.g.mapleader = " "
 
 -- Set listchars
-vim.opt.list = false
+vim.opt.list = true
 vim.opt.listchars = { tab = "»·", trail = "·", extends = ">", precedes = "<", nbsp = "␣", eol = "↲" }
 
 -- Enable soft wrapping
@@ -22,6 +22,7 @@ vim.opt.background = "dark"
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
 -- vim.cmd.colorscheme("default")
+vim.cmd.colorscheme("pablo")
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -38,32 +39,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- {
-    --     "https://gitlab.com/bartekjaszczak/finale-nvim",
-    --
-    --     priority = 1000,
-    --     config = function()
-    --         -- Activate the theme
-    --         vim.cmd.colorscheme("finale")
-    --     end
-    -- },
     {
-        "L-Colombo/oldschool.nvim",
+        "https://gitlab.com/bartekjaszczak/finale-nvim",
         priority = 1000,
-        config = true,
+        config = function()
+        end
     },
-    -- {
-    --     "vague2k/vague.nvim",
-    --     priority = 1000,
-    --     config = function()
-    --         require("vague").setup({
-    --             colors = {
-    --                 string = "#DAB2CB",
-    --             }
-    --         })
-    --         vim.cmd.colorscheme("vague")
-    --     end
-    -- },
+    {
+        "ishan9299/modus-theme-vim",
+        priority = 1000,
+        config = function()
+        end
+    },
+    {
+        "NLKNguyen/papercolor-theme",
+        priority = 1000,
+        config = function()
+        end
+    },
     {
         "hedyhli/outline.nvim",
         config = function()
@@ -237,7 +230,9 @@ require("lazy").setup({
     {'L3MON4D3/LuaSnip'},
 })
 
-vim.cmd.colorscheme("oldschool")
+-- vim.cmd.colorscheme("finale")
+-- vim.cmd.colorscheme("modus-vivendi")
+vim.cmd.colorscheme("papercolor")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
