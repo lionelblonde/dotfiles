@@ -51,6 +51,7 @@ brew install qmk-toolbox
 
 # Install macOS applications with brew cask
 brew install --cask monarch
+brew install --cask superwhisper
 brew install --cask selfcontrol
 brew install --cask git-credential-manager
 brew install --cask font-ubuntu-mono-nerd-font
