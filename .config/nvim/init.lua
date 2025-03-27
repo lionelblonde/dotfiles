@@ -22,7 +22,7 @@ vim.opt.background = "dark"
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
 -- vim.cmd.colorscheme("default")
-vim.cmd.colorscheme("pablo")
+vim.cmd.colorscheme("blue")
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -47,12 +47,6 @@ require("lazy").setup({
     },
     {
         "ishan9299/modus-theme-vim",
-        priority = 1000,
-        config = function()
-        end
-    },
-    {
-        "NLKNguyen/papercolor-theme",
         priority = 1000,
         config = function()
         end
@@ -231,8 +225,7 @@ require("lazy").setup({
 })
 
 -- vim.cmd.colorscheme("finale")
--- vim.cmd.colorscheme("modus-vivendi")
-vim.cmd.colorscheme("papercolor")
+vim.cmd.colorscheme("modus-vivendi")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
