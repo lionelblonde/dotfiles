@@ -40,13 +40,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+        "rktjmp/lush.nvim",
+    },
+    {
         "https://gitlab.com/bartekjaszczak/finale-nvim",
         priority = 1000,
         config = function()
         end
     },
     {
-        "ishan9299/modus-theme-vim",
+        "anAcc22/sakura.nvim",
         priority = 1000,
         config = function()
         end
@@ -225,7 +228,7 @@ require("lazy").setup({
 })
 
 -- vim.cmd.colorscheme("finale")
-vim.cmd.colorscheme("modus-vivendi")
+vim.cmd.colorscheme("sakura")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
