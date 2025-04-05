@@ -55,10 +55,8 @@ Install these from the Web Store:
 + DeArrow
 + Paperpile Extension
 + Return YouTube Dislike
-+ Minimal New Page
 + arxiv-utils
 + Session Buddy
-+ Openreview Quicklook
 + Unhook
 + Web Archives
 
