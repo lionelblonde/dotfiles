@@ -44,6 +44,7 @@ Install these apps from the Mac App Store:
 + DaisyDisk
 + HEIC Converter
 + Things (always keep the side-bar hidden, use keyboard only: access "Deadlines", "All Projects", etc.)
++ Notability
 
 ## Chromium
 Install these from the Web Store:
