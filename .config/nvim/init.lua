@@ -43,12 +43,6 @@ require("lazy").setup({
         "rktjmp/lush.nvim",
     },
     {
-        "https://gitlab.com/bartekjaszczak/finale-nvim",
-        priority = 1000,
-        config = function()
-        end
-    },
-    {
         "anAcc22/sakura.nvim",
         priority = 1000,
         config = function()
@@ -227,7 +221,7 @@ require("lazy").setup({
     {'L3MON4D3/LuaSnip'},
 })
 
--- vim.cmd.colorscheme("finale")
+-- Define the color scheme
 vim.cmd.colorscheme("sakura")
 
 -- Mitigate netrw defaults
