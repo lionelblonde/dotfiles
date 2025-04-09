@@ -53,8 +53,6 @@ brew install qmk-toolbox
 brew install --cask monarch
 brew install --cask selfcontrol
 brew install --cask git-credential-manager
-brew install --cask font-ubuntu-mono-nerd-font
-brew install --cask font-go-mono-nerd-font
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
 brew install --cask chatgpt
