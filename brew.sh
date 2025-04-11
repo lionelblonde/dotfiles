@@ -55,6 +55,7 @@ brew install --cask selfcontrol
 brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
+brew install --cask reminders-menubar
 brew install --cask chatgpt
 brew install --cask claude
 brew install --cask appcleaner
