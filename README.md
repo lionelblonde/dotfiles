@@ -43,21 +43,11 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + HEIC Converter
-
-## Chromium
-Install these from the Web Store:
-+ uBlock Origin
-+ Vimium
-+ I still don't care about cookies
-+ News Feed Eradicator
-+ SponsorBlock
-+ DeArrow
++ Wipr 2
++ Hush Nag Blocker
++ SocialFocus
 + Paperpile Extension
-+ Return YouTube Dislike
-+ arxiv-utils
-+ Session Buddy
-+ Unhook
-+ Web Archives
++ Yesterday For Old Reddit
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
@@ -128,6 +118,3 @@ Note, the `--name` flag gives ties the kernelspec to an existing conda environme
 
 Use `jupyter kernelspec list` to print the list of kernelspecs install on the system.
 Use `jupyter kernelspec uninstall my_kernelspec_name` to remove a kernelspec.
-
-## LaTeX
-Setup `vimtex` by following the instructions at [this link](https://dr563105.github.io/blog/skim-vimtex-setup/).
