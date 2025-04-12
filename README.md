@@ -106,15 +106,3 @@ Mambaforge is deprecated as of July 2024.
     + _f11_ to "volume decrement"
     + _f12_ to "volume increment"
 N.B.: these depend on the QMK layout.
-
-## Jupyter
-Those are the steps to follow to create a new kernelspec aligned with a conda environment, although this is effectively
-obsolete to carry out by hand since vscode/vscodium is capable of changing the kernel directly from conda environments.
-+ activate the desired conda environment
-+ `pip install jupyter`
-+ `pip install ipykernel`
-+ `python -m ipykernel install --user --name=<exact conda env name> --display-name="<nicer name for kernelspec>"`
-Note, the `--name` flag gives ties the kernelspec to an existing conda environment (it is not the activation that does).
-
-Use `jupyter kernelspec list` to print the list of kernelspecs install on the system.
-Use `jupyter kernelspec uninstall my_kernelspec_name` to remove a kernelspec.
