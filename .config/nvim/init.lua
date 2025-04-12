@@ -40,12 +40,19 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "rktjmp/lush.nvim",
+        "ishan9299/modus-theme-vim",
+        priority = 1000,
     },
     {
-        "anAcc22/sakura.nvim",
+        "miikanissi/modus-themes.nvim",
+        priority = 1000,
+    },
+    {
+        "RishabhRD/nvim-rdark",
+        dependencies = "tjdevries/colorbuddy.vim",
         priority = 1000,
         config = function()
+            require('colorbuddy').colorscheme('nvim-rdark')
         end
     },
     {
@@ -222,7 +229,8 @@ require("lazy").setup({
 })
 
 -- Define the color scheme
-vim.cmd.colorscheme("sakura")
+-- vim.cmd.colorscheme("modus-vivendi")
+-- vim.cmd.colorscheme("modus")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
