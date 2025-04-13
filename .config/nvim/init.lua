@@ -21,8 +21,8 @@ vim.opt.background = "dark"
 
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
--- vim.cmd.colorscheme("default")
-vim.cmd.colorscheme("blue")
+vim.cmd.colorscheme("default")
+-- vim.cmd.colorscheme("blue")
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -40,19 +40,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "ishan9299/modus-theme-vim",
-        priority = 1000,
-    },
-    {
         "miikanissi/modus-themes.nvim",
         priority = 1000,
     },
     {
-        "RishabhRD/nvim-rdark",
-        dependencies = "tjdevries/colorbuddy.vim",
+        "ficcdaf/ashen.nvim",
+        priority = 1000,
+    },
+    {
+        "anAcc22/sakura.nvim",
+        dependencies = "rktjmp/lush.nvim",
         priority = 1000,
         config = function()
-            require('colorbuddy').colorscheme('nvim-rdark')
         end
     },
     {
@@ -229,8 +228,9 @@ require("lazy").setup({
 })
 
 -- Define the color scheme
--- vim.cmd.colorscheme("modus-vivendi")
 -- vim.cmd.colorscheme("modus")
+-- vim.cmd.colorscheme("ashen")
+vim.cmd.colorscheme("sakura")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
