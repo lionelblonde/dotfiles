@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-# Create symlinks (careful, overrides old dotfiles)
+# create symlinks (careful with overrides)
 
-# NOTE: Sublime Text does not get set up with symlinks, because packages might change location every update
-
-# Misc
 ln -svf $HOME/Documents/dotfiles/.aliases $HOME/.aliases
 ln -svf $HOME/Documents/dotfiles/.bash_profile $HOME/.bash_profile
 ln -svf $HOME/Documents/dotfiles/.bashrc $HOME/.bashrc
@@ -22,6 +19,9 @@ ln -svf $HOME/Documents/dotfiles/.vimrc $HOME/.vimrc
 ln -svf $HOME/Documents/dotfiles/.zshrc $HOME/.zshrc
 ln -svf $HOME/Documents/dotfiles/.ytdlp.conf $HOME/.ytdlp.conf
 ln -svf $HOME/Documents/dotfiles/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
+
+# vim
+ln -svf $HOME/Documents/dotfiles/grb24bit.vim $HOME/.config/nvim/colors/grb24bit.vim
 
 # kitty
 ln -svf $HOME/Documents/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
