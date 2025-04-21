@@ -38,6 +38,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+        "sphamba/smear-cursor.nvim",
+        opts = {},
+    },
+    {
         "hedyhli/outline.nvim",
         config = function()
             -- Example mapping to toggle outline
@@ -100,7 +104,7 @@ require("lazy").setup({
         config = function()
             require("nvim-treesitter.configs").setup({
                 ensure_installed = {
-		            "bash",
+                    "bash",
                     "cuda",
                     "fortran",
                     "gitignore",
