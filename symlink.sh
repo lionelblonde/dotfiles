@@ -22,7 +22,3 @@ ln -svf $HOME/Documents/dotfiles/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
 
 # vim
 ln -svf $HOME/Documents/dotfiles/grb24bit.vim $HOME/.config/nvim/colors/grb24bit.vim
-
-# kitty
-ln -svf $HOME/Documents/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
-ln -svf $HOME/Documents/dotfiles/.config/kitty/ssh.conf $HOME/.config/kitty/ssh.conf
