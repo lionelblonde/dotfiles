@@ -43,36 +43,37 @@ alias tkillall='tmux kill-server'
 # make ydt-dl use its config files, notably so that downloads go to the right place
 alias ydl='yt-dlp --config-location ~/.ytdlp.conf'
 
-# kitty
-# Automatically copy over the terminfo files and also magically enable shell integration on the remote machine
-# https://sw.kovidgoyal.net/kitty/faq/#i-get-errors-about-the-terminal-being-unknown-or-opening-the-terminal-failing-or-functional-keys-like-arrow-keys-don-t-work
-alias s="kitty +kitten ssh --kitten share_connections=yes"
-
 # convenience aliases for editing configs
-# I use these on macOS and Anton only -- can use neovim
-alias ec='v ~/Documents/notes/cbt.md'
-alias eo='v +"normal G" ~/Documents/notes/research/log.md'
-# alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt' # keep for posterity: pretty cool functionality
+alias ec='open ~/Documents/notes/cbt.bike'
+alias ep='open ~/Documents/notes/projects.bike'
+alias eo='open ~/Documents/notes/curiosities.bike'
 alias ea='v ~/.aliases'
 alias ev='v ~/.vimrc'
 alias en='v ~/.config/nvim/init.lua'
 alias ez='v ~/.zshrc'
 alias et='v ~/.tmux.conf'
 alias eh='v ~/.hammerspoon/init.lua'
-alias ek='v ~/.config/kitty/kitty.conf'
+alias ek='v ~/Documents/notes/bookmarks.md'
 alias er='v ~/Documents/dotfiles/README.md'
 alias eb='v ~/Documents/dotfiles/brew.sh'
+# keep for posterity: pretty cool functionality
+# alias eo='v +"normal G" ~/Documents/notes/research/log.md'
+# alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 
-alias ee='espanso edit'
-
-# convenience alias to source .zshrc
+# convenience alias to source files
 alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
 
 alias wip='cd ~/Documents/git/code/wip'
-alias nots='cd ~/Documents/notes'
-alias dots='cd ~/Documents/dotfiles'
-alias resume='cd ~/Documents/git/code/ego/github/private/resume-latex'
+alias nts='cd ~/Documents/notes'
+alias dts='cd ~/Documents/dotfiles'
+alias rsm='cd ~/Documents/git/code/ego/github/private/resume-latex'
+alias grw='cd ~/Documents/growth'
 
 # select file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='find . -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
+
+# quick search shortcuts
+alias sn='nts && f'
+alias sg='grw && f'
+
