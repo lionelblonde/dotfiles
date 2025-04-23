@@ -43,6 +43,7 @@ Install these apps from the Mac App Store:
 + Hand Mirror
 + DaisyDisk
 + HEIC Converter
++ One Thing
 + Wipr 2
 + Hush Nag Blocker
 + SocialFocus
