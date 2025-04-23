@@ -44,10 +44,30 @@ require("lazy").setup({
     {
         "hedyhli/outline.nvim",
         config = function()
-            -- Example mapping to toggle outline
-            vim.keymap.set("n", "<leader>O", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+            vim.keymap.set("n", "<leader>oo", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
             require("outline").setup {
                 position = "bottom",
+            }
+            require("outline").setup {
+                outline_window = {
+                    width = 60,
+                    auto_close = true,
+                    auto_jump = true,
+                    show_numbers = true,
+                    wrap = true,
+                },
+                outline_items = {
+                    show_symbol_lineno = true,
+                },
+                providers = {
+                    priority = { 'lsp', 'markdown' },
+                },
+                symbols = {
+                    filter = {
+                        default = { 'String', exclude=true },
+                        python = { 'Function', 'Class' },
+                    }
+                },
             }
         end,
     },
@@ -255,6 +275,7 @@ vim.opt.smartcase = true
 
 -- Set a ruler to indicate the X column
 -- vim.opt.colorcolumn = "100,120"
+-- vim.opt.colorcolumn = 120"
 
 -- Set the format options
 -- `q` enales automatic formatting of comments using `gq` command
