@@ -31,6 +31,7 @@ let s:none = "NONE"
 let s:reverse = "reverse"
 let s:bold = "BOLD"
 let s:underline = "underline"
+let s:boldunderline = "BOLD,underline"
 
 " Additional colors.
 let s:darkgray = "#202020"
@@ -53,6 +54,8 @@ exe 'hi Normal          guifg='.s:none          .' guibg='.s:black           .' 
 exe 'hi NonText         guifg='.s:lightblack    .' guibg='.s:none           .' gui='.s:none
 
 exe 'hi Cursor          guifg='.s:black         .' guibg='.s:lightwhite     .' gui='.s:reverse
+exe 'hi CursorInsert    guifg='.s:black         .' guibg='.s:lightgreen     .' gui='.s:reverse
+
 exe 'hi LineNr          guifg='.s:lightgray     .' guibg='.s:none           .' gui='.s:none
 
 exe 'hi VertSplit       guifg='.s:lightgray     .' guibg='.s:lightgray      .' gui='.s:none
@@ -84,7 +87,11 @@ exe 'hi MatchParen      guifg='.s:lightwhite    .' guibg='.s:lightgray      .' g
 exe 'hi Pmenu           guifg='.s:black         .' guibg='.s:white          .' gui='.s:none
 exe 'hi PmenuSel        guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:none
 
-exe 'hi Search          guifg='.s:none          .' guibg='.s:magenta        .' gui='.s:bold    .' ctermfg='.s:none .' ctermbg='.s:none
+exe 'hi Search          guifg='.s:black         .' guibg='.s:lightmagenta   .' gui='.s:none
+exe 'hi IncSearch       guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:none
+exe 'hi CurSearch       guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:boldunderline
+
+exe 'hi Substitute      guifg='.s:black         .' guibg='.s:lightcyan      .' gui='.s:boldunderline
 
 " Syntax highlighting
 exe 'hi Comment         guifg='.s:lightgray     .' guibg='.s:none           .' gui='.s:none
