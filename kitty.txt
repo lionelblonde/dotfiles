@@ -1,0 +1,8 @@
+font_family Menlo
+font_size 15.0
+macos_titlebar_color system
+enable_audio_bell no
+window_padding_width 0
+hide_window_decorations no
+wheel_scroll_multiplier 5
+touch_scroll multiplier 2
