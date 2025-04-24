@@ -9,7 +9,6 @@ window-padding-y = 0
 window-padding-color = background
 background = #000000
 cursor-color = #ffffff
-adjust-cursor-thickness = 5
 cursor-invert-fg-bg = true
 font-thicken = true
 font-family = Menlo
