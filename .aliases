@@ -77,4 +77,3 @@ alias f='find . -type f | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
 # quick search shortcuts
 alias sn='nts && f'
 alias sg='grw && f'
-
