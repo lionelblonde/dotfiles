@@ -50,7 +50,7 @@ let colors_name = "grb24bit"
 
 
 " General colors. Forgive me for the way that all of this is formatted.
-exe 'hi Normal          guifg='.s:none          .' guibg='.s:black           .' gui='.s:none
+exe 'hi Normal          guifg='.s:white          .' guibg='.s:black           .' gui='.s:none
 exe 'hi NonText         guifg='.s:lightblack    .' guibg='.s:none           .' gui='.s:none
 
 exe 'hi Cursor          guifg='.s:black         .' guibg='.s:lightwhite     .' gui='.s:reverse
