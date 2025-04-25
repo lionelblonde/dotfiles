@@ -387,6 +387,11 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- Edit all the occurrence of the word the cursor was on in the buffer
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Highlight matches and mark as todo's
+vim.keymap.set("n", "<leader>h", function()
+    vim.fn.matchadd("Todo", [[\v^([^+=*\-])]])
+end, { desc = "Highlight first char of lines not starting with +, =, *, -" })
+
 -- Make the current file executable (from within!)
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
