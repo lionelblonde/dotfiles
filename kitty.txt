@@ -1,5 +1,7 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
 font_family Menlo
-font_size 15.0
+font_size 13.0
 macos_titlebar_color system
 enable_audio_bell no
 window_padding_width 0
@@ -8,9 +10,9 @@ wheel_scroll_multiplier 5
 touch_scroll multiplier 2
 
 # theme
-background #141515
+background #000000
 foreground #ddd0c4
-cursor     #702420
+# cursor     #702420
 selection_background #515151
 selection_foreground #ffc663
 # black
