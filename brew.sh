@@ -59,7 +59,6 @@ brew install --cask skim
 brew install --cask pdf-expert # just to read Acrobat Reader garbo
 brew install --cask notunes
 brew install --cask silicon
-brew install --cask ghostty
 brew install --cask kitty
 brew install --cask bike
 brew install --cask dash
