@@ -6,3 +6,42 @@ window_padding_width 0
 hide_window_decorations no
 wheel_scroll_multiplier 5
 touch_scroll multiplier 2
+
+# theme
+background #141515
+foreground #ddd0c4
+cursor     #702420
+selection_background #515151
+selection_foreground #ffc663
+# black
+color0  #333333
+# red
+color1  #b66056
+# green
+color2  #85b1a9
+# yellow
+color3  #dbbb43
+# blue
+color4  #6890d7
+# magenta
+color5  #887aa3
+# cyan
+color6  #837369
+# white
+color7  #ddd0c4
+# bright black
+color8  #515151
+# bright red
+color9  #ffc663
+# bright green
+color10 #c1ffae
+# bright yellow
+color11 #fff700
+# bright blue
+color12 #a1d9ff
+# bright magenta
+color13 #a994ff
+# bright cyan
+color14 #f9cfb9
+# bright white
+color15 #ffffff
