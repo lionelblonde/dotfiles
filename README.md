@@ -16,8 +16,10 @@
         + `defaults write -g InitialKeyRepeat -int 10`
         + `defaults write -g KeyRepeat -int 1`
     + Change the time it takes for the Dock to reappear fully; this time is in seconds
-        + `defaults write com.apple.Dock autohide-time-modifier -int 0`
-        + `defaults write com.apple.Dock autohide-delay -int 0`
+        + What I like to do is force myself not to ever use the Dock: set a long delay for it appearance (5secs).
+          It can still be seen instantly and clicked on from Mission Control. The App Switcher shows what's open.
+        + `defaults write com.apple.Dock autohide-time-modifier -int 5`
+        + `defaults write com.apple.Dock autohide-delay -int 5`
         + `killall Dock` to have those changes take effect
         + To restore the Dock's appearance to its original setting, use the following command
             + `defaults delete com.apple.Dock autohide-time-modifier`
