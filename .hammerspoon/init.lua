@@ -250,3 +250,6 @@ end)
 hs.timer.doEvery(1, function()
    updateHighlight()
 end)
+
+-- Automatically reload your Hammerspoon configuration whenever this file is saved
+hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", hs.reload):start()
