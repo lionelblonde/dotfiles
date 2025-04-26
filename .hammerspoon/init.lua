@@ -25,22 +25,59 @@ grid.setGrid("3x1", "3440x1440")
 -- Aliases
 local hyper = {"control", "shift"}
 
--- Instant window resizing, none of this animation shit
+-- Instant window resizing, none of this animation stuff
 window.animationDuration = 0
 
--- Toggle an application between being the frontmost app, and being hidden
+-- Toggle an application between being the frontmost app, or cycling through the windows
 local function toggle_application(_app)
-   local app = appfinder.appFromName(_app)
-   local mainwin = app:mainWindow()
-   if mainwin then
-      if mainwin == window.focusedWindow() then
-         mainwin:application():hide()
-      else
-         mainwin:application():activate(true)
-         mainwin:application():unhide()
-         mainwin:focus()
-      end
-   end
+
+    local app = hs.application.get(_app)
+
+    -- Uncomment this block to also allow for app launches
+    -- if not app then
+    --     hs.application.launchOrFocus(_app)
+    --     return
+    -- end
+
+    -- Get all visible, standard windows
+    local windows = hs.fnutils.filter(app:visibleWindows(), function(w)
+        return w:isStandard()
+    end)
+
+    -- No visible standard windows? Just activate
+    if #windows == 0 then
+        app:activate()
+        return
+    end
+
+    local focused = hs.window.focusedWindow()
+
+    if focused and focused:application():name() == _app then
+        -- App is already focused: cycle through windows
+        -- First, sort windows by window ID to ensure stable ordering
+        table.sort(windows, function(a, b) return a:id() < b:id() end)
+
+        -- Find index of currently focused window
+        local currentIdx = nil
+        for i, win in ipairs(windows) do
+            if win:id() == focused:id() then
+                currentIdx = i
+                break
+            end
+        end
+
+        local nextWindow
+        if currentIdx then
+            nextWindow = windows[(currentIdx % #windows) + 1]
+        else
+            nextWindow = windows[1]
+        end
+        nextWindow:focus()
+    else
+        -- App not focused: activate and bring frontmost window
+        app:activate()
+        windows[1]:focus()
+    end
 end
 
 local frameCache = {} --reset the cache
@@ -154,3 +191,62 @@ hotkey.bind(hyper, "c", function() hs.caffeinate.startScreensaver() end)
 -- Finally, show a notification that we finished loading the config successfully
 notify.new({title = 'Hammerspoon', informativeText = 'Config loaded'}):send()
 -- speaker:speak("config reloaded successfully")
+
+
+-- Highlight the window currently in focus with a red line
+local highlight = nil
+
+local function highlightFocusedWindow()
+   if highlight then
+      highlight:delete()
+      highlight = nil
+   end
+   local win = hs.window.focusedWindow()
+   if win then
+      local frame = win:frame()
+
+      highlight = hs.drawing.rectangle(frame)
+      highlight:setStrokeColor({red=1, green=0, blue=0, alpha=0.8}) -- orange-ish
+      highlight:setFill(false)
+      highlight:setStrokeWidth(6)
+      highlight:setRoundedRectRadii(8, 8) -- rounded corners!
+      highlight:setLevel(hs.drawing.windowLevels.floating) -- stays above normal windows
+      highlight:bringToFront(true)
+      highlight:show()
+
+      -- Optional: add a slight shadow for a premium feel
+      highlight:setShadow(true)
+   end
+end
+
+-- Reposition the highlight if window moves or resizes
+local function updateHighlight()
+   if not highlight then return end
+   local win = hs.window.focusedWindow()
+   if win then
+      highlight:setFrame(win:frame())
+   end
+end
+
+-- Watch window focus/move/resize
+local wf = hs.window.filter.default
+
+wf:subscribe({
+   hs.window.filter.windowFocused,
+   hs.window.filter.windowMoved,
+   hs.window.filter.windowResized
+}, function()
+   highlightFocusedWindow()
+end)
+
+wf:subscribe(hs.window.filter.windowUnfocused, function()
+   if highlight then
+      highlight:delete()
+      highlight = nil
+   end
+end)
+
+-- Periodic check to fix rare edge cases
+hs.timer.doEvery(1, function()
+   updateHighlight()
+end)
