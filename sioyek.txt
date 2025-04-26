@@ -1,0 +1,2 @@
+default_dark_mode 1
+dark_mode_contrast 0.9
