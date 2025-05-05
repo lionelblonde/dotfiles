@@ -60,7 +60,7 @@ alias eb='v ~/Documents/dotfiles/brew.sh'
 # alias eo='v +"normal G" ~/Documents/notes/research/log.md'
 # alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 # alias td='v +":silent! g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
-alias td='v ~/Documents/notes/plan.txt'
+# alias td='v ~/Documents/notes/plan.txt'
 
 # convenience alias to source files
 alias sz='source ~/.zshrc'
