@@ -48,11 +48,6 @@ Install these apps from the Mac App Store:
 + Photo Widget
 + Things 3
 + One Thing
-+ Wipr 2
-+ Hush Nag Blocker
-+ SocialFocus
-+ Paperpile Extension
-+ Yesterday For Old Reddit
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
