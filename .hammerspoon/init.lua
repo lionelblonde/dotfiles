@@ -206,7 +206,7 @@ local function highlightFocusedWindow()
       local frame = win:frame()
 
       highlight = hs.drawing.rectangle(frame)
-      highlight:setStrokeColor({red=1, green=0, blue=0, alpha=0.8}) -- orange-ish
+      highlight:setStrokeColor({red=0.09, green=0.74, blue=0.69, alpha=0.8}) -- orange-ish
       highlight:setFill(false)
       highlight:setStrokeWidth(6)
       highlight:setRoundedRectRadii(8, 8) -- rounded corners!
