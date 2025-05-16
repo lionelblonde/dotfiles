@@ -47,7 +47,6 @@ Install these apps from the Mac App Store:
 + HEIC Converter
 + Photo Widget
 + Things 3
-+ One Thing
 
 ## Zsh
 + Make sure to only continue here after having run the `brew.sh` script
