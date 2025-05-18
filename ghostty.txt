@@ -19,5 +19,6 @@ auto-update = download
 auto-update-channel = stable
 macos-icon = retro
 macos-icon-frame = plastic
+adjust-cell-height = -15%
 
 keybind = super+shift+plus=increase_font_size:1
