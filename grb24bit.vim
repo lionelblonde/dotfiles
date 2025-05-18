@@ -38,6 +38,7 @@ let s:darkgray = "#202020"
 let s:darkred = "#770000"
 let s:darkorange = "#773c00"
 let s:lightblack = "#474747"
+let s:darkpurple = "#2f1f37"
 
 set background=dark
 hi clear
@@ -84,8 +85,12 @@ exe 'hi CursorColumn    guifg='.s:none          .' guibg='.s:none           .' g
 exe 'hi MatchParen      guifg='.s:lightwhite    .' guibg='.s:lightgray      .' gui='.s:none
 
 " Omnicompletion (<c-n> and <c-p>)
-exe 'hi Pmenu           guifg='.s:black         .' guibg='.s:white          .' gui='.s:none
-exe 'hi PmenuSel        guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:none
+" exe 'hi Pmenu           guifg='.s:black         .' guibg='.s:white          .' gui='.s:none
+" exe 'hi PmenuSel        guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:none
+exe 'hi Pmenu           guifg='.s:white         .' guibg='.s:darkpurple     .' gui='.s:none
+exe 'hi PmenuSel        guifg='.s:black         .' guibg='.s:lightmagenta   .' gui='.s:bold
+exe 'hi PmenuSbar        guibg='.s:gray
+exe 'hi PmenuThumb       guibg='.s:lightgray
 
 exe 'hi Search          guifg='.s:black         .' guibg='.s:lightmagenta   .' gui='.s:none
 exe 'hi IncSearch       guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:none
@@ -116,12 +121,27 @@ exe 'hi Special         guifg='.s:lightwhite    .' guibg='.s:none           .' g
 exe 'hi Delimiter       guifg='.s:lightercyan   .' guibg='.s:none           .' gui='.s:none
 
 " The spelling highlights are used for errors (e.g. vim-ale uses it).
-exe 'hi SpellBad        guifg='.s:none          .' guibg='.s:darkred        .' gui='.s:none
+" exe 'hi SpellBad        guifg='.s:none          .' guibg='.s:darkred        .' gui='.s:none # erroneously highlights underscore in doc from pmenu in darkred
 exe 'hi SpellCap        guifg='.s:none          .' guibg='.s:darkorange     .' gui='.s:none
 
-" Floating hovering window
-exe 'hi NormalFloat     guifg='.s:none          .' guibg='.s:none           .' gui='.s:none
+" Floating windows (e.g., LSP popups)
+exe 'hi NormalFloat     guifg='.s:white         .' guibg='.s:darkpurple     .' gui='.s:none
+exe 'hi FloatBorder     guifg='.s:lightgray     .' guibg='.s:darkpurple     .' gui='.s:none
+exe 'hi LspInfoBorder   guifg='.s:lightgray     .' guibg='.s:darkpurple     .' gui='.s:none
 
+exe 'hi WinSeparator    guifg='.s:gray .' guibg='.s:darkpurple .' gui='.s:none
+
+" Virtual text (in-line LSP messages)
+exe 'hi DiagnosticVirtualTextError guifg='.s:lightred    .' guibg='.s:darkpurple .' gui=BOLD'
+exe 'hi DiagnosticVirtualTextWarn  guifg='.s:yellow      .' guibg='.s:darkpurple .' gui=BOLD'
+exe 'hi DiagnosticVirtualTextInfo  guifg='.s:lightblue   .' guibg='.s:darkpurple .' gui=italic'
+exe 'hi DiagnosticVirtualTextHint  guifg='.s:lightgray   .' guibg='.s:darkpurple .' gui=italic'
+
+" Underlines (for squiggles)
+exe 'hi DiagnosticUnderlineError   guisp='.s:lightred    .' gui=undercurl'
+exe 'hi DiagnosticUnderlineWarn    guisp='.s:yellow      .' gui=undercurl'
+exe 'hi DiagnosticUnderlineInfo    guisp='.s:lightblue   .' gui=undercurl'
+exe 'hi DiagnosticUnderlineHint    guisp='.s:lightgray   .' gui=undercurl'
 
 hi link Character       Constant
 hi link Float           Number
@@ -139,3 +159,55 @@ hi link Tag             Special
 hi link SpecialChar     Special
 hi link SpecialComment  Special
 hi link Debug           Special
+
+" Treesitter highlights
+hi link @variable        Identifier
+hi link @parameter       Identifier
+hi link @function        Function
+hi link @function.call   Function
+hi link @type            Type
+hi link @type.builtin    Type
+hi link @keyword         Keyword
+hi link @string          String
+hi link @number          Number
+hi link @boolean         Boolean
+hi link @operator        Operator
+
+" Abbreviation match (bold)
+exe 'hi! CmpItemAbbrMatch        guifg='.s:lightcyan    .' gui=bold'
+exe 'hi! CmpItemAbbrMatchFuzzy   guifg='.s:lightcyan    .' gui=bold'
+
+" Functions and methods
+exe 'hi! CmpItemKindFunction     guifg='.s:lightblue
+exe 'hi! CmpItemKindMethod       guifg='.s:lightblue
+
+" Variables and fields
+exe 'hi! CmpItemKindVariable     guifg='.s:lightmagenta
+exe 'hi! CmpItemKindField        guifg='.s:lightmagenta
+
+" Classes and interfaces
+exe 'hi! CmpItemKindClass        guifg='.s:lightyellow
+exe 'hi! CmpItemKindInterface    guifg='.s:lightyellow
+
+" Properties
+exe 'hi! CmpItemKindProperty     guifg='.s:lightgreen
+
+" Modules and namespaces
+exe 'hi! CmpItemKindModule       guifg='.s:magenta
+
+" Keywords and constants
+exe 'hi! CmpItemKindKeyword      guifg='.s:lightcyan
+exe 'hi! CmpItemKindConstant     guifg='.s:lightcyan
+
+" Constructors and enums
+exe 'hi! CmpItemKindConstructor  guifg='.s:lightred
+exe 'hi! CmpItemKindEnum         guifg='.s:lightred
+
+" Snippets
+exe 'hi! CmpItemKindSnippet      guifg='.s:green
+
+" Text, files, folders
+exe 'hi! CmpItemKindText         guifg='.s:white
+exe 'hi! CmpItemKindFile         guifg='.s:lightgray
+exe 'hi! CmpItemKindFolder       guifg='.s:gray
+
