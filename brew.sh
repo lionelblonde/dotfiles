@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Install brew packages
+brew install fd
 brew install asitop
 brew install mas
 brew install topgrade
@@ -59,7 +60,7 @@ brew install --cask skim
 brew install --cask pdf-expert # just to read Acrobat Reader garbo
 brew install --cask notunes
 brew install --cask silicon
-brew install --cask kitty
+brew install --cask kitty # far better than Ghostty for font rendering
 brew install --cask bike
 brew install --cask dash
 brew install --cask ivpn
