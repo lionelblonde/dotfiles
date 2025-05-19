@@ -20,7 +20,7 @@ vim.opt.background = "dark"
 
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
-vim.cmd.colorscheme("default")
+-- vim.cmd.colorscheme("desert")
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -37,6 +37,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    {
+        "ishan9299/modus-theme-vim",
+        priority = 1000,
+    },
     {
         "sphamba/smear-cursor.nvim",
         opts = {},
@@ -60,12 +64,15 @@ require("lazy").setup({
                     show_symbol_lineno = true,
                 },
                 providers = {
-                    priority = { 'lsp', 'markdown' },
+                    priority = {
+                        "lsp",
+                        "markdown",
+                    },
                 },
                 symbols = {
                     filter = {
-                        default = { 'String', exclude=true },
-                        python = { 'Function', 'Class' },
+                        default = { "String", exclude=true },
+                        python = { "Function", "Class" },
                     }
                 },
             }
@@ -124,6 +131,8 @@ require("lazy").setup({
         config = function()
             require("nvim-treesitter.configs").setup({
                 ensure_installed = {
+                    "markdown",
+                    -- "markdown_inline",
                     "bash",
                     "cuda",
                     "fortran",
@@ -142,8 +151,6 @@ require("lazy").setup({
                     "rust",
                     "latex",
                     "bibtex",
-                    "markdown",
-                    "markdown_inline",
                     "tmux",
                     "json",
                     "jq",
@@ -155,12 +162,30 @@ require("lazy").setup({
                 },
                 highlight = {
                     enable = true,  -- false disables the whole extension
-                    additional_vim_regex_highlighting = { "markdown" },
+                    additional_vim_regex_highlighting = false,
                     -- runs `:h syntax` and TS at the same time
                     -- the values to give here can be: false, true, or parser names
                 },
             })
         end
+    },
+    {
+        "nvim-treesitter/playground",
+        cmd = {
+            "TSPlaygroundToggle",
+            "TSHighlightCapturesUnderCursor",
+            "TSNodeUnderCursor",
+        },
+        config = function()
+            require("nvim-treesitter.configs").setup({
+                playground = {
+                    enable = true,
+                    updatetime = 25, -- debounced highlighting updates (in ms)
+                    persist_queries = false,
+                },
+            })
+        end,
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
     },
     {
         "NeogitOrg/neogit",
