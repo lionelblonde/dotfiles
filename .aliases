@@ -6,7 +6,7 @@ alias distro='uname -sr' # `s` for kernel name, `r` for kernel release
 alias nproc='sysctl -n hw.ncpu'
 
 alias ll='ls -FGlAhp'
-alias xx='eza -1la --header --git --color-scale --time=created --time-style=long-iso --octal-permissions --no-user --no-time --color=always --icons=always' # rust
+alias xx='eza -1la --header --git --color-scale --time=created --time-style=long-iso --octal-permissions --no-user --no-time --no-filesize --color=always --icons=never' # rust
 
 alias ln='ln -v'
 
