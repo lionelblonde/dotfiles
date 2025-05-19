@@ -92,16 +92,16 @@ Mambaforge is deprecated as of July 2024.
 + In _Devices -> Advanced -> Disable the build-in keyboard while one of the following selected device is connected_,
   tick the box that says "HHKB Professional \[...\]" (or other desired device)
 + In _Function Keys_, _For all devices_, set ("use all F1, F2, etc. keys as standard function keys" is set to False):
-    + _f1_ to "display brightness decrement"
-    + _f2_ to "display brightness increment"
-    + _f3_ to "mission control"
-    + _f4_ to "f10"
-    + _f5_ to "f5"
-    + _f6_ to "f6"
-    + _f7_ to "rewind"
-    + _f8_ to "play or pause"
-    + _f9_ to "fast forward"
-    + _f10_ to "mute"
-    + _f11_ to "volume decrement"
-    + _f12_ to "volume increment"
+    + F1 to "display brightness decrement"
+    + F2 to "display brightness increment"
+    + F3 to "mission control"
+    + F4 to "f10"
+    + F5 to "f5"
+    + F6 to "f6"
+    + F7 to "rewind"
+    + F8 to "play or pause"
+    + F9 to "fast forward"
+    + F10 to "mute"
+    + F11 to "volume decrement"
+    + F12 to "volume increment"
 N.B.: these depend on the QMK layout.
