@@ -21,4 +21,4 @@ ln -svf $HOME/Documents/dotfiles/.ytdlp.conf $HOME/.ytdlp.conf
 ln -svf $HOME/Documents/dotfiles/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
 
 # vim
-ln -svf $HOME/Documents/dotfiles/grb24bit.vim $HOME/.config/nvim/colors/grb24bit.vim
+ln -svf $HOME/Documents/dotfiles/term.vim $HOME/.config/nvim/colors/term.vim
