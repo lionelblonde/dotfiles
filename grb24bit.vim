@@ -79,6 +79,10 @@ exe 'hi WarningMsg      guifg='.s:lightwhite    .' guibg='.s:darkorange     .' g
 
 " Message displayed in lower left, such as --INSERT--
 exe 'hi ModeMsg         guifg='.s:black         .' guibg='.s:lightred       .' gui='.s:bold
+exe 'hi WarningMsg      guifg='.s:magenta  .' guibg='.s:black       .' gui='.s:bold
+exe 'hi ErrorMsg      guifg='.s:red  .' guibg='.s:black       .' gui='.s:bold
+exe 'hi MoreMsg      guifg='.s:lightred  .' guibg='.s:black       .' gui='.s:bold
+exe 'hi Question        guifg='.s:lightmagenta  .' guibg='.s:black     .' gui='.s:bold
 
 exe 'hi CursorLine      guifg='.s:none          .' guibg='.s:darkgray       .' gui='.s:none
 exe 'hi CursorColumn    guifg='.s:none          .' guibg='.s:none           .' gui='.s:bold
@@ -117,25 +121,27 @@ exe 'hi Function        guifg='.s:yellow        .' guibg='.s:none           .' g
 exe 'hi Type            guifg='.s:lightyellow   .' guibg='.s:none           .' gui='.s:none
 exe 'hi Statement       guifg='.s:lightblue     .' guibg='.s:none           .' gui='.s:none
 
-exe 'hi Special         guifg='.s:lightred    .' guibg='.s:none           .' gui='.s:none
+exe 'hi Special         guifg='.s:lightwhite    .' guibg='.s:none           .' gui='.s:none
+exe 'hi  netrwSymLink   guifg='.s:lightred    .' guibg='.s:none           .' gui='.s:none
 exe 'hi Delimiter       guifg='.s:lightercyan   .' guibg='.s:none           .' gui='.s:none
 exe 'hi SpecialKey      guifg='.s:yellow        .' guibg='.s:none           .' gui='.s:none
 
 " The spelling highlights are used for errors (e.g. vim-ale uses it).
-" exe 'hi SpellBad        guifg='.s:none          .' guibg='.s:darkred        .' gui='.s:none # erroneously highlights underscore in doc from pmenu in darkred
+exe 'hi SpellBad        guifg='.s:none          .' guibg='.s:none        .' gui='.s:none
+" erroneously highlights underscore in doc from pmenu in darkred
 exe 'hi SpellCap        guifg='.s:none          .' guibg='.s:darkorange     .' gui='.s:none
 
 " Floating windows (e.g., LSP popups)
-exe 'hi NormalFloat     guifg='.s:white         .' guibg='.s:darkpurple     .' gui='.s:none
+exe 'hi NormalFloat     guifg='.s:white         .' guibg='.s:darkgray     .' gui='.s:none
 exe 'hi FloatBorder     guifg='.s:lightgray     .' guibg='.s:darkpurple     .' gui='.s:none
 exe 'hi LspInfoBorder   guifg='.s:lightgray     .' guibg='.s:darkpurple     .' gui='.s:none
 exe 'hi WinSeparator    guifg='.s:gray          .' guibg='.s:darkpurple     .' gui='.s:none
 
 " Virtual text (in-line LSP messages)
 exe 'hi DiagnosticVirtualTextError guifg='.s:lightred    .' guibg='.s:darkpurple .' gui='.s:bold
-exe 'hi DiagnosticVirtualTextWarn  guifg='.s:yellow      .' guibg='.s:darkpurple .' gui='.s:bold
-exe 'hi DiagnosticVirtualTextInfo  guifg='.s:lightblue   .' guibg='.s:darkpurple .' gui='.s:none
-exe 'hi DiagnosticVirtualTextHint  guifg='.s:lightgray   .' guibg='.s:darkpurple .' gui='.s:none
+exe 'hi DiagnosticVirtualTextWarn  guifg='.s:yellow      .' guibg='.s:darkgray .' gui='.s:bold
+exe 'hi DiagnosticVirtualTextInfo  guifg='.s:lightblue   .' guibg='.s:black .' gui='.s:none
+exe 'hi DiagnosticVirtualTextHint  guifg='.s:lightgray   .' guibg='.s:black .' gui='.s:none
 
 exe 'hi DiagnosticUnderlineError   guisp='.s:lightred
 exe 'hi DiagnosticUnderlineWarn    guisp='.s:yellow
@@ -158,7 +164,6 @@ hi link Tag             Special
 hi link SpecialChar     Special
 hi link SpecialComment  Special
 hi link Debug           Special
-hi link netrwSymLink    Special
 
 " Treesitter highlights
 hi link @variable        Identifier
@@ -226,4 +231,32 @@ exe 'hi! GitSignsAdd              guifg='.s:lightgreen    .' guibg='.s:none .' g
 exe 'hi! GitSignsChange           guifg='.s:lightmagenta  .' guibg='.s:none .' gui='.s:none
 exe 'hi! GitSignsDelete           guifg='.s:red           .' guibg='.s:none .' gui='.s:none
 exe 'hi! GitSignsCurrentLineBlame guifg='.s:lightgray     .' guibg='.s:none .' gui='.s:italic
+
+" Diff sections (used broadly in Neogit)
+exe 'hi! DiffAdd      guifg='.s:none       .' guibg=#1b2a1b gui='.s:none
+exe 'hi! DiffDelete   guifg='.s:none       .' guibg=#3a1f1f gui='.s:none
+exe 'hi! DiffChange   guifg='.s:none       .' guibg=#2a2a1f gui='.s:none
+exe 'hi! DiffText     guifg='.s:white      .' guibg=#445544 gui='.s:bold
+
+" Neogit-specific groups
+" NeogitBranch — like a header or tag; should be vivid
+exe 'hi! NeogitBranch               guifg='.s:lightgreen     .' guibg='.s:none .' gui='.s:bold
+
+" NeogitDiffAddHighlight — added lines, should match DiffAdd bg
+exe 'hi! NeogitDiffAddHighlight    guifg='.s:none           .' guibg=#1b2a1b gui='.s:none
+
+" NeogitDiffContextHighlight — neutral context lines, subtle contrast
+exe 'hi! NeogitDiffContextHighlight guifg='.s:lightgray     .' guibg=#202020 gui='.s:none
+
+" NeogitDiffDeleteHighlight — removed lines, should match DiffDelete bg
+exe 'hi! NeogitDiffDeleteHighlight guifg='.s:none           .' guibg=#3a1f1f gui='.s:none
+
+" NeogitHunkHeader — non-highlighted, so styled like Pmenu
+exe 'hi! NeogitHunkHeader          guifg='.s:white          .' guibg='.s:darkpurple .' gui='.s:none
+
+" NeogitHunkHeaderHighlight — vivid version of above, active hunk
+exe 'hi! NeogitHunkHeaderHighlight guifg='.s:black          .' guibg='.s:lightcyan .' gui='.s:bold
+
+" NeogitRemote — generally italicized and distinctive
+exe 'hi! NeogitRemote              guifg='.s:lightmagenta   .' guibg='.s:none .' gui='.s:italic
 
