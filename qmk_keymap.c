@@ -27,9 +27,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // BASE layer
     //
     //      q w e r t          y u i o p
-    //      a s d f g          h j k l ;            <= with miryoku home row mods (LEFT mods)
+    //      a s d f g          h j k l ;            <- with miryoku home row mods (LEFT mods)
     //      z x c v b          n m , . '
-    //       ESC SPC TAB   ENT BSPC DEL
+    //       TAB SPC ESC   ENT BSPC DEL
     //
     // and WHEN SHIFTED
     //
@@ -41,9 +41,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //
     [BASE] = LAYOUT_split_3x5_3(
         KC_Q,         KC_W,         KC_E,              KC_R,            KC_T,                     KC_Y,            KC_U,             KC_I,             KC_O,           KC_P,
-        LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D),      LSFT_T(KC_F),    KC_G,                     KC_H,            LSFT_T(KC_J),     LCTL_T(KC_K),     LALT_T(KC_L),   LGUI_T(KC_QUOT),
-        KC_Z,         ALGR_T(KC_X), KC_C,              KC_V,            KC_B,                     KC_N,            KC_M,             KC_COMM,          ALGR_T(KC_DOT), KC_SLSH,
-                                    LT(MOUSE, KC_ESC), LT(NAV, KC_SPC), LT(FUNC, KC_TAB),         LT(NUM, KC_ENT), LT(SYM, KC_BSPC), LT(EDIT, KC_DEL)
+        LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D),      LSFT_T(KC_F),    KC_G,                     KC_H,            LSFT_T(KC_J),     LCTL_T(KC_K),     LALT_T(KC_L),   LGUI_T(KC_SCLN),
+        KC_Z,         ALGR_T(KC_X), KC_C,              KC_V,            KC_B,                     KC_N,            KC_M,             KC_COMM,          ALGR_T(KC_DOT), KC_QUOT,
+                                    LT(MOUSE, KC_TAB), LT(NAV, KC_SPC), LT(FUNC, KC_ESC),         LT(NUM, KC_ENT), LT(SYM, KC_BSPC), LT(EDIT, KC_DEL)
     ),
 
     //
@@ -112,26 +112,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //      7 5 3 1 9               NOOP NOOP       NOOP      NOOP      NOOP
     //      6 4 2 0 8               NOOP LEFT_SHIFT LEFT_CTRL LEFT_ALT  LEFT_CMD
     //      % * = + /               NOOP NOOP       NOOP      RIGHT_ALT NOOP
-    //             _ - .        NOOP NOOP NOOP
+    //             - SPC .        NOOP NOOP NOOP
     //
     [NUM] = LAYOUT_split_3x5_3(
         KC_7,    KC_5,    KC_3,    KC_1,    KC_9,             KC_NA, KC_NA,   KC_NA,   KC_NA,   KC_NA,
         KC_6,    KC_4,    KC_2,    KC_0,    KC_8,             KC_NA, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
         KC_PERC, KC_ASTR, KC_EQL,  KC_PLUS, KC_SLSH,          KC_NA, KC_NA,   KC_NA,   KC_ALGR, KC_NA,
-                          KC_UNDS, KC_MINS, KC_PDOT,          KC_NA, KC_NA,   KC_NA
+                          KC_MINS, KC_SPC, KC_PDOT,          KC_NA, KC_NA,   KC_NA
     ),
 
     //
     // SYM layer
     //
-    //      @ ] ) } $               NOOP NOOP       NOOP      NOOP      NOOP
-    //      _ [ ( { ^               NOOP LEFT_SHIFT LEFT_CTRL LEFT_ALT  LEFT_CMD
+    //      @ ] ) } _               NOOP NOOP       NOOP      NOOP      NOOP
+    //      ^ [ ( { $               NOOP LEFT_SHIFT LEFT_CTRL LEFT_ALT  LEFT_CMD
     //      | # & ` \               NOOP NOOP       NOOP      RIGHT_ALT NOOP
     //             ! ~ ?        NOOP NOOP NOOP
     //
     [SYM] = LAYOUT_split_3x5_3(
-        KC_AT,   KC_RCBR, KC_RPRN, KC_RCBR, KC_DLR,           KC_NA, KC_NA,   KC_NA,   KC_NA,   KC_NA,
-        KC_UNDS, KC_LBRC, KC_LPRN, KC_LCBR, KC_CIRC,          KC_NA, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+        KC_AT,   KC_RCBR, KC_RPRN, KC_RCBR, KC_UNDS,           KC_NA, KC_NA,   KC_NA,   KC_NA,   KC_NA,
+        KC_CIRC, KC_LBRC, KC_LPRN, KC_LCBR, KC_DLR,          KC_NA, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
         KC_PIPE, KC_HASH, KC_AMPR, KC_GRV,  KC_BSLS,          KC_NA, KC_NA,   KC_NA,   KC_ALGR, KC_NA,
                           KC_EXLM, KC_TILD, KC_QUES,          KC_NA, KC_NA,   KC_NA
     ),
