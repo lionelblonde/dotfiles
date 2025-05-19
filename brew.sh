@@ -51,6 +51,8 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
+brew install --cask font-lilex-nerd-font
+brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
