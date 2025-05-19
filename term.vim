@@ -218,4 +218,3 @@ hi NeogitDiffDeleteHighlight ctermfg=15 ctermbg=9 cterm=NONE
 hi NeogitHunkHeader ctermfg=15 ctermbg=8 cterm=NONE
 hi NeogitHunkHeaderHighlight ctermfg=0 ctermbg=14 cterm=bold
 hi NeogitRemote ctermfg=13 ctermbg=0 cterm=italic
-
