@@ -53,6 +53,7 @@ brew install qmk-toolbox
 # Install macOS applications with brew cask
 brew install --cask font-lilex-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
@@ -62,7 +63,7 @@ brew install --cask skim
 brew install --cask pdf-expert # just to read Acrobat Reader garbo
 brew install --cask notunes
 brew install --cask silicon
-brew install --cask kitty # far better than Ghostty for font rendering
+brew install --cask ghostty
 brew install --cask bike
 brew install --cask dash
 brew install --cask ivpn

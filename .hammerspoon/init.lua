@@ -128,7 +128,7 @@ hyperfns["="] = toggle_window_maximized
 local hyperapps = {}
 hyperapps["y"] = "Notes"
 hyperapps["u"] = "Finder"
-hyperapps["i"] = "kitty"
+hyperapps["i"] = "Ghostty"
 hyperapps["k"] = "Bike"
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
