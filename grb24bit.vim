@@ -30,6 +30,7 @@ let s:lightwhite = "#feffff"
 let s:none = "NONE"
 let s:reverse = "reverse"
 let s:bold = "BOLD"
+let s:italic = "ITALIC"
 let s:underline = "underline"
 let s:boldunderline = "BOLD,underline"
 
@@ -38,7 +39,7 @@ let s:darkgray = "#202020"
 let s:darkred = "#770000"
 let s:darkorange = "#773c00"
 let s:lightblack = "#474747"
-let s:darkpurple = "#2f1f37"
+let s:darkpurple = "#382338"
 
 set background=dark
 hi clear
@@ -51,7 +52,8 @@ let colors_name = "grb24bit"
 
 
 " General colors. Forgive me for the way that all of this is formatted.
-exe 'hi Normal          guifg='.s:white          .' guibg='.s:black           .' gui='.s:none
+exe 'hi Directory       guifg='.s:lightcyan     .' guibg='.s:black          .' gui='.s:bold
+exe 'hi Normal          guifg='.s:white         .' guibg='.s:black          .' gui='.s:none
 exe 'hi NonText         guifg='.s:lightblack    .' guibg='.s:none           .' gui='.s:none
 
 exe 'hi Cursor          guifg='.s:black         .' guibg='.s:lightwhite     .' gui='.s:reverse
@@ -66,8 +68,6 @@ exe 'hi StatusLineNC    guifg='.s:black         .' guibg='.s:lightgray      .' g
 exe 'hi Folded          guifg='.s:none          .' guibg='.s:none           .' gui='.s:none
 exe 'hi Title           guifg='.s:none          .' guibg='.s:none           .' gui='.s:none
 exe 'hi Visual          guifg='.s:none          .' guibg='.s:gray           .' cterm='.s:reverse
-
-exe 'hi SpecialKey      guifg='.s:yellow        .' guibg='.s:none           .' gui='.s:none
 
 exe 'hi WildMenu        guifg='.s:black         .' guibg='.s:lightyellow    .' gui='.s:none
 exe 'hi PmenuSbar       guifg='.s:black         .' guibg='.s:lightwhite     .' gui='.s:none
@@ -89,8 +89,8 @@ exe 'hi MatchParen      guifg='.s:lightwhite    .' guibg='.s:lightgray      .' g
 " exe 'hi PmenuSel        guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:none
 exe 'hi Pmenu           guifg='.s:white         .' guibg='.s:darkpurple     .' gui='.s:none
 exe 'hi PmenuSel        guifg='.s:black         .' guibg='.s:lightmagenta   .' gui='.s:bold
-exe 'hi PmenuSbar        guibg='.s:gray
-exe 'hi PmenuThumb       guibg='.s:lightgray
+exe 'hi PmenuSbar       guibg='.s:gray
+exe 'hi PmenuThumb      guibg='.s:lightgray
 
 exe 'hi Search          guifg='.s:black         .' guibg='.s:lightmagenta   .' gui='.s:none
 exe 'hi IncSearch       guifg='.s:black         .' guibg='.s:magenta        .' gui='.s:none
@@ -117,8 +117,9 @@ exe 'hi Function        guifg='.s:yellow        .' guibg='.s:none           .' g
 exe 'hi Type            guifg='.s:lightyellow   .' guibg='.s:none           .' gui='.s:none
 exe 'hi Statement       guifg='.s:lightblue     .' guibg='.s:none           .' gui='.s:none
 
-exe 'hi Special         guifg='.s:lightwhite    .' guibg='.s:none           .' gui='.s:none
+exe 'hi Special         guifg='.s:lightred    .' guibg='.s:none           .' gui='.s:none
 exe 'hi Delimiter       guifg='.s:lightercyan   .' guibg='.s:none           .' gui='.s:none
+exe 'hi SpecialKey      guifg='.s:yellow        .' guibg='.s:none           .' gui='.s:none
 
 " The spelling highlights are used for errors (e.g. vim-ale uses it).
 " exe 'hi SpellBad        guifg='.s:none          .' guibg='.s:darkred        .' gui='.s:none # erroneously highlights underscore in doc from pmenu in darkred
@@ -128,20 +129,18 @@ exe 'hi SpellCap        guifg='.s:none          .' guibg='.s:darkorange     .' g
 exe 'hi NormalFloat     guifg='.s:white         .' guibg='.s:darkpurple     .' gui='.s:none
 exe 'hi FloatBorder     guifg='.s:lightgray     .' guibg='.s:darkpurple     .' gui='.s:none
 exe 'hi LspInfoBorder   guifg='.s:lightgray     .' guibg='.s:darkpurple     .' gui='.s:none
-
-exe 'hi WinSeparator    guifg='.s:gray .' guibg='.s:darkpurple .' gui='.s:none
+exe 'hi WinSeparator    guifg='.s:gray          .' guibg='.s:darkpurple     .' gui='.s:none
 
 " Virtual text (in-line LSP messages)
-exe 'hi DiagnosticVirtualTextError guifg='.s:lightred    .' guibg='.s:darkpurple .' gui=BOLD'
-exe 'hi DiagnosticVirtualTextWarn  guifg='.s:yellow      .' guibg='.s:darkpurple .' gui=BOLD'
-exe 'hi DiagnosticVirtualTextInfo  guifg='.s:lightblue   .' guibg='.s:darkpurple .' gui=italic'
-exe 'hi DiagnosticVirtualTextHint  guifg='.s:lightgray   .' guibg='.s:darkpurple .' gui=italic'
+exe 'hi DiagnosticVirtualTextError guifg='.s:lightred    .' guibg='.s:darkpurple .' gui='.s:bold
+exe 'hi DiagnosticVirtualTextWarn  guifg='.s:yellow      .' guibg='.s:darkpurple .' gui='.s:bold
+exe 'hi DiagnosticVirtualTextInfo  guifg='.s:lightblue   .' guibg='.s:darkpurple .' gui='.s:none
+exe 'hi DiagnosticVirtualTextHint  guifg='.s:lightgray   .' guibg='.s:darkpurple .' gui='.s:none
 
-" Underlines (for squiggles)
-exe 'hi DiagnosticUnderlineError   guisp='.s:lightred    .' gui=undercurl'
-exe 'hi DiagnosticUnderlineWarn    guisp='.s:yellow      .' gui=undercurl'
-exe 'hi DiagnosticUnderlineInfo    guisp='.s:lightblue   .' gui=undercurl'
-exe 'hi DiagnosticUnderlineHint    guisp='.s:lightgray   .' gui=undercurl'
+exe 'hi DiagnosticUnderlineError   guisp='.s:lightred
+exe 'hi DiagnosticUnderlineWarn    guisp='.s:yellow
+exe 'hi DiagnosticUnderlineInfo    guisp='.s:lightblue
+exe 'hi DiagnosticUnderlineHint    guisp='.s:lightgray
 
 hi link Character       Constant
 hi link Float           Number
@@ -159,6 +158,7 @@ hi link Tag             Special
 hi link SpecialChar     Special
 hi link SpecialComment  Special
 hi link Debug           Special
+hi link netrwSymLink    Special
 
 " Treesitter highlights
 hi link @variable        Identifier
@@ -173,9 +173,19 @@ hi link @number          Number
 hi link @boolean         Boolean
 hi link @operator        Operator
 
+" Markdown with TreeSitter
+exe 'hi @markup.raw         guifg='.s:lightercyan     .' guibg='.s:none       .' gui='.s:none
+exe 'hi @markup.heading.1   guifg='.s:lightred        .' guibg='.s:none       .' gui='.s:bold
+exe 'hi @markup.heading.2   guifg='.s:lightmagenta    .' guibg='.s:none       .' gui='.s:bold
+exe 'hi @markup.heading.3   guifg='.s:lightcyan       .' guibg='.s:none       .' gui='.s:bold
+exe 'hi @markup.heading.3   guifg='.s:lightgreen      .' guibg='.s:none       .' gui='.s:bold
+exe 'hi @markup.list        guifg='.s:lightgray       .' guibg='.s:none       .' gui='.s:bold
+exe 'hi @markup.strong      guifg='.s:lightyellow     .' guibg='.s:none       .' gui='.s:bold
+exe 'hi @markup.italic      guifg='.s:lightyellow     .' guibg='.s:none       .' gui='.s:italic
+
 " Abbreviation match (bold)
-exe 'hi! CmpItemAbbrMatch        guifg='.s:lightcyan    .' gui=bold'
-exe 'hi! CmpItemAbbrMatchFuzzy   guifg='.s:lightcyan    .' gui=bold'
+exe 'hi! CmpItemAbbrMatch        guifg='.s:lightcyan    .' gui='.s:bold
+exe 'hi! CmpItemAbbrMatchFuzzy   guifg='.s:lightcyan    .' gui='.s:bold
 
 " Functions and methods
 exe 'hi! CmpItemKindFunction     guifg='.s:lightblue
@@ -210,4 +220,10 @@ exe 'hi! CmpItemKindSnippet      guifg='.s:green
 exe 'hi! CmpItemKindText         guifg='.s:white
 exe 'hi! CmpItemKindFile         guifg='.s:lightgray
 exe 'hi! CmpItemKindFolder       guifg='.s:gray
+
+" Gitsigns
+exe 'hi! GitSignsAdd              guifg='.s:lightgreen    .' guibg='.s:none .' gui='.s:none
+exe 'hi! GitSignsChange           guifg='.s:lightmagenta  .' guibg='.s:none .' gui='.s:none
+exe 'hi! GitSignsDelete           guifg='.s:red           .' guibg='.s:none .' gui='.s:none
+exe 'hi! GitSignsCurrentLineBlame guifg='.s:lightgray     .' guibg='.s:none .' gui='.s:italic
 
