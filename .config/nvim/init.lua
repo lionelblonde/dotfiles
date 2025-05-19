@@ -12,11 +12,7 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 
 -- Set termguicolors to enable highlight groups
-vim.opt.termguicolors = true -- leave it before the colorscheme
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
-
--- Set the background to be black
-vim.opt.background = "dark"
 
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
@@ -37,10 +33,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        "ishan9299/modus-theme-vim",
-        priority = 1000,
-    },
     {
         "sphamba/smear-cursor.nvim",
         opts = {},
@@ -271,7 +263,7 @@ require("lazy").setup({
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
-vim.cmd.colorscheme("grb24bit")
+vim.cmd.colorscheme("term")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
