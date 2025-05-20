@@ -124,14 +124,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //
     // SYM layer
     //
-    //      @ ] ) } _               NOOP NOOP       NOOP      NOOP      NOOP
-    //      ^ [ ( { $               NOOP LEFT_SHIFT LEFT_CTRL LEFT_ALT  LEFT_CMD
+    //      @ [ ( { _               NOOP NOOP       NOOP      NOOP      NOOP
+    //      ^ ] ) } $               NOOP LEFT_SHIFT LEFT_CTRL LEFT_ALT  LEFT_CMD
     //      | # & ` \               NOOP NOOP       NOOP      RIGHT_ALT NOOP
     //             ! ~ ?        NOOP NOOP NOOP
     //
     [SYM] = LAYOUT_split_3x5_3(
-        KC_AT,   KC_RCBR, KC_RPRN, KC_RCBR, KC_UNDS,           KC_NA, KC_NA,   KC_NA,   KC_NA,   KC_NA,
-        KC_CIRC, KC_LBRC, KC_LPRN, KC_LCBR, KC_DLR,          KC_NA, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+        KC_AT,   KC_LBRC, KC_LPRN, KC_LCBR, KC_UNDS,           KC_NA, KC_NA,   KC_NA,   KC_NA,   KC_NA,
+        KC_CIRC, KC_RBRC, KC_RPRN, KC_RCBR, KC_DLR,          KC_NA, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
         KC_PIPE, KC_HASH, KC_AMPR, KC_GRV,  KC_BSLS,          KC_NA, KC_NA,   KC_NA,   KC_ALGR, KC_NA,
                           KC_EXLM, KC_TILD, KC_QUES,          KC_NA, KC_NA,   KC_NA
     ),
