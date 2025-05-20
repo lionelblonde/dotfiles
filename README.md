@@ -7,7 +7,6 @@
     + switch on _Reduce motion_, __Differentiate without color__, and __Reduce transparency__.
 + Go to _Trackpad_ and set up App Expose with three-finger swipe down as gesture.
 + Go to _Keyboard -> Keyboard Shortcuts... -> Mission Control_ and assign F10 to _Application windows_.
-+ Schedule downtime in Screen Time (both on macOS and iOS) to be between 23:45 and 05:00.
 
 ## More hidden settings
 + Change hidden settings from the command line
