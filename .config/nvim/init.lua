@@ -379,7 +379,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- When pasting over something, puts the overwritten thing into the void buffer
+-- When pasting over something, puts the overwritten thing into the black hole register
 -- so that the copied text remains in the register and can be pasted again and again
 -- this truly is the greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -390,6 +390,8 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- Puts the deleted text into the void register to be forgotten forever
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+-- Prevents deleted chars from being put in the default register (override)
+vim.keymap.set("n", "x", [["_x]])
 
 -- Ban capital `Q`
 vim.keymap.set("n", "Q", "<nop>")
@@ -404,7 +406,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- Edit all the occurrence of the word the cursor was on in the buffer
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- Highlight matches and mark as todo's
+-- Highlight matches and mark as todo's (for the Carmack-style plan.txt task manager)
 vim.keymap.set("n", "<leader>h", function()
     vim.fn.matchadd("Todo", [[\v^([^+=*\-])]])
 end, { desc = "Highlight first char of lines not starting with +, =, *, -" })
