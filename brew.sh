@@ -2,6 +2,7 @@
 
 # Install brew packages
 brew install fd
+brew install node # atm needed for Claude Code install
 brew install asitop
 brew install mas
 brew install topgrade
