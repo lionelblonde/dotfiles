@@ -1,9 +1,0 @@
-{
-    "font_size": 12,
-    "theme": "auto",
-    "translate_tabs_to_spaces": true,
-    "side_bar_layout": "tabs",
-    "render_commit_dialog_message_at_top": true,
-    "image_diff_style": "side-by-side",
-    "font_face": "Cousine",
-}

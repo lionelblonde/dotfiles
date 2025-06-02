@@ -16,7 +16,7 @@ vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700
 
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
--- vim.cmd.colorscheme("desert")
+-- vim.cmd.colorscheme("lunaperche")
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -263,7 +263,7 @@ require("lazy").setup({
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
-vim.cmd.colorscheme("term")
+-- vim.cmd.colorscheme("term")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0

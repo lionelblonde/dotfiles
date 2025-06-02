@@ -17,15 +17,10 @@ alias cp='cp -i'
 alias df='df -h' # report file system disk space usage
 
 alias du='du -h' # estimate file space usage
-alias du.='du -h .'
-alias du.1='du -h -d 1 .' # useful: stop at a depth of 1
 
 alias nettop='nettop -P -k state,interface -d' # not downloaded, present by default
 
-alias ..='cd ..'
-alias .2='cd ../..'
-alias .3='cd ../../..'
-
+# quicklook from command line
 alias qv='qlmanage -p'
 
 # neovim
@@ -48,7 +43,6 @@ alias ec='open ~/Documents/notes/cbt.bike'
 alias ep='open ~/Documents/notes/projects.bike'
 alias eo='open ~/Documents/notes/curiosities.bike'
 alias ea='v ~/.aliases'
-alias ev='v ~/.vimrc'
 alias en='v ~/.config/nvim/init.lua'
 alias ez='v ~/.zshrc'
 alias et='v ~/.tmux.conf'

@@ -2,6 +2,7 @@
 
 # Install brew packages
 brew install fd
+brew install pyenv
 brew install node # atm needed for Claude Code install
 brew install asitop
 brew install mas
@@ -59,7 +60,6 @@ brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
 brew install --cask zen-browser
-brew install --cask brave-browser # not really needed; here just in case I meet a failure case in Zen
 brew install --cask appcleaner
 brew install --cask skim
 brew install --cask pdf-expert # just to read Acrobat Reader garbo

@@ -17,6 +17,7 @@ ln -svf $HOME/Documents/dotfiles/.gitconfig $HOME/.gitconfig
 ln -svf $HOME/Documents/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -svf $HOME/Documents/dotfiles/.vimrc $HOME/.vimrc
 ln -svf $HOME/Documents/dotfiles/.zshrc $HOME/.zshrc
+ln -svf $HOME/Documents/dotfiles/.zprofile $HOME/.zprofile
 ln -svf $HOME/Documents/dotfiles/.ytdlp.conf $HOME/.ytdlp.conf
 ln -svf $HOME/Documents/dotfiles/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
 

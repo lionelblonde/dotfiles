@@ -1,7 +1,10 @@
 # zsh config
 
-PATH="$PATH":"$HOME"
+# Configure pyenv for interactive shell (shims and autocompletion)
+eval "$(pyenv init -)"
 
+# Add HOME at the end of the PATH
+export PATH="$PATH":"$HOME"
 # Add the global npm directory in front
 export PATH=~/.npm-global/bin:$PATH
 
@@ -69,21 +72,3 @@ fi
 
 # Configure the zsh-syntax-highlighting plugin (N.B. path to the executable found by digging)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/lionelblonde/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/lionelblonde/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/lionelblonde/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/lionelblonde/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Necessary for conda envs to work in tmux
-[[ -z $TMUX ]] || conda deactivate; conda activate base

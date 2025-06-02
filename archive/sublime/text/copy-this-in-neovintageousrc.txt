@@ -1,7 +1,0 @@
-" Type :help nv for help.
-
-" Leader mapping
-let mapleader=<Space>
-
-" Make `Y` behave properly (symmetry w.r.t. `D`)
-nnoremap Y y$
