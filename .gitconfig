@@ -4,37 +4,16 @@
     pager = less -x4
     editor = vim
 [user]
-	name = lionelblonde
-	email = lionel.blonde@me.com
-[alias]
-    # usual commands enhancements
-    st = status -sb
-    ci = commit -v
-    cp = cherry-pick
-    cl = clone
-    co = checkout
-    br = branch
-    diff = diff --word-diff
-    dc = diff --cached
-    # logs for a specific file ('fl' stands for 'file log')
-    fl = log -n 10 -u
-    fl1 = log -n 1 -u
-    # pretty one-line log with tags, branches and authors
-    ls = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(blue)(%C(reset)%an%C(blue))%C(reset)'
-    ls1 = "!git ls -n 1"
-    ls5 = "!git ls -n 5"
-    # verbose ls, shows changed files too
-    lsv = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(blue)(%C(reset)%an%C(blue))%C(reset)' --numstat
-    # list out the aliases
-    la = "!git config -l | grep alias | cut -c 7-"
+    name = lionelblonde
+    email = lionel.blonde@me.com
 [pager]
-    ls = false
+    status = true
+    branch = true
+    ls = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
 [credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+    helper = /usr/local/share/gcm-core/git-credential-manager
