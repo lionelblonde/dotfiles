@@ -42,7 +42,6 @@ Install these apps from the Mac App Store:
 + HEIC Converter
 + Photo Widget
 + Things 3
-+ Streaks
 
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
