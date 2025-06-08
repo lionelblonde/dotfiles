@@ -39,9 +39,10 @@ Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 + Hand Mirror
 + DaisyDisk
-+ HEIC Converter
-+ Photo Widget
-+ Things 3
++ HEIC Converter (Sindre)
++ Photo Widget (Sindre)
++ Text Lens (Sindre)
++ One Task (Sindre)
 
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
