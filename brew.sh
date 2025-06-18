@@ -58,7 +58,7 @@ brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
-brew install --cask zen-browser
+brew install --cask brave-browser
 brew install --cask appcleaner
 brew install --cask skim
 brew install --cask pdf-expert # just to read Acrobat Reader garbo
