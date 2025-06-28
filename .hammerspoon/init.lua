@@ -126,17 +126,17 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "Brave Browser"
+hyperapps["y"] = "Notes"
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
 hyperapps["k"] = "Bike"
 hyperapps["p"] = "Dash"
 hyperapps["h"] = "Mail"
-hyperapps["j"] = "Zen"
+hyperapps["j"] = "Brave Browser"
 hyperapps["m"] = "IINA"
 hyperapps[";"] = "Messages"
--- hyperapps["'"] = ""
-hyperapps["o"] = "ChatGPT"
+hyperapps["'"] = "Signal"
+hyperapps["o"] = "Spotify"
 hyperapps["n"] = "Reminders"
 hyperapps["l"] = "PDF Expert"
 hyperapps[","] = "Calendar"
