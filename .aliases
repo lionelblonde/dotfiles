@@ -40,6 +40,7 @@ alias ydl='yt-dlp --config-location ~/.ytdlp.conf'
 
 # convenience aliases for editing configs
 alias ec='open ~/Documents/notes/cbt.bike'
+alias es='v ~/Documents/notes/scratchpad.txt'
 alias ep='open ~/Documents/notes/projects.bike'
 alias eo='open ~/Documents/notes/curiosities.bike'
 alias ea='v ~/.aliases'
