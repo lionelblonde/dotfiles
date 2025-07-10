@@ -42,7 +42,7 @@ Install these apps from the Mac App Store:
 + HEIC Converter (Sindre)
 + Photo Widget (Sindre)
 + Text Lens (Sindre)
-+ One Task (Sindre)
++ Any Text (Sindre)
 
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
