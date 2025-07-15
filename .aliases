@@ -36,11 +36,11 @@ alias tkill='tmux kill-session -t'
 alias tkillall='tmux kill-server'
 
 # make ydt-dl use its config files, notably so that downloads go to the right place
-alias ydl='yt-dlp --config-location ~/.ytdlp.conf'
+alias ydl='yt-dlp --sponsorblock-remove sponsor --config-location ~/.ytdlp.conf'
 
 # convenience aliases for editing configs
-alias ec='open ~/Documents/notes/cbt.bike'
-alias es='v ~/Documents/notes/scratchpad.txt'
+# alias ec=''
+# alias es=''
 alias ep='open ~/Documents/notes/projects.bike'
 alias eo='open ~/Documents/notes/curiosities.bike'
 alias ea='v ~/.aliases'
