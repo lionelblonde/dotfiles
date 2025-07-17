@@ -263,7 +263,7 @@ require("lazy").setup({
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
-vim.cmd.colorscheme("term")
+-- vim.cmd.colorscheme("term")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
