@@ -39,7 +39,6 @@ Install these apps from the Mac App Store:
 + Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 + Hand Mirror
 + DaisyDisk
-+ Things
 + HEIC Converter (Sindre)
 + Photo Widget (Sindre)
 + Text Lens (Sindre)
