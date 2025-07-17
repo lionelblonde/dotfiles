@@ -1,11 +1,5 @@
 # zsh config
 
-# Show the plan.txt task to complete upon new shell
-if [[ -o interactive ]]; then
-    echo "\n=== Carmack's 'plan.txt' ==="
-    grep '^[^+=*-]' ~/Documents/notes/plan.txt | sed 's/^/- /' | tee >(wc -l | awk '{print "=======> " $1 " pending todos\n"}')
-fi
-
 # Configure pyenv for interactive shell (shims and autocompletion)
 eval "$(pyenv init -)"
 
