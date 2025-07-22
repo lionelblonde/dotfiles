@@ -126,10 +126,10 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "Notes"
+hyperapps["y"] = "Keynote"
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
--- hyperapps["k"] = ""
+hyperapps["k"] = "Notes"
 -- hyperapps["p"] = ""
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Helium"
@@ -137,8 +137,8 @@ hyperapps["m"] = "IINA"
 hyperapps[";"] = "Messages"
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Spotify"
-hyperapps["n"] = "Keynote"
-hyperapps["l"] = "Preview"
+hyperapps["n"] = "Reminders"
+hyperapps["l"] = "PDF Expert"
 hyperapps[","] = "Calendar"
 hyperapps["."] = "Slack"
 
