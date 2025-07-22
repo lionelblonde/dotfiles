@@ -34,6 +34,47 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+        'MeanderingProgrammer/render-markdown.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        opts = {
+            link = { enabled = false },
+            -- link = {
+            --   -- Blank strings mean “show nothing”.
+            --   image      = '',   -- ![alt](img.png)
+            --   email      = '',   -- <someone@example.com>
+            --   hyperlink  = '',   -- http://neovim.io
+            --   -- And wipe any site‑specific rules:
+            --   custom     = {},
+            -- },
+            ------------------------------------------------------------------
+            -- 1.  Never conceal anything when the plugin is “rendering”
+            ------------------------------------------------------------------
+            win_options = {
+                conceallevel  = { default = vim.o.conceallevel,  rendered = 0 }, -- 0 = no hiding
+                concealcursor = { default = vim.o.concealcursor, rendered = '' }, -- keep it visible everywhere
+            },
+
+            ------------------------------------------------------------------
+            -- 2.  Optional: keep the ``` fences and other delimiters visible
+            ------------------------------------------------------------------
+            code   = { conceal_delimiters = false },
+
+            ------------------------------------------------------------------
+            -- 3.  Optional: if you *really* do not want icons replacing
+            --     bullets, headings, etc., just turn those sub‑modules off
+            ------------------------------------------------------------------
+            -- heading = { enabled = false },  -- leave the #’s alone
+            -- bullet  = { enabled = false },  -- leave “-”, “*”, “+” alone
+            -- dash    = { enabled = false },  -- leave --- / *** alone
+        },
+
+        -- Handy toggle so you can still preview occasionally
+        -- keys = {
+        --     { '<leader>mr', function() require('render-markdown').toggle() end,
+        --         desc = 'render‑markdown: toggle' },
+        -- },
+    },
+    {
         "sphamba/smear-cursor.nvim",
         opts = {},
     },
@@ -263,7 +304,7 @@ require("lazy").setup({
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
--- vim.cmd.colorscheme("term")
+vim.cmd.colorscheme("term")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
