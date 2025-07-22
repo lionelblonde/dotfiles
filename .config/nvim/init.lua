@@ -33,6 +33,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    { "miikanissi/modus-themes.nvim", priority = 1000 },
     {
         'MeanderingProgrammer/render-markdown.nvim',
         dependencies = { 'nvim-treesitter/nvim-treesitter' },
@@ -304,7 +305,8 @@ require("lazy").setup({
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
-vim.cmd.colorscheme("term")
+-- vim.cmd.colorscheme("term")
+vim.cmd.colorscheme("modus_vivendi")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
