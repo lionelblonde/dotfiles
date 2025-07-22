@@ -39,7 +39,6 @@ alias tkillall='tmux kill-server'
 alias ydl='yt-dlp --sponsorblock-remove sponsor --config-location ~/.ytdlp.conf'
 
 # convenience aliases for editing configs
-# alias ec=''
 # alias es=''
 # alias ep=''
 # alias eo=''
@@ -48,7 +47,8 @@ alias en='v ~/.config/nvim/init.lua'
 alias ez='v ~/.zshrc'
 alias et='v ~/.tmux.conf'
 alias eh='v ~/.hammerspoon/init.lua'
-# alias ek=''
+alias ec='v ~/Documents/notes/checklist.md'
+alias ek='v ~/Documents/notes/bookmarks.md'
 alias er='v ~/Documents/dotfiles/README.md'
 alias eb='v ~/Documents/dotfiles/brew.sh'
 # keep for posterity: pretty cool functionality
