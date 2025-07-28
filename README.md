@@ -43,6 +43,7 @@ Install these apps from the Mac App Store:
 + Photo Widget (Sindre)
 + Text Lens (Sindre)
 + Any Text (Sindre)
++ Things 3
 
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
