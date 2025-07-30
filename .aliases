@@ -48,7 +48,7 @@ alias ez='v ~/.zshrc'
 alias et='v ~/.tmux.conf'
 alias eh='v ~/.hammerspoon/init.lua'
 # alias ec=''
-alias ek='v ~/Documents/notes/bookmarks.md'
+# alias ek=''
 alias er='v ~/Documents/dotfiles/README.md'
 alias eb='v ~/Documents/dotfiles/brew.sh'
 # keep for posterity: pretty cool functionality
