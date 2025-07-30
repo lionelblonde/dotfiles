@@ -33,12 +33,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { "blazkowolf/gruber-darker.nvim" },
-    { "miikanissi/modus-themes.nvim", priority = 1000 },
-    { "e-q/okcolors.nvim", name = "okcolors" },
+    -- colorschemes
+    { "blazkowolf/gruber-darker.nvim" },  -- best so far
+    { "miikanissi/modus-themes.nvim", priority = 1000 },  -- most support
+    { "e-q/okcolors.nvim", name = "okcolors" },  -- no neogit support
+    -- packages
     {
-        'MeanderingProgrammer/render-markdown.nvim',
-        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        "MeanderingProgrammer/render-markdown.nvim",
         opts = {
             link = { enabled = false },
             win_options = {
