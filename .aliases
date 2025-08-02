@@ -61,11 +61,8 @@ alias eb='v ~/Documents/dotfiles/brew.sh'
 alias sz='source ~/.zshrc'
 alias ss='source ~/.aliases'
 
+# go to wip directory
 alias wip='cd ~/Documents/git/code/wip'
-alias nts='cd ~/Documents/notes'
-alias dts='cd ~/Documents/dotfiles'
-alias rsm='cd ~/Documents/git/code/ego/github/private/resume-latex'
-alias kor='cd ~/Documents/koreader'
 
 # select file in current directory with fzf, then ENTER to open it with default app for the type
 alias f='fd --type f --hidden --exclude .git | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
