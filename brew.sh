@@ -15,7 +15,7 @@ brew install sd
 brew install tq
 brew install fzf
 brew install rsync
-brew install ncdu
+brew install dua-cli
 brew install croc
 brew install zsh
 brew install zsh-syntax-highlighting
@@ -60,7 +60,6 @@ brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
 brew install --cask appcleaner
-brew install --cask sioyek
 brew install --cask skim
 brew install --cask pdf-expert # just to read Acrobat Reader garbo
 brew install --cask notunes
