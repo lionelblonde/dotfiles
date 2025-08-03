@@ -2,24 +2,26 @@
 
 # create symlinks (careful with overrides)
 
-ln -svf $HOME/Documents/dotfiles/.aliases $HOME/.aliases
-ln -svf $HOME/Documents/dotfiles/.bash_profile $HOME/.bash_profile
-ln -svf $HOME/Documents/dotfiles/.bashrc $HOME/.bashrc
+DOTFILES="$HOME/Documents/git/code/ego/github/public/dotfiles"
+
+ln -svf $DOTFILES/.aliases $HOME/.aliases
+ln -svf $DOTFILES/.bash_profile $HOME/.bash_profile
+ln -svf $DOTFILES/.bashrc $HOME/.bashrc
 
 cd $HOME/.config && mkdir -p nvim
-ln -svf $HOME/Documents/dotfiles/.config/nvim/init.lua $HOME/.config/nvim/init.lua
+ln -svf $DOTFILES/.config/nvim/init.lua $HOME/.config/nvim/init.lua
 
 cd $HOME
 mkdir -p .hammerspoon
-ln -svf $HOME/Documents/dotfiles/.hammerspoon/init.lua $HOME/.hammerspoon/init.lua
+ln -svf $DOTFILES/.hammerspoon/init.lua $HOME/.hammerspoon/init.lua
 
-ln -svf $HOME/Documents/dotfiles/.gitconfig $HOME/.gitconfig
-ln -svf $HOME/Documents/dotfiles/.tmux.conf $HOME/.tmux.conf
-ln -svf $HOME/Documents/dotfiles/.vimrc $HOME/.vimrc
-ln -svf $HOME/Documents/dotfiles/.zshrc $HOME/.zshrc
-ln -svf $HOME/Documents/dotfiles/.zprofile $HOME/.zprofile
-ln -svf $HOME/Documents/dotfiles/.ytdlp.conf $HOME/.ytdlp.conf
-ln -svf $HOME/Documents/dotfiles/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
+ln -svf $DOTFILES/.gitconfig $HOME/.gitconfig
+ln -svf $DOTFILES/.tmux.conf $HOME/.tmux.conf
+ln -svf $DOTFILES/.vimrc $HOME/.vimrc
+ln -svf $DOTFILES/.zshrc $HOME/.zshrc
+ln -svf $DOTFILES/.zprofile $HOME/.zprofile
+ln -svf $DOTFILES/.ytdlp.conf $HOME/.ytdlp.conf
+ln -svf $DOTFILES/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
 
 # vim
-ln -svf $HOME/Documents/dotfiles/term.vim $HOME/.config/nvim/colors/term.vim
+ln -svf $DOTFILES/term.vim $HOME/.config/nvim/colors/term.vim
