@@ -17,7 +17,6 @@ ln -svf $DOTFILES/.hammerspoon/init.lua $HOME/.hammerspoon/init.lua
 
 ln -svf $DOTFILES/.gitconfig $HOME/.gitconfig
 ln -svf $DOTFILES/.tmux.conf $HOME/.tmux.conf
-ln -svf $DOTFILES/.vimrc $HOME/.vimrc
 ln -svf $DOTFILES/.zshrc $HOME/.zshrc
 ln -svf $DOTFILES/.zprofile $HOME/.zprofile
 ln -svf $DOTFILES/.ytdlp.conf $HOME/.ytdlp.conf
