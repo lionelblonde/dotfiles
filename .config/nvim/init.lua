@@ -288,7 +288,7 @@ require("lazy").setup({
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_vivendi")
 vim.cmd.colorscheme("okcolors-sharp")
-vim.cmd.colorscheme("gruber-darker")
+-- vim.cmd.colorscheme("gruber-darker")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
