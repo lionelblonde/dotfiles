@@ -27,7 +27,7 @@
         - To restore the original behavior, i.e. turn the "scale up" animations back on again
             - `defaults delete NSGlobalDomain NSAutomaticWindowAnimationsEnabled`
 - Setup the following shortcuts for various Spotlight-like apps:
-    - `control + :`: trigger TRex
+    - `control + :`: trigger Text Lens
     - `control + '`: trigger Maccy
 
 ## Homebrew
