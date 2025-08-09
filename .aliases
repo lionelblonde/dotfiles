@@ -66,7 +66,7 @@ alias wip='cd ~/Documents/git/code/wip'
 alias ego='cd ~/Documents/git/code/ego/github/private'
 
 # select file in current directory with fzf, then ENTER to open it with default app for the type
-alias f='fd --type f --hidden --exclude .git | fzf-tmux -d 75% | xargs -r -I {} open "{}"'
+alias s='fd -t f -e pdf . "$HOME/Documents/pdfs" -H -E .git -0 | fzf-tmux -d 75% --read0 --print0 | xargs -0 -I {} open -a Sioyek --args "{}" --execute-command startup_commands'
 
 # quick search shortcuts
 alias sn='nts && f'

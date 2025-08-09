@@ -1,0 +1,24 @@
+matches:
+  - trigger: ":gpom"
+    replace: "git push origin main"
+  - trigger: ":gpom"
+    replace: "git push origin master"
+
+  - trigger: ":waqq"
+    replace: "watch -n 3 squeue -u $(whoami)"
+  - trigger: ":toucha"
+    replace: "find . -exec touch {} +"
+  - trigger: ":sva"
+    replace: "source .venv/bin/activate"
+  - trigger: ":shebang"
+    replace: "#!/usr/bin/env bash"
+
+  - trigger: ":qq"
+    replace: "squeue -u $(whoami)"
+  - trigger: ":nq"
+    replace: "squeue --format='%.9i %12P %75j  %9u %.13L %.13l %.20S %.7t %.5D %.5C %25R ' --sort='t,-S' -u $(whoami)"
+
+  - trigger: ":scla"
+    replace: "scancel -u $(whoami)"
+  - trigger: ":scls"
+    replace: "squeue -u $(whoami) | grep '$|$' | awk '{print $1}' | xargs scancel"

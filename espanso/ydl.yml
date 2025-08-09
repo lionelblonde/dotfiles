@@ -1,0 +1,11 @@
+matches:
+  - trigger: ":ydlv"
+    replace: "ydl --sponsorblock-remove sponsor,selfpromo --embed-metadata --embed-thumbnail --embed-chapters '{{clipb}}'"
+    vars:
+      - name: "clipb"
+        type: "clipboard"
+  - trigger: ":ydla"
+    replace: "ydl --sponsorblock-remove sponsor,selfpromo --embed-metadata --embed-thumbnail --embed-chapters -x --audio-format mp3 --audio-quality 0 '{{clipb}}'"
+    vars:
+      - name: "clipb"
+        type: "clipboard"
