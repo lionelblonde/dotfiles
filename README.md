@@ -44,6 +44,11 @@ Install these apps from the Mac App Store:
 - Text Lens (Sindre)
 - Any Text (Sindre)
 
+## NPM
+Claude Code: `npm install -g @anthropic-ai/claude-code`
+Gemini CLI: `npm install -g @google/gemini-cli`
+TreeSitter CLI: `npm install -g tree-sitter-cli`
+
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
 
