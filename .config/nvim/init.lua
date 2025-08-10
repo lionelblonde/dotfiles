@@ -139,68 +139,50 @@ require("lazy").setup({
             },
         },
     },
-    -- {
-    --     "nvim-treesitter/nvim-treesitter",
-    --     build = ":TSUpdate",
-    --     config = function()
-    --         require("nvim-treesitter.configs").setup({
-    --             ensure_installed = {
-    --                 "markdown",
-    --                 -- "markdown_inline",
-    --                 "bash",
-    --                 "cuda",
-    --                 "fortran",
-    --                 "gitignore",
-    --                 "ocaml",
-    --                 "toml",
-    --                 "yaml",
-    --                 "csv",
-    --                 "regex",
-    --                 "comment",
-    --                 "vim",
-    --                 "vimdoc",
-    --                 "c",
-    --                 "lua",
-    --                 "python",
-    --                 "rust",
-    --                 "latex",
-    --                 "bibtex",
-    --                 "tmux",
-    --                 "json",
-    --                 "jq",
-    --             },
-    --             sync_install = false,  -- install parsers asynchronously
-    --             auto_install = true,  -- auto install missing parsers when entering buffer
-    --             indent = {
-    --                 enable = true
-    --             },
-    --             highlight = {
-    --                 enable = true,  -- false disables the whole extension
-    --                 additional_vim_regex_highlighting = false,
-    --                 -- runs `:h syntax` and TS at the same time
-    --                 -- the values to give here can be: false, true, or parser names
-    --             },
-    --         })
-    --     end
-    -- },
-    -- {
-    --     "nvim-treesitter/playground",
-    --     cmd = {
-    --         "TSPlaygroundToggle",
-    --         "TSHighlightCapturesUnderCursor",
-    --         "TSNodeUnderCursor",
-    --     },
-    --     config = function()
-    --         require("nvim-treesitter.configs").setup({
-    --             playground = {
-    --                 enable = true,
-    --                 updatetime = 25, -- debounced highlighting updates (in ms)
-    --                 persist_queries = false,
-    --             },
-    --         })
-    --     end,
-    --     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    -- },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter.configs").setup({
+                ensure_installed = {
+                    "markdown",
+                    -- "markdown_inline",
+                    "bash",
+                    "cuda",
+                    "fortran",
+                    "gitignore",
+                    "ocaml",
+                    "toml",
+                    "yaml",
+                    "csv",
+                    "regex",
+                    "comment",
+                    "vim",
+                    "vimdoc",
+                    "c",
+                    "lua",
+                    "python",
+                    "rust",
+                    "latex",
+                    "bibtex",
+                    "tmux",
+                    "json",
+                    "jq",
+                },
+                sync_install = false,  -- install parsers asynchronously
+                auto_install = true,  -- auto install missing parsers when entering buffer
+                indent = {
+                    enable = true
+                },
+                highlight = {
+                    enable = true,  -- false disables the whole extension
+                    additional_vim_regex_highlighting = false,
+                    -- runs `:h syntax` and TS at the same time
+                    -- the values to give here can be: false, true, or parser names
+                },
+            })
+        end
+    },
     {
         "NeogitOrg/neogit",
         dependencies = {
@@ -287,8 +269,8 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_vivendi")
-vim.cmd.colorscheme("okcolors-sharp")
--- vim.cmd.colorscheme("gruber-darker")
+-- vim.cmd.colorscheme("okcolors-sharp")
+vim.cmd.colorscheme("gruber-darker")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
