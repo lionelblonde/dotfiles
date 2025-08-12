@@ -34,9 +34,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- colorschemes
-    { "blazkowolf/gruber-darker.nvim" },  -- best so far
     { "miikanissi/modus-themes.nvim", priority = 1000 },  -- most support
-    { "e-q/okcolors.nvim", name = "okcolors" },  -- no neogit support
     -- packages
     {
         "MeanderingProgrammer/render-markdown.nvim",
@@ -269,8 +267,6 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_vivendi")
--- vim.cmd.colorscheme("okcolors-sharp")
--- vim.cmd.colorscheme("gruber-darker")
 
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
