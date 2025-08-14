@@ -29,7 +29,8 @@ alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is 
 # tmux
 alias tnew='tmux new -d -s'
 alias tls='tmux ls'
-alias ta='tmux attach -t'
+alias ta='tmux attach'
+alias tan='tmux attach -t'  # Tmux Attach with Name
 alias tkill='tmux kill-session -t'
 alias tkillall='tmux kill-server'
 
@@ -63,8 +64,8 @@ alias ss='source ~/.aliases'
 alias wip='cd ~/Documents/git/code/wip'
 alias ego='cd ~/Documents/git/code/ego/github/private'
 
-# select file in current directory with fzf, then ENTER to open it with default app for the type
-alias s='fd -t f -e pdf . "$HOME/Documents/pdfs" -H -E .git -0 | fzf-tmux -d 75% --read0 --print0 | xargs -0 -I {} open -a Sioyek --args "{}" --execute-command startup_commands'
+# select file in current directory with sk, then ENTER to open it with default app for the type
+alias s='fd -t f -e pdf . "$HOME/Documents/pdfs" -H -E .git -0 | sk --read0 --print0 | xargs -0 -I {} open -a Sioyek --args "{}" --execute-command startup_commands'
 
 # quick search shortcuts
 alias sn='nts && f'

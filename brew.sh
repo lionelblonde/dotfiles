@@ -13,7 +13,7 @@ brew install jordanbaird-ice
 brew install parallel
 brew install sd
 brew install tq
-brew install fzf
+brew install sk
 brew install rsync
 brew install dua-cli
 brew install croc
