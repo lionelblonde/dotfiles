@@ -27,11 +27,9 @@ alias qv='qlmanage -p'
 alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
 
 # tmux
-alias ta_='tmux attach -t'
-alias tcopy='tmux list-sessions -F "#{session_name}" | fzf-tmux -d 25% --reverse | tr -d "\n" | pbcopy'
-alias ta='tcopy && ta_ "$(pbpaste)"'
 alias tnew='tmux new -d -s'
 alias tls='tmux ls'
+alias ta='tmux attach -t'
 alias tkill='tmux kill-session -t'
 alias tkillall='tmux kill-server'
 
