@@ -60,6 +60,7 @@ brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
 brew install --cask appcleaner
+brew install --cask sketch
 brew install --cask skim
 brew install --cask pdf-expert # just to read Acrobat Reader garbo
 brew install --cask notunes
