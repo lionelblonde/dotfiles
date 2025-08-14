@@ -3,10 +3,15 @@
 # Configure pyenv for interactive shell (shims and autocompletion)
 eval "$(pyenv init -)"
 
+# Completions
+autoload -Uz compinit && compinit -i
+
 # Add HOME at the end of the PATH
 export PATH="$PATH":"$HOME"
 # Add the global npm directory in front
 export PATH=~/.npm-global/bin:$PATH
+# Add local bin in front
+export PATH="$HOME/.local/bin:$PATH"
 
 # ZSH uses the KEYTIMEOUT parameter to determine how long to wait (in hundredths of a second)
 # for additional characters in sequence. Default is 0.4 seconds.
