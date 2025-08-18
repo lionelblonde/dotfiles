@@ -29,10 +29,11 @@ alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is 
 # tmux
 alias tnew='tmux new -d -s'
 alias tls='tmux ls'
-alias ta='tmux attach'
-alias tan='tmux attach -t'  # Tmux Attach with Name
 alias tkill='tmux kill-session -t'
 alias tkillall='tmux kill-server'
+# TMUX ATTACH ALIASES: do not use them, use sessionizer to attach too  
+# alias ta='tmux attach' # does not require session name
+# alias tan='tmux attach -t' # requires session name
 
 # make ydt-dl use its config files, notably so that downloads go to the right place
 alias ydl='yt-dlp --sponsorblock-remove sponsor --config-location ~/.ytdlp.conf'
