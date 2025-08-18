@@ -55,7 +55,6 @@ brew install qmk-toolbox
 brew install --cask font-lilex-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
-brew install --cask widgettoggler
 brew install --cask git-credential-manager
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
