@@ -265,7 +265,7 @@ require("lazy").setup({
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
--- vim.cmd.colorscheme("term")
+vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_vivendi")
 
 -- Mitigate netrw defaults
