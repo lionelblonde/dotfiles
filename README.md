@@ -40,9 +40,7 @@ Install these apps from the Mac App Store:
 - Hand Mirror
 - DaisyDisk
 - HEIC Converter (Sindre)
-- Photo Widget (Sindre)
 - Text Lens (Sindre)
-- Any Text (Sindre)
 
 ## NPM
 Claude Code: `npm install -g @anthropic-ai/claude-code`
