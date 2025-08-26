@@ -126,20 +126,20 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "Keynote"
+-- hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
 hyperapps["k"] = "Notes"
 -- hyperapps["p"] = ""
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Helium"
-hyperapps["m"] = "Messages"
+hyperapps["m"] = "Signal"
 -- hyperapps[";"] = ""
 -- hyperapps["'"] = ""
-hyperapps["o"] = "Spotify"
-hyperapps["n"] = "IINA"
+hyperapps["o"] = "ChatGPT"
+-- hyperapps["n"] = ""
 hyperapps["l"] = "Sioyek"
-hyperapps[","] = "Calendar"
+hyperapps[","] = "Bike"
 hyperapps["."] = "Slack"
 
 for k, v in pairs(hyperapps) do
