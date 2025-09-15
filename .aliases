@@ -65,5 +65,9 @@ alias ss='source ~/.aliases'
 alias wip='cd ~/Documents/git/code/wip'
 alias ego='cd ~/Documents/git/code/ego/github/private'
 
+# search with sk (rust fzf) and open with default app
+alias o='open "$(ls | sk)"'
+
 # select file in current directory with sk, then ENTER to open it with default app for the type
 alias s='fd -t f -e pdf . "$HOME/Documents/pdfs" -H -E .git -0 | sk --read0 --print0 | xargs -0 -I {} open -a Sioyek --args "{}" --execute-command startup_commands'
+
