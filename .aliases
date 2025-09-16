@@ -69,5 +69,5 @@ alias ego='cd ~/Documents/git/code/ego/github/private'
 alias o='open "$(ls | sk)"'
 
 # select file in current directory with sk, then ENTER to open it with default app for the type
-alias s='fd -t f -e pdf . "$HOME/Documents/pdfs" -H -E .git -0 | sk --read0 --print0 | xargs -0 -I {} open -a Sioyek --args "{}" --execute-command startup_commands'
-
+# alias s='fd -t f -e pdf . "$HOME/Documents/pdfs" -H -E .git -0 | sk --read0 --print0 | xargs -0 -I {} open -a Sioyek --args "{}" --execute-command startup_commands'
+# I commented out the command because Sioyek is not maintained and is kinda broken
