@@ -264,7 +264,7 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 vim.cmd.colorscheme("backpack")
-
+-- override background of colorscheme to be pure black
 vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" }) -- also floating windows
 
