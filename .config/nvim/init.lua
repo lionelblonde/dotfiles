@@ -254,14 +254,6 @@ require("lazy").setup({
     {
         "Vimjas/vim-python-pep8-indent",
     },
-    -- -- whatever is needed for LSP-Zero
-    -- {'williamboman/mason-lspconfig.nvim'},
-    -- {'williamboman/mason.nvim'},
-    -- {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    -- -- {'neovim/nvim-lspconfig'},
-    -- {'hrsh7th/cmp-nvim-lsp'},
-    -- {'hrsh7th/nvim-cmp'},
-    -- {'L3MON4D3/LuaSnip'},
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
@@ -417,93 +409,21 @@ end, { desc = "Highlight first char of lines not starting with +, =, *, -" })
 -- Make the current file executable (from within!)
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- Formats a buffer using the attached (and optionally filtered) language server clients
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
--- Show the virtual text from the lsp inline
-vim.diagnostic.config({ virtual_text = true })
-
--- -- LSP Zero
--- local lsp_zero = require("lsp-zero")
---
--- lsp_zero.on_attach(function(client, bufnr)
---     local opts = { buffer = bufnr, remap = false}
---
---     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
---     vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, opts)
---     vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
---     vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
---     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
---     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
---     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
---     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
---     -- the two following keymaps are handled via trouble
---     -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
---     -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
--- end)
---
--- lsp_zero.setup_servers({
---     -- "pyright", -- type-checker
---     "ruff", -- linter
---     "pylsp", -- assist linting for rules not yet working in ruff
--- })
---
--- lsp_zero.setup()
-
--- local cmp = require("cmp")
--- local cmp_action = require("lsp-zero").cmp_action()
---
--- cmp.setup({
---     mapping = {
---         ["<C-p>"] = cmp_action.luasnip_jump_forward(),
---         ["<C-n>"] = cmp_action.luasnip_jump_backward(),
---         ["<C-y>"] = cmp.mapping.confirm({ select = true }),
---         ["<C-Space"] = cmp.mapping.complete(),
---     }
--- })
-
--- lsp_zero.set_preferences({
---     suggest_lsp_servers = false,
---     sign_icons = {
---         error = "E",
---         warn = "W",
---         hint = "H",
---         info = "I",
---     }
--- })
-
+-- Configure LSPs as per v0.11+
 vim.lsp.config("*", {
     root_markers = {".git"},
-})
-vim.lsp.config("pyright", {
-    cmd = {"pyright-langserver", "--stdio"},
-    filetypes = {"python"},
-    settings = {
-        pyright = {
-            strict = true,
-        },
-        python = {
-            analysis = {
-                autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
-                diagnosticMode = "openFilesOnly",
-            },
-        },
-    },
-    single_file_support = true,
 })
 vim.lsp.config("ruff", {
     cmd = {"ruff","server"},
     filetypes = {"python"},
     root_markers = {"pyproject.toml", "ruff.toml", ".ruff.toml"},
 })
-vim.lsp.enable({
-    -- "pyright",
-    "ruff",
-})
-
+vim.lsp.enable({ "ruff" })
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
+        -- Show the virtual text from the lsp inline
+        vim.diagnostic.config({ virtual_text = true })
+
         local client = vim.lsp.get_client_by_id(args.data.client_id)
         if client == nil then return end
 
@@ -518,6 +438,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
         vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
         vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+        -- The two following keymaps are handled via trouble
+        -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+        -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
 
         vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
     end,
