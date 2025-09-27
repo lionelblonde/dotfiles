@@ -66,7 +66,6 @@ brew install --cask notunes
 brew install --cask silicon
 brew install --cask ghostty
 brew install --cask espanso
-brew install --cask dash
 brew install --cask ivpn
 brew install --cask signal
 brew install --cask sublime-text # for occasional codebase grokking
