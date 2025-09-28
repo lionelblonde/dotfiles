@@ -21,6 +21,7 @@ brew install zsh
 brew install zsh-syntax-highlighting
 brew install reattach-to-user-namespace
 brew install liquidprompt
+brew install transmission-cli
 brew install eza
 brew install git
 brew install wget
