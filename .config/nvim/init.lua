@@ -218,21 +218,6 @@ require("lazy").setup({
         end
     },
     {
-        "lervag/vimtex",
-        config = function()
-            vim.g.tex_flavor = "latex"
-            vim.g.vimtex_view_method = "skim"
-            vim.g.vimtex_callback_progpath = "nvr"
-            vim.g.vimtex_view_skim_sync = 1
-            -- value 1 allows forward search after every successful compilation
-            vim.g.vimtex_view_skim_activate = 1
-            -- value 1 allows change focus to the viewer after command `:VimtexView` is given
-            vim.g.vimtex_quickfix_mode = 0
-            vim.g.tex_conceal = "abdmg"
-            vim.g.vimtex_imaps_leader = ";" -- default is backtick, which is an annoyance
-        end
-    },
-    {
         "kylechui/nvim-surround", -- surround objects
         config = function()
             require("nvim-surround").setup({})
