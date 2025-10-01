@@ -138,7 +138,7 @@ hyperapps["m"] = "Signal"
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Spotify"
 hyperapps["n"] = "PDF Expert"
--- hyperapps["l"] = ""
+hyperapps["l"] = "Sketch"
 hyperapps[","] = "Preview"
 hyperapps["."] = "Slack"
 
