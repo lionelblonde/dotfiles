@@ -71,3 +71,7 @@ alias o='open "$(ls | sk)"'
 # select file in current directory with sk, then ENTER to open it with default app for the type
 # alias s='fd -t f -e pdf . "$HOME/Documents/pdfs" -H -E .git -0 | sk --read0 --print0 | xargs -0 -I {} open -a Sioyek --args "{}" --execute-command startup_commands'
 # I commented out the command because Sioyek is not maintained and is kinda broken
+#
+# codex command preference by Nathan Lambert
+# shared in: https://www.interconnects.ai/p/coding-as-the-epicenter-of-ai-progress
+alias codex='codex -m gpt-5-codex -c model_reasoning_effort="high" --yolo --search'
