@@ -24,7 +24,7 @@ matches:
     replace: "squeue -u $(whoami) | grep '$|$' | awk '{print $1}' | xargs scancel"
 
   - trigger: ":tcli"
-    replace: "transmission-cli '{{clipb}}'"
+    replace: "transmission-cli --encryption-required  '{{clipb}}'"
     vars:
       - name: "clipb"
         type: "clipboard"
