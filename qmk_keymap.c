@@ -88,8 +88,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Reminder: in macOS, the function keys work as follows:
     // F1: decrease display brightness
     // F2: increase display brightness
-    // F3: open Mission Control
-    // F4: open Launchpad
+    // F3: - (leave it but do not map in Karabiner)
+    // F4: - (leave it but do not map in Karabiner)
     // F5: decrease keyboard brightness (on compatible notebooks only)
     // F6: increase keyboard brightness (on compatible notebooks only)
     // F7: previous media
