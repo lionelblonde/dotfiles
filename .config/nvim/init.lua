@@ -316,8 +316,9 @@ vim.opt.nu = true -- same as vim.opt.number
 -- Enable relative line numbers
 vim.opt.relativenumber = true
 
--- Enable highlighting of the current line
+-- Disable highlighting of the current line
 vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 
 -- Always leave X lines at the top above the current line
 vim.opt.scrolloff = 8
