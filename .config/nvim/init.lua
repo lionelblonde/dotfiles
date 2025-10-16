@@ -409,7 +409,37 @@ vim.lsp.config("ruff", {
     filetypes = {"python"},
     root_markers = {"pyproject.toml", "ruff.toml", ".ruff.toml"},
 })
-vim.lsp.enable({ "ruff" })
+vim.lsp.config("pyright", {
+    cmd = { "pyright-langserver", "--stdio" },
+    filetypes = { "python" },
+    root_markers = {
+        "pyproject.toml",
+        "setup.cfg",
+        "setup.py",
+        "requirements.txt",
+        "Pipfile",
+        "pyrightconfig.json",
+        ".git",
+    },
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off", -- "off" | "basic" | "strict"
+                diagnosticMode = "workspace", -- or "openFilesOnly"
+                autoImportCompletions = true,
+                useLibraryCodeForTypes = true,
+                inlayHints = {
+                    variableTypes = true,
+                    functionReturnTypes = true,
+                    callArgumentNames = "partial", -- "none" | "partial" | "all"
+                },
+            },
+        },
+    },
+})
+
+vim.lsp.enable({ "ruff", "pyright" })
+
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         -- Show the virtual text from the lsp inline
