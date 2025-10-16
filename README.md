@@ -55,8 +55,8 @@ Create symbolic links to reference the dotfiles outside the repository by runnin
 In _Function Keys -> For all devices_, set:
 - F1 to "display brightness decrement"
 - F2 to "display brightness increment"
-- F3 to "mission control"
-- F4 to "f10"
+- F3 to UNBIND
+- F4 to UNBIND
 - F5 to "f5"
 - F6 to "f6"
 - F7 to "rewind"
