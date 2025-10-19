@@ -49,6 +49,7 @@ brew install dust
 brew install gitui
 brew install ouch
 brew install unar
+brew install gallery-dl
 brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
