@@ -7,6 +7,16 @@ Host nabla
 Host bao
     HostName login1.baobab.hpc.unige.ch
     User blondeli
+    IdentityFile ~/.ssh/id_rsa
 Host ygg
     HostName login1.yggdrasil.hpc.unige.ch
     User blondeli
+    IdentityFile ~/.ssh/id_rsa
+Host bam
+    HostName login1.bamboo.hpc.unige.ch
+    User blondeli
+    IdentityFile ~/.ssh/id_rsa
+Host kobo
+    HostName 192.168.1.21
+    User root
+    Port 2222
