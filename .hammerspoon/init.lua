@@ -139,21 +139,41 @@ hyperapps["m"] = "Signal"
 hyperapps["o"] = "IINA"
 hyperapps["n"] = "PDF Expert"
 hyperapps["l"] = "Sketch"
-hyperapps[","] = "Preview"
+-- hyperapps[","] = ""
 hyperapps["."] = "Slack"
-
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end
 end
-
 -- Bind all the hotkeys and functions together
 for _hotkey, _fn in pairs(hyperfns) do
    hotkey.bind(hyper, _hotkey, _fn)
 end
 
+-- Focus a window of a known app by (partial) window title
+function focusAppWindow(appName, windowTitle)
+    local app = hs.application.find(appName)
+    if not app then
+        hs.alert.show("App not found: " .. appName)
+        return
+    end
+
+    for _, win in ipairs(app:allWindows()) do
+        if string.find(win:title(), windowTitle) then
+            win:focus()
+            return
+        end
+    end
+    hs.alert.show("No window found: " .. windowTitle)
+end
+hs.hotkey.bind(hyper, "y", function()
+    focusAppWindow("Ghostty", "today")
+end)
+hs.hotkey.bind(hyper, ",", function()
+    focusAppWindow("Helium", "Google Calendar")
+end)
+
 -- Show launch application's keystroke
 local showAppKeystrokeAlertId = ""
-
 local function showAppKeystroke()
    if showAppKeystrokeAlertId == "" then
       -- Show application keystroke if alert id is empty.
@@ -184,6 +204,10 @@ local function showAppKeystroke()
    end
 end
 hotkey.bind(hyper, "space", showAppKeystroke)
+
+
+
+
 
 -- Start the screensaver
 hotkey.bind(hyper, "c", function() hs.caffeinate.startScreensaver() end)
