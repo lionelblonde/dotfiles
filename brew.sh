@@ -60,7 +60,6 @@ brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
 brew install --cask little-snitch
 brew install --cask maccy
-brew install --cask alt-tab
 brew install --cask itsycal # only for the hourly beep-beep
 brew install --cask meetingbar
 brew install --cask appcleaner
