@@ -209,57 +209,57 @@ hotkey.bind(hyper, "space", showAppKeystroke)
 
 
 
--- Hard-coded path to your text file
-local filepath = "/Users/lionelblonde/Documents/git/code/ego/github/private/today/today.txt"
-
--- Read the first line of the file
-local function readFirstLine(path)
-    local file = io.open(path, "r")
-    if not file then return "(file not found)" end
-    local line = file:read("*l") or "(empty)"
-    file:close()
-    return line
-end
-
-local screen = hs.screen.mainScreen()
-local frame = screen:frame()
-
--- Create a canvas that spans the width of the screen
-local offset = 40
-local textCanvas = hs.canvas.new{
-    x = frame.x,
-    y = frame.y + frame.h - offset, -- offset p from the bottom
-    w = frame.w,
-    h = offset
-}
-
-textCanvas[1] = {
-    type = "rectangle",
-    action = "fill",
-    fillColor = {white = 0, alpha = 0.1}, -- translucent background
-}
-
-textCanvas[2] = {
-    type = "text",
-    -- text = "Focus: Deep Work Mode",
-    text = readFirstLine(filepath),
-    textSize = 22,
-    textColor = {white = 1, alpha = 1},
-    textAlignment = "center",
-    textFont = "Pixel Code", -- use Pixel Code font
-}
-
-textCanvas:show()
-textCanvas:level(hs.canvas.windowLevels.overlay) -- stay on top of all windows
-textCanvas:behavior(hs.drawing.windowBehaviors.canJoinAllSpaces)
-
-hs.hotkey.bind("ctrl", "o", function()
-    if textCanvas:isShowing() then
-        textCanvas:hide()
-    else
-        textCanvas:show()
-    end
-end)
+-- -- Hard-coded path to your text file
+-- local filepath = "/Users/lionelblonde/Documents/git/code/ego/github/private/today/today.txt"
+--
+-- -- Read the first line of the file
+-- local function readFirstLine(path)
+--     local file = io.open(path, "r")
+--     if not file then return "(file not found)" end
+--     local line = file:read("*l") or "(empty)"
+--     file:close()
+--     return line
+-- end
+--
+-- local screen = hs.screen.mainScreen()
+-- local frame = screen:frame()
+--
+-- -- Create a canvas that spans the width of the screen
+-- local offset = 40
+-- local textCanvas = hs.canvas.new{
+--     x = frame.x,
+--     y = frame.y + frame.h - offset, -- offset p from the bottom
+--     w = frame.w,
+--     h = offset
+-- }
+--
+-- textCanvas[1] = {
+--     type = "rectangle",
+--     action = "fill",
+--     fillColor = {white = 0, alpha = 0.1}, -- translucent background
+-- }
+--
+-- textCanvas[2] = {
+--     type = "text",
+--     -- text = "Focus: Deep Work Mode",
+--     text = readFirstLine(filepath),
+--     textSize = 22,
+--     textColor = {white = 1, alpha = 1},
+--     textAlignment = "center",
+--     textFont = "Pixel Code", -- use Pixel Code font
+-- }
+--
+-- textCanvas:show()
+-- textCanvas:level(hs.canvas.windowLevels.overlay) -- stay on top of all windows
+-- textCanvas:behavior(hs.drawing.windowBehaviors.canJoinAllSpaces)
+--
+-- hs.hotkey.bind("ctrl", "o", function()
+--     if textCanvas:isShowing() then
+--         textCanvas:hide()
+--     else
+--         textCanvas:show()
+--     end
+-- end)
 
 
 
