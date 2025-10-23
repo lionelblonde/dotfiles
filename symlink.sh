@@ -30,6 +30,7 @@ ln -svf $DOTFILES/term.vim $HOME/.config/nvim/colors/term.vim
 ln -svf $DOTFILES/espanso/term.yml "$HOME/Library/Application Support/espanso/match/term.yml"
 ln -svf $DOTFILES/espanso/venues.yml "$HOME/Library/Application Support/espanso/match/venues.yml"
 ln -svf $DOTFILES/espanso/ydl.yml "$HOME/Library/Application Support/espanso/match/ydl.yml"
+ln -svf $DOTFILES/espanso/prompts.yml "$HOME/Library/Application Support/espanso/match/prompts.yml"
 
 # sioyek
 ln -svf $DOTFILES/prefs_user.config "$HOME/Library/Application Support/sioyek/prefs_user.config"

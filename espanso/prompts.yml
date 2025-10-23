@@ -1,0 +1,3 @@
+matches:
+  - trigger: ":moneystuff"
+    replace: "Here is a column from Matt Levine's 'Money Stuff' newsletter. I would like you to summarize for me. I want to learn the things that you think I would find cool and interesting. For context: I am an AI researcher and have deep interests in finance, AI, maths, puzzles, computer science, etc. I want you to preserve the tone and 'voice' of the author, Matt Levine (because I absolutely LOVE how he writes). Also, do not overthink the structure: keep the section titles like he does, but do not give me a deep structure of embedded bullet points. I copy-paste the article to you; if it erroneously contains ads that I copied by mistake, obviously ignore those."
