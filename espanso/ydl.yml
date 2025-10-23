@@ -1,6 +1,6 @@
 matches:
   - trigger: ":ydlv"
-    replace: "ydl --sponsorblock-remove sponsor,selfpromo --embed-metadata --embed-thumbnail --embed-chapters '{{clipb}}'"
+    replace: "ydl --sponsorblock-remove sponsor,selfpromo --embed-metadata --embed-thumbnail --embed-chapters --extractor-args 'youtube:player_js_version=actual' '{{clipb}}'"
     vars:
       - name: "clipb"
         type: "clipboard"
