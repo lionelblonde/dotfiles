@@ -59,6 +59,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
 brew install --cask little-snitch
+brew install --cask hazeover
 brew install --cask monofocus
 brew install --cask maccy
 brew install --cask itsycal # only for the hourly beep-beep
