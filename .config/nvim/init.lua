@@ -96,8 +96,8 @@ require("lazy").setup({
         "nvim-lua/plenary.nvim",
     },
     {
-        "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
+        "nvim-telescope/telescope.nvim",
         tag = "0.1.5",
         config = function()
             require("telescope").setup({
@@ -112,14 +112,22 @@ require("lazy").setup({
             vim.keymap.set("n", "<leader>ps", function()
                 builtin.grep_string({ search = vim.fn.input("grep > ") })
             end)
+            -- grep for the small "word" under the cursor
+            -- e.g. works for "segment" but not for "my_segment" or "self.segment"
             vim.keymap.set("n", "<leader>pws", function()
-                local word = vim.fn.expand("<cword>")
+                local word = vim.fn.expand("<cword>") -- the word under the cursor
                 builtin.grep_string({ search = word })
             end)
+            -- grep for the larger "WORD" under the cursor
+            -- e.g. some_function(arg) or module.name
             vim.keymap.set("n", "<leader>pWs", function()
-                local word = vim.fn.expand("<cWORD>")
+                local word = vim.fn.expand("<cWORD>") -- the WORD under the cursor
                 builtin.grep_string({ search = word })
             end)
+            -- search symbols in current buffer
+            vim.keymap.set("n", "<leader>ss", builtin.lsp_document_symbols)
+            -- search symbols in workspace (according to LSP)
+            vim.keymap.set("n", "<leader>sS", builtin.lsp_workspace_symbols)
         end
     },
     {
