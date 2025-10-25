@@ -41,8 +41,8 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - HEIC Converter (Sindre)
 - Text Lens (Sindre)
-- Meny Drop (Sindre)
-- Stretch It (timer)
+- Menu Drop (Sindre)
+- Countdown
 
 ## NPM
 - Claude Code: `npm install -g @anthropic-ai/claude-code`
