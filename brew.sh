@@ -58,6 +58,7 @@ brew install qmk-toolbox
 # not maintained or updated anymore, but still best
 brew install --cask monofocus
 brew install --cask tomatobar
+brew install --cask sioyek
 
 brew install --cask font-lilex-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
