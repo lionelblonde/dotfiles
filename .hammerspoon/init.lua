@@ -149,29 +149,6 @@ for _hotkey, _fn in pairs(hyperfns) do
    hotkey.bind(hyper, _hotkey, _fn)
 end
 
--- Focus a window of a known app by (partial) window title
-function focusAppWindow(appName, windowTitle)
-    local app = hs.application.find(appName)
-    if not app then
-        hs.alert.show("App not found: " .. appName)
-        return
-    end
-
-    for _, win in ipairs(app:allWindows()) do
-        if string.find(win:title(), windowTitle) then
-            win:focus()
-            return
-        end
-    end
-    hs.alert.show("No window found: " .. windowTitle)
-end
-hs.hotkey.bind(hyper, "y", function()
-    focusAppWindow("Ghostty", "today")
-end)
-hs.hotkey.bind(hyper, ",", function()
-    focusAppWindow("Helium", "Google Calendar")
-end)
-
 -- Show launch application's keystroke
 local showAppKeystrokeAlertId = ""
 local function showAppKeystroke()
