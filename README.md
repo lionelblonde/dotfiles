@@ -39,10 +39,12 @@ Install these apps from the Mac App Store:
 - Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 - Hand Mirror
 - DaisyDisk
-- HEIC Converter (Sindre)
-- Text Lens (Sindre)
-- Menu Drop (Sindre)
-- Countdown
+(from The Iconfactory)
+- Tot
+(from Sindre Sorhus)
+- HEIC Converter
+- Text Lens
+- Menu Drop
 
 ## NPM
 - Claude Code: `npm install -g @anthropic-ai/claude-code`
