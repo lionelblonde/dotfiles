@@ -38,23 +38,23 @@ require("lazy").setup({
         "4513ECHO/vim-colors-hatsunemiku",
     },
     -- packages
-    {
-        "MeanderingProgrammer/render-markdown.nvim",
-        opts = {
-            link = { enabled = false },
-            win_options = {
-                conceallevel  = {
-                    default = vim.o.conceallevel,
-                    rendered = 0,
-                },
-                concealcursor = {
-                    default = vim.o.concealcursor,
-                    rendered = '',
-                },
-            },
-            code   = { conceal_delimiters = false },
-        },
-    },
+    -- {
+    --     "MeanderingProgrammer/render-markdown.nvim",
+    --     opts = {
+    --         link = { enabled = false },
+    --         win_options = {
+    --             conceallevel  = {
+    --                 default = vim.o.conceallevel,
+    --                 rendered = 0,
+    --             },
+    --             concealcursor = {
+    --                 default = vim.o.concealcursor,
+    --                 rendered = '',
+    --             },
+    --         },
+    --         code   = { conceal_delimiters = false },
+    --     },
+    -- },
     {
         "sphamba/smear-cursor.nvim",
         opts = {},
