@@ -40,6 +40,7 @@ Install these apps from the Mac App Store:
 - Hand Mirror
 - DaisyDisk
 (from Sindre Sorhus)
+- Any Text
 - HEIC Converter
 - Text Lens
 - Menu Drop
