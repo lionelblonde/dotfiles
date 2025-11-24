@@ -56,7 +56,6 @@ brew install qmk-toolbox
 # Install macOS applications with brew cask
 
 # not maintained or updated anymore, but still best
-brew install --cask tomatobar
 brew install --cask sioyek
 
 brew install --cask font-lilex-nerd-font
