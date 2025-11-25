@@ -67,7 +67,6 @@ brew install --cask little-snitch
 brew install --cask hazeover
 brew install --cask maccy
 brew install --cask itsycal # only for the hourly beep-beep
-brew install --cask meetingbar
 brew install --cask appcleaner
 brew install --cask sketch
 brew install --cask notunes
