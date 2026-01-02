@@ -87,6 +87,7 @@ brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask iina
 brew install --cask 1password # Electron app but fast
+brew install --cask spotify  # no other viable way to org lib
 brew install --cask whatsapp
 brew install --cask google-drive
 brew install --cask zoom
