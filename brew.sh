@@ -55,10 +55,6 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
-
-# not maintained or updated anymore, but still best
-brew install --cask sioyek
-
 brew install --cask font-lilex-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
