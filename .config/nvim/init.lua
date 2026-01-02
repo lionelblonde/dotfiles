@@ -422,6 +422,11 @@ vim.lsp.config("ruff", {
     filetypes = {"python"},
     root_markers = {"pyproject.toml", "ruff.toml", ".ruff.toml"},
 })
+vim.lsp.config("ty", {
+    cmd = {"ty", "server" },
+    filetypes = { "python" },
+    root_markers = { "pyproject.toml", ".git" },
+})
 vim.lsp.config("pyright", {
     cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" },
@@ -451,7 +456,9 @@ vim.lsp.config("pyright", {
     },
 })
 
-vim.lsp.enable({ "ruff", "pyright" })
+vim.lsp.enable({ "ruff" })
+-- vim.lsp.enable({ "ruff", "ty" })
+-- vim.lsp.enable({ "ruff", "pyright" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
