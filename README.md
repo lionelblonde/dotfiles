@@ -40,6 +40,7 @@ Install these apps from the Mac App Store:
 - Hand Mirror
 - DaisyDisk
 - Infuse
+- Sequel
 (from Sindre Sorhus)
 - HEIC Converter
 - Text Lens
