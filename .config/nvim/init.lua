@@ -16,7 +16,7 @@ vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700
 
 -- Set the colorscheme to use by default
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
-vim.cmd.colorscheme("lunaperche")
+-- vim.cmd.colorscheme("lunaperche")
 
 -- Lazy setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -34,9 +34,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- colorschemes
-    {
-        "4513ECHO/vim-colors-hatsunemiku",
-    },
+
     -- packages
     {
         "lervag/vimtex",
@@ -258,7 +256,6 @@ require("lazy").setup({
 
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
-vim.cmd.colorscheme("hatsunemiku")
 -- override background of colorscheme to be pure black
 vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" }) -- also floating windows
