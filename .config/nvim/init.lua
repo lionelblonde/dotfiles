@@ -412,30 +412,30 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Configure LSPs as per v0.11+
 vim.lsp.config("*", {
-    root_markers = {".git"},
+    root_markers = {"pyproject.toml", ".git"},
 })
 vim.lsp.config("ruff", {
-    cmd = {"ruff","server"},
+    cmd = {"ruff", "server"},
     filetypes = {"python"},
-    root_markers = {"pyproject.toml", "ruff.toml", ".ruff.toml"},
+    root_markers = {"ruff.toml", ".ruff.toml"},
 })
 vim.lsp.config("ty", {
     cmd = {"ty", "server" },
     filetypes = { "python" },
-    root_markers = { "pyproject.toml", ".git" },
+    root_markers = {"ty.toml", ".ty.toml"},
+    settings = {
+        ty = {
+            disableLanguageServices = true,
+            diagnosticMode = "openFilesOnly", -- default
+            -- diagnosticMode = "workspace",
+            showSyntaxErrors = false,
+        },
+    },
 })
 vim.lsp.config("pyright", {
     cmd = { "pyright-langserver", "--stdio" },
     filetypes = { "python" },
-    root_markers = {
-        "pyproject.toml",
-        "setup.cfg",
-        "setup.py",
-        "requirements.txt",
-        "Pipfile",
-        "pyrightconfig.json",
-        ".git",
-    },
+    root_markers = { "pyrightconfig.json" },
     settings = {
         python = {
             analysis = {
@@ -456,6 +456,7 @@ vim.lsp.config("pyright", {
 vim.lsp.enable({ "ruff" })
 -- vim.lsp.enable({ "ruff", "ty" })
 -- vim.lsp.enable({ "ruff", "pyright" })
+-- vim.lsp.enable({ "ruff", "ty", "pyright" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
