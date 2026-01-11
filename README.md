@@ -49,6 +49,7 @@ Install these apps from the Mac App Store:
 ## NPM
 - Claude Code: `npm install -g @anthropic-ai/claude-code`
 - Gemini CLI: `npm install -g @google/gemini-cli`
+- OpenAI Codex CLI: `npm install -g @openai/codex`
 - TreeSitter CLI: `npm install -g tree-sitter-cli`
 
 ## Symlinks
