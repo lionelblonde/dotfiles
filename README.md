@@ -41,6 +41,7 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - Infuse
 - Sequel
+- Things 3
 (from Sindre Sorhus)
 - HEIC Converter
 - Text Lens
