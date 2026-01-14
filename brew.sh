@@ -80,6 +80,7 @@ brew install --cask mouse-fix
 brew install --cask keepingyouawake
 brew install --cask hammerspoon
 brew install --cask karabiner-elements
+brew install --cask ArtemYurov/tomobar/tomobar  # fork of tomatobar
 brew install --cask mactex
 brew install --cask iina
 brew install --cask 1password # Electron app but fast
