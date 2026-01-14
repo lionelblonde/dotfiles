@@ -2,7 +2,6 @@
 
 # Install brew packages
 brew install fd
-brew install meetingbar
 brew install pyenv
 brew install node # atm needed for Claude Code install
 brew install asitop
