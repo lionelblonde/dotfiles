@@ -126,18 +126,18 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
--- hyperapps["y"] = "Sublime Text" -- for large-scale transfers
+-- hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
 hyperapps["k"] = "Code"
 -- hyperapps["p"] = ""
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Helium"
--- hyperapps["m"] = ""
+hyperapps["m"] = "Sketch"
 -- hyperapps[";"] = ""
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Spotify"
-hyperapps["n"] = "Sketch"
+hyperapps["n"] = "Things"
 -- hyperapps["l"] = ""
 -- hyperapps[","] = ""
 hyperapps["."] = "Slack"
