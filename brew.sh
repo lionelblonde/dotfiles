@@ -61,11 +61,10 @@ brew install --cask git-credential-manager
 brew install --cask monarch
 brew install --cask handbrake
 brew install --cask itsycal
-brew install --cask alt-tab
 brew install --cask little-snitch
-brew install --cask hazeover
 brew install --cask maccy
 brew install --cask appcleaner
+brew install --cask pearcleaner
 brew install --cask sketch
 brew install --cask notunes
 brew install --cask silicon
@@ -75,7 +74,6 @@ brew install --cask ivpn
 brew install --cask signal
 brew install --cask sublime-text # for occasional codebase grokking
 brew install --cask sublime-merge # for occasional GUI needs
-brew install --cask cyberduck
 brew install --cask zerotier-one
 brew install --cask mouse-fix
 brew install --cask keepingyouawake
