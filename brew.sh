@@ -58,6 +58,7 @@ brew install --cask font-lilex-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
+brew install --cask transmission
 brew install --cask monarch
 brew install --cask handbrake
 brew install --cask itsycal
