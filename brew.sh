@@ -65,6 +65,7 @@ brew install --cask itsycal
 brew install --cask little-snitch
 brew install --cask maccy
 brew install --cask shottr
+brew install --cask sioyek
 brew install --cask pearcleaner
 brew install --cask sketch
 brew install --cask notunes
