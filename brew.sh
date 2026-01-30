@@ -74,6 +74,7 @@ brew install --cask ghostty
 brew install --cask espanso
 brew install --cask ivpn
 brew install --cask signal
+brew install --cask telegram
 brew install --cask sublime-text # for occasional codebase grokking
 brew install --cask sublime-merge # for occasional GUI needs
 brew install --cask zerotier-one
