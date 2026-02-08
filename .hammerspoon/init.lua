@@ -138,7 +138,7 @@ hyperapps["m"] = "Sketch"
 -- hyperapps["'"] = ""
 -- hyperapps["o"] = ""
 -- hyperapps["n"] = ""
-hyperapps["l"] = "sioyek"
+hyperapps["l"] = "Preview"
 -- hyperapps[","] = ""
 hyperapps["."] = "Slack"
 for k, v in pairs(hyperapps) do
