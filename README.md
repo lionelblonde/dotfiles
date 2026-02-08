@@ -7,6 +7,7 @@
     - switch on _Reduce motion_, __Differentiate without color__, and __Reduce transparency__.
 - Go to _Trackpad_ and set up App Expose with three-finger swipe down as gesture.
 - Go to _Keyboard -> Keyboard Shortcuts... -> Mission Control_ and assign F10 to _Application windows_.
+- Go to _Keyboard -> Keyboard Shortcuts... -> Spotlight_ and disable everything (use Monarch for everything).
 - Go to _Keyboard -> Keyboard Shortcuts... -> Screenshots_ and disable everything (use Shottr for everything).
 
 ## More hidden settings
