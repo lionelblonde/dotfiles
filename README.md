@@ -43,10 +43,7 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - Infuse
 - Sequel
-(from Sindre Sorhus)
 - HEIC Converter
-- Text Lens
-- Menu Drop
 
 ## NPM
 - Claude Code: `npm install -g @anthropic-ai/claude-code`
