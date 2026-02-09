@@ -23,6 +23,12 @@ ln -svf $DOTFILES/.zprofile $HOME/.zprofile
 ln -svf $DOTFILES/.ytdlp.conf $HOME/.ytdlp.conf
 ln -svf $DOTFILES/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
 
+# codex
+ln -svf $DOTFILES/INSTRUCTIONS.md $HOME/.codex/INSTRUCTIONS.md
+# add this line **before** the first [projects. ] section in `$HOME/.codex/config.toml`
+# > model_instructions_file = "$HOME/.codex/INSTRUCTIONS.md"
+# for it to apply globally to codex for all projects it is summoned in.
+
 # vim
 ln -svf $DOTFILES/term.vim $HOME/.config/nvim/colors/term.vim
 
@@ -33,4 +39,4 @@ ln -svf $DOTFILES/espanso/ydl.yml "$HOME/Library/Application Support/espanso/mat
 ln -svf $DOTFILES/espanso/prompts.yml "$HOME/Library/Application Support/espanso/match/prompts.yml"
 
 # sioyek
-ln -svf $DOTFILES/prefs_user.config "$HOME/Library/Application Support/sioyek/prefs_user.config"
+# ln -svf $DOTFILES/prefs_user.config "$HOME/Library/Application Support/sioyek/prefs_user.config"
