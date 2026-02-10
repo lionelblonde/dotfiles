@@ -33,6 +33,7 @@ ln -svf $DOTFILES/INSTRUCTIONS.md $HOME/.codex/INSTRUCTIONS.md
 ln -svf $DOTFILES/term.vim $HOME/.config/nvim/colors/term.vim
 
 # espanso
+ln -svf $DOTFILES/espanso/default.yml "$HOME/Library/Application Support/espanso/config/default.yml"
 ln -svf $DOTFILES/espanso/term.yml "$HOME/Library/Application Support/espanso/match/term.yml"
 ln -svf $DOTFILES/espanso/venues.yml "$HOME/Library/Application Support/espanso/match/venues.yml"
 ln -svf $DOTFILES/espanso/ydl.yml "$HOME/Library/Application Support/espanso/match/ydl.yml"
