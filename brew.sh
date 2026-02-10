@@ -79,7 +79,6 @@ brew install --cask sublime-text # for occasional codebase grokking
 brew install --cask sublime-merge # for occasional GUI needs
 brew install --cask zerotier-one
 brew install --cask mouse-fix
-brew install --cask keepingyouawake
 brew install --cask hammerspoon
 brew install --cask karabiner-elements
 brew install --cask mactex
