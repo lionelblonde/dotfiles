@@ -9,7 +9,6 @@ brew install mas
 brew install topgrade
 brew install uutils-coreutils
 brew install jless
-brew install jordanbaird-ice
 brew install parallel
 brew install sd
 brew install tq
