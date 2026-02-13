@@ -62,7 +62,6 @@ brew install --cask aqua-voice
 brew install --cask transmission
 brew install --cask monarch
 brew install --cask handbrake
-brew install --cask itsycal
 brew install --cask little-snitch
 brew install --cask maccy
 brew install --cask shottr
