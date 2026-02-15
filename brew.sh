@@ -59,6 +59,7 @@ brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
 brew install --cask codex-app
 brew install --cask aqua-voice
+brew install --cask todoist
 brew install --cask transmission
 brew install --cask monarch
 brew install --cask handbrake
@@ -83,7 +84,7 @@ brew install --cask hammerspoon
 brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask iina
-brew install --cask 1password # Electron app but fast
+brew install --cask 1password
 brew install --cask pdf-expert
 brew install --cask spotify  # no other viable way to org lib
 brew install --cask whatsapp
