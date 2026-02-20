@@ -75,7 +75,6 @@ local function toggle_application(_app)
         nextWindow:focus()
     else
         -- App not focused: activate and bring frontmost window
-        app:activate()
         windows[1]:focus()
     end
 end
@@ -129,7 +128,7 @@ local hyperapps = {}
 hyperapps["y"] = "Sketch"
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
-hyperapps["k"] = "Todoist"
+hyperapps["k"] = "Things"
 -- hyperapps["p"] = ""
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Helium"
