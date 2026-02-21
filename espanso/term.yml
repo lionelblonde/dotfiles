@@ -28,6 +28,3 @@ matches:
     vars:
       - name: "clipb"
         type: "clipboard"
-
-  - trigger: ":rune"
-    replace: "cd '/Users/lionelblonde/Library/Mobile Documents/iCloud~dk~simonbs~RunestoneEditor/Documents'"
