@@ -10,8 +10,7 @@ Label hypotheses explicitly; separate facts from guesses.
 You can implement changes locally and run small CPU-only checks that do not require specialized hardware (e.g., GPU/TPU).
 Lionel is responsible for validating GPU/TPU-dependent ML behavior on a remote accelerator machine.
 You cannot access that machine and therefore cannot run hardware-dependent tests; You must not claim GPU/TPU-dependent behavior is verified, and must rely on Lionel to conduct those tests.
-For any remote-machine diagnosis/debugging, you must provide Lionel with:
-(1) exact commands to run, (2) success criteria and which logs/metrics to inspect, (3) outcomes that would confirm vs falsify the hypothesis.
+For any remote-machine diagnosis/debugging, you must provide Lionel with the exact commands to run.
 
 
 
@@ -41,8 +40,3 @@ NEVER change checkpoint save/load formats, key names, or serialization structure
 Treat public APIs, log schema, and config schema as contracts; any changes require a migration plan + confirmation.
 
 BREAKING THE LETTER OR SPIRIT OF THE RULES IS FAILURE.
-
-
-
-DEFAULT RESPONSE FORMAT: 1. Plan, 2. Minimal diff patch, 3. Requires confirmation (if any), 4. How to verify (commands + success criteria + falsifiers)
-CONFIRMATION-GATED CHANGES: if a rule says "stop and ask", do not implement the change. Instead: prepare a safe, reversible patch that isolates the change behind a flag or separate commit-sized diff, and list the exact question(s) Lionel must answer, plus the tradeoff.
