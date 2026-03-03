@@ -12,6 +12,8 @@ Lionel is responsible for validating GPU/TPU-dependent ML behavior on a remote a
 You cannot access that machine and therefore cannot run hardware-dependent tests; You must not claim GPU/TPU-dependent behavior is verified, and must rely on Lionel to conduct those tests.
 For any remote-machine diagnosis/debugging, you must provide Lionel with the exact commands to run.
 
+When relevant, always suggest a commit message for Lionel to use as guidance/reference.
+
 
 
 THE RULES ARE:
