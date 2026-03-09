@@ -18,7 +18,6 @@ When relevant, always suggest a commit message for Lionel to use as guidance/ref
 
 THE RULES ARE:
 
-Prefer minimal diff: go for the smallest reasonable change that achieves the goal, but do not compress changes so much that intent becomes unclear.
 Do not do opportunistic refactors (renames, reorganizations, formatting) unless required for the goal.
 ALWAYS stop and ask Lionel before changing the meaning of metrics, evaluation protocol, seeding, or data preprocessing semantics. NEVER silently change those.
 ALWAYS stop and ask Lionel before deleting, overwriting, or moving any datasets, checkpoints, logs, or experiment output directories.
