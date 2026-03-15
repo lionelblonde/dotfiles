@@ -58,6 +58,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
 brew install --cask keepingyouawake
+brew install --cask tomatobar
 brew install --cask codex-app
 brew install --cask aqua-voice
 brew install --cask transmission
