@@ -45,6 +45,7 @@ Install these apps from the Mac App Store:
 - Sequel
 - HEIC Converter
 - Things 3
+- Overcast
 
 ## NPM
 - Claude Code: `npm install -g @anthropic-ai/claude-code`
