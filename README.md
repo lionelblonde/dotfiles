@@ -41,11 +41,8 @@ Install these apps from the Mac App Store:
 - Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 - Hand Mirror
 - DaisyDisk
-- Infuse
-- Sequel
 - HEIC Converter
 - Things 3
-- Overcast
 
 ## NPM
 - Claude Code: `npm install -g @anthropic-ai/claude-code`
