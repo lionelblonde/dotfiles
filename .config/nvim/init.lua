@@ -152,12 +152,11 @@ require("lazy").setup({
     },
     {
         "nvim-treesitter/nvim-treesitter",
+        branch = "main",
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter.configs").setup({
                 ensure_installed = {
-                    "markdown",
-                    -- "markdown_inline",
                     "bash",
                     "cuda",
                     "fortran",
@@ -187,6 +186,7 @@ require("lazy").setup({
                 },
                 highlight = {
                     enable = true,  -- false disables the whole extension
+                    disable = { "markdown" },
                     additional_vim_regex_highlighting = false,
                     -- runs `:h syntax` and TS at the same time
                     -- the values to give here can be: false, true, or parser names
@@ -255,7 +255,7 @@ require("lazy").setup({
 })
 
 -- Define the color scheme (the file is in .config/nvim/colors)
-vim.cmd.colorscheme("term")
+-- vim.cmd.colorscheme("term")
 -- override background of colorscheme to be pure black
 vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" }) -- also floating windows
