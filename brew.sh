@@ -83,7 +83,6 @@ brew install --cask mouse-fix
 brew install --cask hammerspoon
 brew install --cask karabiner-elements
 brew install --cask mactex
-brew install --cask iina
 brew install --cask 1password
 brew install --cask pdf-expert
 brew install --cask spotify  # no other viable way to org lib
