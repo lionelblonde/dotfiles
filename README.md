@@ -42,7 +42,7 @@ Install these apps from the Mac App Store:
 - Hand Mirror
 - DaisyDisk
 - HEIC Converter
-- Things 3
+- Folder Peek
 
 ## NPM
 - Claude Code: `npm install -g @anthropic-ai/claude-code`
