@@ -60,7 +60,6 @@ brew install --cask git-credential-manager
 brew install --cask keepingyouawake
 brew install --cask tomatobar
 brew install --cask codex-app
-brew install --cask aqua-voice
 brew install --cask transmission
 brew install --cask monarch
 brew install --cask handbrake
