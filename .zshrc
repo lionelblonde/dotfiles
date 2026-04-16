@@ -77,3 +77,20 @@ fi
 
 # Configure the zsh-syntax-highlighting plugin (N.B. path to the executable found by digging)
 source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Shell functions
+
+yta() {
+  yt-dlp --config-location ~/.ytdlp.conf \
+         -x \
+         --audio-format m4a \
+         "$@"
+}
+
+ytv() {
+  yt-dlp --config-location ~/.ytdlp.conf \
+         --extractor-args 'youtube:player_js_version=actual' \
+         "$@"
+}
+

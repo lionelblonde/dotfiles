@@ -35,9 +35,6 @@ alias tkillall='tmux kill-server'
 # alias ta='tmux attach' # does not require session name
 # alias tan='tmux attach -t' # requires session name
 
-# make ydt-dl use its config files, notably so that downloads go to the right place
-alias ydl='yt-dlp --config-location ~/.ytdlp.conf'
-
 # convenience aliases for editing configs
 # alias es=''
 # alias ep=''
