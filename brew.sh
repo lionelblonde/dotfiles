@@ -66,6 +66,7 @@ brew install --cask handbrake
 brew install --cask little-snitch
 brew install --cask maccy
 brew install --cask vesktop
+brew install --cask t3-code
 brew install --cask shottr
 brew install --cask skim
 brew install --cask pearcleaner
