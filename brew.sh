@@ -86,7 +86,6 @@ brew install --cask hammerspoon
 brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask 1password
-brew install --cask pdf-expert
 brew install --cask spotify  # no other viable way to org lib
 brew install --cask whatsapp
 brew install --cask google-drive
