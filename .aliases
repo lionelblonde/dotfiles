@@ -26,6 +26,9 @@ alias qv='qlmanage -p'
 # neovim
 alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
 
+# mpv
+alias mpv='mpv --force-window=yes --osd-level=3'
+
 # tmux
 alias tnew='tmux new -d -s'
 alias tls='tmux ls'
