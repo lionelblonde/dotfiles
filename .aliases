@@ -25,6 +25,7 @@ alias qv='qlmanage -p'
 
 # neovim
 alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
+alias vv='v +":silent! g/^[^+=*-]/#"'
 
 # mpv
 alias mpv='mpv --force-window=yes --osd-level=3'
