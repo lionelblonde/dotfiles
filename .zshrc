@@ -94,3 +94,10 @@ ytv() {
          "$@"
 }
 
+ytt() {
+  yt-dlp \
+    --playlist-end 20 \
+    --skip-download \
+    --print "%(upload_date)s | %(title)s | https://www.youtube.com/watch?v=%(id)s" \
+    "$1"
+}
