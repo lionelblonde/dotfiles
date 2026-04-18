@@ -23,3 +23,6 @@ matches:
     vars:
       - name: "clipb"
         type: "clipboard"
+
+  - trigger: ":ytc"
+    replace: "while IFS= read -r url; do ytt '$url'; done < ytchans.txt"
