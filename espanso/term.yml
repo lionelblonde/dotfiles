@@ -25,4 +25,4 @@ matches:
         type: "clipboard"
 
   - trigger: ":ytc"
-    replace: "while IFS= read -r url; do ytt '$url'; done < ytchans.txt"
+    replace: "while IFS= read -r url; do ytt \"$url\"; done < ytchans.txt"
