@@ -93,11 +93,3 @@ ytv() {
          --extractor-args 'youtube:player_js_version=actual' \
          "$@"
 }
-
-ytt() {
-  yt-dlp \
-    --playlist-end 20 \
-    --skip-download \
-    --print "%(upload_date)s | %(uploader)s | %(title)s | https://www.youtube.com/watch?v=%(id)s" \
-    "$1"
-}
