@@ -23,3 +23,9 @@ matches:
     vars:
       - name: "clipb"
         type: "clipboard"
+
+  - trigger: ":navi"
+    replace: "navidrome --musicfolder ~/Documents/navidrome/music --datafolder ~/Documents/navidrome/data"
+
+  - trigger: ":myip"
+    replace: "ipconfig getifaddr en0"
