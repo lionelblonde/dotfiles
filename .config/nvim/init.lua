@@ -176,12 +176,6 @@ require("lazy").setup({
         end
     },
     {
-        "numToStr/Comment.nvim",
-        config = function()
-            require("Comment").setup({})
-        end
-    },
-    {
         "kylechui/nvim-surround", -- surround objects
         config = function()
             require("nvim-surround").setup({})
