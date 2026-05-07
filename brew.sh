@@ -60,13 +60,13 @@ brew install --cask git-credential-manager
 brew install --cask keepingyouawake
 brew install --cask keka # for the "Exclude Mac resource forks"
 brew install --cask codex-app
+brew install --cask t3-code
 brew install --cask transmission
 brew install --cask monarch
 brew install --cask handbrake
 brew install --cask little-snitch
 brew install --cask maccy
-brew install --cask vesktop
-brew install --cask t3-code
+brew install --cask vesktop # open-source client of Discord
 brew install --cask shottr
 brew install --cask skim
 brew install --cask pearcleaner
