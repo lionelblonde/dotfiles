@@ -211,6 +211,12 @@ require("lazy").setup({
 vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" }) -- also floating windows
 
+-- Move by visual/display lines when no count is given
+-- In wrapped text, j/k move through the visible wrapped rows
+-- WHILE preserving count behavior: 5j/5k still move by real buffer lines
+vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, })
+vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, })
+
 -- Mitigate netrw defaults
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
