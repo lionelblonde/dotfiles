@@ -138,7 +138,7 @@ hyperapps["j"] = "Helium"
 hyperapps["o"] = "sioyek"
 -- hyperapps["n"] = ""
 hyperapps["l"] = "Codex"
-hyperapps[","] = ""
+-- hyperapps[","] = ""
 hyperapps["."] = "Slack"
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end
