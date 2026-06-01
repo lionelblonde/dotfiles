@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# app to install manually:
+# sioyek: from latest release on forge
+# MDV: from https://www.mowglii.com/mdv/
+# Itsycal: from https://www.mowglii.com/itsycal/
+
 # Install brew packages
 brew install fd
 brew install pyenv
