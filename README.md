@@ -38,6 +38,7 @@
 
 ## Mac App Store
 Install these apps from the Mac App Store:
+- Things 3
 - Microsoft Word, Excel, PowerPoint (installation via the Mac App Store alleviates Microsoft Update pop-ups)
 - Hand Mirror
 - DaisyDisk
