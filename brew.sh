@@ -80,7 +80,6 @@ brew install --cask notunes
 brew install --cask silicon
 brew install --cask ghostty
 brew install --cask alacritty # for current notes and just writing
-brew install --cask kitty # for task management
 brew install --cask espanso
 brew install --cask ivpn
 brew install --cask signal
