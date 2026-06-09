@@ -3,8 +3,16 @@
 # Configure pyenv for interactive shell (shims and autocompletion)
 eval "$(pyenv init -)"
 
+# Ensure zsh can find standard functions and Homebrew completions
+fpath=(
+  /opt/homebrew/share/zsh/functions
+  /opt/homebrew/share/zsh/site-functions
+  $fpath
+)
+
 # Completions
-autoload -Uz compinit && compinit -i
+autoload -Uz compinit
+compinit -i
 
 # Add HOME at the end of the PATH
 export PATH="$PATH":"$HOME"
@@ -16,6 +24,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # ZSH uses the KEYTIMEOUT parameter to determine how long to wait (in hundredths of a second)
 # for additional characters in sequence. Default is 0.4 seconds.
 KEYTIMEOUT=1
+# means zsh waits 1 hundredth of a second, so 10 ms, for the rest of a key sequence before deciding what you meant
 
 # Source the aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
@@ -54,8 +63,6 @@ export EDITOR="$VISUAL"
 
 # Enable the use of vi in terminal commands
 set -o vi
-# Problem: vi mode in bash has a delay when switching from insert mode to command mode
-set keyseq-timeout 0.01
 
 # Enable Ctrl-x-e to edit command line
 autoload -U edit-command-line
