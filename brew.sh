@@ -73,7 +73,6 @@ brew install --cask maccy
 brew install --cask vesktop # open-source client of Discord
 brew install --cask shottr
 brew install --cask skim
-brew install --cask iina
 brew install --cask pearcleaner
 brew install --cask mp3tag
 brew install --cask sketch
