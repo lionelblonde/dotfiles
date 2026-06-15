@@ -50,6 +50,7 @@ alias eh='v ~/.hammerspoon/init.lua'
 # alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 # alias td='v +":silent! g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 # alias td='v ~/Documents/notes/plan.txt'
+alias drive='cat ~/Documents/git/code/ego/github/private/trove/00-pins/drives-reframes.md'
 
 # convenience alias to source files
 alias sz='source ~/.zshrc'
