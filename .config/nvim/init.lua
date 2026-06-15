@@ -34,7 +34,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- colorschemes
-    { "blazkowolf/gruber-darker.nvim" },
+    { "miikanissi/modus-themes.nvim", priority = 1000 },
     -- packages
     {
         "lervag/vimtex",
@@ -207,6 +207,7 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("gruber-darker")
+vim.cmd.colorscheme("modus")
 -- override background of colorscheme to be pure black
 vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" }) -- also floating windows
