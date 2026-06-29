@@ -88,16 +88,15 @@ source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/z
 
 # Shell functions
 
-# commented out; use Monarch functionalities instead
-# yta() {
-#   yt-dlp --config-location ~/.ytdlp.conf \
-#          -x \
-#          --audio-format m4a \
-#          "$@"
-# }
-#
-# ytv() {
-#   yt-dlp --config-location ~/.ytdlp.conf \
-#          --extractor-args 'youtube:player_js_version=actual' \
-#          "$@"
-# }
+yta() {
+  yt-dlp --config-location ~/.ytdlp.conf \
+         -x \
+         --audio-format m4a \
+         "$@"
+}
+
+ytv() {
+  yt-dlp --config-location ~/.ytdlp.conf \
+         --extractor-args 'youtube:player_js_version=actual' \
+         "$@"
+}
