@@ -48,7 +48,6 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - HEIC Converter
 - Folder Peek
-- Fomalhaut2
 - Things
 
 ## Symlinks
