@@ -1,9 +1,10 @@
 app-notifications = true
+bell-features = attention,title
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = clipboard
-window-theme = system
-window-colorspace = "display-p3"
+window-theme = auto
+macos-titlebar-style = native
 window-padding-balance = true
 window-padding-x = 0
 window-padding-y = 0
@@ -14,11 +15,13 @@ background = #000000
 cursor-invert-fg-bg = true
 font-thicken = true
 # font-family = Lilex Nerd Font Mono
-font-family = JetBrainsMono Nerd Font Mono
+# font-family = JetBrainsMono Nerd Font Mono
 # font-family = IosevkaTerm Nerd Font Mono
-font-size = 18
+font-family = Menlo
+font-size = 22
 window-inherit-font-size = true
-theme = Guezwhoz
+# theme = Guezwhoz
+theme = Cutie Pro
 mouse-hide-while-typing = true
 auto-update = download
 auto-update-channel = stable
@@ -30,3 +33,4 @@ macos-auto-secure-input = true
 macos-secure-input-indication = true
 
 keybind = super+shift+plus=increase_font_size:1
+
