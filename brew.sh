@@ -69,6 +69,7 @@ brew install --cask transmission
 brew install --cask monarch
 brew install --cask handbrake
 brew install --cask little-snitch
+brew install --cask google-chrome
 brew install --cask maccy
 brew install --cask vesktop # open-source client of Discord
 brew install --cask shottr
