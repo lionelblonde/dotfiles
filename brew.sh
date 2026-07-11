@@ -67,7 +67,6 @@ brew install --cask handbrake
 brew install --cask little-snitch
 brew install --cask google-chrome
 brew install --cask maccy
-brew install --cask vesktop # open-source client of Discord
 brew install --cask shottr
 brew install --cask skim
 brew install --cask pearcleaner
