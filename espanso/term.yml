@@ -18,12 +18,6 @@ matches:
   - trigger: ":shebang"
     replace: "#!/usr/bin/env bash"
 
-  - trigger: ":tcli"
-    replace: "transmission-cli --encryption-required  '{{clipb}}'"
-    vars:
-      - name: "clipb"
-        type: "clipboard"
-
   - trigger: ":navi"
     replace: "navidrome --musicfolder ~/Documents/navidrome/music --datafolder ~/Documents/navidrome/data"
 
