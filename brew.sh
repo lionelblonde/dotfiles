@@ -25,7 +25,6 @@ brew install zsh
 brew install zsh-syntax-highlighting
 brew install reattach-to-user-namespace
 brew install liquidprompt
-brew install transmission-cli
 brew install eza
 brew install git
 brew install wget
@@ -65,7 +64,6 @@ brew install --cask git-credential-manager
 brew install --cask keepingyouawake
 brew install --cask keka # for the "Exclude Mac resource forks"
 brew install --cask codex-app
-brew install --cask transmission
 brew install --cask monarch
 brew install --cask handbrake
 brew install --cask little-snitch
@@ -75,17 +73,14 @@ brew install --cask vesktop # open-source client of Discord
 brew install --cask shottr
 brew install --cask skim
 brew install --cask pearcleaner
-brew install --cask mp3tag
 brew install --cask sketch
 brew install --cask notunes
 brew install --cask silicon
 brew install --cask ghostty
-brew install --cask alacritty # for current notes and just writing
 brew install --cask espanso
 brew install --cask ivpn
 brew install --cask signal
 brew install --cask telegram
-brew install --cask sublime-text # for occasional codebase grokking
 brew install --cask sublime-merge # for occasional GUI needs
 brew install --cask zerotier-one
 brew install --cask mouse-fix
