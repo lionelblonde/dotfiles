@@ -18,8 +18,5 @@ matches:
   - trigger: ":shebang"
     replace: "#!/usr/bin/env bash"
 
-  - trigger: ":navi"
-    replace: "navidrome --musicfolder ~/Documents/navidrome/music --datafolder ~/Documents/navidrome/data"
-
   - trigger: ":myip"
     replace: "ipconfig getifaddr en0"
