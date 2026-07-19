@@ -66,7 +66,6 @@ brew install --cask monarch
 brew install --cask handbrake
 brew install --cask little-snitch
 brew install --cask google-chrome
-brew install --cask numi
 brew install --cask maccy
 brew install --cask shottr
 brew install --cask skim
