@@ -47,8 +47,6 @@ Install these apps from the Mac App Store:
 - Hand Mirror
 - DaisyDisk
 - HEIC Converter
-- uBlock Origin Lite
-- Hush
 
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
