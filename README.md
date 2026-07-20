@@ -48,6 +48,17 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - HEIC Converter
 
+## Browser extensions
+- uBlock Origin (preferably the full version; otherwise the "Lite" version)
+- Vimium
+- News Feed Eradicator
+- Paperpile Extension
+- Feedbin Subscribe & Save
+- Raindrop.io
+- Decentraleyes
+- I still don't care about cookies
+- SponsorBlock for YouTube
+
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
 
