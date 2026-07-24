@@ -52,7 +52,7 @@ local function toggle_application(_app)
 
     local focused = hs.window.focusedWindow()
 
-    if focused and focused:application():name() == _app then
+    if focused and focused:application():pid() == app:pid() then
         -- App is already focused: cycle through windows
         -- First, sort windows by window ID to ensure stable ordering
         table.sort(windows, function(a, b) return a:id() < b:id() end)
