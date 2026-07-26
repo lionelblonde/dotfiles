@@ -125,17 +125,17 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
-hyperapps["y"] = "Sketch"
+-- hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
-hyperapps["k"] = "sioyek"
+hyperapps["k"] = "Preview"
 -- hyperapps["p"] = ""
 hyperapps["h"] = "Mail"
 hyperapps["j"] = "Chrome"
 -- hyperapps["m"] = ""
 -- hyperapps[";"] = ""
 -- hyperapps["'"] = ""
-hyperapps["o"] = "Skim"
+hyperapps["o"] = "Books"
 -- hyperapps["n"] = ""
 hyperapps["l"] = "ChatGPT"
 -- hyperapps[","] = ""
