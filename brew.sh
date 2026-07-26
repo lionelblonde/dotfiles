@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # app to install manually:
-# sioyek: from latest release on forge
 # MDV: from https://www.mowglii.com/mdv/
 
 # Install brew packages
