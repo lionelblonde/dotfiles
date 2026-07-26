@@ -70,7 +70,7 @@ brew install --cask helium-browser
 brew install --cask maccy
 brew install --cask shottr
 brew install --cask skim
-brew install --cask qbittorrent
+brew install --cask transmission
 brew install --cask pearcleaner
 brew install --cask sketch
 brew install --cask notunes
