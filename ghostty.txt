@@ -1,10 +1,8 @@
-app-notifications = true
+macos-titlebar-style = tabs
 bell-features = attention,title
-clipboard-read = allow
-clipboard-write = allow
+clipboard-read = ask
 copy-on-select = clipboard
 window-theme = auto
-macos-titlebar-style = native
 window-padding-balance = true
 window-padding-x = 0
 window-padding-y = 0
@@ -13,24 +11,27 @@ window-vsync = true
 background = #000000
 # cursor-color = #ffffff
 cursor-invert-fg-bg = true
-font-thicken = true
 # font-family = Lilex Nerd Font Mono
 # font-family = JetBrainsMono Nerd Font Mono
-# font-family = IosevkaTerm Nerd Font Mono
-font-family = Menlo
-font-size = 22
+font-family = IosevkaTerm Nerd Font Mono
+# font-family = Menlo
+font-size = 24
+font-style = Medium
+adjust-cell-height = -15%
 window-inherit-font-size = true
 # theme = Guezwhoz
 theme = Cutie Pro
 mouse-hide-while-typing = true
 auto-update = download
 auto-update-channel = stable
-# macos-icon = retro
-# macos-icon-frame = plastic
-adjust-cell-height = -10%
 quit-after-last-window-closed = true
 macos-auto-secure-input = true
 macos-secure-input-indication = true
 
-keybind = super+shift+plus=increase_font_size:1
+# Notify after a long command finishes while Ghostty is unfocused.
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = no-bell,notify
+notify-on-command-finish-after = 20s
 
+
+keybind = super+shift+plus=increase_font_size:1
