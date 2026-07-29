@@ -168,7 +168,7 @@ local function showAppKeystroke()
 
       showAppKeystrokeAlertId = hs.alert.show(
          keystroke,
-         {textFont = "Pixel Code",
+         {textFont = "JetBrainsMono Nerd Font Mono",
           textSize = 24,
           radius = 0,
           strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0.75})},
