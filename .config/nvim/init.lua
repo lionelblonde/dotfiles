@@ -206,11 +206,12 @@ require("lazy").setup({
 
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
--- vim.cmd.colorscheme("gruber-darker")
-vim.cmd.colorscheme("modus")
--- override background of colorscheme to be pure black
-vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" }) -- also floating windows
+-- vim.cmd.colorscheme("modus_operandi")
+vim.cmd.colorscheme("modus_vivendi")
+
+-- -- override background of colorscheme to be pure black
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" }) -- also floating windows
 
 -- Move by visual/display lines when no count is given
 -- In wrapped text, j/k move through the visible wrapped rows
