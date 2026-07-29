@@ -1,5 +1,23 @@
-macos-titlebar-style = tabs
+font-family = D2CodingLigature Nerd Font Mono
+# font-family = GoMono Nerd Font Mono
+#font-family = Cousine Nerd Font Mono
+# font-family = Lilex Nerd Font Mono
+# font-family = JetBrainsMono Nerd Font Mono
+# font-family = IosevkaTerm Nerd Font Mono
+# font-family = MesloLGM Nerd Font Mono
+
+font-size = 24
+font-thicken = true
+# font-style = Medium
+adjust-cell-height = -15%
+window-inherit-font-size = true
+
+# theme = Guezwhoz
+theme = Cutie Pro
+
 macos-icon = paper
+macos-titlebar-style = native
+
 bell-features = attention,title
 clipboard-read = ask
 copy-on-select = clipboard
@@ -9,19 +27,9 @@ window-padding-x = 0
 window-padding-y = 0
 window-padding-color = background
 window-vsync = true
-background = #000000
-# cursor-color = #ffffff
+# background = #000000
 cursor-invert-fg-bg = true
-# font-family = Lilex Nerd Font Mono
-# font-family = JetBrainsMono Nerd Font Mono
-font-family = IosevkaTerm Nerd Font Mono
-# font-family = Menlo
-font-size = 24
-font-style = Medium
-adjust-cell-height = -15%
-window-inherit-font-size = true
-# theme = Guezwhoz
-theme = Cutie Pro
+
 mouse-hide-while-typing = true
 auto-update = download
 auto-update-channel = stable
