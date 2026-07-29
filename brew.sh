@@ -54,6 +54,10 @@ brew install qmk/qmk/qmk
 brew install qmk-toolbox
 
 # Install macOS applications with brew cask
+brew install --cask font-cousine-nerd-font
+brew install --cask font-go-mono-nerd-font
+brew install --cask font-meslo-lg-nerd-font
+brew install --cask font-d2coding-nerd-font # from Naver! amazing font with Hangul symbols
 brew install --cask font-lilex-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
