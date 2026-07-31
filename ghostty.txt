@@ -28,7 +28,7 @@ window-padding-y = 0
 window-padding-color = background
 window-vsync = true
 # background = #000000
-cursor-invert-fg-bg = true
+# cursor-invert-fg-bg = true
 
 mouse-hide-while-typing = true
 auto-update = download
