@@ -125,6 +125,7 @@ hyperfns["="] = toggle_window_maximized
 
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
+
 -- hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
@@ -137,9 +138,10 @@ hyperapps["j"] = "ChatGPT"
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Things"
 -- hyperapps["n"] = ""
-hyperapps["l"] = "Helium"
+hyperapps["l"] = "Chrome"
 -- hyperapps[","] = ""
 hyperapps["."] = "Slack"
+
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end
 end
