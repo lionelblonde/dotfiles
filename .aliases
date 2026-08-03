@@ -20,8 +20,7 @@ alias du='du -h' # estimate file space usage
 
 alias nettop='nettop -P -k state,interface -d' # not downloaded, present by default
 
-# quicklook from command line
-alias qv='qlmanage -p'
+alias qv='qlmanage -p' # quicklook from command line
 
 # neovim
 alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
@@ -29,6 +28,7 @@ alias vv='v +":silent! g/^[^+=*-]/#"'
 
 # mpv
 alias mpv='mpv --force-window=yes --osd-level=3'
+# NOTE: `command mpv` bypasses the alias and runs the actual mpv command
 
 # tmux
 alias tnew='tmux new -d -s'
