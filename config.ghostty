@@ -1,6 +1,6 @@
 # macos-icon = paper
 macos-icon = custom-style
-macos-icon-frame = beige
+macos-icon-frame = chrome
 macos-icon-ghost-color = #ff0059
 macos-icon-screen-color = #ffdd00,#00ccff
 
