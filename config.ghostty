@@ -1,6 +1,12 @@
-font-family = D2CodingLigature Nerd Font Mono
+# macos-icon = paper
+macos-icon = custom-style
+macos-icon-frame = beige
+macos-icon-ghost-color = #ff0059
+macos-icon-screen-color = #ffdd00,#00ccff
+
+font-family = D2KodingLigature Nerd Font Mono
 # font-family = GoMono Nerd Font Mono
-#font-family = Cousine Nerd Font Mono
+# font-family = Cousine Nerd Font Mono
 # font-family = Lilex Nerd Font Mono
 # font-family = JetBrainsMono Nerd Font Mono
 # font-family = IosevkaTerm Nerd Font Mono
@@ -14,9 +20,6 @@ window-inherit-font-size = true
 
 # theme = Guezwhoz
 theme = Cutie Pro
-
-macos-icon = paper
-macos-titlebar-style = native
 
 bell-features = attention,title
 clipboard-read = ask

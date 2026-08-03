@@ -23,6 +23,9 @@ ln -svf $DOTFILES/.zprofile $HOME/.zprofile
 ln -svf $DOTFILES/.ytdlp.conf $HOME/.ytdlp.conf
 ln -svf $DOTFILES/tmux_sessionizer.sh $HOME/tmux_sessionizer.sh
 
+# ghostty
+ln -svf $DOTFILES/config.ghostty $HOME/.config/ghostty/config.ghostty
+
 # codex
 ln -svf $DOTFILES/INSTRUCTIONS.md $HOME/.codex/INSTRUCTIONS.md
 # add this line **before** the first [projects. ] section in `$HOME/.codex/config.toml`
