@@ -40,17 +40,18 @@ alias tkillall='tmux kill-server'
 # alias tan='tmux attach -t' # requires session name
 
 # convenience aliases for editing configs
+# NOTE: all of them edit symlinks of the src files, which are in my dotfiles
 alias ea='v ~/.aliases'
 alias en='v ~/.config/nvim/init.lua'
 alias ez='v ~/.zshrc'
 alias et='v ~/.tmux.conf'
+alias eg='v ~/.config/ghostty/config.ghostty' # equiv to `ghostty +edit-config`
 alias eh='v ~/.hammerspoon/init.lua'
 # keep for posterity: pretty cool functionality
 # alias eo='v +"normal G" ~/Documents/notes/research/log.md'
 # alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 # alias td='v +":silent! g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 # alias td='v ~/Documents/notes/plan.txt'
-alias drive='cat ~/Documents/git/code/ego/github/private/trove/00-pins/drives-reframes.md'
 
 # convenience alias to source files
 alias sz='source ~/.zshrc'

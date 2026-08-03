@@ -4,9 +4,9 @@ macos-icon-frame = chrome
 macos-icon-ghost-color = #ff0059
 macos-icon-screen-color = #ffdd00,#00ccff
 
-font-family = D2KodingLigature Nerd Font Mono
+# font-family = D2KodingLigature Nerd Font Mono
 # font-family = GoMono Nerd Font Mono
-# font-family = Cousine Nerd Font Mono
+font-family = Cousine Nerd Font Mono
 # font-family = Lilex Nerd Font Mono
 # font-family = JetBrainsMono Nerd Font Mono
 # font-family = IosevkaTerm Nerd Font Mono
