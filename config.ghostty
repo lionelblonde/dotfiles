@@ -15,6 +15,9 @@ font-family = Cousine Nerd Font Mono
 # font-family = IosevkaTerm Nerd Font Mono
 # font-family = MesloLGM Nerd Font Mono
 
+# make the tabe names bigger (easier to read)
+window-title-font-family = Arial Rounded MT Bold
+
 font-size = 24
 font-thicken = true
 # font-style = Medium
@@ -30,7 +33,9 @@ auto-update-channel = stable
 bell-features = attention,title
 
 clipboard-read = ask
-copy-on-select = clipboard
+copy-on-select = false
+right-click-action = ignore
+mouse-reporting = true
 
 window-theme = auto
 window-padding-balance = true
