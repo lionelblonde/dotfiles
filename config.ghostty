@@ -26,6 +26,7 @@ window-inherit-font-size = true
 
 # theme = Guezwhoz
 theme = Cutie Pro
+# theme = IR Black
 
 auto-update = download
 auto-update-channel = stable
