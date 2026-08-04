@@ -1,8 +1,8 @@
-# Cheat Sheet
+**Cheat Sheet**
 
-## Vim
+# Vim
 
-### Motions
+## Motions
 - Motions that can be preceded by a count
     - `h`: move one character left
     - `j`: move one row down
@@ -56,7 +56,7 @@
     - `;`: repeat above, in same direction (it is a repeat, but a repeat of a motion)
     - `,`: repeat above, in reverse direction (same as above in the parentheses)
 
-### Inserting text
+## Inserting text
 - `i`: insert at current location
 - `a`: insert after current location (append)
 - `I`: insert at start of current line
@@ -69,9 +69,9 @@
 - `cc`: same as S (change line)
 - `C`: delete from the cursor to the end of line and start inserting at the cursor position
 
-### Operations
+## Operations
 
-#### Ops on commands (repeats and undos)
+### Ops on commands (repeats and undos)
 - `.`: repeat last command
 - (Remember that in the "Motions" subsection, we described `;` and `,` which do operate repeats or previous motions)
 - `u` and `U`: undo, and undo all the changes made in the current line
@@ -80,20 +80,20 @@
     - `g;`: go to the last position of the cursor where something has been edited
     - `g,`: the opposite the above, i.e. go to the next position where something has been edited
 
-#### Pasting in normal mode
+### Pasting in normal mode
 - To select a register from which to paste, one can use `"kp`
 to paste from the register *k*.
 - `p`: paste after cursor
 - `P`: paste before cursor
 
-#### Pasting in insert mode
+### Pasting in insert mode
 - `CTRL-r` then a character that identifies the register
 - Examples
     - `CTRL-r`, then `"` pastes from the default register
     - `CTRL-r`, then `0` pastes from register zero
     which holds the text that was most recently yanked
 
-#### Marking text (visual mode)
+### Marking text (visual mode)
 - `v`: start visual mode. Marks the current character.
 - `V`: start line-wise visual mode. Marks the current line.
 - `gv`: re-select previous selection
@@ -109,7 +109,7 @@ to paste from the register *k*.
     - `iB`: mark in (excluding) brackets
     - `<ESC>`: exit visual mode
 
-### Registers
+## Registers
 - To access a register, you type `"k` before a command, where *k* is the name of a register.
 - If you want to copy the current line into register *k*, you can type
 `"` + `k` + `y` + `y`,
@@ -125,7 +125,7 @@ deleted or changed using
 - The same way `"0` holds the last yank, `"1` holds the last delete or change.
 - **Use `"*` to yank and paste characters and lines (segments) to and from the PRIMARY clipboard**.
 
-### Editor
+## Editor
 - `:`, then `CTRL-p`: previous command in history of executed commands
 - `:`, then `CTRL-n`: next command in history of executed commands
 - Hitting `<TAB>` while in the `:` menu shows all the options for the currently typed entry
@@ -140,9 +140,9 @@ deleted or changed using
 - `:Hex`: open a file in a new buffer placed in a new horizontal pane of the same window by splitting it
 - `:changes`: display the content of the changelist (quit the list with the standard `q`, it opens a pager)
 
-### Plugins
+## Plugins
 
-#### Vim Markdown
+### Vim Markdown
 - Table of contents/outline
     - `:Toc` or `:Tocv`: add a vertical pane than shows the outline of the open Markdown file
     - `:Toch`: add a horizontal pane than shows the outline of the open Markdown file
@@ -167,7 +167,7 @@ deleted or changed using
     - `]h`: go to current header ('h' for *Header*)
     - `]u`: go to parent header ('u' for *Up*)
 
-#### Surround
+### Surround
 - `Surround.vim` is all about "surroundings": parentheses, brackets, quotes, XML tags, and more
 - The plugin provides mappings to easily *delete, change and add such surroundings in pairs*
 - Press `cs"'` (read *Change Surroundings from " to '*) inside `"Hello world!"` to change it to `'Hello world!'`
@@ -200,10 +200,10 @@ deleted or changed using
     - As opposed to HTML/XML *inserting*, for which many plugins are available
     - With `surround.vim`, adding, changing, and removing pairs of tags simultaneously is a breeze!
 
-#### Unimpaired
+### Unimpaired
 - `[<SPC>` and `]<SPC>`: add newline(s) before the cursor line (accept a *count*: can thus add more than one newline)
 
-### Reformatting, Hard-Wrapping
+## Reformatting, Hard-Wrapping
 - `gq<MOTION>`: hard-wrap the text that the *<MOTION>* covers
 - Examples
     - `gqip`: hard-wrap the current paragraph
@@ -219,116 +219,10 @@ deleted or changed using
 - `>>`: indent
 - `<<`: de-indent
 
-## Things 3
 
-### Create new items
-- `CMD-n`: create a new to-do
-- `<SPC>`: create a new to-do below selection
-- `CMD-v`: paste plain text to create new to-dos
-- `CMD-SHIFT-c`: create a checklist in an open to-do
-- `CMD-SHIFT-n`: create a new heading in a project
-- `CMD-META-c`: create a new project
-- `CTRL-<SPC>`: open Quick Entry
-- `CTRL-META-<SPC>`: open Quick Entry with Autofill
+# macOS
 
-### Edit items
-- `<CR>`: open a to-do or project
-- `CMD-<CR>`: save and close
-- `<ESC>`: save and close (careful, closes Quick Entry)
-- `CMD-d`: duplicate a to-do or project
-- `CMD-c`: copy a to-do or project
-- `CMD-v`: paste a to-do or project
-- `CMD-k`: complete selected items
-- `CMD-META-.`: cancel selected items
-- `CMD-<BS>` or `delete`: delete selected items
-- `CMD-l`: move completed to Logbook
-
-### Select items
-- `<UP>`: select item above
-- `<DOWN>`: select item below
-- `SHIFT-<UP>`: extend selection upwards
-- `SHIFT-<DOWN>`: extend selection downwards
-- `SHIFT-META-<UP>`: extend selection to the top
-- `SHIFT-META-<DOWN>`: extend selection to the bottom
-- `CMD-a`: select everything
-
-### Move items
-- `CMD-SHIFT-m`: move selection to another list
-- `CMD-META-v`: move copied to-dos and projects
-- `CMD-<UP>`: move selection up
-- `CMD-<DOWN>`: move selection down
-- `CMD-META-<UP>`: move selection to top of list
-- `CMD-META-<DOWN>`: move selection to bottom of list
-
-### Edit dates
-- `CMD-s`: show When
-- `CMD-t`: start Today
-- `CMD-e`: start This Evening
-- `CMD-r`: start Anytime
-- `CMD-o`: start Someday
-- `CTRL-]`: start date +1 day
-- `CTRL-[`: start date -1 day
-- `CTRL-SHIFT-]`: start date +1 week
-- `CTRL-SHIFT-[`: start date -1 week
-- `CMD-SHIFT-d`: add a deadline
-- `CTRL-.`: deadline +1 day
-- `CTRL-,`: deadline -1 day
-- `CTRL-SHIFT-.`: deadline +1 week
-- `CTRL-SHIFT-,`: deadline -1 week
-- `CMD-SHIFT-r`: make to-do or project repeating
-
-### Control windows
-- `CTRL-CMD-n`: open new window
-- `CMD-/`: hide or show sidebar
-- `CMD-META-t`: hide or show toolbar
-
-### Navigate
-- `CMD-1`: go to Inbox
-- `CMD-2`: go to Today
-- `CMD-3`: go to Upcoming
-- `CMD-4`: go to Anytime
-- `CMD-5`: go to Someday
-- `CMD-6`: go to Logbook
-
-### Search
-- `any key`: start typing to begin a search
-- `CMD-f`: find
-- Keywords in search
-    - `Tomorrow`: Quick Find list for tomorrow's to-dos (hehehe)
-    - `Dealines`: Quick Find list for all deadlines
-    - `Repeating`: Quick Find list for repeating to-dos
-    - `Projects`: Quick Find list for all projects
-    - `Logged Projects`: Quick Find list for completed projects
-- Tag
-    - `CTRL-CMD` + `t`: open tag window
-    - `CMD-SHIFT-t`: access tag picker for selected to-dos
-
-## Safari
-- `CMD-SHIFT-r`: open Reader
-
-## Sublime Text 3
-- `CMD-d`: add next identical item to selection
-- `CTRL-CMD-g`: select all the occurrences of the item
-- `CTRL-SHIFT-<UP>` / `down`: multi-cursor
-- `CMD-/`: toggle comment
-- `CMD-]`: indent by one tab increment
-- `CMD-[`:  de-indent by one tab increment
-- `CMD-l`: select line (repeat to select the next one(s) too)
-- `CMD-x`: delete line
-- `CMD-<CR>`: insert new line after the current one
-- `CMD-<LEFT CLICK>`: add extra cursor at clicked location
-- `CTRL-CMD-<UP|DOWN>`: move line(s)
-- `CMD-SHIFT-v`: paste with proper formatting
-- `CMD-SHIFT-j`: join line below to the end of the current line
-- `CMD-SHIFT-d`: duplicate line(s)
-- `CMD-SHIFT-<CR>`: insert empty new line above the current line, and set cursor on that new line
-- `CTRL-u`: soft undo
-- `CTRL-g`: go to line in current file
-- `CMD-META-<NUM OF COLS>`: set the number of columns in the layout
-
-## macOS
-
-### Misc
+## Misc
 - Hold `META` while you *click on anything, especially menubar items*: show extra options and info
 - Hold `META` while you *click on Notification Center icon in menu bar*: toggle *do not disturb*
 - `CMD-SHIFT-META-v`: paste without formatting
@@ -341,7 +235,7 @@ deleted or changed using
 - `META-2`: trademark "TM" symbol in exponent
 - `META-=`: "not equal" symbol
 
-### Moving the cursor/Arrow keys
+## Moving the cursor/Arrow keys
 - `CTRL-b`: move backward one character
 - `CTRL-f`: move forward one character
 - `CTRL-p`: previous command (up arrow)
@@ -349,7 +243,7 @@ deleted or changed using
 - `CTRL-a`: go to the beginning of the line (Home)
 - `CTRL-e`: go to the end of the line (End)
 
-### Delete/Modify
+## Delete/Modify
 - `CTRL-d`: delete character from left to right
 - `CTRL-h`: delete character from right to left
 - `META-<BS>`: delete word to the left
@@ -358,14 +252,20 @@ deleted or changed using
 - `CTRL-o`: insert a new line after the cursor
 - `CTRL-t`: transpose characters around cursor
 
-## Tmux
-- Prefix changed from the default `CTRL-b` to `CTRL-a` in `~/.tmux.conf`
-- `CTRL-a ?`: enter Help Mode and display a list of keyboard shortcuts (`<CR>` to exit)
-- `CTRL-a [`: enter Copy Mode which enables the use of movement keys to move the cursor around the screen (`<CR>` to exit)
-- `CTRL-a I`: fetch the plugins and source them
-- Hold `META` while you *select text with your left mouse button*: copy selected text to clipboard
 
-### Managing sessions
+# Tmux
+
+## Help mode and Copy mode
+- `<CR>` to exit modes
+- `PREFIX ?`: enter Help Mode and display a list of keyboard shortcuts
+- `PREFIX [`: enter Copy Mode which enables the use of movement keys to move the cursor around the screen
+In copy mode:
+- `Space` to start selection
+- Vim/Emacs keys move/extend selection
+- `<CR>` to copy selection and exit copy mode
+- Paste it back inside tmux with `PREFIX ]`
+
+## Managing sessions
 - `tmux ls` list out the running sessions
 - `tmux new-session -s work` create a session named 'work'
 - `tmux new-session -s work2 -t work` create a new session that shares all windows with an existing session, but has its
@@ -380,7 +280,7 @@ deleted or changed using
     - `CTRL-a s`: choose a session from a list
 - `CTRL-a$`: rename the current session
 
-### Managing windows
+## Managing windows
 - `CTRL-a c`: create a new window
 - `CTRL-a w`: list out the running windows
 - Switch between windows
@@ -394,7 +294,7 @@ deleted or changed using
 - `CTRL-a .`: renumber current window
 - `CTRL-a :swap-window -s <source_window> -t <target_window> <CR>`: swap windows
 
-### Managing split panes
+## Managing split panes
 - `CTRL-a x`: kill the current pane
 - `CTRL-a q`: display pane numbers for a short while
 - Creating a new pane by splitting an existing one
@@ -420,9 +320,10 @@ deleted or changed using
     - `CTRL-a META-5`: switch to tiled layout
     - `CTRL-a <SPC>`: switch to the next layout
 
-## Git
 
-### Coding style conventions
+# Git
+
+## Coding style conventions
 - Repositories
     - Repositories' names should
         - be *lowercase*
@@ -463,7 +364,7 @@ deleted or changed using
     - Before merging, rebase it onto the branch it's going to be merged to, in order to maintain a linear history.
         - If we merge with "master": `git fetch; git rebase origin//master;`
 
-### Set name and email address
+## Set name and email address
 - For the current repository: `--local`
     - `git config --local user.name "Your Name Here"`
     - `git config --local user.email your@email.com`
@@ -471,7 +372,7 @@ deleted or changed using
     - `git config --global user.name "Your Name Here"`
     - `git config --global user.email your@email.com`
 
-### Usual commands
+## Usual commands
 - `echo "# Repo's name" >> README.md`
 - `git init`
 - `git add <filename>`
@@ -510,11 +411,8 @@ in other words, **update** all tracked files in the current directory and its su
     - `git fetch --all`
     - `git reset --hard origin/master`
 
-## IINA
-- `SHIFT-CMD-.`: jump to next chapter (`CMD-\>`)
-- `SHIFT-CMD-,`: jump to next chapter (`CMD-\<`)
 
-## Generate a new SSH key for password-less authentication
+# Generate a new SSH key for password-less authentication
 - `ssh-keygen -f ~/.ssh/bao -t rsa` create an ssh key pair for user authentication
     - The name of the file in which the key is stored is selected using the `-f` option
     - The algorithm is selected using the `-t` option and key size using the `-b` option
