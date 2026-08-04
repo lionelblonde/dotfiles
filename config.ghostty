@@ -4,6 +4,9 @@ macos-icon-frame = chrome
 macos-icon-ghost-color = #ff0059
 macos-icon-screen-color = #ffdd00,#00ccff
 
+# background = #000000
+# cursor-invert-fg-bg = true
+
 # font-family = D2KodingLigature Nerd Font Mono
 # font-family = GoMono Nerd Font Mono
 font-family = Cousine Nerd Font Mono
@@ -21,26 +24,27 @@ window-inherit-font-size = true
 # theme = Guezwhoz
 theme = Cutie Pro
 
+auto-update = download
+auto-update-channel = stable
+
 bell-features = attention,title
+
 clipboard-read = ask
 copy-on-select = clipboard
+
 window-theme = auto
 window-padding-balance = true
 window-padding-x = 0
 window-padding-y = 0
 window-padding-color = background
 window-vsync = true
-# background = #000000
-# cursor-invert-fg-bg = true
 
 mouse-hide-while-typing = true
-auto-update = download
-auto-update-channel = stable
-quit-after-last-window-closed = true
+quit-after-last-window-closed = false
 macos-auto-secure-input = true
 macos-secure-input-indication = true
 
-# Notify after a long command finishes while Ghostty is unfocused.
+# notify after a long command finishes while Ghostty is unfocused
 notify-on-command-finish = unfocused
 notify-on-command-finish-action = no-bell,notify
 notify-on-command-finish-after = 20s
