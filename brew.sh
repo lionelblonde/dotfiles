@@ -21,7 +21,6 @@ brew install dua-cli
 brew install croc
 brew install zsh
 brew install zsh-syntax-highlighting
-brew install reattach-to-user-namespace
 brew install liquidprompt
 brew install eza
 brew install git
