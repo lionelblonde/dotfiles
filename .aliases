@@ -1,69 +1,44 @@
-# ALIASES
-#
+# aliases
 # NOTE: USE OUTER SINGLE QUOTES AND INNER DOUBLE QUOTES
 
-alias distro='uname -sr' # `s` for kernel name, `r` for kernel release
-alias nproc='sysctl -n hw.ncpu'
-
-alias ll='ls -FGlAhp'
-alias xx='eza -la --header --git --octal-permissions --no-user --no-time --no-filesize --color=auto --icons=never'
-
-alias ln='ln -v'
-
-alias rsync='rsync -ahP'
-
-alias cp='cp -i'
-
-alias df='df -h' # report file system disk space usage
-
-alias du='du -h' # estimate file space usage
-
-alias nettop='nettop -P -k state,interface -d' # not downloaded, present by default
-
-alias qv='qlmanage -p' # quicklook from command line
-
-# neovim
-alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
-alias vv='v +":silent! g/^[^+=*-]/#"'
-
-# mpv
-alias mpv='mpv --force-window=yes --osd-level=3'
-# NOTE: `command mpv` bypasses the alias and runs the actual mpv command
-
-# tmux
-alias tnew='tmux new -d -s'
-alias tls='tmux ls'
-alias tkill='tmux kill-session -t'
-alias tkillall='tmux kill-server'
-# TMUX ATTACH ALIASES: do not use them, use sessionizer to attach too  
-# alias ta='tmux attach' # does not require session name
-# alias tan='tmux attach -t' # requires session name
-
-# convenience aliases for editing configs
-# NOTE: all of them edit symlinks of the src files, which are in my dotfiles
-alias ea='v ~/.aliases'
-alias en='v ~/.config/nvim/init.lua'
-alias ez='v ~/.zshrc'
-alias et='v ~/.tmux.conf'
-alias eg='v ~/.config/ghostty/config.ghostty' # equiv to `ghostty +edit-config`
-alias eh='v ~/.hammerspoon/init.lua'
-# keep for posterity: pretty cool functionality
+# keep for posterity (pretty cool stuff)
 # alias eo='v +"normal G" ~/Documents/notes/research/log.md'
 # alias ep='v +"g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 # alias td='v +":silent! g/^[^+=*-]/#" ~/Documents/notes/plan.txt' 
 # alias td='v ~/Documents/notes/plan.txt'
 
-# convenience alias to source files
-alias sz='source ~/.zshrc'
-alias ss='source ~/.aliases'
-
-# go to wip directory
-alias wip='cd ~/Documents/git/code/wip'
-alias ego='cd ~/Documents/git/code/ego/github/private'
-
+alias distro='uname -sr' # `s` for kernel name, `r` for kernel release
+alias nproc='sysctl -n hw.ncpu'
+alias ll='ls -FGlAhp'
+alias xx='eza -la --header --git --octal-permissions --no-user --no-time --no-filesize --color=auto --icons=never'
+alias qv='qlmanage -p' # quicklook from command line
+# neovim
+alias v='nvim' # ensure we do not replace vim with neovim in case the neovim is not installed
+alias vv='v +":silent! g/^[^+=*-]/#"'
+# tmux
+alias tnew='tmux new -d -s'
+alias ta='tmux attach -t' # requires session name
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+alias tkillall='tmux kill-server'
 # search with sk (rust fzf) and open with default app
 alias o='open "$(ls | sk)"'
-
 # codex command preference by Nathan Lambert
 # shared in: https://www.interconnects.ai/p/coding-as-the-epicenter-of-ai-progress
 # alias codexx='codex -m gpt-5-codex -c model_reasoning_effort="high" --yolo --search'
+
+# overrides (`command <...>`) bypasses the alias
+alias ln='ln -v'
+alias rsync='rsync -ahP'
+alias cp='cp -i'
+alias df='df -h' # report file system disk space usage
+alias du='du -h' # estimate file space usage
+alias nettop='nettop -P -k state,interface -d' # not downloaded, present by default
+alias mpv='mpv --force-window=yes --osd-level=3'
+
+# convenience
+# to go somewhere difficult to get to
+alias wip='cd ~/Documents/git/code/wip'
+# to source configs
+alias sz='source ~/.zshrc'
+alias ss='source ~/.aliases'
