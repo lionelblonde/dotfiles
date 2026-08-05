@@ -266,59 +266,52 @@ In copy mode:
 - Paste it back inside tmux with `PREFIX ]`
 
 ## Managing sessions
-- `tmux ls` list out the running sessions
+Base ops:
 - `tmux new-session -s work` create a session named 'work'
-- `tmux new-session -s work2 -t work` create a new session that shares all windows with an existing session, but has its
-  own separate notion of which window is current
 - `tmux kill-session -t work` kill the the session named 'work'
 - `tmux attach -t work` attach to a session
-- `CTRL-ad`: detach from a session
-- Switch between sessions
-    - `CTRL-a (`: switch to previous session
-    - `CTRL-a )`: switch to next session
-    - `CTRL-a L`: switch to *last* (previously used) session
-    - `CTRL-a s`: choose a session from a list
-- `CTRL-a$`: rename the current session
+- `PREFIX $`: rename the current session
+- `PREFIX d`: detach from a session
+Switch between sessions
+- `PREFIX (`: switch to previous session
+- `PREFIX )`: switch to next session
+- `PREFIX L`: switch to *last* (previously used) session
+- `PREFIX s`: choose a session from a list
 
 ## Managing windows
-- `CTRL-a c`: create a new window
-- `CTRL-a w`: list out the running windows
-- Switch between windows
-    - `CTRL-a <1|...|9|0>`: switch to window with number in {1,...,9,0}
-    - `CTRL-a p`: switch to previous window
-    - `CTRL-a n`: switch to next window
-    - `CTRL-a l`: switch to *last* (previously used) window
-    - `CTRL-a w`: choose window from a list
-- `CTRL-a ,`: rename the current window
-- `CTRL-a &`: kill the current window
-- `CTRL-a .`: renumber current window
-- `CTRL-a :swap-window -s <source_window> -t <target_window> <CR>`: swap windows
+Base ops:
+- `PREFIX c`: create a new window
+- `PREFIX w`: list out the running windows
+- `PREFIX ,`: rename the current window
+- `PREFIX &`: kill the current window
+- `PREFIX .`: renumber current window
+- `PREFIX :swap-window -s <source_window> -t <target_window> <CR>`: swap windows
+Switch between windows
+- `PREFIX <1|...|9|0>`: switch to window with number in {1,...,9,0}
+- `PREFIX p`: switch to previous window
+- `PREFIX n`: switch to next window
+- `PREFIX l`: switch to *last* (previously used) window
+- `PREFIX w`: choose window from a list
 
 ## Managing split panes
-- `CTRL-a x`: kill the current pane
-- `CTRL-a q`: display pane numbers for a short while
-- Creating a new pane by splitting an existing one
-    - `CTRL-a "`: split vertically (top/bottom)
-    - `CTRL-a %`: split horizontally (left/right)
-- Switching between panes
-    - `CTRL-a <ARROW KEY>`: go to the next panel in the direction
-    - `CTRL-a o`: switch to the next pane (cycle through all of them)
-    - `CTRL-a;`:
-    switch to the *last* (previously used) pane
-- Moving panes aroud
-    - `CTRL-a {`: move the current pane to the previous position
-    - `CTRL-a }`: move the current pane to the next position-
-    - `CTRL-a`
-    `CTRL-o`: rotate window 'up' (i.e. move all panes)
-    - `CTRL-a`
-    `META-o`: rotate window 'down'
-- Applying predefined layouts
-    - `CTRL-a META-1`: switch to even-horizontal layout
-    - `CTRL-a META-2`: switch to even-vertical layout
-    - `CTRL-a META-3`: switch to main-horizontal layout
-    - `CTRL-a META-4`: switch to main-vertical layout
-    - `CTRL-a META-5`: switch to tiled layout
-    - `CTRL-a <SPC>`: switch to the next layout
+FAVS: `PREFIX o` to cycle through panes; `PREFIX z` to toggle zoom
+Base ops:
+- `PREFIX z`: toggles zoom for the current pane (fill the whole window | restore the other panes)
+- `PREFIX x`: kill the current pane
+- `PREFIX q`: display pane numbers for a short while
+Creating a new pane by splitting an existing one
+- `PREFIX "`: split vertically (top/bottom)
+- `PREFIX %`: split horizontally (left/right)
+Switching between panes
+- `PREFIX <ARROW KEY>`: go to the next panel in the direction
+- `PREFIX o`: switch to the next pane (cycle through all of them)
+- `PREFIX ;`: switch to the *last* (previously used) pane
+Moving panes aroud
+- `PREFIX {`: move the current pane to the previous position
+- `PREFIX }`: move the current pane to the next position-
+- `PREFIX CTRL-o`: rotate window 'up' (i.e. move all panes)
+- `PREFIX META-o`: rotate window 'down'
+Applying predefined layouts: NO NEED
 
 
 # Git
