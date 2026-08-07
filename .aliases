@@ -21,8 +21,6 @@ alias ta='tmux attach -t' # requires session name
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias tkillall='tmux kill-server'
-# search with sk (rust fzf) and open with default app
-alias o='open "$(ls | sk)"'
 # codex command preference by Nathan Lambert
 # shared in: https://www.interconnects.ai/p/coding-as-the-epicenter-of-ai-progress
 # alias codexx='codex -m gpt-5-codex -c model_reasoning_effort="high" --yolo --search'

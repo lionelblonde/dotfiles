@@ -100,3 +100,11 @@ ytv() {
          --extractor-args 'youtube:player_js_version=actual' \
          "$@"
 }
+
+o() {
+  local dir="${1:-.}"
+  local selected
+
+  selected="$(find "$dir" -mindepth 1 | sk)" || return
+  [[ -n "$selected" ]] && open "$selected"
+}
