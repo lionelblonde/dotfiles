@@ -65,7 +65,6 @@ brew install --cask keepingyouawake
 brew install --cask meetingbar
 brew install --cask keka # for the "Exclude Mac resource forks"
 brew install --cask codex-app
-brew install --cask monarch
 brew install --cask handbrake
 brew install --cask little-snitch
 brew install --cask google-chrome
