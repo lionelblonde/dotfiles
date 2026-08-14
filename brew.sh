@@ -2,6 +2,7 @@
 
 # app to install manually:
 # MDV: from https://www.mowglii.com/mdv/
+# install IVPN arm64 from the website
 
 # Install brew packages
 brew install fd
