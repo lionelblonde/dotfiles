@@ -139,7 +139,7 @@ hyperapps["j"] = "ChatGPT"
 hyperapps["o"] = "Skim"
 -- hyperapps["n"] = ""
 hyperapps["l"] = "Helium"
--- hyperapps[","] = ""
+hyperapps[","] = "Things"
 hyperapps["."] = "Slack"
 
 for k, v in pairs(hyperapps) do
