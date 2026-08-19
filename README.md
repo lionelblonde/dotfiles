@@ -47,6 +47,7 @@ Install these apps from the Mac App Store:
 - Hand Mirror
 - DaisyDisk
 - HEIC Converter
+- Things
 
 ## Browser extensions
 - uBlock Origin (preferably the full version; otherwise the "Lite" version)
