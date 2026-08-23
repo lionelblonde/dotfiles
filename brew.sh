@@ -76,7 +76,6 @@ brew install --cask skim
 brew install --cask transmission
 brew install --cask pearcleaner
 brew install --cask sketch
-brew install --cask notunes
 brew install --cask silicon
 brew install --cask ghostty
 brew install --cask espanso
