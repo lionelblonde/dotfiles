@@ -208,8 +208,8 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_operandi")
--- vim.cmd.colorscheme("modus_vivendi")
-vim.cmd.colorscheme("grb256")
+vim.cmd.colorscheme("modus_vivendi")
+-- vim.cmd.colorscheme("grb256")
 
 -- -- override background of colorscheme to be pure black
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
