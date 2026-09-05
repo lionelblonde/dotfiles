@@ -75,6 +75,7 @@ brew install --cask shottr
 brew install --cask skim
 brew install --cask transmission
 brew install --cask pearcleaner
+brew install --cask iina
 brew install --cask sketch
 brew install --cask silicon
 brew install --cask ghostty
