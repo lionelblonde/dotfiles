@@ -63,7 +63,6 @@ brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
 brew install --cask git-credential-manager
 brew install --cask keepingyouawake
-brew install --cask meetingbar
 brew install --cask keka # for the "Exclude Mac resource forks"
 brew install --cask codex-app
 brew install --cask handbrake
