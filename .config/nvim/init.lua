@@ -68,7 +68,9 @@ require("lazy").setup({
     -- },
     {
         "sphamba/smear-cursor.nvim",
-        opts = {},
+        opts = {
+            smear_between_buffers = true,
+        },
     },
     {
         "hedyhli/outline.nvim",
