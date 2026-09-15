@@ -48,7 +48,6 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - HEIC Converter
 - Folder Peek
-- Unforgetful
 
 ## Browser extensions
 - uBlock Origin (preferably the full version; otherwise the "Lite" version)
