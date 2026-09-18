@@ -9,16 +9,16 @@ macos-icon-screen-color = #ffdd00,#00ccff
 
 # font-family = D2KodingLigature Nerd Font Mono
 # font-family = GoMono Nerd Font Mono
-# font-family = Cousine Nerd Font Mono
+font-family = Cousine Nerd Font Mono
 # font-family = Lilex Nerd Font Mono
 # font-family = JetBrainsMono Nerd Font Mono
 # font-family = IosevkaTerm Nerd Font Mono
-font-family = MesloLGS Nerd Font Mono
+# font-family = MesloLGS Nerd Font Mono
 
 # make the tabe names bigger (easier to read)
 window-title-font-family = Arial Rounded MT Bold
 
-font-size = 26
+font-size = 22
 font-thicken = false
 # font-style = Medium
 adjust-cell-height = -15%
