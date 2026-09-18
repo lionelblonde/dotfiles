@@ -18,15 +18,24 @@ font-family = Cousine Nerd Font Mono
 # make the tabe names bigger (easier to read)
 window-title-font-family = Arial Rounded MT Bold
 
-font-size = 22
+font-size = 25
 font-thicken = false
 # font-style = Medium
-adjust-cell-height = -15%
+adjust-cell-height = -10%
 window-inherit-font-size = true
 
 # theme = Guezwhoz
-theme = Cutie Pro
+# theme = Cutie Pro
 # theme = IR Black
+# theme = HaX0R R3D
+# theme = Kurokula
+# theme = Modus Vivendi Tinted
+# theme = Nvim Dark
+# theme = Sakura
+# theme = traffic
+# theme = Ubuntu
+theme = Xcode WWDC
+# theme = Unikitty
 
 auto-update = download
 auto-update-channel = stable
