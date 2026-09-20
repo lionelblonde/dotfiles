@@ -61,7 +61,6 @@ brew install --cask font-d2coding-nerd-font # from Naver! amazing font with Hang
 brew install --cask font-lilex-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-iosevka-term-nerd-font
-brew install --cask macvim-app
 brew install --cask git-credential-manager
 brew install --cask keepingyouawake
 brew install --cask keka # for the "Exclude Mac resource forks"
