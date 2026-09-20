@@ -19,7 +19,7 @@ vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700
 -- the official list: https://github.com/neovim/neovim/tree/master/runtime/colors
 -- vim.cmd.colorscheme("lunaperche")
 -- vim.cmd.colorscheme("ron")
--- vim.cmd.colorscheme("default")
+vim.cmd.colorscheme("default")
 -- vim.cmd.colorscheme("blue")
 
 -- Lazy setup
@@ -39,6 +39,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- colorschemes
     { "miikanissi/modus-themes.nvim", priority = 1000 },
+    { "rktjmp/lush.nvim" },
+    { "metalelf0/jellybeans-nvim"},
     -- packages
     {
         "lervag/vimtex",
@@ -214,6 +216,7 @@ require("lazy").setup({
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_operandi")
 vim.cmd.colorscheme("modus_vivendi")
+-- vim.cmd.colorscheme("jellybeans-nvim")
 
 -- -- override background of colorscheme to be pure black
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
