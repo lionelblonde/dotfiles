@@ -92,4 +92,5 @@ brew install --cask whatsapp
 brew install --cask google-drive
 brew install --cask zoom
 brew install --cask slack
+brew install --cask pdf-expert
 brew install --cask microsoft-teams
