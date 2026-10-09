@@ -65,6 +65,7 @@ brew install --cask git-credential-manager
 brew install --cask keepingyouawake
 brew install --cask keka # for the "Exclude Mac resource forks"
 brew install --cask codex-app
+brew install --cask codexbar # from steipete
 brew install --cask handbrake
 brew install --cask little-snitch
 brew install --cask google-chrome
