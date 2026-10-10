@@ -72,7 +72,6 @@ YouTube corner:
 - Return YouTube Dislike
 - SponsorBlock for YouTube
 
-
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
 
