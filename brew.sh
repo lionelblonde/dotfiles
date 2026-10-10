@@ -6,6 +6,7 @@
 
 # Install brew packages
 brew install fd
+brew install dua-cli # `dua i` instead of `ncdu`
 brew install pyenv
 brew install node # atm needed for Claude Code install
 brew install asitop
@@ -18,7 +19,6 @@ brew install sd
 brew install tq
 brew install sk
 brew install rsync
-brew install dua-cli
 brew install croc
 brew install zsh
 brew install zsh-syntax-highlighting
