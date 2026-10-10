@@ -1,4 +1,4 @@
-# macos-icon = paper
+macos-icon = paper
 # macos-icon = custom-style
 macos-icon-frame = chrome
 macos-icon-ghost-color = #ff0059
