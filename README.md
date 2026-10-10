@@ -50,15 +50,29 @@ Install these apps from the Mac App Store:
 - Things
 
 ## Browser extensions
+### Safari
+- Feedbin
+- Hush
+- Save to Raindrop.io
+- SocialFocus
+- uBlock Origin Lite
+### Chromium (e.g. Helium)
 - uBlock Origin (preferably the full version; otherwise the "Lite" version)
 - Vimium
+- Web Archives
 - News Feed Eradicator
 - Paperpile Extension
-- Feedbin Subscribe & Save
+- Feedbin
 - Raindrop.io
 - Decentraleyes
 - I still don't care about cookies
+- Custom New Tab (set new tab to be the GCal X-view)
+- LeechBlock NG (block: scholar.google.com, semanticscholar.org, twitch.tv)
+- Openreview Quicklook
+YouTube corner:
+- Return YouTube Dislike
 - SponsorBlock for YouTube
+
 
 ## Symlinks
 Create symbolic links to reference the dotfiles outside the repository by running `./symlink.sh`.
