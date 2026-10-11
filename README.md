@@ -47,6 +47,7 @@ Install these apps from the Mac App Store:
 - Hand Mirror
 - DaisyDisk
 - HEIC Converter
+- One Thing
 
 ## Browser extensions
 ### Safari
