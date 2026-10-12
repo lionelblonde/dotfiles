@@ -71,6 +71,7 @@ Install these apps from the Mac App Store:
 - Custom New Tab (set new tab to be the GCal X-view)
 - LeechBlock NG (block: scholar.google.com, semanticscholar.org, twitch.tv)
 - Openreview Quicklook
+- arxiv-utils
 YouTube corner:
 - Return YouTube Dislike
 - SponsorBlock for YouTube
