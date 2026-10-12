@@ -46,7 +46,6 @@ Install these apps from the Mac App Store:
     - Outlook
 - Hand Mirror
 - DaisyDisk
-- Switchglass
 - HEIC Converter
 - One Thing
 - Folder Peek
