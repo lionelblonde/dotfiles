@@ -137,7 +137,7 @@ hyperapps["j"] = "Helium"
 -- hyperapps[";"] = ""
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Spotify"
-hyperapps["n"] = "Sketch"
+-- hyperapps["n"] = "Sketch"
 hyperapps["l"] = "Slack"
 hyperapps[","] = "Skim"
 -- hyperapps["."] = ""
@@ -170,8 +170,8 @@ local function showAppKeystroke()
 
       showAppKeystrokeAlertId = hs.alert.show(
          keystroke,
-         {textFont = "JetBrainsMono Nerd Font Mono",
-          textSize = 24,
+         {textFont = "Arial Rounded MT Bold",
+          textSize = 40,
           radius = 0,
           strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0.75})},
          hs.screen.mainScreen(), 25)
