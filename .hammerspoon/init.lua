@@ -129,18 +129,18 @@ local hyperapps = {}
 -- hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
-hyperapps["k"] = "Bike"
+hyperapps["k"] = "ChatGPT"
 -- hyperapps["p"] = ""
 hyperapps["h"] = "Mail"
-hyperapps["j"] = "ChatGPT"
+hyperapps["j"] = "Helium"
 -- hyperapps["m"] = ""
 -- hyperapps[";"] = ""
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Spotify"
 hyperapps["n"] = "Sketch"
-hyperapps["l"] = "Helium"
+hyperapps["l"] = "Slack"
 hyperapps[","] = "Skim"
-hyperapps["."] = "Slack"
+-- hyperapps["."] = ""
 
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end
