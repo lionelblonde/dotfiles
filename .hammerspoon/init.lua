@@ -126,7 +126,7 @@ hyperfns["="] = toggle_window_maximized
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
 
--- hyperapps["y"] = ""
+hyperapps["y"] = "Yomu"
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
 hyperapps["k"] = "ChatGPT"
@@ -137,7 +137,7 @@ hyperapps["m"] = "Bike"
 -- hyperapps[";"] = ""
 -- hyperapps["'"] = ""
 hyperapps["o"] = "Spotify"
--- hyperapps["n"] = "Sketch"
+hyperapps["n"] = "Things"
 hyperapps["l"] = "Slack"
 hyperapps[","] = "Skim"
 -- hyperapps["."] = ""
@@ -170,7 +170,7 @@ local function showAppKeystroke()
 
       showAppKeystrokeAlertId = hs.alert.show(
          keystroke,
-         {textFont = "Arial Rounded MT Bold",
+         {textFont = "Monaco",
           textSize = 40,
           radius = 0,
           strokeColor = hs.drawing.color.asRGB({hex="#1DB954", alpha=0.75})},
