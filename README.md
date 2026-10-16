@@ -49,7 +49,6 @@ Install these apps from the Mac App Store:
 - HEIC Converter
 - One Thing
 - Folder Peek
-- Switchglass
 
 ## Browser extensions
 ### Safari
