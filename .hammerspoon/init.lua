@@ -126,7 +126,7 @@ hyperfns["="] = toggle_window_maximized
 -- Hotkeys to toggle focus on applications
 local hyperapps = {}
 
-hyperapps["y"] = "Yomu"
+-- hyperapps["y"] = ""
 hyperapps["u"] = "Finder"
 hyperapps["i"] = "Ghostty"
 hyperapps["k"] = "ChatGPT"
@@ -140,7 +140,7 @@ hyperapps["o"] = "Spotify"
 hyperapps["n"] = "Things"
 hyperapps["l"] = "Slack"
 hyperapps[","] = "Skim"
--- hyperapps["."] = ""
+hyperapps["."] = "PDF Expert"
 
 for k, v in pairs(hyperapps) do
    hyperfns[k] = function() toggle_application(v) end
