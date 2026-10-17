@@ -49,6 +49,7 @@ Install these apps from the Mac App Store:
 - HEIC Converter
 - One Thing
 - Folder Peek
+- Things
 
 ## Browser extensions
 ### Safari
