@@ -41,6 +41,12 @@ require("lazy").setup({
     { "miikanissi/modus-themes.nvim", priority = 1000 },
     { "rktjmp/lush.nvim" },
     { "metalelf0/jellybeans-nvim" },
+    {
+        "pebeto/dookie.nvim",
+        config = function()
+            vim.cmd.colorscheme("dookie")
+        end,
+    },
     -- packages
     {
         "lervag/vimtex",
@@ -230,7 +236,7 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_operandi")
-vim.cmd.colorscheme("modus_vivendi")
+-- vim.cmd.colorscheme("modus_vivendi")
 -- vim.cmd.colorscheme("jellybeans-nvim")
 
 -- -- override background of colorscheme to be pure black
