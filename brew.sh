@@ -35,6 +35,8 @@ brew install htop
 brew install bottom # command is btm
 brew install tmux
 brew install tree
+brew install tree-sitter
+brew install tree-sitter-cli
 brew install trash
 brew install lua
 brew install neofetch

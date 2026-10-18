@@ -40,7 +40,7 @@ require("lazy").setup({
     -- colorschemes
     { "miikanissi/modus-themes.nvim", priority = 1000 },
     { "rktjmp/lush.nvim" },
-    { "metalelf0/jellybeans-nvim"},
+    { "metalelf0/jellybeans-nvim" },
     -- packages
     {
         "lervag/vimtex",
@@ -51,23 +51,38 @@ require("lazy").setup({
             vim.g.vimtex_view_method = "skim"
         end
     },
-    -- {
-    --     "MeanderingProgrammer/render-markdown.nvim",
-    --     opts = {
-    --         link = { enabled = false },
-    --         win_options = {
-    --             conceallevel  = {
-    --                 default = vim.o.conceallevel,
-    --                 rendered = 0,
-    --             },
-    --             concealcursor = {
-    --                 default = vim.o.concealcursor,
-    --                 rendered = '',
-    --             },
-    --         },
-    --         code   = { conceal_delimiters = false },
-    --     },
-    -- },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        lazy = false,
+        build = ":TSUpdate",
+        config = function()
+            local parsers = {
+                "lua",
+                "python",
+                "bash",
+                "c",
+                "cpp",
+                "rust",
+                "javascript",
+                "typescript",
+                "json",
+                "yaml",
+                "markdown",
+                "vim",
+                "vimdoc",
+            }
+
+            require("nvim-treesitter").install(parsers)
+
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = "*",
+                callback = function(args)
+                    pcall(vim.treesitter.start, args.buf)
+                end,
+            })
+        end,
+    },
     {
         "sphamba/smear-cursor.nvim",
         opts = {
@@ -111,9 +126,9 @@ require("lazy").setup({
         "nvim-lua/plenary.nvim",
     },
     {
-        dependencies = { "nvim-lua/plenary.nvim" },
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.5",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        version = "*",
         config = function()
             require("telescope").setup({
                 -- defaults = {
@@ -215,7 +230,7 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_operandi")
--- vim.cmd.colorscheme("modus_vivendi")
+vim.cmd.colorscheme("modus_vivendi")
 -- vim.cmd.colorscheme("jellybeans-nvim")
 
 -- -- override background of colorscheme to be pure black
