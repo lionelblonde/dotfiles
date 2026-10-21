@@ -44,6 +44,11 @@ require("lazy").setup({
             vim.cmd.colorscheme("dookie")
         end,
     },
+    {
+        "chaserensberger/christmas.nvim",
+        name = "christmas",
+        lazy = false,
+    },
     -- packages
     {
         "lervag/vimtex",
@@ -235,6 +240,8 @@ require("lazy").setup({
 -- vim.cmd.colorscheme("modus_operandi")
 -- vim.cmd.colorscheme("modus_vivendi")
 -- vim.cmd.colorscheme("jellybeans-nvim")
+vim.cmd.colorscheme("dookie")
+-- vim.cmd.colorscheme("christmas")
 
 -- -- override background of colorscheme to be pure black
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
