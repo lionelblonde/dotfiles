@@ -24,6 +24,7 @@ brew install zsh
 brew install zsh-syntax-highlighting
 brew install liquidprompt
 brew install eza
+brew install mosh
 brew install git
 brew install wget
 brew install curl
