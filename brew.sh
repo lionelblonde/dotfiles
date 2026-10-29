@@ -41,7 +41,6 @@ brew install tree-sitter-cli
 brew install trash
 brew install lua
 brew install neofetch
-brew install yt-dlp
 brew install pandoc
 brew install rust-analyzer
 brew install lua-language-server
