@@ -68,7 +68,6 @@ brew install --cask codex-app
 brew install --cask handbrake
 brew install --cask notunes
 brew install --cask little-snitch
-brew install --cask google-chrome
 brew install --cask helium-browser
 brew install --cask maccy
 brew install --cask shottr
