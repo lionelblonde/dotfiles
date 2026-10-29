@@ -32,7 +32,6 @@ alias cp='cp -i'
 alias df='df -h' # report file system disk space usage
 alias du='du -h' # estimate file space usage
 alias nettop='nettop -P -k state,interface -d' # not downloaded, present by default
-alias mpv='mpv --force-window=yes --osd-level=3'
 
 # convenience
 # to go somewhere difficult to get to
