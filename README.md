@@ -48,7 +48,7 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - HEIC Converter
 - One Thing
-- Folder Peek
+- Super Menu
 - Things
 
 ## Browser extensions
