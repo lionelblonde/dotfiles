@@ -88,19 +88,6 @@ source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/z
 
 # Shell functions
 
-yta() {
-  yt-dlp --config-location ~/.ytdlp.conf \
-         -x \
-         --audio-format m4a \
-         "$@"
-}
-
-ytv() {
-  yt-dlp --config-location ~/.ytdlp.conf \
-         --extractor-args 'youtube:player_js_version=actual' \
-         "$@"
-}
-
 o() {
   local dir="${1:-.}"
   local selected
