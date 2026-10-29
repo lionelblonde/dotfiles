@@ -29,7 +29,6 @@ brew install git
 brew install wget
 brew install curl
 brew install neovim
-brew install mpv
 brew install imagemagick
 brew install ffmpeg
 brew install htop
