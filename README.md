@@ -50,6 +50,7 @@ Install these apps from the Mac App Store:
 - One Thing
 - Super Menu
 - Things
+- Endel
 
 ## Browser extensions
 ### Safari
