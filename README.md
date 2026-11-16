@@ -49,7 +49,6 @@ Install these apps from the Mac App Store:
 - HEIC Converter
 - One Thing
 - Things
-- Endel
 
 ## Browser extensions
 ### Safari
