@@ -48,7 +48,6 @@ Install these apps from the Mac App Store:
 - DaisyDisk
 - HEIC Converter
 - One Thing
-- Things
 
 ## Browser extensions
 ### Safari
