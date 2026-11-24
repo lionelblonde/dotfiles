@@ -238,9 +238,9 @@ require("lazy").setup({
 -- Define the color scheme (the file is in .config/nvim/colors)
 -- vim.cmd.colorscheme("term")
 -- vim.cmd.colorscheme("modus_operandi")
--- vim.cmd.colorscheme("modus_vivendi")
+vim.cmd.colorscheme("modus_vivendi")
 -- vim.cmd.colorscheme("jellybeans-nvim")
-vim.cmd.colorscheme("dookie")
+-- vim.cmd.colorscheme("dookie")
 -- vim.cmd.colorscheme("christmas")
 
 -- -- override background of colorscheme to be pure black
